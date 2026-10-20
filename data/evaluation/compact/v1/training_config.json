@@ -1,0 +1,29 @@
+{
+ "architecture": "YOLOX-tiny",
+ "depth": 0.33,
+ "width": 0.375,
+ "num_classes": 2,
+ "input_size": [
+  416,
+  416
+ ],
+ "optimizer": "AdamW",
+ "base_lr": 0.0005,
+ "weight_decay": 0.0005,
+ "batch_size": 8,
+ "threads": 8,
+ "epochs": 35,
+ "mosaic": false,
+ "mixup": false,
+ "flip_prob": 0.5,
+ "hsv_prob": 0.5,
+ "ema_decay": 0.99,
+ "seed": 20261012,
+ "data_workers": 0,
+ "initial_person_coco_class": 0,
+ "initial_forklift_coco_class": 7,
+ "validation_iou": 0.5,
+ "nms_iou": 0.45,
+ "pretrained_sha256": "9de513de589ac98bb92d3bca53b5af7b9acfa9b0bacb831f7999d0f7afaee8f0",
+ "start_utc": "2026-10-12T07:50:52Z"
+}

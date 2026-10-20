@@ -1,0 +1,521 @@
+{
+ "timestamp_utc": "2026-10-12T08:04:24Z",
+ "checkpoint_sha256": "636cbf96275e7c65298cd647355bb94f6363c6c8c278c9997f6792946ef06ef2",
+ "onnx_sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d",
+ "checkpoint_epoch": 4,
+ "selection_source": "Only disjoint validation runs; common confidence maximizing mean class F1 among thresholds meeting both recall >=0.9, else maximum mean F1",
+ "validation": {
+  "selected": {
+   "confidence": 0.4,
+   "detection": {
+    "person": {
+     "tp": 276,
+     "fp": 4,
+     "fn": 14,
+     "precision": 0.9857142857142858,
+     "recall": 0.9517241379310345,
+     "f1": 0.968421052631579
+    },
+    "forklift": {
+     "tp": 180,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "both_recall_ge_0_9": true
+  },
+  "threshold_sweep": [
+   {
+    "confidence": 0.01,
+    "detection": {
+     "person": {
+      "tp": 279,
+      "fp": 41,
+      "fn": 11,
+      "precision": 0.871875,
+      "recall": 0.9620689655172414,
+      "f1": 0.9147540983606558
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 109,
+      "fn": 0,
+      "precision": 0.6228373702422145,
+      "recall": 1.0,
+      "f1": 0.767590618336887
+     }
+    }
+   },
+   {
+    "confidence": 0.02,
+    "detection": {
+     "person": {
+      "tp": 279,
+      "fp": 27,
+      "fn": 11,
+      "precision": 0.9117647058823529,
+      "recall": 0.9620689655172414,
+      "f1": 0.936241610738255
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 39,
+      "fn": 0,
+      "precision": 0.821917808219178,
+      "recall": 1.0,
+      "f1": 0.9022556390977443
+     }
+    }
+   },
+   {
+    "confidence": 0.03,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 21,
+      "fn": 12,
+      "precision": 0.9297658862876255,
+      "recall": 0.9586206896551724,
+      "f1": 0.9439728353140917
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 31,
+      "fn": 0,
+      "precision": 0.8530805687203792,
+      "recall": 1.0,
+      "f1": 0.9207161125319694
+     }
+    }
+   },
+   {
+    "confidence": 0.05,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 16,
+      "fn": 12,
+      "precision": 0.9455782312925171,
+      "recall": 0.9586206896551724,
+      "f1": 0.952054794520548
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 29,
+      "fn": 0,
+      "precision": 0.861244019138756,
+      "recall": 1.0,
+      "f1": 0.9254498714652957
+     }
+    }
+   },
+   {
+    "confidence": 0.075,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 11,
+      "fn": 12,
+      "precision": 0.9619377162629758,
+      "recall": 0.9586206896551724,
+      "f1": 0.9602763385146804
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 28,
+      "fn": 0,
+      "precision": 0.8653846153846154,
+      "recall": 1.0,
+      "f1": 0.9278350515463918
+     }
+    }
+   },
+   {
+    "confidence": 0.1,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 8,
+      "fn": 12,
+      "precision": 0.972027972027972,
+      "recall": 0.9586206896551724,
+      "f1": 0.9652777777777778
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 28,
+      "fn": 0,
+      "precision": 0.8653846153846154,
+      "recall": 1.0,
+      "f1": 0.9278350515463918
+     }
+    }
+   },
+   {
+    "confidence": 0.15,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 5,
+      "fn": 12,
+      "precision": 0.9823321554770318,
+      "recall": 0.9586206896551724,
+      "f1": 0.9703315881326352
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 27,
+      "fn": 0,
+      "precision": 0.8695652173913043,
+      "recall": 1.0,
+      "f1": 0.9302325581395349
+     }
+    }
+   },
+   {
+    "confidence": 0.2,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 5,
+      "fn": 12,
+      "precision": 0.9823321554770318,
+      "recall": 0.9586206896551724,
+      "f1": 0.9703315881326352
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 23,
+      "fn": 0,
+      "precision": 0.8866995073891626,
+      "recall": 1.0,
+      "f1": 0.9399477806788512
+     }
+    }
+   },
+   {
+    "confidence": 0.25,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 5,
+      "fn": 12,
+      "precision": 0.9823321554770318,
+      "recall": 0.9586206896551724,
+      "f1": 0.9703315881326352
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 14,
+      "fn": 0,
+      "precision": 0.9278350515463918,
+      "recall": 1.0,
+      "f1": 0.9625668449197862
+     }
+    }
+   },
+   {
+    "confidence": 0.3,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 4,
+      "fn": 12,
+      "precision": 0.9858156028368794,
+      "recall": 0.9586206896551724,
+      "f1": 0.972027972027972
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1": 0.9917355371900827
+     }
+    }
+   },
+   {
+    "confidence": 0.35,
+    "detection": {
+     "person": {
+      "tp": 278,
+      "fp": 4,
+      "fn": 12,
+      "precision": 0.9858156028368794,
+      "recall": 0.9586206896551724,
+      "f1": 0.972027972027972
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1": 0.994475138121547
+     }
+    }
+   },
+   {
+    "confidence": 0.4,
+    "detection": {
+     "person": {
+      "tp": 276,
+      "fp": 4,
+      "fn": 14,
+      "precision": 0.9857142857142858,
+      "recall": 0.9517241379310345,
+      "f1": 0.968421052631579
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    },
+    "both_recall_ge_0_9": true
+   },
+   {
+    "confidence": 0.45,
+    "detection": {
+     "person": {
+      "tp": 275,
+      "fp": 4,
+      "fn": 15,
+      "precision": 0.985663082437276,
+      "recall": 0.9482758620689655,
+      "f1": 0.9666080843585236
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   {
+    "confidence": 0.5,
+    "detection": {
+     "person": {
+      "tp": 273,
+      "fp": 4,
+      "fn": 17,
+      "precision": 0.9855595667870036,
+      "recall": 0.9413793103448276,
+      "f1": 0.962962962962963
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   {
+    "confidence": 0.55,
+    "detection": {
+     "person": {
+      "tp": 272,
+      "fp": 4,
+      "fn": 18,
+      "precision": 0.9855072463768116,
+      "recall": 0.9379310344827586,
+      "f1": 0.9611307420494699
+     },
+     "forklift": {
+      "tp": 180,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   {
+    "confidence": 0.6,
+    "detection": {
+     "person": {
+      "tp": 271,
+      "fp": 2,
+      "fn": 19,
+      "precision": 0.9926739926739927,
+      "recall": 0.9344827586206896,
+      "f1": 0.9626998223801067
+     },
+     "forklift": {
+      "tp": 179,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9944444444444445,
+      "f1": 0.9972144846796658
+     }
+    }
+   },
+   {
+    "confidence": 0.65,
+    "detection": {
+     "person": {
+      "tp": 269,
+      "fp": 1,
+      "fn": 21,
+      "precision": 0.9962962962962963,
+      "recall": 0.9275862068965517,
+      "f1": 0.9607142857142856
+     },
+     "forklift": {
+      "tp": 179,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9944444444444445,
+      "f1": 0.9972144846796658
+     }
+    }
+   },
+   {
+    "confidence": 0.7,
+    "detection": {
+     "person": {
+      "tp": 268,
+      "fp": 1,
+      "fn": 22,
+      "precision": 0.9962825278810409,
+      "recall": 0.9241379310344827,
+      "f1": 0.9588550983899822
+     },
+     "forklift": {
+      "tp": 179,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9944444444444445,
+      "f1": 0.9972144846796658
+     }
+    }
+   },
+   {
+    "confidence": 0.75,
+    "detection": {
+     "person": {
+      "tp": 266,
+      "fp": 1,
+      "fn": 24,
+      "precision": 0.9962546816479401,
+      "recall": 0.9172413793103448,
+      "f1": 0.9551166965888689
+     },
+     "forklift": {
+      "tp": 179,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9944444444444445,
+      "f1": 0.9972144846796658
+     }
+    }
+   },
+   {
+    "confidence": 0.8,
+    "detection": {
+     "person": {
+      "tp": 204,
+      "fp": 0,
+      "fn": 86,
+      "precision": 1.0,
+      "recall": 0.7034482758620689,
+      "f1": 0.825910931174089
+     },
+     "forklift": {
+      "tp": 179,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9944444444444445,
+      "f1": 0.9972144846796658
+     }
+    }
+   }
+  ],
+  "n_frames": 292,
+  "gold_counts": [
+   290,
+   180
+  ]
+ },
+ "settings": {
+  "backend": "compact-onnx",
+  "model_path": "../work/stage1/compact-detector/yolox_tiny_warehouse.onnx",
+  "model_sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d",
+  "model_id": "YOLOX-tiny-warehouse-person-forklift",
+  "model_revision": "636cbf96275e7c65298cd647355bb94f6363c6c8c278c9997f6792946ef06ef2",
+  "input_size": 416,
+  "sample_fps": 1.0,
+  "confidence": 0.4,
+  "nms_iou": 0.45,
+  "gap_ratio": 0.3,
+  "min_samples": 2,
+  "merge_gap_s": 2.1,
+  "threads": 4
+ },
+ "split_sha256": "77cce3f98442f705273f975b29e84b0c930ab7d291d5cc39dee551ae482931e6",
+ "overlap_audit_sha256": "515a7a4a806b95feca0192d58b08d1b07374293dd2014b0611282e9b49a3a0a8",
+ "evaluation_tuning_permitted": false,
+ "onnx_val_parity": [
+  {
+   "val_image_index": 0,
+   "max_abs_error": 1.0475516319274902e-05
+  },
+  {
+   "val_image_index": 41,
+   "max_abs_error": 6.854534149169922e-06
+  },
+  {
+   "val_image_index": 83,
+   "max_abs_error": 1.6003847122192383e-05
+  },
+  {
+   "val_image_index": 124,
+   "max_abs_error": 9.98377799987793e-06
+  },
+  {
+   "val_image_index": 166,
+   "max_abs_error": 1.811981201171875e-05
+  },
+  {
+   "val_image_index": 207,
+   "max_abs_error": 1.5437602996826172e-05
+  },
+  {
+   "val_image_index": 249,
+   "max_abs_error": 1.2576580047607422e-05
+  },
+  {
+   "val_image_index": 291,
+   "max_abs_error": 1.424551010131836e-05
+  }
+ ],
+ "compiled_hef": false,
+ "evaluation_plan": {
+  "sample_fps": [
+   1,
+   5
+  ],
+  "primary": "same phase2 10 runs; same coverage exclusions; 9runs/90 gold frames",
+  "routine": "same phase2 10 runs; candidate groups and overlays only; no false-positive rate"
+ },
+ "compact_vision_sha256": "8c7a540237082d0f7bd42c9ca0d85b59a9ca8fc8c5590c3f6af1bc7205fc1a4e"
+}

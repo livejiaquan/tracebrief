@@ -1,0 +1,20 @@
+{
+  "scope": "Seen routine calibration frames only; no negative ground-truth scoring or threshold search",
+  "confidence": 0.6,
+  "text_threshold": 0.25,
+  "processor_size": {
+    "shortest_edge": 512,
+    "longest_edge": 853
+  },
+  "nms_iou": 0.45,
+  "frames": [
+    0,
+    150,
+    299
+  ],
+  "diagnostic_recording_threshold": 0.2,
+  "threads": 4,
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "production_sha256": "37a47edde364a9af3b23ed6eb31a8a97dfcfdf14a4f5f45155118a5cb56293df"
+}

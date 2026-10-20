@@ -1,0 +1,254 @@
+{
+  "scope": "Diagnosis of saved v2 binary false negatives only; below-threshold logits unavailable, so missing retained detections may reflect low scores or model absence. No inference or tuning.",
+  "counts": {
+    "missing retained person": 5,
+    "missing retained forklift": 16
+  },
+  "frames": [
+    {
+      "video": "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+      "frame_index": 240,
+      "reason": "missing retained person",
+      "retained_scores": [
+        [
+          "forklift",
+          0.871
+        ]
+      ]
+    },
+    {
+      "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+      "frame_index": 90,
+      "reason": "missing retained person",
+      "retained_scores": [
+        [
+          "forklift",
+          0.8491
+        ]
+      ]
+    },
+    {
+      "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+      "frame_index": 120,
+      "reason": "missing retained person",
+      "retained_scores": [
+        [
+          "forklift",
+          0.8536
+        ]
+      ]
+    },
+    {
+      "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+      "frame_index": 150,
+      "reason": "missing retained person",
+      "retained_scores": [
+        [
+          "forklift",
+          0.8459
+        ]
+      ]
+    },
+    {
+      "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+      "frame_index": 240,
+      "reason": "missing retained person",
+      "retained_scores": [
+        [
+          "forklift",
+          0.8518
+        ]
+      ]
+    },
+    {
+      "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+      "frame_index": 0,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9223
+        ]
+      ]
+    },
+    {
+      "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+      "frame_index": 30,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9092
+        ]
+      ]
+    },
+    {
+      "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+      "frame_index": 60,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.8845
+        ]
+      ]
+    },
+    {
+      "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+      "frame_index": 90,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.8974
+        ]
+      ]
+    },
+    {
+      "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+      "frame_index": 120,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.857
+        ]
+      ]
+    },
+    {
+      "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+      "frame_index": 150,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.8673
+        ]
+      ]
+    },
+    {
+      "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+      "frame_index": 30,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9088
+        ]
+      ]
+    },
+    {
+      "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+      "frame_index": 60,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9195
+        ]
+      ]
+    },
+    {
+      "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+      "frame_index": 90,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9232
+        ]
+      ]
+    },
+    {
+      "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+      "frame_index": 120,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9259
+        ]
+      ]
+    },
+    {
+      "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+      "frame_index": 150,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9207
+        ]
+      ]
+    },
+    {
+      "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+      "frame_index": 240,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9031
+        ]
+      ]
+    },
+    {
+      "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+      "frame_index": 0,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9022
+        ]
+      ]
+    },
+    {
+      "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+      "frame_index": 30,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9151
+        ]
+      ]
+    },
+    {
+      "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+      "frame_index": 60,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.9176
+        ]
+      ]
+    },
+    {
+      "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+      "frame_index": 90,
+      "reason": "missing retained forklift",
+      "retained_scores": [
+        [
+          "person",
+          0.8887
+        ]
+      ]
+    }
+  ],
+  "visual_audit": {
+    "scope": "All21 binary false-negative rawframes inspected with gold boxes; qualitative descriptions, not causal attribution or additional safety truth.",
+    "findings": [
+      "All5 missing-retained-person frames show heavy occlusion by the forklift or very small visible person fragments.",
+      "15 of16 missing-retained-forklift frames show a forklift truncated by the top image boundary; six of these are in a dark scene.",
+      "One remaining forklift miss shows a largely visible forklift and person in warm illumination.",
+      "Below-threshold logits were not saved; do not infer that the model saw no object or that confidence alone caused each miss.",
+      "Many missed forklifts still have clearly visible body/mast despite top truncation or frontal view; misses cannot all be explained as invisible or small. A second visual pass confirmed these categories."
+    ],
+    "contact_sha256": {
+      "miss_contact_1.jpg": "ce24c6f8eae7e9c1dbe57d5cf21a2bb1ad213c02f9d02dd1c004f9b9ddace9ff",
+      "miss_contact_2.jpg": "77dcc80b519ac33b4de568700e9cecbcd233f2f7355f0a181bd4e1e282800a70"
+    }
+  }
+}

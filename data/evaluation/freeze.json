@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-03T19:15:59Z",
+  "settings": {
+    "sample_fps": 1.0,
+    "confidence": 0.35,
+    "nms_iou": 0.45,
+    "gap_ratio": 0.3,
+    "min_samples": 2,
+    "merge_gap_s": 2.1,
+    "threads": 4,
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "text_threshold": 0.25,
+    "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71"
+  },
+  "heldout": [
+    "001e53453441935632ae_run_1_seed_1288693302.ceiling_00.rgb.mp4",
+    "005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.rgb.mp4",
+    "00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.rgb.mp4",
+    "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+    "016c1396912bfc432997_run_3_seed_1053328212.ceiling_00.rgb.mp4",
+    "018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.rgb.mp4",
+    "019b03676f77ba21f644_run_5_seed_946900070.ceiling_00.rgb.mp4",
+    "01ce771b887143b4a592_run_13_seed_1930806231.ceiling_00.rgb.mp4",
+    "01d845d245e362161c7e_run_11_seed_2081127967.ceiling_00.rgb.mp4",
+    "01ef74f98b72cc506daf_run_10_seed_618522198.ceiling_00.rgb.mp4",
+    "01f95a365901208d48d3_run_17_seed_1189260733.ceiling_00.rgb.mp4",
+    "02191b34f6b6e0ef2db4_run_19_seed_1390860058.ceiling_00.rgb.mp4",
+    "027324c52d159ed93f1d_run_3_seed_1515015089.ceiling_00.rgb.mp4",
+    "030a3619cbb8c73e15ee_run_27_seed_1264018830.ceiling_00.rgb.mp4",
+    "03346ff432a0fe57151d_run_7_seed_428454731.ceiling_00.rgb.mp4",
+    "036c383522ca703ef6fd_run_1_seed_83132534.ceiling_00.rgb.mp4",
+    "03a2937960b9e61f1c99_run_7_seed_900334964.ceiling_00.rgb.mp4",
+    "03ce361363ed08a91e1c_run_14_seed_908913191.ceiling_00.rgb.mp4",
+    "03dde99492fa6570fb42_run_16_seed_1305281951.ceiling_00.rgb.mp4",
+    "04573755960a76f10119_run_46_seed_1402403531.ceiling_00.rgb.mp4",
+    "047fca619ecf7a56b2e4_run_4_seed_795834165.ceiling_00.rgb.mp4",
+    "049c83ec42a34cacaff4_run_20_seed_2118878844.ceiling_00.rgb.mp4",
+    "04ea23649a6f7cb2eea7_run_27_seed_523198994.ceiling_00.rgb.mp4",
+    "04eb0ba18568ad567724_run_12_seed_2001147106.ceiling_00.rgb.mp4"
+  ],
+  "development": [
+    "0851b7a332077a4fc0e2_01021d3989e38beb3395_run_10_seed_213384163.ceiling_00.rgb.mp4",
+    "40722caa0f2600ab6bef_0137e00c677a4118e887_run_2_seed_1276653305.ceiling_00.rgb.mp4",
+    "c26853e0837dca932ef9_00f2bbb80d7badad0134_run_25_seed_750796930.ceiling_00.rgb.mp4"
+  ],
+  "implementation_sha256": "37a47edde364a9af3b23ed6eb31a8a97dfcfdf14a4f5f45155118a5cb56293df"
+}

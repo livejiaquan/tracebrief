@@ -1,0 +1,290 @@
+{
+ "schema_version": "1.0",
+ "video": {
+  "path": "work/stage1/vision/phase2/data/01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+  "sha256": "526ffb78c6fe9b4fb044627f3f64eade2a9275843a6b07f5cb7bdf74b4e9b2cf",
+  "duration_s": 13.933333333333334,
+  "fps": 30.0,
+  "width": 1920,
+  "height": 1080
+ },
+ "model": {
+  "id": "YOLOX-tiny-warehouse-person-forklift",
+  "revision": "636cbf96275e7c65298cd647355bb94f6363c6c8c278c9997f6792946ef06ef2",
+  "backend": "YOLOX ONNXRuntime CPU",
+  "sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d"
+ },
+ "settings": {
+  "sample_fps": 1.0,
+  "confidence": 0.4,
+  "text_threshold": 0.25,
+  "nms_iou": 0.45,
+  "gap_ratio": 0.3,
+  "min_samples": 2,
+  "merge_gap_s": 2.1,
+  "threads": 4,
+  "model_id": "YOLOX-tiny-warehouse-person-forklift",
+  "model_revision": "636cbf96275e7c65298cd647355bb94f6363c6c8c278c9997f6792946ef06ef2",
+  "backend": "compact-onnx",
+  "input_size": 416,
+  "model_path": "../work/stage1/compact-detector/yolox_tiny_warehouse.onnx",
+  "model_sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d"
+ },
+ "observations": [
+  {
+   "frame_index": 0,
+   "time_s": 0.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8818,
+     "bbox_xyxy": [
+      897.47,
+      306.45,
+      1042.85,
+      769.46
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 30,
+   "time_s": 1.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8858,
+     "bbox_xyxy": [
+      887.06,
+      307.61,
+      1026.79,
+      708.97
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 60,
+   "time_s": 2.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.875,
+     "bbox_xyxy": [
+      893.42,
+      312.38,
+      1029.05,
+      719.37
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 90,
+   "time_s": 3.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8778,
+     "bbox_xyxy": [
+      891.38,
+      406.18,
+      1033.32,
+      764.66
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 120,
+   "time_s": 4.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8308,
+     "bbox_xyxy": [
+      889.27,
+      564.63,
+      1018.28,
+      803.12
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 150,
+   "time_s": 5.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8671,
+     "bbox_xyxy": [
+      890.29,
+      462.13,
+      1018.75,
+      784.91
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 180,
+   "time_s": 6.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.895,
+     "bbox_xyxy": [
+      889.33,
+      300.73,
+      1030.02,
+      743.33
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 210,
+   "time_s": 7.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8996,
+     "bbox_xyxy": [
+      877.31,
+      303.8,
+      1028.79,
+      753.11
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 240,
+   "time_s": 8.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8941,
+     "bbox_xyxy": [
+      869.25,
+      307.21,
+      1024.32,
+      740.09
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 270,
+   "time_s": 9.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8946,
+     "bbox_xyxy": [
+      868.75,
+      307.04,
+      1024.55,
+      740.13
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 300,
+   "time_s": 10.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8935,
+     "bbox_xyxy": [
+      869.15,
+      307.04,
+      1024.3,
+      740.31
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 330,
+   "time_s": 11.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8948,
+     "bbox_xyxy": [
+      869.75,
+      307.46,
+      1024.52,
+      740.28
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 360,
+   "time_s": 12.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8938,
+     "bbox_xyxy": [
+      867.58,
+      306.4,
+      1024.22,
+      741.26
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  },
+  {
+   "frame_index": 390,
+   "time_s": 13.0,
+   "detections": [
+    {
+     "class_name": "person",
+     "confidence": 0.8931,
+     "bbox_xyxy": [
+      868.58,
+      307.57,
+      1023.69,
+      739.19
+     ]
+    }
+   ],
+   "proximity_pairs": []
+  }
+ ],
+ "events": [],
+ "timing": {
+  "wall_s": 0.968,
+  "sampled_frames": 14,
+  "model_load_s": 0.111978,
+  "wall_without_model_load_s": 0.855993,
+  "inference_s": 0.290256,
+  "inference_ms_per_frame": 20.733
+ },
+ "warnings": [
+  "Synthetic-domain validation only; real warehouse generalization unverified.",
+  "No detected candidates does not establish safety.",
+  "Sampling may miss short events."
+ ],
+ "implementation": {
+  "vision_sha256": "8c7a540237082d0f7bd42c9ca0d85b59a9ca8fc8c5590c3f6af1bc7205fc1a4e"
+ }
+}

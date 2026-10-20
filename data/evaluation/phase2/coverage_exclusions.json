@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-03T20:36:38Z",
+  "reason": "Ground-truth integrity audit after inference: 198 annotation rows versus 300 RGB frames, no frame IDs/timestamps, visual box misalignment at row/frame150 and197. Entire run unscorable; no replacement or timestamp rescaling. Exclusion not based on detector outcome.",
+  "excluded_runs": {
+    "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4": "Annotation temporal alignment cannot be established; 198 rows vs300RGB frames with visible late-row misalignment."
+  },
+  "annotation_sha256": "2ddbfdd8ed657d76037eb83953f7106db7dec26dc9d001681cc9142bd891e926",
+  "alignment_montage_sha256": "5d76ff1e92fecb433a99e379e6f78dab5e4ad7d35dda55c1e3802fead2c4c270",
+  "retained_predictions": 100,
+  "scored_runs": 9,
+  "scored_frames": 90,
+  "unscorable_runs": 1,
+  "unscorable_frames": 10,
+  "pair_evidence_scope": "Prespecified v2 localized image-space pair metric: both predicted actor boxes must match a gold proximity pair at IoU >=0.50. Not physical safety truth."
+}

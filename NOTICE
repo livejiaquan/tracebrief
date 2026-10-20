@@ -1,0 +1,11 @@
+TraceBrief
+Copyright 2026 TraceBrief contributors
+
+Original TraceBrief source code is licensed under Apache License 2.0.
+Third-party model weights, sample videos, extracted source frames, upstream
+license texts, dependencies, and other attributed materials are excluded
+from this original-code license grant and retain their respective licenses.
+See docs/THIRD_PARTY_NOTICES.md and data/samples/manifest.json.
+
+NVIDIA synthetic warehouse demonstration material is provided under
+OpenMDW-1.1. NVIDIA does not endorse this project.

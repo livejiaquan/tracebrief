@@ -1,0 +1,114 @@
+{
+ "Broader": {
+  "pair_evidence": {
+   "tp": 55,
+   "fp": 6,
+   "fn": 4,
+   "precision": 0.9016393442622951,
+   "recall": 0.9322033898305084
+  },
+  "detection": {
+   "person": {
+    "tp": 85,
+    "fp": 1,
+    "fn": 4,
+    "precision": 0.9883720930232558,
+    "recall": 0.9550561797752809
+   },
+   "forklift": {
+    "tp": 90,
+    "fp": 3,
+    "fn": 0,
+    "precision": 0.967741935483871,
+    "recall": 1.0
+   }
+  },
+  "n_runs": 9,
+  "n_frames": 90,
+  "median_wall_s": 67.737
+ },
+ "Stricter": {
+  "pair_evidence": {
+   "tp": 37,
+   "fp": 4,
+   "fn": 22,
+   "precision": 0.9024390243902439,
+   "recall": 0.6271186440677966
+  },
+  "detection": {
+   "person": {
+    "tp": 83,
+    "fp": 1,
+    "fn": 6,
+    "precision": 0.9880952380952381,
+    "recall": 0.9325842696629213
+   },
+   "forklift": {
+    "tp": 72,
+    "fp": 0,
+    "fn": 18,
+    "precision": 1.0,
+    "recall": 0.8
+   }
+  },
+  "n_runs": 9,
+  "n_frames": 90,
+  "median_wall_s": 36.487
+ },
+ "YOLOX-tiny v1 1fps": {
+  "pair_evidence": {
+   "tp": 51,
+   "fp": 1,
+   "fn": 8,
+   "precision": 0.9807692307692307,
+   "recall": 0.864406779661017
+  },
+  "detection": {
+   "person": {
+    "tp": 83,
+    "fp": 0,
+    "fn": 6,
+    "precision": 1.0,
+    "recall": 0.9325842696629213
+   },
+   "forklift": {
+    "tp": 90,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  "n_runs": 9,
+  "n_frames": 90,
+  "median_wall_s": 0.791
+ },
+ "YOLOX-tiny v2 1fps": {
+  "pair_evidence": {
+   "tp": 53,
+   "fp": 3,
+   "fn": 6,
+   "precision": 0.9464285714285714,
+   "recall": 0.8983050847457628
+  },
+  "detection": {
+   "person": {
+    "tp": 84,
+    "fp": 3,
+    "fn": 5,
+    "precision": 0.9655172413793104,
+    "recall": 0.9438202247191011
+   },
+   "forklift": {
+    "tp": 90,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0
+   }
+  },
+  "n_runs": 9,
+  "n_frames": 90,
+  "median_wall_s": 0.728
+ }
+}

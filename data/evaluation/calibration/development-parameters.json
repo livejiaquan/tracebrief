@@ -1,0 +1,26 @@
+{
+  "scope": "Original 3 development runs only; same 12 frames as first DINO probe; no new held-out access",
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "confidence": 0.6,
+  "text_threshold": 0.25,
+  "nms_iou": 0.45,
+  "threads": 4,
+  "frames": [
+    0,
+    90,
+    150,
+    240
+  ],
+  "sizes": [
+    {
+      "shortest_edge": 384,
+      "longest_edge": 640
+    },
+    {
+      "shortest_edge": 512,
+      "longest_edge": 853
+    }
+  ],
+  "production_sha256": "37a47edde364a9af3b23ed6eb31a8a97dfcfdf14a4f5f45155118a5cb56293df"
+}

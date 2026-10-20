@@ -1,0 +1,31 @@
+{
+  "n_runs": 9,
+  "method": "2000 percentile bootstrap replicates resampling entire runs; seed20261004. Same generator/scene family; does not estimate real-world generalization.",
+  "candidate_ci95": {
+    "precision": [
+      0.8490566037735849,
+      0.9814814814814815
+    ],
+    "recall": [
+      0.8304600484261502,
+      1.0
+    ]
+  },
+  "pair_evidence_ci95": {
+    "precision": [
+      0.8386978178368122,
+      0.9642857142857143
+    ],
+    "recall": [
+      0.8304600484261502,
+      1.0
+    ]
+  },
+  "median_video_wall_s": 67.737,
+  "min_video_wall_s": 65.087,
+  "max_video_wall_s": 95.581,
+  "runs_with_positive_sampled_frames": 9,
+  "runs_with_negative_sampled_frames": 9,
+  "fully_negative_runs": 0,
+  "candidate_groups": 10
+}

@@ -1,0 +1,67 @@
+{
+  "scope": "Explicit posthoc .65 calibration from saved512 outputs only; no inference",
+  "cutoff": 0.65,
+  "development": {
+    "person": {
+      "minimum_score": 0.8491,
+      "minimum_video": "c26853e0837dca932ef9_00f2bbb80d7badad0134_run_25_seed_750796930.ceiling_00.rgb.mp4",
+      "minimum_frame": 150,
+      "retained": 12,
+      "previously_iou_matched_at_60": 12,
+      "removed": []
+    },
+    "forklift": {
+      "minimum_score": 0.7977,
+      "minimum_video": "0851b7a332077a4fc0e2_01021d3989e38beb3395_run_10_seed_213384163.ceiling_00.rgb.mp4",
+      "minimum_frame": 0,
+      "retained": 12,
+      "previously_iou_matched_at_60": 12,
+      "removed": []
+    }
+  },
+  "routine": {
+    "R01": {
+      "forklift_scores": [
+        0.8715484142303467,
+        0.8836348652839661,
+        0.9009711146354675
+      ],
+      "retained_forklift_frames": 3,
+      "minimum_person_score": 0.8673495650291443,
+      "removed_person_frames": []
+    },
+    "R05": {
+      "forklift_scores": [
+        0.6162774562835693,
+        0.6033536195755005,
+        0.4988986849784851
+      ],
+      "retained_forklift_frames": 0,
+      "minimum_person_score": 0.8948112726211548,
+      "removed_person_frames": []
+    },
+    "R07": {
+      "forklift_scores": [
+        0.5659679174423218,
+        0.253120481967926,
+        0.6115069389343262,
+        0.5670587420463562
+      ],
+      "retained_forklift_frames": 0,
+      "minimum_person_score": 0.8718186020851135,
+      "removed_person_frames": []
+    },
+    "R09": {
+      "forklift_scores": [
+        0.48265013098716736,
+        0.5210490226745605,
+        0.5233628153800964
+      ],
+      "retained_forklift_frames": 0,
+      "minimum_person_score": 0.6400458812713623,
+      "removed_person_frames": [
+        299
+      ]
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+ "job_id": "3ee3d1fe1f11435f",
+ "description": "recorded demonstration, Fast search, 2026-10-12",
+ "analysis_seconds": 18.98,
+ "vision_timing": {
+  "wall_s": 0.969,
+  "sampled_frames": 10,
+  "model_load_s": 0.170201,
+  "wall_without_model_load_s": 0.798326,
+  "inference_s": 0.219144,
+  "inference_ms_per_frame": 21.914
+ },
+ "search_profile": {
+  "id": "fast",
+  "label": "Fast search",
+  "description": "Purpose-trained compact detector (YOLOX-tiny). About a second per clip on CPU and few false candidates, but it can miss some interactions; review the original footage."
+ },
+ "vision_model": {
+  "id": "YOLOX-tiny-warehouse-person-forklift",
+  "revision": "636cbf96275e7c65298cd647355bb94f6363c6c8c278c9997f6792946ef06ef2",
+  "backend": "YOLOX ONNXRuntime CPU",
+  "sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d"
+ },
+ "source_sha256": "802f70b61ac677b13168acf80e07469b7b94684ef724ef7b60b3da3111957344",
+ "generated_at": "2026-10-12T11:05:51.985245+00:00",
+ "events": 1,
+ "generation_audits": [
+  {
+   "file": "generation-event-001-audit.json",
+   "method": "local-qwen-draft",
+   "subprocess_seconds": 15.794,
+   "load_seconds": 4.192,
+   "generation_seconds": 11.251
+  }
+ ]
+}

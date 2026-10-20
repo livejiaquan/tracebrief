@@ -1,0 +1,12 @@
+{
+  "sample_fps": 1.0,
+  "confidence": 0.35,
+  "nms_iou": 0.45,
+  "gap_ratio": 0.3,
+  "min_samples": 2,
+  "merge_gap_s": 2.1,
+  "threads": 4,
+  "model_id": "IDEA-Research/grounding-dino-tiny",
+  "text_threshold": 0.25,
+  "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71"
+}

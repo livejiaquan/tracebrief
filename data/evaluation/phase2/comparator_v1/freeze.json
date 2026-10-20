@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-03T20:40:50Z",
+  "scope": "Post-result paired comparison requested after v2 primary results; same new10 inputs, exact original v1 source/config. Not a newly heldout evaluation or tuning grid.",
+  "settings": {
+    "sample_fps": 1.0,
+    "confidence": 0.35,
+    "nms_iou": 0.45,
+    "gap_ratio": 0.3,
+    "min_samples": 2,
+    "merge_gap_s": 2.1,
+    "threads": 4,
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "text_threshold": 0.25,
+    "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71"
+  },
+  "implementation_sha256": "37a47edde364a9af3b23ed6eb31a8a97dfcfdf14a4f5f45155118a5cb56293df",
+  "videos": [
+    "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+    "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+    "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+    "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+    "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+    "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+    "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+    "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+    "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+    "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4"
+  ],
+  "coverage_exclusions_sha256": "349ad875fa1a5c8ca05bb45103e666d0ffb9394b33ba3ff5744a7e71d7b9c002"
+}

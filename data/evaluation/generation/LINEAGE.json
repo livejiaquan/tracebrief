@@ -1,0 +1,25 @@
+{
+  "transformation": "Removed local frame URLs and image paths; preserved observations, predictions, drafts, timing, checks, and assessments. Frozen source text below is byte-identical; one summary key renamed for publication.",
+  "files": [
+    {
+      "file": "FREEZE.json",
+      "original_sha256": "7f20e3f6964004a10e59423dbbe8767bd45a6505af45cf4e183ab52536745b58",
+      "portable_sha256": "5e2f507e594aff6c75caf2e5c977e698b665822e478982c63991b0ea38565bd6"
+    },
+    {
+      "file": "results.json",
+      "original_sha256": "d68c33cc05a20013bc9dce0cad77718225db924a9e9f6fb0d082ea9ab574bbb6",
+      "portable_sha256": "dc1f62b7cee35653b74abe0101a3710bf566fe1842a747abb0b1bea2bc7197de"
+    },
+    {
+      "file": "independent-audit.json",
+      "original_sha256": "33a9e33d66613bb6a8115514e4b871ddb01ed18a2c3c36321263b501a2fad4ce",
+      "portable_sha256": "bbc2f014e1bee633a322d95fccccde58eb5a4b335ef15290c4fe2415183cd865"
+    },
+    {
+      "file": "post-audit-guard-recheck.json",
+      "original_sha256": "3e53e8eb2a118337c24c5f07997f9e8ca4bbf941a60b6394aa07f5d4fd9553eb",
+      "portable_sha256": "d9817cff2ac20b27b403284f2d07e94277fe4a7bfca4876cb9bccc853596f5a9"
+    }
+  ]
+}

@@ -1,0 +1,922 @@
+{
+ "recorded_utc": "2026-10-20T07:12:21Z",
+ "method": "Visual labels recorded from contact sheets of the exact model crops (thin outlines of the predicted boxes, item id only) before the model was run on any test crop. Gold status and model answers were not shown on the sheets.",
+ "fields": {
+  "forklift": "a forklift is visible anywhere in the crop (yes/no)",
+  "person": "a person is visible anywhere in the crop (yes/no)",
+  "boxed_forklift": "what the predicted forklift box contains",
+  "boxed_person": "what the predicted person box contains"
+ },
+ "freeze_sha256": "b2f0b67c35af50b068ad930ebbe5ca1e5fc9f7543cf9794b5ec0d1f7ae0478c5",
+ "labels": {
+  "t-0505436a-f150-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0505436a-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0505436a-f210-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f090-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f120-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f150-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f210-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f000-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "forklift partly outside the crop at top"
+  },
+  "t-052961d2-f030-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "forklift partly outside the crop at top"
+  },
+  "t-052961d2-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f090-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f120-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f150-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f210-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f000-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f030-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f090-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f120-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f030-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f210-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f270-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f270-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "second pair on this frame; person box covers only part of the person"
+  },
+  "t-05761a14-f000-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "dark scene"
+  },
+  "t-05761a14-f030-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f090-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f120-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f150-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f000-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f030-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f090-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f120-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f150-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f210-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f270-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f000-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f030-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f090-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f120-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f150-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f210-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0624a7b3-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0624a7b3-f210-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0624a7b3-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0624a7b3-f270-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f000-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f030-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f090-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f120-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f150-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f270-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f120-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f120-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "person crouched; person box covers upper body only"
+  },
+  "t-01db36b5-f000-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f030-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f060-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f090-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f120-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f150-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f180-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f210-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f240-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f270-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f300-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f330-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f360-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01db36b5-f390-a": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "parked counterbalance forklift, ground-level camera"
+  },
+  "t-01fb00c3-f000-a": {
+   "forklift": "no",
+   "person": "yes",
+   "boxed_forklift": "rack upright with yellow base guard",
+   "boxed_person": "person"
+  },
+  "t-01fb00c3-f390-a": {
+   "forklift": "no",
+   "person": "yes",
+   "boxed_forklift": "rack upright with yellow base guard",
+   "boxed_person": "person"
+  },
+  "t-0505436a-f150-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0505436a-f180-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0505436a-f210-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f090-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f120-c": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f150-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f180-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f210-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-050ce71e-f240-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f000-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "forklift partly outside the crop at top; box covers lower part"
+  },
+  "t-052961d2-f030-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f060-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f090-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f120-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f150-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f180-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f210-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-052961d2-f240-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f000-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f030-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f060-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f090-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-054b0c8f-f120-c": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f030-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f060-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f180-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05601faa-f210-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f000-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person",
+   "note": "dark scene"
+  },
+  "t-05761a14-f030-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f060-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f090-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f120-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05761a14-f150-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f060-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f090-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f120-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f150-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f180-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f210-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f240-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-059b6b08-f270-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f000-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f030-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f060-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f090-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f120-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f180-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-05f91749-f240-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0624a7b3-f180-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0624a7b3-f210-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0624a7b3-f240-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f000-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f030-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f060-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f090-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f120-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f150-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f240-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-0729fd10-f270-b": {
+   "forklift": "yes",
+   "person": "yes",
+   "boxed_forklift": "forklift",
+   "boxed_person": "person"
+  },
+  "t-017e8454-f060-a": {
+   "forklift": "no",
+   "person": "yes",
+   "boxed_forklift": "person and yellow rack base guard",
+   "boxed_person": "person"
+  }
+ }
+}

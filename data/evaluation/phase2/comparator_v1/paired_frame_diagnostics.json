@@ -1,0 +1,11 @@
+{
+  "scope": "Binary sampled-frame paired comparison, same90scorableframes. This does not separately identify confidence vs resolution effects.",
+  "counts": {
+    "gold_positive_broader_1_stricter_0": 17,
+    "gold_positive_broader_1_stricter_1": 38,
+    "gold_negative_broader_0_stricter_0": 26,
+    "gold_positive_broader_0_stricter_0": 4,
+    "gold_negative_broader_1_stricter_1": 3,
+    "gold_negative_broader_1_stricter_0": 2
+  }
+}

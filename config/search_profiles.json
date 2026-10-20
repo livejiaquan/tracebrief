@@ -1,0 +1,23 @@
+{
+  "default": "broader",
+  "profiles": [
+    {
+      "id": "broader",
+      "label": "Broader search",
+      "description": "Include more possible moments for review. Analysis takes longer and can flag irrelevant objects.",
+      "settings_file": "vision-broader.json"
+    },
+    {
+      "id": "fast",
+      "label": "Fast search",
+      "description": "Purpose-trained compact detector (YOLOX-tiny). About a second per clip on CPU and few false candidates, but it can miss some interactions; review the original footage.",
+      "settings_file": "vision-compact.json"
+    },
+    {
+      "id": "stricter",
+      "label": "Stricter search",
+      "description": "Filter out lower-confidence detections. This can miss visible interactions; review the original footage.",
+      "settings_file": "vision-stricter.json"
+    }
+  ]
+}

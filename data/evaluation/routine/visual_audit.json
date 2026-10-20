@@ -1,0 +1,125 @@
+{
+  "method": "Contact sheets from raw RGB at three preselected frames per video. No detector overlays; no inference output inspected. Frames do not establish whole-video safety truth.",
+  "runs": [
+    {
+      "run_id": "008caa590c5e5b7b4bca_run_8_seed_4731920",
+      "video": "008caa590c5e5b7b4bca_run_8_seed_4731920.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person and clearly visible parked forklift",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "00b5539fc7881b9a488c_run_3_seed_1344838085",
+      "video": "00b5539fc7881b9a488c_run_3_seed_1344838085.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person visible; no clearly visible forklift in the three inspected frames",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "00bfbc0bd24ce6285880_run_20_seed_168275105",
+      "video": "00bfbc0bd24ce6285880_run_20_seed_168275105.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person visible; no clearly visible forklift in the three inspected frames",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "0100c578fce9ef8984db_run_6_seed_1352668724",
+      "video": "0100c578fce9ef8984db_run_6_seed_1352668724.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person visible; no clearly visible forklift in the three inspected frames",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "0100ef99c44d329a4ead_run_1_seed_1842295844",
+      "video": "0100ef99c44d329a4ead_run_1_seed_1842295844.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person visible; no clearly visible forklift in the three inspected frames",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "01033139e6f4295559bb_run_10_seed_475738285",
+      "video": "01033139e6f4295559bb_run_10_seed_475738285.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person visible; no clearly visible forklift in the three inspected frames",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "011b9c17a89798dddcf7_run_6_seed_901782411",
+      "video": "011b9c17a89798dddcf7_run_6_seed_901782411.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person visible; no clearly visible forklift in the three inspected frames",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "01364cbb9962b6f2155a_run_21_seed_1716214950",
+      "video": "01364cbb9962b6f2155a_run_21_seed_1716214950.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person visible; no clearly visible forklift in the three inspected frames",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "0136b224f66e6de233e7_run_4_seed_1488295038",
+      "video": "0136b224f66e6de233e7_run_4_seed_1488295038.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person visible; no clearly visible forklift in the three inspected frames",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    },
+    {
+      "run_id": "0161a91adecb7da111e2_run_4_seed_1735895060",
+      "video": "0161a91adecb7da111e2_run_4_seed_1735895060.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        299
+      ],
+      "visual_findings": "Person and clearly visible parked forklift",
+      "reviewer": "visual inspection; not ground truth",
+      "physical_safety_label": null
+    }
+  ]
+}

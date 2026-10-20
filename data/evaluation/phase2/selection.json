@@ -1,0 +1,169 @@
+{
+  "utc": "2026-10-03T20:06:20Z",
+  "selection_rule": "First10lexicographicallysorted eligible clips ineachscene afterexcludingALL previouslyinspected/evaluatedruns. No phase2inference beforeparameterfreeze.",
+  "dataset_revision": "d5b88d3abcf659f304a107f4336b71b4e2159133",
+  "primary": [
+    {
+      "clip_key": "0505436ac678a28890be_run_4_seed_359878350.ceiling_00",
+      "run_id": "0505436ac678a28890be_run_4_seed_359878350",
+      "scenario": "nearmiss",
+      "size": 16275849,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+      "seed": 359878350.0
+    },
+    {
+      "clip_key": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00",
+      "run_id": "050ce71e92100771ae46_run_9_seed_1794414351",
+      "scenario": "nearmiss",
+      "size": 16714140,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+      "seed": 1794414351.0
+    },
+    {
+      "clip_key": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00",
+      "run_id": "052961d2a2e7eeaf2652_run_5_seed_1856081553",
+      "scenario": "nearmiss",
+      "size": 16638349,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+      "seed": 1856081553.0
+    },
+    {
+      "clip_key": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00",
+      "run_id": "054b0c8fbf9231bb5e64_run_5_seed_1298670252",
+      "scenario": "nearmiss",
+      "size": 16811108,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+      "seed": 1298670252.0
+    },
+    {
+      "clip_key": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00",
+      "run_id": "05601faa87d2b873def5_run_5_seed_2048712839",
+      "scenario": "nearmiss",
+      "size": 16576844,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+      "seed": 2048712839.0
+    },
+    {
+      "clip_key": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00",
+      "run_id": "05761a14cf211fdb7562_run_21_seed_742094177",
+      "scenario": "nearmiss",
+      "size": 17293902,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+      "seed": 742094177.0
+    },
+    {
+      "clip_key": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00",
+      "run_id": "059b6b0837427d36a85f_run_6_seed_811801615",
+      "scenario": "nearmiss",
+      "size": 16161244,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00001.tar",
+      "seed": 811801615.0
+    },
+    {
+      "clip_key": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00",
+      "run_id": "05f91749a05e847d3508_run_19_seed_1136414482",
+      "scenario": "nearmiss",
+      "size": 16056475,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00001.tar",
+      "seed": 1136414482.0
+    },
+    {
+      "clip_key": "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00",
+      "run_id": "0624a7b397510500ee00_run_53_seed_418875157",
+      "scenario": "nearmiss",
+      "size": 16645839,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00001.tar",
+      "seed": 418875157.0
+    },
+    {
+      "clip_key": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00",
+      "run_id": "0729fd108949f741ded8_run_26_seed_477965812",
+      "scenario": "nearmiss",
+      "size": 16496061,
+      "shard_path_in_repo": "rgb/forklift_human_nearmiss/nearmiss-rgb-00001.tar",
+      "seed": 477965812.0
+    }
+  ],
+  "routine": [
+    {
+      "clip_key": "01644a25617e0dd8ebb3_run_24_seed_1764206232.cam_00",
+      "run_id": "01644a25617e0dd8ebb3_run_24_seed_1764206232",
+      "scenario": "box_pickup",
+      "size": 20669226,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 1764206232.0
+    },
+    {
+      "clip_key": "0179f236dd63ebbdf964_run_15_seed_2112804163.cam_00",
+      "run_id": "0179f236dd63ebbdf964_run_15_seed_2112804163",
+      "scenario": "box_pickup",
+      "size": 23249125,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 2112804163.0
+    },
+    {
+      "clip_key": "017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00",
+      "run_id": "017e84541eeadcaf7ba1_run_7_seed_1502988365",
+      "scenario": "box_pickup",
+      "size": 23228622,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 1502988365.0
+    },
+    {
+      "clip_key": "018c5222a72e2bff8e86_run_2_seed_31436824.cam_00",
+      "run_id": "018c5222a72e2bff8e86_run_2_seed_31436824",
+      "scenario": "box_pickup",
+      "size": 22316673,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 31436824.0
+    },
+    {
+      "clip_key": "018cd2d26ab89c5ad9b2_run_32_seed_992174531.cam_00",
+      "run_id": "018cd2d26ab89c5ad9b2_run_32_seed_992174531",
+      "scenario": "box_pickup",
+      "size": 21421672,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 992174531.0
+    },
+    {
+      "clip_key": "018ce6edabcf479d76d2_run_4_seed_224042306.cam_00",
+      "run_id": "018ce6edabcf479d76d2_run_4_seed_224042306",
+      "scenario": "box_pickup",
+      "size": 22447968,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 224042306.0
+    },
+    {
+      "clip_key": "01a8b535022f10dbf3b8_run_35_seed_133492914.cam_00",
+      "run_id": "01a8b535022f10dbf3b8_run_35_seed_133492914",
+      "scenario": "box_pickup",
+      "size": 21815001,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 133492914.0
+    },
+    {
+      "clip_key": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00",
+      "run_id": "01db36b56c4daa26452e_run_10_seed_2010980325",
+      "scenario": "box_pickup",
+      "size": 22812541,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 2010980325.0
+    },
+    {
+      "clip_key": "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00",
+      "run_id": "01fb00c3126ef31816d1_run_2_seed_529070768",
+      "scenario": "box_pickup",
+      "size": 22176235,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 529070768.0
+    },
+    {
+      "clip_key": "02204d8ac901f56538dc_run_2_seed_250957540.cam_00",
+      "run_id": "02204d8ac901f56538dc_run_2_seed_250957540",
+      "scenario": "box_pickup",
+      "size": 20740022,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+      "seed": 250957540.0
+    }
+  ]
+}

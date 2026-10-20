@@ -1,0 +1,64 @@
+{
+  "scope": "All candidates in first six frozen heldout run IDs; one no-candidate run retained",
+  "runs": 6,
+  "candidate_drafts": 5,
+  "automatic_checks_passed": 5,
+  "review_factual_addition_failures": 1,
+  "known_ambiguous_wording_drafts": 3,
+  "supplied_observations_covered": 12,
+  "supplied_observations_total": 12,
+  "citation_sets_match_all_supplied_observations": 5,
+  "baseline_summary_words_total": 152,
+  "model_summary_words_total": 161,
+  "generation_total_seconds_median": 37.581,
+  "generation_total_seconds_min": 24.948,
+  "generation_total_seconds_max": 61.42,
+  "source_sha256": "d68c33cc05a20013bc9dce0cad77718225db924a9e9f6fb0d082ea9ab574bbb6",
+  "rows": [
+    {
+      "run": "001e53453441935632ae_run_1_seed_1288693302.ceiling_00.rgb.mp4",
+      "observations": 3,
+      "baseline_summary_words": 43,
+      "model_summary_words": 35,
+      "seconds": 25.842,
+      "method": "local-qwen-draft",
+      "valid_ids": true
+    },
+    {
+      "run": "005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.rgb.mp4",
+      "observations": 2,
+      "baseline_summary_words": 22,
+      "model_summary_words": 27,
+      "seconds": 24.948,
+      "method": "local-qwen-draft",
+      "valid_ids": true
+    },
+    {
+      "run": "00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.rgb.mp4",
+      "observations": 2,
+      "baseline_summary_words": 22,
+      "model_summary_words": 27,
+      "seconds": 37.581,
+      "method": "local-qwen-draft",
+      "valid_ids": true
+    },
+    {
+      "run": "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+      "observations": 2,
+      "baseline_summary_words": 22,
+      "model_summary_words": 38,
+      "seconds": 43.499,
+      "method": "local-qwen-draft",
+      "valid_ids": true
+    },
+    {
+      "run": "018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.rgb.mp4",
+      "observations": 3,
+      "baseline_summary_words": 43,
+      "model_summary_words": 34,
+      "seconds": 61.42,
+      "method": "local-qwen-draft",
+      "valid_ids": true
+    }
+  ]
+}

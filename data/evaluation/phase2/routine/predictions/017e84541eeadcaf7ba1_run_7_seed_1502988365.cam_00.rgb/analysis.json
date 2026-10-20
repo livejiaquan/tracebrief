@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0",
+  "video": {
+    "path": "017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb.mp4",
+    "sha256": "06e6ab725581943e3f9b88f9d1bcaada208bcd0184c5e2d88ada41c4b8d153bc",
+    "duration_s": 13.966666666666667,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080
+  },
+  "model": {
+    "id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "backend": "Grounding DINO CPU"
+  },
+  "settings": {
+    "sample_fps": 1.0,
+    "confidence": 0.65,
+    "text_threshold": 0.25,
+    "nms_iou": 0.45,
+    "gap_ratio": 0.3,
+    "min_samples": 2,
+    "merge_gap_s": 2.1,
+    "threads": 4,
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "processor_size": {
+      "shortest_edge": 512,
+      "longest_edge": 853
+    }
+  },
+  "observations": [
+    {
+      "frame_index": 0,
+      "time_s": 0.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.9161,
+          "bbox_xyxy": [
+            884.29,
+            289.93,
+            1046.26,
+            756.82
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 30,
+      "time_s": 1.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.9052,
+          "bbox_xyxy": [
+            999.3,
+            295.27,
+            1156.81,
+            785.69
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 60,
+      "time_s": 2.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.9066,
+          "bbox_xyxy": [
+            1209.74,
+            287.92,
+            1378.95,
+            813.45
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 90,
+      "time_s": 3.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.902,
+          "bbox_xyxy": [
+            1409.83,
+            290.54,
+            1599.43,
+            818.12
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 120,
+      "time_s": 4.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.9171,
+          "bbox_xyxy": [
+            1538.83,
+            290.52,
+            1716.46,
+            772.35
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 150,
+      "time_s": 5.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.9126,
+          "bbox_xyxy": [
+            1604.78,
+            296.49,
+            1764.78,
+            730.3
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 180,
+      "time_s": 6.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.9076,
+          "bbox_xyxy": [
+            1615.53,
+            300.17,
+            1761.88,
+            699.72
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 210,
+      "time_s": 7.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.9146,
+          "bbox_xyxy": [
+            1507.17,
+            302.04,
+            1649.19,
+            663.4
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 240,
+      "time_s": 8.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.8952,
+          "bbox_xyxy": [
+            1406.81,
+            300.23,
+            1503.47,
+            642.69
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 270,
+      "time_s": 9.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.7651,
+          "bbox_xyxy": [
+            1354.85,
+            306.1,
+            1467.43,
+            647.28
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 300,
+      "time_s": 10.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.7921,
+          "bbox_xyxy": [
+            1345.06,
+            331.07,
+            1461.74,
+            607.28
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 330,
+      "time_s": 11.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.8276,
+          "bbox_xyxy": [
+            1331.02,
+            438.06,
+            1475.6,
+            617.58
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 360,
+      "time_s": 12.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.8257,
+          "bbox_xyxy": [
+            1331.41,
+            452.28,
+            1479.14,
+            612.14
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 390,
+      "time_s": 13.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.8134,
+          "bbox_xyxy": [
+            1335.78,
+            318.55,
+            1462.16,
+            577.28
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    }
+  ],
+  "events": [],
+  "timing": {
+    "wall_s": 41.002,
+    "sampled_frames": 14
+  },
+  "warnings": [
+    "Synthetic-domain validation only; real warehouse generalization unverified.",
+    "No detected candidates does not establish safety.",
+    "Sampling may miss short events."
+  ],
+  "bundle_note": "Original frozen phase2 output; evidence JPEGs omitted. Reproduce from source video."
+}

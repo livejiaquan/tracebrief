@@ -1,0 +1,15 @@
+{
+  "backend": "compact-onnx",
+  "model_path": "weights/yolox-tiny-warehouse.onnx",
+  "model_sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d",
+  "model_id": "YOLOX-tiny-warehouse-person-forklift",
+  "model_revision": "636cbf96275e7c65298cd647355bb94f6363c6c8c278c9997f6792946ef06ef2",
+  "input_size": 416,
+  "sample_fps": 1.0,
+  "confidence": 0.4,
+  "nms_iou": 0.45,
+  "gap_ratio": 0.3,
+  "min_samples": 2,
+  "merge_gap_s": 2.1,
+  "threads": 4
+}

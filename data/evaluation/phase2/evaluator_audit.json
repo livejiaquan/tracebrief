@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-03T20:36:38Z",
+  "evaluator_sha256": "2df11b8410926f69996f9140968274c1317512e7ea9ce77ec7015fa93a31676c",
+  "change": "Explicit coverage exclusion option only; historical baseline scoring behavior unchanged. Entire temporally unaligned run recorded as unscorable.",
+  "previous_evaluator_sha256": "17f4eec889b155e3f48ebfa0c9411b20f5112dbf1d1cdd8c67a84ff3cc39deab",
+  "scope_metadata_update": "V2 pair metric was prespecified; explicit coverage record overrides legacy baseline supplementary wording without changing counts."
+}

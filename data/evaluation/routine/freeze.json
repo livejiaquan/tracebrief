@@ -1,0 +1,78 @@
+{
+  "utc": "2026-10-03T19:35:27Z",
+  "rule": "First10sorted independent box_pickup cam_00 runs from metadata; first clip already visually inspected, none inferred. Separate supplementary cohort; no tuning. Scene labels do not establish absence of image-space proximity.",
+  "clips": [
+    {
+      "clip_key": "008caa590c5e5b7b4bca_run_8_seed_4731920.cam_00",
+      "run_id": "008caa590c5e5b7b4bca_run_8_seed_4731920",
+      "size": 22253530,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "00b5539fc7881b9a488c_run_3_seed_1344838085.cam_00",
+      "run_id": "00b5539fc7881b9a488c_run_3_seed_1344838085",
+      "size": 22016872,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "00bfbc0bd24ce6285880_run_20_seed_168275105.cam_00",
+      "run_id": "00bfbc0bd24ce6285880_run_20_seed_168275105",
+      "size": 23131854,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "0100c578fce9ef8984db_run_6_seed_1352668724.cam_00",
+      "run_id": "0100c578fce9ef8984db_run_6_seed_1352668724",
+      "size": 21897516,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "0100ef99c44d329a4ead_run_1_seed_1842295844.cam_00",
+      "run_id": "0100ef99c44d329a4ead_run_1_seed_1842295844",
+      "size": 22621202,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "01033139e6f4295559bb_run_10_seed_475738285.cam_00",
+      "run_id": "01033139e6f4295559bb_run_10_seed_475738285",
+      "size": 21327693,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "011b9c17a89798dddcf7_run_6_seed_901782411.cam_00",
+      "run_id": "011b9c17a89798dddcf7_run_6_seed_901782411",
+      "size": 22246182,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "01364cbb9962b6f2155a_run_21_seed_1716214950.cam_00",
+      "run_id": "01364cbb9962b6f2155a_run_21_seed_1716214950",
+      "size": 23700385,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "0136b224f66e6de233e7_run_4_seed_1488295038.cam_00",
+      "run_id": "0136b224f66e6de233e7_run_4_seed_1488295038",
+      "size": 21625041,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    },
+    {
+      "clip_key": "0161a91adecb7da111e2_run_4_seed_1735895060.cam_00",
+      "run_id": "0161a91adecb7da111e2_run_4_seed_1735895060",
+      "size": 22680360,
+      "shard_path_in_repo": "rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar"
+    }
+  ],
+  "frozen_primary_settings": {
+    "sample_fps": 1.0,
+    "confidence": 0.35,
+    "nms_iou": 0.45,
+    "gap_ratio": 0.3,
+    "min_samples": 2,
+    "merge_gap_s": 2.1,
+    "threads": 4,
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "text_threshold": 0.25,
+    "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71"
+  }
+}

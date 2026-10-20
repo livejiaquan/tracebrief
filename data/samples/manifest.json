@@ -1,0 +1,41 @@
+{
+  "dataset_revision": "d5b88d3abcf659f304a107f4336b71b4e2159133",
+  "samples": [
+    {
+      "id": "warehouse-1",
+      "name": "Warehouse interaction 01",
+      "description": "Synthetic warehouse footage. Development example; review candidate interactions, not a verified safety incident.",
+      "path": "warehouse-1.mp4",
+      "duration": 10.0,
+      "source_label": "NVIDIA synthetic warehouse \u00b7 development example",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes",
+      "source_file": "0851b7a332077a4fc0e2_01021d3989e38beb3395_run_10_seed_213384163.ceiling_00.rgb.mp4",
+      "license": "OpenMDW-1.1",
+      "sha256": "802f70b61ac677b13168acf80e07469b7b94684ef724ef7b60b3da3111957344"
+    },
+    {
+      "id": "warehouse-2",
+      "name": "Warehouse interaction 02",
+      "description": "Synthetic warehouse footage. Development example; review candidate interactions, not a verified safety incident.",
+      "path": "warehouse-2.mp4",
+      "duration": 10.0,
+      "source_label": "NVIDIA synthetic warehouse \u00b7 development example",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes",
+      "source_file": "40722caa0f2600ab6bef_0137e00c677a4118e887_run_2_seed_1276653305.ceiling_00.rgb.mp4",
+      "license": "OpenMDW-1.1",
+      "sha256": "5526031c48b897fda889d1e8a533a7dbbeaeeec1b5fe4fc5c7faa5806cd60c98"
+    },
+    {
+      "id": "warehouse-3",
+      "name": "Warehouse interaction 03",
+      "description": "Synthetic warehouse footage. Development example; review candidate interactions, not a verified safety incident.",
+      "path": "warehouse-3.mp4",
+      "duration": 10.0,
+      "source_label": "NVIDIA synthetic warehouse \u00b7 development example",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes",
+      "source_file": "c26853e0837dca932ef9_00f2bbb80d7badad0134_run_25_seed_750796930.ceiling_00.rgb.mp4",
+      "license": "OpenMDW-1.1",
+      "sha256": "14d7b0dd8ab53529151ca49cf2c9d2e741900f077384148a017eacaa8a504f2a"
+    }
+  ]
+}

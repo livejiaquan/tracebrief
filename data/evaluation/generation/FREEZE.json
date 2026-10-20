@@ -1,0 +1,18 @@
+{
+  "selection": "Every candidate from first six runs in corrected detector FREEZE.json order; zero-candidate runs retained.",
+  "runs": [
+    "001e53453441935632ae_run_1_seed_1288693302.ceiling_00.rgb.mp4",
+    "005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.rgb.mp4",
+    "00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.rgb.mp4",
+    "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+    "016c1396912bfc432997_run_3_seed_1053328212.ceiling_00.rgb.mp4",
+    "018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.rgb.mp4"
+  ],
+  "frozen_at": "2026-10-03T19:27:22.694521+00:00",
+  "code_sha256": {
+    "tracebrief/scripts/generate_local.py": "f11473a5cc54a3ffeb1d6f9f8915315dc1a52260ec0a2ec7b3adfb358b8d95c0",
+    "tracebrief/src/tracebrief/generation.py": "350bbbf28c874a4a060c8dff79ec5cf4d0ca23946be7eb5a476f90d31e7f4ba4",
+    "tracebrief/src/tracebrief/server.py": "b80f4eb44c317a355e30d693d8debee68265053a306590aed6542e06068839f6"
+  },
+  "tuning": "Development run only; prompt versions1-3 retained. No heldout generation inspected before freeze."
+}

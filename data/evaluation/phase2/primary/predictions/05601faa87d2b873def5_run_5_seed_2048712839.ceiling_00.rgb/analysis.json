@@ -1,0 +1,512 @@
+{
+  "schema_version": "1.0",
+  "video": {
+    "path": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+    "sha256": "0d2dfc8d5be33e57105d244e00e6cbe79640ee24ff6de922bec2fe92b84d203d",
+    "duration_s": 10.0,
+    "fps": 30.0,
+    "width": 1920,
+    "height": 1080
+  },
+  "model": {
+    "id": "IDEA-Research/grounding-dino-tiny",
+    "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "backend": "Grounding DINO CPU"
+  },
+  "settings": {
+    "sample_fps": 1.0,
+    "confidence": 0.65,
+    "text_threshold": 0.25,
+    "nms_iou": 0.45,
+    "gap_ratio": 0.3,
+    "min_samples": 2,
+    "merge_gap_s": 2.1,
+    "threads": 4,
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "processor_size": {
+      "shortest_edge": 512,
+      "longest_edge": 853
+    }
+  },
+  "observations": [
+    {
+      "frame_index": 0,
+      "time_s": 0.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.914,
+          "bbox_xyxy": [
+            879.95,
+            247.7,
+            1023.06,
+            565.21
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "confidence": 0.8654,
+          "bbox_xyxy": [
+            201.22,
+            13.06,
+            731.91,
+            573.15
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 30,
+      "time_s": 1.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.9035,
+          "bbox_xyxy": [
+            884.18,
+            281.27,
+            1035.05,
+            601.43
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "confidence": 0.8838,
+          "bbox_xyxy": [
+            318.73,
+            3.89,
+            849.39,
+            579.49
+          ]
+        }
+      ],
+      "proximity_pairs": [
+        {
+          "person_bbox": [
+            884.18,
+            281.27,
+            1035.05,
+            601.43
+          ],
+          "forklift_bbox": [
+            318.73,
+            3.89,
+            849.39,
+            579.49
+          ],
+          "gap_px": 34.79,
+          "gap_person_height_ratio": 0.1087,
+          "confidence": 0.8838
+        }
+      ]
+    },
+    {
+      "frame_index": 60,
+      "time_s": 2.0,
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.8932,
+          "bbox_xyxy": [
+            444.46,
+            19.55,
+            970.24,
+            585.15
+          ]
+        },
+        {
+          "class_name": "person",
+          "confidence": 0.8856,
+          "bbox_xyxy": [
+            851.35,
+            170.67,
+            952.14,
+            346.79
+          ]
+        }
+      ],
+      "proximity_pairs": [
+        {
+          "person_bbox": [
+            851.35,
+            170.67,
+            952.14,
+            346.79
+          ],
+          "forklift_bbox": [
+            444.46,
+            19.55,
+            970.24,
+            585.15
+          ],
+          "gap_px": 0.0,
+          "gap_person_height_ratio": 0.0,
+          "confidence": 0.8856
+        }
+      ]
+    },
+    {
+      "frame_index": 90,
+      "time_s": 3.0,
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.8491,
+          "bbox_xyxy": [
+            562.47,
+            22.3,
+            1094.88,
+            594.87
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 120,
+      "time_s": 4.0,
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.8536,
+          "bbox_xyxy": [
+            621.16,
+            31.79,
+            1133.3,
+            671.73
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 150,
+      "time_s": 5.0,
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.8459,
+          "bbox_xyxy": [
+            837.23,
+            35.52,
+            1146.32,
+            721.48
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 180,
+      "time_s": 6.0,
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.8776,
+          "bbox_xyxy": [
+            797.23,
+            10.77,
+            1331.1,
+            591.32
+          ]
+        },
+        {
+          "class_name": "person",
+          "confidence": 0.8721,
+          "bbox_xyxy": [
+            854.28,
+            125.13,
+            951.82,
+            343.71
+          ]
+        }
+      ],
+      "proximity_pairs": [
+        {
+          "person_bbox": [
+            854.28,
+            125.13,
+            951.82,
+            343.71
+          ],
+          "forklift_bbox": [
+            797.23,
+            10.77,
+            1331.1,
+            591.32
+          ],
+          "gap_px": 0.0,
+          "gap_person_height_ratio": 0.0,
+          "confidence": 0.8721
+        }
+      ]
+    },
+    {
+      "frame_index": 210,
+      "time_s": 7.0,
+      "detections": [
+        {
+          "class_name": "person",
+          "confidence": 0.912,
+          "bbox_xyxy": [
+            795.0,
+            91.84,
+            891.09,
+            336.5
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "confidence": 0.8516,
+          "bbox_xyxy": [
+            825.27,
+            23.79,
+            1106.56,
+            618.48
+          ]
+        }
+      ],
+      "proximity_pairs": [
+        {
+          "person_bbox": [
+            795.0,
+            91.84,
+            891.09,
+            336.5
+          ],
+          "forklift_bbox": [
+            825.27,
+            23.79,
+            1106.56,
+            618.48
+          ],
+          "gap_px": 0.0,
+          "gap_person_height_ratio": 0.0,
+          "confidence": 0.8516
+        }
+      ]
+    },
+    {
+      "frame_index": 240,
+      "time_s": 8.0,
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.8518,
+          "bbox_xyxy": [
+            839.27,
+            25.84,
+            1082.39,
+            624.88
+          ]
+        }
+      ],
+      "proximity_pairs": []
+    },
+    {
+      "frame_index": 270,
+      "time_s": 9.0,
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.8528,
+          "bbox_xyxy": [
+            840.04,
+            26.05,
+            1081.5,
+            624.09
+          ]
+        },
+        {
+          "class_name": "person",
+          "confidence": 0.6773,
+          "bbox_xyxy": [
+            907.58,
+            141.23,
+            967.3,
+            268.44
+          ]
+        }
+      ],
+      "proximity_pairs": [
+        {
+          "person_bbox": [
+            907.58,
+            141.23,
+            967.3,
+            268.44
+          ],
+          "forklift_bbox": [
+            840.04,
+            26.05,
+            1081.5,
+            624.09
+          ],
+          "gap_px": 0.0,
+          "gap_person_height_ratio": 0.0,
+          "confidence": 0.6773
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "candidate-001",
+      "kind": "person_forklift_proximity_candidate",
+      "start_s": 0,
+      "end_s": 3.0,
+      "peak_s": 2.0,
+      "evidence": [
+        {
+          "frame_index": 30,
+          "time_s": 1.0,
+          "pairs": [
+            {
+              "person_bbox": [
+                884.18,
+                281.27,
+                1035.05,
+                601.43
+              ],
+              "forklift_bbox": [
+                318.73,
+                3.89,
+                849.39,
+                579.49
+              ],
+              "gap_px": 34.79,
+              "gap_person_height_ratio": 0.1087,
+              "confidence": 0.8838
+            }
+          ],
+          "fact": "Predicted person and forklift boxes are close in image space."
+        },
+        {
+          "frame_index": 60,
+          "time_s": 2.0,
+          "pairs": [
+            {
+              "person_bbox": [
+                851.35,
+                170.67,
+                952.14,
+                346.79
+              ],
+              "forklift_bbox": [
+                444.46,
+                19.55,
+                970.24,
+                585.15
+              ],
+              "gap_px": 0.0,
+              "gap_person_height_ratio": 0.0,
+              "confidence": 0.8856
+            }
+          ],
+          "fact": "Predicted person and forklift boxes are close in image space."
+        }
+      ],
+      "limitations": [
+        "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+        "Predicted object labels and boxes require visual verification."
+      ]
+    },
+    {
+      "id": "candidate-002",
+      "kind": "person_forklift_proximity_candidate",
+      "start_s": 5.0,
+      "end_s": 10.0,
+      "peak_s": 6.0,
+      "evidence": [
+        {
+          "frame_index": 180,
+          "time_s": 6.0,
+          "pairs": [
+            {
+              "person_bbox": [
+                854.28,
+                125.13,
+                951.82,
+                343.71
+              ],
+              "forklift_bbox": [
+                797.23,
+                10.77,
+                1331.1,
+                591.32
+              ],
+              "gap_px": 0.0,
+              "gap_person_height_ratio": 0.0,
+              "confidence": 0.8721
+            }
+          ],
+          "fact": "Predicted person and forklift boxes are close in image space."
+        },
+        {
+          "frame_index": 210,
+          "time_s": 7.0,
+          "pairs": [
+            {
+              "person_bbox": [
+                795.0,
+                91.84,
+                891.09,
+                336.5
+              ],
+              "forklift_bbox": [
+                825.27,
+                23.79,
+                1106.56,
+                618.48
+              ],
+              "gap_px": 0.0,
+              "gap_person_height_ratio": 0.0,
+              "confidence": 0.8516
+            }
+          ],
+          "fact": "Predicted person and forklift boxes are close in image space."
+        },
+        {
+          "frame_index": 270,
+          "time_s": 9.0,
+          "pairs": [
+            {
+              "person_bbox": [
+                907.58,
+                141.23,
+                967.3,
+                268.44
+              ],
+              "forklift_bbox": [
+                840.04,
+                26.05,
+                1081.5,
+                624.09
+              ],
+              "gap_px": 0.0,
+              "gap_person_height_ratio": 0.0,
+              "confidence": 0.6773
+            }
+          ],
+          "fact": "Predicted person and forklift boxes are close in image space."
+        }
+      ],
+      "limitations": [
+        "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+        "Predicted object labels and boxes require visual verification."
+      ]
+    }
+  ],
+  "timing": {
+    "wall_s": 36.487,
+    "sampled_frames": 10
+  },
+  "warnings": [
+    "Synthetic-domain validation only; real warehouse generalization unverified.",
+    "No detected candidates does not establish safety.",
+    "Sampling may miss short events."
+  ],
+  "bundle_note": "Original frozen phase2 output; evidence JPEGs omitted. Reproduce from source video."
+}

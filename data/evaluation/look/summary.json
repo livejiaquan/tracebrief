@@ -1,0 +1,474 @@
+{
+ "frozen_utc": "2026-10-20T07:10:20Z",
+ "labels_recorded_utc": "2026-10-20T07:12:21Z",
+ "labels_sha256": "8771363878b2f3e9e6b93a6a7e1f2d39100a21f91a62f556506435849cfb2124",
+ "freeze_sha256": "b2f0b67c35af50b068ad930ebbe5ca1e5fc9f7543cf9794b5ec0d1f7ae0478c5",
+ "test_run_utc": {
+  "start": "2026-10-20T07:12:31Z",
+  "end": "2026-10-20T07:33:00Z"
+ },
+ "dataset": {
+  "predicted_pairs": 198,
+  "predicted_pairs_by_profile_cohort": {
+   "broader/primary": 70,
+   "fast/primary": 61,
+   "fast/routine": 1,
+   "stricter/primary": 50,
+   "stricter/routine": 16
+  },
+  "pair_gold_by_profile": {
+   "broader/fp": 6,
+   "broader/tp": 55,
+   "broader/unscorable": 9,
+   "fast/fp": 1,
+   "fast/routine": 1,
+   "fast/tp": 51,
+   "fast/unscorable": 9,
+   "stricter/fp": 4,
+   "stricter/routine": 16,
+   "stricter/tp": 37,
+   "stricter/unscorable": 9
+  },
+  "unique_crops": 148,
+  "unique_crops_by_cohort": {
+   "primary": 131,
+   "routine": 17
+  },
+  "unique_crops_by_gold": {
+   "fp": 7,
+   "tp": 106,
+   "unscorable": 18,
+   "routine": 17
+  },
+  "unique_crops_by_profile_set": {
+   "broader": 22,
+   "broader+fast+stricter": 2,
+   "broader+stricter": 46,
+   "fast": 60,
+   "stricter": 18
+  },
+  "visual_labels": {
+   "forklift_no/person_yes": 3,
+   "forklift_yes/person_yes": 145
+  },
+  "dedup_rule": "same run and frame, both boxes IoU >= 0.9; the crop uses the first profile's boxes in the order Broader, Stricter, Fast"
+ },
+ "parse_errors": 1,
+ "a_b_per_profile_pairs": {
+  "broader": {
+   "pairs": 70,
+   "gold_tp_confirmed": {
+    "numerator": 53,
+    "denominator": 55,
+    "rate": 0.9636
+   },
+   "gold_tp_flagged": {
+    "numerator": 2,
+    "denominator": 55,
+    "rate": 0.0364
+   },
+   "gold_tp_parse_errors": 0,
+   "gold_fp_flagged": {
+    "numerator": 1,
+    "denominator": 6,
+    "rate": 0.1667
+   },
+   "routine_pairs": 0,
+   "routine_nonforklift_box_flagged": {
+    "numerator": 0,
+    "denominator": 0,
+    "rate": null
+   }
+  },
+  "stricter": {
+   "pairs": 66,
+   "gold_tp_confirmed": {
+    "numerator": 37,
+    "denominator": 37,
+    "rate": 1.0
+   },
+   "gold_tp_flagged": {
+    "numerator": 0,
+    "denominator": 37,
+    "rate": 0.0
+   },
+   "gold_tp_parse_errors": 0,
+   "gold_fp_flagged": {
+    "numerator": 1,
+    "denominator": 4,
+    "rate": 0.25
+   },
+   "routine_pairs": 16,
+   "routine_nonforklift_box_flagged": {
+    "numerator": 2,
+    "denominator": 2,
+    "rate": 1.0
+   }
+  },
+  "fast": {
+   "pairs": 62,
+   "gold_tp_confirmed": {
+    "numerator": 51,
+    "denominator": 51,
+    "rate": 1.0
+   },
+   "gold_tp_flagged": {
+    "numerator": 0,
+    "denominator": 51,
+    "rate": 0.0
+   },
+   "gold_tp_parse_errors": 0,
+   "gold_fp_flagged": {
+    "numerator": 0,
+    "denominator": 1,
+    "rate": 0.0
+   },
+   "routine_pairs": 1,
+   "routine_nonforklift_box_flagged": {
+    "numerator": 0,
+    "denominator": 1,
+    "rate": 0.0
+   }
+  }
+ },
+ "a_b_unique_crops": {
+  "gold_tp_confirmed": {
+   "numerator": 104,
+   "denominator": 106,
+   "rate": 0.9811
+  },
+  "gold_tp_flagged": {
+   "numerator": 2,
+   "denominator": 106,
+   "rate": 0.0189
+  },
+  "gold_fp_flagged": {
+   "numerator": 1,
+   "denominator": 7,
+   "rate": 0.1429
+  },
+  "routine_nonforklift_box_flagged": {
+   "numerator": 2,
+   "denominator": 3,
+   "rate": 0.6667
+  },
+  "routine_real_forklift_box_confirmed": {
+   "numerator": 14,
+   "denominator": 14,
+   "rate": 1.0
+  },
+  "unscorable_run_confirmed": {
+   "numerator": 18,
+   "denominator": 18,
+   "rate": 1.0
+  },
+  "all_flagged": {
+   "numerator": 5,
+   "denominator": 148,
+   "rate": 0.0338
+  }
+ },
+ "c_agreement_with_visual_labels": {
+  "forklift": {
+   "agreement_parsed": {
+    "numerator": 147,
+    "denominator": 147,
+    "rate": 1.0
+   },
+   "confusion_label_vs_model": {
+    "label_no/model_no": 2,
+    "label_no/model_parse_error": 1,
+    "label_yes/model_yes": 145
+   }
+  },
+  "person": {
+   "agreement_parsed": {
+    "numerator": 144,
+    "denominator": 147,
+    "rate": 0.9796
+   },
+   "confusion_label_vs_model": {
+    "label_yes/model_no": 3,
+    "label_yes/model_parse_error": 1,
+    "label_yes/model_yes": 144
+   }
+  },
+  "both_fields_exact_all_items": {
+   "numerator": 144,
+   "denominator": 148,
+   "rate": 0.973
+  }
+ },
+ "d_hypothetical_if_reviewer_accepted_every_suggestion": {
+  "note": "Hypothetical: every pair with forklift=no or person=no removed before pair scoring on the 9 scorable primary runs. The application never removes candidates.",
+  "broader": {
+   "as_frozen": {
+    "tp": 55,
+    "fp": 6,
+    "fn": 4,
+    "precision": 0.9016,
+    "recall": 0.9322
+   },
+   "if_reviewer_accepted_every_suggestion": {
+    "tp": 53,
+    "fp": 5,
+    "fn": 6,
+    "precision": 0.9138,
+    "recall": 0.8983
+   }
+  },
+  "stricter": {
+   "as_frozen": {
+    "tp": 37,
+    "fp": 4,
+    "fn": 22,
+    "precision": 0.9024,
+    "recall": 0.6271
+   },
+   "if_reviewer_accepted_every_suggestion": {
+    "tp": 37,
+    "fp": 3,
+    "fn": 22,
+    "precision": 0.925,
+    "recall": 0.6271
+   }
+  },
+  "fast": {
+   "as_frozen": {
+    "tp": 51,
+    "fp": 1,
+    "fn": 8,
+    "precision": 0.9808,
+    "recall": 0.8644
+   },
+   "if_reviewer_accepted_every_suggestion": {
+    "tp": 51,
+    "fp": 1,
+    "fn": 8,
+    "precision": 0.9808,
+    "recall": 0.8644
+   }
+  }
+ },
+ "e_description_audit": {
+  "sampling": "20 test items drawn with random.Random(20261020).sample over the sorted item ids, after the model run",
+  "criteria": "error = clear factual error: wrong object, or an invented action or object; minor = imprecise position or attribute; ok = no clear factual error (hedged speculation such as 'possibly' is not counted as an error)",
+  "counts": {
+   "error": 5,
+   "minor": 1,
+   "ok": 14
+  },
+  "clear_factual_errors": {
+   "numerator": 5,
+   "denominator": 20
+  },
+  "rows": [
+   {
+    "id": "t-01db36b5-f210-a",
+    "description": "A woman is standing in the middle of a warehouse, facing a yellow forklift. The forklift is parked between two rows of shelves filled with boxes.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-01fb00c3-f000-a",
+    "description": "A person in a uniform is standing in the middle of a warehouse, facing a forklift. The person appears to be observing the forklift or preparing to interact with it.",
+    "verdict": "error",
+    "note": "mentions a forklift the person is facing and observing; no forklift is in the crop (the model's own answer was forklift: no)"
+   },
+   {
+    "id": "t-01fb00c3-f390-a",
+    "description": "A woman in a white uniform and hat stands in the middle of a warehouse, holding a cardboard box. She is positioned between two rows of shelves, with a fire extinguisher visible in the background.",
+    "verdict": "error",
+    "note": "says the person is holding a cardboard box; the box is on the floor beside her"
+   },
+   {
+    "id": "t-0505436a-f180-b",
+    "description": "A small figure is sitting on the ground near a forklift, which is parked in a warehouse.",
+    "verdict": "error",
+    "note": "says the person is sitting on the ground; she is standing beside the forklift"
+   },
+   {
+    "id": "t-050ce71e-f060-a",
+    "description": "A person in a uniform stands next to a forklift, possibly directing or supervising its operation.",
+    "verdict": "ok",
+    "note": "'possibly directing or supervising' is hedged speculation"
+   },
+   {
+    "id": "t-052961d2-f000-a",
+    "description": "A person is standing in the middle of a warehouse, wearing a vest and jeans, with a forklift in the background.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-052961d2-f030-a",
+    "description": "A man in a vest and pants is standing in front of a forklift, which is parked on the floor.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-052961d2-f210-b",
+    "description": "A man in a vest and brown pants is standing next to a blue box on a flat, gray floor, with a forklift in the background.",
+    "verdict": "error",
+    "note": "calls the forklift's blue body 'a blue box' and places a separate forklift in the background"
+   },
+   {
+    "id": "t-052961d2-f240-b",
+    "description": "A man in a vest is standing next to a blue forklift, seemingly in the process of moving or adjusting it.",
+    "verdict": "ok",
+    "note": "'seemingly moving or adjusting it' is hedged speculation"
+   },
+   {
+    "id": "t-054b0c8f-f000-b",
+    "description": "A person is walking towards a forklift, which is parked on the left side of the frame.",
+    "verdict": "minor",
+    "note": "says the forklift is on the left side of the frame; it is at the top centre"
+   },
+   {
+    "id": "t-054b0c8f-f120-a",
+    "description": "A person is sitting in a forklift, which is parked on a red floor.",
+    "verdict": "error",
+    "note": "says the person is sitting in the forklift; the person is crouched beside it"
+   },
+   {
+    "id": "t-05761a14-f030-a",
+    "description": "A person is standing in front of a forklift, which is parked in the background.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-05761a14-f060-a",
+    "description": "A person is standing in front of a forklift, which is parked in the middle of the warehouse floor.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-05f91749-f000-b",
+    "description": "A small figure of a man in a white shirt and hat stands next to a forklift, which is parked on the floor of a warehouse.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-05f91749-f120-b",
+    "description": "A person in a white uniform and hat is standing next to a blue forklift in a warehouse.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-05f91749-f240-b",
+    "description": "A man in a white shirt and hat is standing next to a forklift in a warehouse, looking towards the camera.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-0624a7b3-f210-a",
+    "description": "A person in a white hat and yellow shirt is walking towards a forklift, which is parked on the floor of a warehouse.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-0624a7b3-f270-a",
+    "description": "A man in a white uniform and hat stands next to a forklift, which is parked on the ground.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-0729fd10-f060-a",
+    "description": "A woman in a white shirt and pants is standing next to a blue forklift in a warehouse.",
+    "verdict": "ok",
+    "note": ""
+   },
+   {
+    "id": "t-0729fd10-f150-b",
+    "description": "A person is standing next to a forklift, which is parked in a warehouse.",
+    "verdict": "ok",
+    "note": ""
+   }
+  ]
+ },
+ "f_timing": {
+  "median_s": 8.297,
+  "p90_s": 9.99,
+  "min_s": 5.013,
+  "max_s": 12.168,
+  "load_s": 1.072,
+  "threads": 12,
+  "seconds_scope": "per crop, model generation only; excludes the one-time model load",
+  "wall_clock_148_crops_s": 1229.1,
+  "machine": "Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz, 8 cores / 16 threads, WSL2 Linux 6.6, CPU only",
+  "concurrent_load": "1-minute load average 1.6 before the run and 11.2-14.1 during it; the Look process itself used about 11.6 cores (1158% CPU), so other jobs added roughly 0-2.5",
+  "max_rss_kb": 2771004
+ },
+ "per_candidate_group_as_app_runs": {
+  "note": "The application checks one key pair per candidate group (evidence frame closest to the peak, then the closest pair). Mapped onto the same test answers.",
+  "broader": {
+   "events": 11,
+   "verdicts": {
+    "confirmed": 11
+   },
+   "by_key_pair_gold": {
+    "tp": {
+     "confirmed": 10
+    },
+    "unscorable": {
+     "confirmed": 1
+    }
+   }
+  },
+  "stricter": {
+   "events": 11,
+   "verdicts": {
+    "confirmed": 11
+   },
+   "by_key_pair_gold": {
+    "routine": {
+     "confirmed": 1
+    },
+    "tp": {
+     "confirmed": 9
+    },
+    "unscorable": {
+     "confirmed": 1
+    }
+   }
+  },
+  "fast": {
+   "events": 11,
+   "verdicts": {
+    "confirmed": 11
+   },
+   "by_key_pair_gold": {
+    "tp": {
+     "confirmed": 10
+    },
+    "unscorable": {
+     "confirmed": 1
+    }
+   }
+  }
+ },
+ "development": {
+  "dev_items": 39,
+  "look_v2": {
+   "items": 39,
+   "parse_errors": 9,
+   "exact_match_both_fields": 23,
+   "shelf_rack_flagged": "6/26",
+   "true_forklift_confirmed": "17/17",
+   "forklift_agreement_parsed": "23/30",
+   "person_agreement_parsed": "30/30"
+  },
+  "look_v3": {
+   "items": 39,
+   "parse_errors": 2,
+   "exact_match_both_fields": 32,
+   "shelf_rack_flagged": "22/22",
+   "true_forklift_confirmed": "11/17",
+   "forklift_agreement_parsed": "34/37",
+   "person_agreement_parsed": "35/37",
+   "notes": "4 overhead reach trucks answered forklift=no; 1 person=no on a visible person; 2 outputs with person='standing' (parse errors)"
+  },
+  "decision_rule": "Keep look-v3 only if its exact-match count (both fields parsed and equal to the visual label, parse errors count as misses) over the same 39 dev crops is greater than 23 AND it confirms at least 15/17 true-forklift crops; otherwise restore look-v2.",
+  "kept": "look-v2",
+  "note": "look_v2 shelf_rack_flagged is 6/22 (22 shelf/rack crops); an early record said 6/26 by miscount."
+ }
+}

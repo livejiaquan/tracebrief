@@ -1,0 +1,517 @@
+{
+  "dataset_id": "nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes",
+  "dataset_revision": "d5b88d3abcf659f304a107f4336b71b4e2159133",
+  "license": "OpenMDW-1.1",
+  "primary": [
+    {
+      "video": {
+        "filename": "01ce771b887143b4a592_run_13_seed_1930806231.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "01ce771b887143b4a592_run_13_seed_1930806231.ceiling_00.rgb.mp4",
+        "bytes": 15750595,
+        "sha256": "cbdf541a3d28414c75d44c930d5e14bd59a6585deaa9a6b7ff5156fc8f7a28c0"
+      },
+      "annotation": {
+        "filename": "6644f57b1b5103937e19_01ce771b887143b4a592_run_13_seed_1930806231.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00003.tar",
+        "tar_member": "6644f57b1b5103937e19_01ce771b887143b4a592_run_13_seed_1930806231.ceiling_00.object_detection.jsonl",
+        "bytes": 2323376,
+        "sha256": "4868587347e059e70677b123e598c6b66345838e27062b6f13e27e0796eb7359",
+        "byte_offset": 1599662080
+      }
+    },
+    {
+      "video": {
+        "filename": "04573755960a76f10119_run_46_seed_1402403531.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "04573755960a76f10119_run_46_seed_1402403531.ceiling_00.rgb.mp4",
+        "bytes": 15487644,
+        "sha256": "55af7b33707d48523b9b466f13b637d2fec455b1dc6213e76989c4d9a5f884d7"
+      },
+      "annotation": {
+        "filename": "0f6d585a0f0f0a8ed2c8_04573755960a76f10119_run_46_seed_1402403531.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00007.tar",
+        "tar_member": "0f6d585a0f0f0a8ed2c8_04573755960a76f10119_run_46_seed_1402403531.ceiling_00.object_detection.jsonl",
+        "bytes": 2211927,
+        "sha256": "3ca9451d197a6dbb7c01bc079b3ec7bbcf8c7cac6aad5e5654bd8a646c332b88",
+        "byte_offset": 1734980608
+      }
+    },
+    {
+      "video": {
+        "filename": "027324c52d159ed93f1d_run_3_seed_1515015089.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "027324c52d159ed93f1d_run_3_seed_1515015089.ceiling_00.rgb.mp4",
+        "bytes": 17135930,
+        "sha256": "6966b5983ba12fa278f9b8d35e4228e2c9b0de36c74e346dc9c1fa57883cc736"
+      },
+      "annotation": {
+        "filename": "e95461855d3464a1c027_027324c52d159ed93f1d_run_3_seed_1515015089.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00005.tar",
+        "tar_member": "e95461855d3464a1c027_027324c52d159ed93f1d_run_3_seed_1515015089.ceiling_00.object_detection.jsonl",
+        "bytes": 2287979,
+        "sha256": "76fc0b2ef8eaf6a656bde703eb09d317eddeb1467c88106a29db557aae2c20fb",
+        "byte_offset": 127128064
+      }
+    },
+    {
+      "video": {
+        "filename": "01f95a365901208d48d3_run_17_seed_1189260733.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "01f95a365901208d48d3_run_17_seed_1189260733.ceiling_00.rgb.mp4",
+        "bytes": 17058552,
+        "sha256": "34f5811814d9bfb77639db69428bbd2f8284540782145b9455096917e8346b25"
+      },
+      "annotation": {
+        "filename": "4ef5e5ee924e2120c22a_01f95a365901208d48d3_run_17_seed_1189260733.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00004.tar",
+        "tar_member": "4ef5e5ee924e2120c22a_01f95a365901208d48d3_run_17_seed_1189260733.ceiling_00.object_detection.jsonl",
+        "bytes": 2242058,
+        "sha256": "98f2f098e259ff5ce57fdea4de81097676e0ae4fd9f8543c6413266b74a991d9",
+        "byte_offset": 1752424960
+      }
+    },
+    {
+      "video": {
+        "filename": "01ef74f98b72cc506daf_run_10_seed_618522198.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "01ef74f98b72cc506daf_run_10_seed_618522198.ceiling_00.rgb.mp4",
+        "bytes": 16910869,
+        "sha256": "010d1bfbdf22a800c31b58562442f1ab3f9bfd1386c2c117a995c271af556571"
+      },
+      "annotation": {
+        "filename": "95d7697894d89afbfcdb_01ef74f98b72cc506daf_run_10_seed_618522198.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00004.tar",
+        "tar_member": "95d7697894d89afbfcdb_01ef74f98b72cc506daf_run_10_seed_618522198.ceiling_00.object_detection.jsonl",
+        "bytes": 2233396,
+        "sha256": "9c7a2d52bb36f8de24b410d9cfaeda45d3c1c73d27209e54393ed323a959f26f",
+        "byte_offset": 123545088
+      }
+    },
+    {
+      "video": {
+        "filename": "03ce361363ed08a91e1c_run_14_seed_908913191.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "03ce361363ed08a91e1c_run_14_seed_908913191.ceiling_00.rgb.mp4",
+        "bytes": 16228153,
+        "sha256": "c61b6d1882fc53d066dedc9133cd85f857f59a5b4a492338492ec70133cddc29"
+      },
+      "annotation": {
+        "filename": "2a98a25631741466a614_03ce361363ed08a91e1c_run_14_seed_908913191.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00006.tar",
+        "tar_member": "2a98a25631741466a614_03ce361363ed08a91e1c_run_14_seed_908913191.ceiling_00.object_detection.jsonl",
+        "bytes": 2238849,
+        "sha256": "6314159e2eb09587d2ff34367386c5dbfb127b3dbd6287b9a5d6a2d31b039838",
+        "byte_offset": 3111214080
+      }
+    },
+    {
+      "video": {
+        "filename": "019b03676f77ba21f644_run_5_seed_946900070.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "019b03676f77ba21f644_run_5_seed_946900070.ceiling_00.rgb.mp4",
+        "bytes": 16865604,
+        "sha256": "a9112a6448803bc6724bc5892e1376092883d047020b3ff34bf85311f38e9394"
+      },
+      "annotation": {
+        "filename": "daa0b116569762dd4d0a_019b03676f77ba21f644_run_5_seed_946900070.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00003.tar",
+        "tar_member": "daa0b116569762dd4d0a_019b03676f77ba21f644_run_5_seed_946900070.ceiling_00.object_detection.jsonl",
+        "bytes": 2336635,
+        "sha256": "1622354517aa6af910d792d2ba62b782040ae318dbbda381e09ae82eafe4ee21",
+        "byte_offset": 110555136
+      }
+    },
+    {
+      "video": {
+        "filename": "04eb0ba18568ad567724_run_12_seed_2001147106.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "04eb0ba18568ad567724_run_12_seed_2001147106.ceiling_00.rgb.mp4",
+        "bytes": 16533570,
+        "sha256": "c991af7c38aeaab764e4e7b9b35ad5d719a980d10828b7bfa5c646de71ad0e80"
+      },
+      "annotation": {
+        "filename": "f927e4e1809805ecaa80_04eb0ba18568ad567724_run_12_seed_2001147106.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00008.tar",
+        "tar_member": "f927e4e1809805ecaa80_04eb0ba18568ad567724_run_12_seed_2001147106.ceiling_00.object_detection.jsonl",
+        "bytes": 2164008,
+        "sha256": "00e5d71687c34b15aebb5c94a90e68219cbcf36f88aee3e700558a233dd667d9",
+        "byte_offset": 3281015296
+      }
+    },
+    {
+      "video": {
+        "filename": "005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.rgb.mp4",
+        "bytes": 16915807,
+        "sha256": "d0bb9cb0ca795b7a9f9fe256ff9c82196a8406cf1b237f49503da99657984104"
+      },
+      "annotation": {
+        "filename": "47033fbfcca828df8722_005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00000.tar",
+        "tar_member": "47033fbfcca828df8722_005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.object_detection.jsonl",
+        "bytes": 2290766,
+        "sha256": "4533504c171096539d86c08eeb08d3b231d067331e7a0ce2a31d03b8e846fc4d",
+        "byte_offset": 28976424448
+      }
+    },
+    {
+      "video": {
+        "filename": "00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.rgb.mp4",
+        "bytes": 16340162,
+        "sha256": "0b8e770b4433b71a15ae25bfcd1eecfa7f75d8c98217067ff711ec801fadaa59"
+      },
+      "annotation": {
+        "filename": "2514078192a067dee881_00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00000.tar",
+        "tar_member": "2514078192a067dee881_00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.object_detection.jsonl",
+        "bytes": 2276803,
+        "sha256": "be27392e8e322316d12d99c28e50deb9fc8282bffaba3fbb112e134e0271add7",
+        "byte_offset": 55390820352
+      }
+    },
+    {
+      "video": {
+        "filename": "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+        "bytes": 16876373,
+        "sha256": "8edd6754abab0eed50df644289a98ddd89dd2764a8d9dbf959c3a36565e69e14"
+      },
+      "annotation": {
+        "filename": "b3904eeae9c70d1b84a0_014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00002.tar",
+        "tar_member": "b3904eeae9c70d1b84a0_014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.object_detection.jsonl",
+        "bytes": 2151150,
+        "sha256": "7197c81f6c8e602b6de3f6c99ff7addfd77cc54d9cef9f6a76c5e3370f6a984b",
+        "byte_offset": 123820544
+      }
+    },
+    {
+      "video": {
+        "filename": "03a2937960b9e61f1c99_run_7_seed_900334964.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "03a2937960b9e61f1c99_run_7_seed_900334964.ceiling_00.rgb.mp4",
+        "bytes": 16538572,
+        "sha256": "cc6fd0a3a43f1188a5bd67962889704b136f6d749251e76aeab96fa9a48ccb7f"
+      },
+      "annotation": {
+        "filename": "16face5576497e69c190_03a2937960b9e61f1c99_run_7_seed_900334964.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00006.tar",
+        "tar_member": "16face5576497e69c190_03a2937960b9e61f1c99_run_7_seed_900334964.ceiling_00.object_detection.jsonl",
+        "bytes": 2310502,
+        "sha256": "ebcca2aae075a04d4f24e58f9793e7b57d52ea0e1b87e67e60269aed1a6259a5",
+        "byte_offset": 1707392512
+      }
+    },
+    {
+      "video": {
+        "filename": "03dde99492fa6570fb42_run_16_seed_1305281951.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "03dde99492fa6570fb42_run_16_seed_1305281951.ceiling_00.rgb.mp4",
+        "bytes": 15818309,
+        "sha256": "52c4920cf6ef434c0fe65dd4009e2ad666dfc43a16af745a2f80e023485ed267"
+      },
+      "annotation": {
+        "filename": "53a0b9f76240c1d09ec8_03dde99492fa6570fb42_run_16_seed_1305281951.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00007.tar",
+        "tar_member": "53a0b9f76240c1d09ec8_03dde99492fa6570fb42_run_16_seed_1305281951.ceiling_00.object_detection.jsonl",
+        "bytes": 2165844,
+        "sha256": "289e37cacb3b5a18bbfc8b4fb9f23b23ce7800a6bb72b8cb622bec63cf76f4e9",
+        "byte_offset": 121376768
+      }
+    },
+    {
+      "video": {
+        "filename": "04ea23649a6f7cb2eea7_run_27_seed_523198994.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "04ea23649a6f7cb2eea7_run_27_seed_523198994.ceiling_00.rgb.mp4",
+        "bytes": 17455381,
+        "sha256": "ec1c76c984c21c1b9463b446e3d65987e1b7d23f4ac1903a11e4af926206f596"
+      },
+      "annotation": {
+        "filename": "a38c7c19f11ee7f9e903_04ea23649a6f7cb2eea7_run_27_seed_523198994.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00008.tar",
+        "tar_member": "a38c7c19f11ee7f9e903_04ea23649a6f7cb2eea7_run_27_seed_523198994.ceiling_00.object_detection.jsonl",
+        "bytes": 2190768,
+        "sha256": "fc5a2ae8fbe6063545a72080d062e964591daf147c2b13c14f50ffb3366a2d6f",
+        "byte_offset": 1682819584
+      }
+    },
+    {
+      "video": {
+        "filename": "001e53453441935632ae_run_1_seed_1288693302.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "001e53453441935632ae_run_1_seed_1288693302.ceiling_00.rgb.mp4",
+        "bytes": 16279681,
+        "sha256": "e4795e873dcbdaaa4dc3d42f533052e3c1db62d1d3ef786c2c90dd4d7681330b"
+      },
+      "annotation": {
+        "filename": "9b3015a6e784eef73200_001e53453441935632ae_run_1_seed_1288693302.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00000.tar",
+        "tar_member": "9b3015a6e784eef73200_001e53453441935632ae_run_1_seed_1288693302.ceiling_00.object_detection.jsonl",
+        "bytes": 2286504,
+        "sha256": "97e6e0c251967bec25fe24c7e55134396b14e64cad46a6b9595008be52f5fbdb",
+        "byte_offset": 2602278912
+      }
+    },
+    {
+      "video": {
+        "filename": "02191b34f6b6e0ef2db4_run_19_seed_1390860058.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "02191b34f6b6e0ef2db4_run_19_seed_1390860058.ceiling_00.rgb.mp4",
+        "bytes": 16283552,
+        "sha256": "18e3db3d251071192b8b71f62d20f33e09cca3584c373d61e1199b946d42d18f"
+      },
+      "annotation": {
+        "filename": "e600f7920447987485a6_02191b34f6b6e0ef2db4_run_19_seed_1390860058.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00004.tar",
+        "tar_member": "e600f7920447987485a6_02191b34f6b6e0ef2db4_run_19_seed_1390860058.ceiling_00.object_detection.jsonl",
+        "bytes": 2329374,
+        "sha256": "8e19d9d84145d7d51233da94b6bd81ff675d9f44350a3d8614d20c8e3ed4c9f5",
+        "byte_offset": 3344407552
+      }
+    },
+    {
+      "video": {
+        "filename": "030a3619cbb8c73e15ee_run_27_seed_1264018830.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "030a3619cbb8c73e15ee_run_27_seed_1264018830.ceiling_00.rgb.mp4",
+        "bytes": 16856769,
+        "sha256": "66987bd5b435df630e485f262ae93da59a0da82f203d9a7627b5089d851be9e8"
+      },
+      "annotation": {
+        "filename": "1e33dbea3fbd0a6745cb_030a3619cbb8c73e15ee_run_27_seed_1264018830.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00005.tar",
+        "tar_member": "1e33dbea3fbd0a6745cb_030a3619cbb8c73e15ee_run_27_seed_1264018830.ceiling_00.object_detection.jsonl",
+        "bytes": 2158626,
+        "sha256": "1cacf2da9b60f725df40333173e79ffaf59f042be56161ff88168b4e37d6d1c1",
+        "byte_offset": 1753804288
+      }
+    },
+    {
+      "video": {
+        "filename": "01d845d245e362161c7e_run_11_seed_2081127967.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "01d845d245e362161c7e_run_11_seed_2081127967.ceiling_00.rgb.mp4",
+        "bytes": 16967029,
+        "sha256": "68ada79547e317c7a7d1238f9b728e3b812415ca78333444a32ccc5c18109b0e"
+      },
+      "annotation": {
+        "filename": "c3f08136b06220405ecb_01d845d245e362161c7e_run_11_seed_2081127967.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00003.tar",
+        "tar_member": "c3f08136b06220405ecb_01d845d245e362161c7e_run_11_seed_2081127967.ceiling_00.object_detection.jsonl",
+        "bytes": 2242838,
+        "sha256": "035e4588ef12fda285e3d9cb5325dae19cea2413a6db3693c1dbaf4bb14ad3e2",
+        "byte_offset": 3168551424
+      }
+    },
+    {
+      "video": {
+        "filename": "036c383522ca703ef6fd_run_1_seed_83132534.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "036c383522ca703ef6fd_run_1_seed_83132534.ceiling_00.rgb.mp4",
+        "bytes": 17313557,
+        "sha256": "d78c3cac6ec7fce3392d749634b504abbf0fe8673e285f494443813100be2d85"
+      },
+      "annotation": {
+        "filename": "d854b69b764ad5d3b04d_036c383522ca703ef6fd_run_1_seed_83132534.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00006.tar",
+        "tar_member": "d854b69b764ad5d3b04d_036c383522ca703ef6fd_run_1_seed_83132534.ceiling_00.object_detection.jsonl",
+        "bytes": 2294165,
+        "sha256": "0e6d1a79c617f92cf600d0d515c0e807a8eaab37b4ae1c9c0b688f67b0e44586",
+        "byte_offset": 128230912
+      }
+    },
+    {
+      "video": {
+        "filename": "047fca619ecf7a56b2e4_run_4_seed_795834165.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "047fca619ecf7a56b2e4_run_4_seed_795834165.ceiling_00.rgb.mp4",
+        "bytes": 17302452,
+        "sha256": "dca0e0439c807d4171a1d6624419b35ddd5c55d172601a5cf4a9d84748864114"
+      },
+      "annotation": {
+        "filename": "b7d73816f28488e7b06e_047fca619ecf7a56b2e4_run_4_seed_795834165.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00007.tar",
+        "tar_member": "b7d73816f28488e7b06e_047fca619ecf7a56b2e4_run_4_seed_795834165.ceiling_00.object_detection.jsonl",
+        "bytes": 2225955,
+        "sha256": "f786b51888aef42db7a6081a279d0f0f1598919ec43589cde4621279349ce168",
+        "byte_offset": 3304384000
+      }
+    },
+    {
+      "video": {
+        "filename": "049c83ec42a34cacaff4_run_20_seed_2118878844.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "049c83ec42a34cacaff4_run_20_seed_2118878844.ceiling_00.rgb.mp4",
+        "bytes": 15968138,
+        "sha256": "9dfd1aa08ad91cdbdd0d5a9bab4077fa801913b8871747ce57f1131cd9f731ea"
+      },
+      "annotation": {
+        "filename": "1347402112ea16310ade_049c83ec42a34cacaff4_run_20_seed_2118878844.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00008.tar",
+        "tar_member": "1347402112ea16310ade_049c83ec42a34cacaff4_run_20_seed_2118878844.ceiling_00.object_detection.jsonl",
+        "bytes": 2166863,
+        "sha256": "5f13dddee8ab1e2d80829e72d87c3fbb5cc0da7ea839716d56765211bdd6d911",
+        "byte_offset": 123039232
+      }
+    },
+    {
+      "video": {
+        "filename": "018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.rgb.mp4",
+        "bytes": 15761084,
+        "sha256": "be7b6c918d48cc7175999d5c396dd6239a73d3e869a11b67410771fa6b8b10fa"
+      },
+      "annotation": {
+        "filename": "f8f1355f56b23468b0c7_018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00002.tar",
+        "tar_member": "f8f1355f56b23468b0c7_018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.object_detection.jsonl",
+        "bytes": 2163846,
+        "sha256": "4c1039dee3b3cdaa5fa85016a9d34222065bdf9d3a2cb9e49cdf728304925f48",
+        "byte_offset": 3319157248
+      }
+    },
+    {
+      "video": {
+        "filename": "03346ff432a0fe57151d_run_7_seed_428454731.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "03346ff432a0fe57151d_run_7_seed_428454731.ceiling_00.rgb.mp4",
+        "bytes": 16977069,
+        "sha256": "8d93689e021979964e8426d6a3f206c75b29b67cc8d9044c5a0bb379bfcd8c1d"
+      },
+      "annotation": {
+        "filename": "806227c4a5bb5e8bc7e5_03346ff432a0fe57151d_run_7_seed_428454731.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00005.tar",
+        "tar_member": "806227c4a5bb5e8bc7e5_03346ff432a0fe57151d_run_7_seed_428454731.ceiling_00.object_detection.jsonl",
+        "bytes": 2323402,
+        "sha256": "dba64ecbadabc12fd6452b0fb416dc3754c8ebf69080232f22cbc4bd4566be54",
+        "byte_offset": 3345457664
+      }
+    },
+    {
+      "video": {
+        "filename": "016c1396912bfc432997_run_3_seed_1053328212.ceiling_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/forklift_human_nearmiss/nearmiss-rgb-00000.tar",
+        "tar_member": "016c1396912bfc432997_run_3_seed_1053328212.ceiling_00.rgb.mp4",
+        "bytes": 16124382,
+        "sha256": "3d62313fb06ed407fb34f57c2b6ed8e157f137776604415c7ff77548855aeabb"
+      },
+      "annotation": {
+        "filename": "0b12b2416a91a8686bf0_016c1396912bfc432997_run_3_seed_1053328212.ceiling_00.object_detection.jsonl",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/artifacts/forklift_human_nearmiss/nearmiss-artifacts-00002.tar",
+        "tar_member": "0b12b2416a91a8686bf0_016c1396912bfc432997_run_3_seed_1053328212.ceiling_00.object_detection.jsonl",
+        "bytes": 2202349,
+        "sha256": "c735b3c814ebadde16b9a08bf52e4b93be33342adbf6b7c8fd136f86269466fd",
+        "byte_offset": 1764646400
+      }
+    }
+  ],
+  "routine": [
+    {
+      "video": {
+        "filename": "008caa590c5e5b7b4bca_run_8_seed_4731920.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "008caa590c5e5b7b4bca_run_8_seed_4731920.cam_00.rgb.mp4",
+        "bytes": 22253530,
+        "sha256": "eabf44d7abe50d1bf4824f238a9f0ac9ddc29419e10d66b89c6a92cb1b98329c",
+        "byte_offset": 512
+      }
+    },
+    {
+      "video": {
+        "filename": "00b5539fc7881b9a488c_run_3_seed_1344838085.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "00b5539fc7881b9a488c_run_3_seed_1344838085.cam_00.rgb.mp4",
+        "bytes": 22016872,
+        "sha256": "203c04339eaf1c23639cda3b86dcc554c18eaf6e615a37263f703394a0fcfee2",
+        "byte_offset": 214164992
+      }
+    },
+    {
+      "video": {
+        "filename": "00bfbc0bd24ce6285880_run_20_seed_168275105.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "00bfbc0bd24ce6285880_run_20_seed_168275105.cam_00.rgb.mp4",
+        "bytes": 23131854,
+        "sha256": "e0ee89a6b6d609ea33fec6be93bee8a8ae8b433a6cca304909e06294387980c6",
+        "byte_offset": 426309632
+      }
+    },
+    {
+      "video": {
+        "filename": "0100c578fce9ef8984db_run_6_seed_1352668724.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "0100c578fce9ef8984db_run_6_seed_1352668724.cam_00.rgb.mp4",
+        "bytes": 21897516,
+        "sha256": "fa67d7151509c958a60947cc9a4bd57f1838995abd7e221f14969de2561f114f",
+        "byte_offset": 640642048
+      }
+    },
+    {
+      "video": {
+        "filename": "0100ef99c44d329a4ead_run_1_seed_1842295844.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "0100ef99c44d329a4ead_run_1_seed_1842295844.cam_00.rgb.mp4",
+        "bytes": 22621202,
+        "sha256": "35d1a22f8cb9bc464278871af726cea8470e9df33f39ac47c8b893423609a678",
+        "byte_offset": 856633856
+      }
+    },
+    {
+      "video": {
+        "filename": "01033139e6f4295559bb_run_10_seed_475738285.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "01033139e6f4295559bb_run_10_seed_475738285.cam_00.rgb.mp4",
+        "bytes": 21327693,
+        "sha256": "6e9d7a02dae00b13ba812e5fbf8a5e580c10cc3643c0f420f9256eb180ce3284",
+        "byte_offset": 1075350016
+      }
+    },
+    {
+      "video": {
+        "filename": "011b9c17a89798dddcf7_run_6_seed_901782411.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "011b9c17a89798dddcf7_run_6_seed_901782411.cam_00.rgb.mp4",
+        "bytes": 22246182,
+        "sha256": "604f8d354373eab0e271cf4436f6e436376ce0a3c0d213ab8de1b644360fbfad",
+        "byte_offset": 1287801344
+      }
+    },
+    {
+      "video": {
+        "filename": "01364cbb9962b6f2155a_run_21_seed_1716214950.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "01364cbb9962b6f2155a_run_21_seed_1716214950.cam_00.rgb.mp4",
+        "bytes": 23700385,
+        "sha256": "8f7318f2a13d32d3ec198daff876e56766c0d7f1b7b709e6fe1674be824caa4e",
+        "byte_offset": 1500546560
+      }
+    },
+    {
+      "video": {
+        "filename": "0136b224f66e6de233e7_run_4_seed_1488295038.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "0136b224f66e6de233e7_run_4_seed_1488295038.cam_00.rgb.mp4",
+        "bytes": 21625041,
+        "sha256": "3b4e42b3ec7eadf28c0263b63597509d4cb9b895f7b195d97e63536cd76833c6",
+        "byte_offset": 1717266944
+      }
+    },
+    {
+      "video": {
+        "filename": "0161a91adecb7da111e2_run_4_seed_1735895060.cam_00.rgb.mp4",
+        "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes/resolve/d5b88d3abcf659f304a107f4336b71b4e2159133/rgb/warehouse_box_pickup/box_pickup-rgb-00000.tar",
+        "tar_member": "0161a91adecb7da111e2_run_4_seed_1735895060.cam_00.rgb.mp4",
+        "bytes": 22680360,
+        "sha256": "16e3abaf2b8a20497ae4ebdb274f6b124a4ee967993283c7c35b5857524bdc69",
+        "byte_offset": 1932897792
+      }
+    }
+  ]
+}

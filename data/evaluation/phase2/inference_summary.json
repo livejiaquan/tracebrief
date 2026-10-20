@@ -1,0 +1,8 @@
+{
+  "n_inferred_runs": 10,
+  "median_wall_s": 36.59,
+  "min_wall_s": 27.852,
+  "max_wall_s": 48.034,
+  "candidate_groups": 10,
+  "scope": "All10 primary inferred videos, including one annotation-unscorable run. SharedCPU workload; not controlledbenchmark."
+}

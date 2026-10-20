@@ -1,0 +1,8 @@
+{
+ "prepare_data.py": "a6f25c455c9219618ca6589ddf86fab9fec8813a049df55d618d0374943baa6e",
+ "build_coco.py": "2ff855782acf2ee5bed15355869284f706617862eca227f40af19a0d334c04c6",
+ "train_cpu.py": "3e64c121a3b08cd60628521f3f871fde0e0b2734bb777d71604260fdbedd6ea3",
+ "freeze_export.py": "eacd11c1c24a11e5df6d16dbea4a567c46214f77f7f8755e598d781840e73e12",
+ "run_evaluation.py": "6534c8bc70fe4e73ac1f20cc01bffa3eb763f16a2bc73710d472d152f82e0e45",
+ "finalize_report.py": "57aeb90dd57f8a00048cc58597452925dd23fa58c6ef99c57a69e40b43674bc7"
+}

@@ -1,0 +1,149 @@
+{
+  "utc": "2026-10-03T20:29:53Z",
+  "scope": "Raw-frame contact audit AFTER final configuration freeze and inference launch. Three frames per selected routine video; not whole-video safety labels or complete actor truth. All emitted event evidence will be audited separately.",
+  "runs": [
+    {
+      "id": "V2-R01",
+      "video": "01644a25617e0dd8ebb3_run_24_seed_1764206232.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        418
+      ],
+      "clearly_visible_person": false,
+      "clearly_visible_forklift": false,
+      "note": "No clearly visible person or forklift in inspected frames; annotations may include occluded actors."
+    },
+    {
+      "id": "V2-R02",
+      "video": "0179f236dd63ebbdf964_run_15_seed_2112804163.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        417
+      ],
+      "clearly_visible_person": true,
+      "clearly_visible_forklift": true,
+      "note": "Person and parked forklift visible in inspected frames."
+    },
+    {
+      "id": "V2-R03",
+      "video": "017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        418
+      ],
+      "clearly_visible_person": true,
+      "clearly_visible_forklift": false,
+      "note": "No clearly visible forklift in inspected frames; person visible."
+    },
+    {
+      "id": "V2-R04",
+      "video": "018c5222a72e2bff8e86_run_2_seed_31436824.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        418
+      ],
+      "clearly_visible_person": true,
+      "clearly_visible_forklift": false,
+      "note": "No clearly visible forklift in inspected frames; person visible."
+    },
+    {
+      "id": "V2-R05",
+      "video": "018cd2d26ab89c5ad9b2_run_32_seed_992174531.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        417
+      ],
+      "clearly_visible_person": true,
+      "clearly_visible_forklift": false,
+      "note": "No clearly visible forklift in inspected frames; person visible."
+    },
+    {
+      "id": "V2-R06",
+      "video": "018ce6edabcf479d76d2_run_4_seed_224042306.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        418
+      ],
+      "clearly_visible_person": true,
+      "clearly_visible_forklift": true,
+      "note": "Person and parked forklift visible in inspected frames."
+    },
+    {
+      "id": "V2-R07",
+      "video": "01a8b535022f10dbf3b8_run_35_seed_133492914.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        417
+      ],
+      "clearly_visible_person": false,
+      "clearly_visible_forklift": false,
+      "note": "No clearly visible person or forklift in inspected frames; annotations may include occluded actors."
+    },
+    {
+      "id": "V2-R08",
+      "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        418
+      ],
+      "clearly_visible_person": true,
+      "clearly_visible_forklift": true,
+      "note": "Person and parked forklift visible in inspected frames."
+    },
+    {
+      "id": "V2-R09",
+      "video": "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        417
+      ],
+      "clearly_visible_person": true,
+      "clearly_visible_forklift": false,
+      "note": "No clearly visible forklift in inspected frames; person visible."
+    },
+    {
+      "id": "V2-R10",
+      "video": "02204d8ac901f56538dc_run_2_seed_250957540.cam_00.rgb.mp4",
+      "inspected_frame_indices": [
+        0,
+        150,
+        418
+      ],
+      "clearly_visible_person": false,
+      "clearly_visible_forklift": false,
+      "note": "No clearly visible person or forklift in inspected frames; annotations may include occluded actors."
+    }
+  ],
+  "emitted_event_audit": {
+    "scope": "All14 evidence frames of the single emitted routine group inspected with predicted-box overlays.",
+    "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+    "event_id": "candidate-001",
+    "frame_indices": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330,
+      360,
+      390
+    ],
+    "finding": "Predicted person and parked forklift correspond to visible actors in all14 evidence frames; no shelf-as-forklift event observed in this cohort. Image-space proximity alone does not establish near miss or physical risk.",
+    "montage_sha256": "3bbb4c9f5c64f38ae417412d9a5558943eb2fb5509c40c61cbf9ebac36c8dbfe"
+  }
+}

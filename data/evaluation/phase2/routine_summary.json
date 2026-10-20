@@ -1,0 +1,146 @@
+{
+  "scope": "Separate prospective routine-scene cohort; incomplete forklift annotations prevent specificity or a complete false-positive rate.",
+  "n_runs": 10,
+  "frames": 140,
+  "candidate_runs": 1,
+  "groups": 1,
+  "median_wall_s": 41.199,
+  "runs": [
+    {
+      "video": "01644a25617e0dd8ebb3_run_24_seed_1764206232.cam_00.rgb.mp4",
+      "sha256": "1bf0d2c19a5d83b22ba98f366fcb8ecdbef9711a9b5b410e21bdf9aceee278f9",
+      "duration_s": 13.966666666666667,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 0,
+      "detections_by_class": {
+        "person": 0,
+        "forklift": 0
+      },
+      "wall_s": 42.056
+    },
+    {
+      "video": "0179f236dd63ebbdf964_run_15_seed_2112804163.cam_00.rgb.mp4",
+      "sha256": "0933e8d78529f69ced57aa845e151ec4fa3e8ee300a25edd46d9d4a763f058e0",
+      "duration_s": 13.933333333333334,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 0,
+      "detections_by_class": {
+        "person": 14,
+        "forklift": 0
+      },
+      "wall_s": 41.185
+    },
+    {
+      "video": "017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb.mp4",
+      "sha256": "06e6ab725581943e3f9b88f9d1bcaada208bcd0184c5e2d88ada41c4b8d153bc",
+      "duration_s": 13.966666666666667,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 0,
+      "detections_by_class": {
+        "person": 14,
+        "forklift": 0
+      },
+      "wall_s": 41.002
+    },
+    {
+      "video": "018c5222a72e2bff8e86_run_2_seed_31436824.cam_00.rgb.mp4",
+      "sha256": "75cc3a98499d452575462749dbdbb4057b3b9eade1e9a38e6e006c5838021270",
+      "duration_s": 13.966666666666667,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 0,
+      "detections_by_class": {
+        "person": 11,
+        "forklift": 12
+      },
+      "wall_s": 41.213
+    },
+    {
+      "video": "018cd2d26ab89c5ad9b2_run_32_seed_992174531.cam_00.rgb.mp4",
+      "sha256": "e2cb9e22f3678853fe1f755a3cb6dab0d927d4ddebd6691529a79d76d97528e6",
+      "duration_s": 13.933333333333334,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 0,
+      "detections_by_class": {
+        "person": 14,
+        "forklift": 0
+      },
+      "wall_s": 42.738
+    },
+    {
+      "video": "018ce6edabcf479d76d2_run_4_seed_224042306.cam_00.rgb.mp4",
+      "sha256": "f5b80198a1eb3dedf5d74f59f10fb93fd59b98db2801e3f071aebbeeb5e45499",
+      "duration_s": 13.966666666666667,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 0,
+      "detections_by_class": {
+        "person": 14,
+        "forklift": 14
+      },
+      "wall_s": 40.946
+    },
+    {
+      "video": "01a8b535022f10dbf3b8_run_35_seed_133492914.cam_00.rgb.mp4",
+      "sha256": "72c740e4bc476fc39199e581a6eb41c0e9c9a3e7085e3ac1b48ec6bf5f6b423e",
+      "duration_s": 13.933333333333334,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 0,
+      "detections_by_class": {
+        "person": 0,
+        "forklift": 0
+      },
+      "wall_s": 41.096
+    },
+    {
+      "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+      "sha256": "ffc84bd8627ddde9d7140714bd4782e1d76141ed91248dfec7bdd14c631887c6",
+      "duration_s": 13.966666666666667,
+      "frames": 14,
+      "groups": 1,
+      "candidate_frames": 14,
+      "detections_by_class": {
+        "person": 14,
+        "forklift": 14
+      },
+      "wall_s": 41.498
+    },
+    {
+      "video": "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+      "sha256": "526ffb78c6fe9b4fb044627f3f64eade2a9275843a6b07f5cb7bdf74b4e9b2cf",
+      "duration_s": 13.933333333333334,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 2,
+      "detections_by_class": {
+        "person": 14,
+        "forklift": 4
+      },
+      "wall_s": 40.67
+    },
+    {
+      "video": "02204d8ac901f56538dc_run_2_seed_250957540.cam_00.rgb.mp4",
+      "sha256": "73568e1cdace8ba10bf3ec96ad7313483f8e4a96f2114f3a7b40ec3ca259be18",
+      "duration_s": 13.966666666666667,
+      "frames": 14,
+      "groups": 0,
+      "candidate_frames": 0,
+      "detections_by_class": {
+        "person": 1,
+        "forklift": 0
+      },
+      "wall_s": 43.577
+    }
+  ],
+  "annotation_limits": "Simulator annotations omit stationary forklifts. Missing forklift annotations are not negative truth. Actor audit and emitted-event visual audit are qualitative, not physical-safety labels.",
+  "video_card_text": "10 routine clips: 1 candidate group in 1 clip. Missing forklift labels prevent a specificity estimate.",
+  "annotation_streams_retrieved": 9,
+  "missing_annotation_run": "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+  "min_wall_s": 40.67,
+  "max_wall_s": 43.577
+}

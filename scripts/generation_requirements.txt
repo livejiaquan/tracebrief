@@ -1,0 +1,2 @@
+# CPU local generation version used for the Stage I prototype.
+llama-cpp-python==0.3.36

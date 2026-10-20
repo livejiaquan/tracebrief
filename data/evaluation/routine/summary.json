@@ -1,0 +1,101 @@
+{
+  "scope": "Separate preselectedroutine-scene challenge. Annotation streams omit stationary forklifts; no specificity/falsealarmrate groundtruth claimed.",
+  "n_runs": 10,
+  "n_sampled_frames": 140,
+  "candidate_videos": 7,
+  "candidate_groups": 9,
+  "median_wall_s": 90.56899999999999,
+  "runs": [
+    {
+      "video": "008caa590c5e5b7b4bca_run_8_seed_4731920.cam_00.rgb.mp4",
+      "sha256": "eabf44d7abe50d1bf4824f238a9f0ac9ddc29419e10d66b89c6a92cb1b98329c",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 2,
+      "candidate_frames": 11,
+      "wall_s": 95.115
+    },
+    {
+      "video": "00b5539fc7881b9a488c_run_3_seed_1344838085.cam_00.rgb.mp4",
+      "sha256": "203c04339eaf1c23639cda3b86dcc554c18eaf6e615a37263f703394a0fcfee2",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 1,
+      "candidate_frames": 12,
+      "wall_s": 104.367
+    },
+    {
+      "video": "00bfbc0bd24ce6285880_run_20_seed_168275105.cam_00.rgb.mp4",
+      "sha256": "e0ee89a6b6d609ea33fec6be93bee8a8ae8b433a6cca304909e06294387980c6",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 1,
+      "candidate_frames": 13,
+      "wall_s": 88.614
+    },
+    {
+      "video": "0100c578fce9ef8984db_run_6_seed_1352668724.cam_00.rgb.mp4",
+      "sha256": "fa67d7151509c958a60947cc9a4bd57f1838995abd7e221f14969de2561f114f",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 0,
+      "candidate_frames": 0,
+      "wall_s": 90.695
+    },
+    {
+      "video": "0100ef99c44d329a4ead_run_1_seed_1842295844.cam_00.rgb.mp4",
+      "sha256": "35d1a22f8cb9bc464278871af726cea8470e9df33f39ac47c8b893423609a678",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 2,
+      "candidate_frames": 6,
+      "wall_s": 90.443
+    },
+    {
+      "video": "01033139e6f4295559bb_run_10_seed_475738285.cam_00.rgb.mp4",
+      "sha256": "6e9d7a02dae00b13ba812e5fbf8a5e580c10cc3643c0f420f9256eb180ce3284",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 1,
+      "candidate_frames": 7,
+      "wall_s": 90.063
+    },
+    {
+      "video": "011b9c17a89798dddcf7_run_6_seed_901782411.cam_00.rgb.mp4",
+      "sha256": "604f8d354373eab0e271cf4436f6e436376ce0a3c0d213ab8de1b644360fbfad",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 1,
+      "candidate_frames": 13,
+      "wall_s": 89.711
+    },
+    {
+      "video": "01364cbb9962b6f2155a_run_21_seed_1716214950.cam_00.rgb.mp4",
+      "sha256": "8f7318f2a13d32d3ec198daff876e56766c0d7f1b7b709e6fe1674be824caa4e",
+      "duration_s": 13.966666666666667,
+      "sampled_frames": 14,
+      "candidate_groups": 1,
+      "candidate_frames": 5,
+      "wall_s": 100.766
+    },
+    {
+      "video": "0136b224f66e6de233e7_run_4_seed_1488295038.cam_00.rgb.mp4",
+      "sha256": "3b4e42b3ec7eadf28c0263b63597509d4cb9b895f7b195d97e63536cd76833c6",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 0,
+      "candidate_frames": 0,
+      "wall_s": 91.587
+    },
+    {
+      "video": "0161a91adecb7da111e2_run_4_seed_1735895060.cam_00.rgb.mp4",
+      "sha256": "16e3abaf2b8a20497ae4ebdb274f6b124a4ee967993283c7c35b5857524bdc69",
+      "duration_s": 13.933333333333334,
+      "sampled_frames": 14,
+      "candidate_groups": 0,
+      "candidate_frames": 0,
+      "wall_s": 90.315
+    }
+  ],
+  "findings": "R01correctlylocalizedparkedforkliftcantrigger2Dproximity. R05rack-as-forklift error confirmed visually. Originalbaseline not deployment-ready onroutineclutter; calibration andprospectivev2validation follow."
+}

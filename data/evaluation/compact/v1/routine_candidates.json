@@ -1,0 +1,185 @@
+{
+ "scope": "Candidate counts only; missing parked-forklift labels preclude false-positive rate.",
+ "runs": [
+  {
+   "fps": 1,
+   "video": "01644a25617e0dd8ebb3_run_24_seed_1764206232.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/01644a25617e0dd8ebb3_run_24_seed_1764206232.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "0179f236dd63ebbdf964_run_15_seed_2112804163.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/0179f236dd63ebbdf964_run_15_seed_2112804163.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 1,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "018c5222a72e2bff8e86_run_2_seed_31436824.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/018c5222a72e2bff8e86_run_2_seed_31436824.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "018cd2d26ab89c5ad9b2_run_32_seed_992174531.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/018cd2d26ab89c5ad9b2_run_32_seed_992174531.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "018ce6edabcf479d76d2_run_4_seed_224042306.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/018ce6edabcf479d76d2_run_4_seed_224042306.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "01a8b535022f10dbf3b8_run_35_seed_133492914.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/01a8b535022f10dbf3b8_run_35_seed_133492914.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 1,
+   "video": "02204d8ac901f56538dc_run_2_seed_250957540.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 14,
+   "preview": "work/stage1/compact-detector/fps1/routine/02204d8ac901f56538dc_run_2_seed_250957540.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "01644a25617e0dd8ebb3_run_24_seed_1764206232.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/01644a25617e0dd8ebb3_run_24_seed_1764206232.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "0179f236dd63ebbdf964_run_15_seed_2112804163.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/0179f236dd63ebbdf964_run_15_seed_2112804163.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 1,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "018c5222a72e2bff8e86_run_2_seed_31436824.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/018c5222a72e2bff8e86_run_2_seed_31436824.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "018cd2d26ab89c5ad9b2_run_32_seed_992174531.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/018cd2d26ab89c5ad9b2_run_32_seed_992174531.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "018ce6edabcf479d76d2_run_4_seed_224042306.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/018ce6edabcf479d76d2_run_4_seed_224042306.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "01a8b535022f10dbf3b8_run_35_seed_133492914.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/01a8b535022f10dbf3b8_run_35_seed_133492914.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  },
+  {
+   "fps": 5,
+   "video": "02204d8ac901f56538dc_run_2_seed_250957540.cam_00.rgb.mp4",
+   "groups": 0,
+   "candidate_frames": 0,
+   "sampled_frames": 70,
+   "preview": "work/stage1/compact-detector/fps5/routine/02204d8ac901f56538dc_run_2_seed_250957540.cam_00.rgb/preview.jpg",
+   "event_evidence": []
+  }
+ ]
+}

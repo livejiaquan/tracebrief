@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-03T20:27:55Z",
+  "phase": "Prospective phase2 after explicit calibration on original34runs",
+  "settings": {
+    "sample_fps": 1.0,
+    "confidence": 0.65,
+    "nms_iou": 0.45,
+    "gap_ratio": 0.3,
+    "min_samples": 2,
+    "merge_gap_s": 2.1,
+    "threads": 4,
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "text_threshold": 0.25,
+    "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "processor_size": {
+      "shortest_edge": 512,
+      "longest_edge": 853
+    }
+  },
+  "primary": [
+    "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+    "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+    "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+    "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+    "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+    "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+    "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+    "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+    "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+    "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4"
+  ],
+  "routine": [
+    "01644a25617e0dd8ebb3_run_24_seed_1764206232.cam_00.rgb.mp4",
+    "0179f236dd63ebbdf964_run_15_seed_2112804163.cam_00.rgb.mp4",
+    "017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb.mp4",
+    "018c5222a72e2bff8e86_run_2_seed_31436824.cam_00.rgb.mp4",
+    "018cd2d26ab89c5ad9b2_run_32_seed_992174531.cam_00.rgb.mp4",
+    "018ce6edabcf479d76d2_run_4_seed_224042306.cam_00.rgb.mp4",
+    "01a8b535022f10dbf3b8_run_35_seed_133492914.cam_00.rgb.mp4",
+    "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+    "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+    "02204d8ac901f56538dc_run_2_seed_250957540.cam_00.rgb.mp4"
+  ],
+  "implementation_sha256": "c01bdc1ec308f870fb1cc5c12cb63cc9bc9e733806c55ee89a9061ac2daa6a5c",
+  "calibration_diagnostics_sha256": "811dd5ff6e3c65f59e75b55855f7dbe18fbea705805e2514570e46aa3a78fb7c",
+  "selection_sha256": "84d9c7d817a484a0327b3fa34f1becd79ebb71b084e1ac51ba319e9027ed25a8",
+  "metrics": "Primary localizedimage-spacepairIoU>=.50,frameproximityagreement,perclassIoU>=.50. Routinecandidate rates and qualitativevisualaudit separately; incompleteforkliftGT prohibits specificityclaims.",
+  "selection_reason": "Confidence first calibrated from original 34 runs; 512/853 resize retained 24 original development actor matches but reintroduced known shelf errors at 0.60. Posthoc 0.65 filtering retained development matches and sampled R01 parked forklift, removed sampled shelf errors, and lost R09 person frame299. This informed final selection before new20 inference. No phase2 RGB inference or visual inspection preceded this freeze. Other sampling, geometry, NMS and grouping settings unchanged.",
+  "finalized": true,
+  "baseline_source_sha256": "37a47edde364a9af3b23ed6eb31a8a97dfcfdf14a4f5f45155118a5cb56293df",
+  "config_sha256": "0598733b1ab12aa09a42ae5e7441d0c6886f13c23750e6abbe096750f259b1a0",
+  "calibration_resize_summary_sha256": "f9a9a5fca5ac768ac33b9ed05b6117f212f8ad068fd24002557a346be6515295",
+  "calibration_posthoc065_sha256": "1a75509973af23a015deb024d4a9858489c09d76af08a8d1dca4843695b3e7c6"
+}

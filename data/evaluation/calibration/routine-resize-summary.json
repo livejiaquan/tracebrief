@@ -1,0 +1,18 @@
+{
+  "scope": "Seen routine calibration frames only; no negative ground-truth scoring or threshold search",
+  "frames": 12,
+  "selected_forklift_frames": {
+    "R01": 3,
+    "R05": 2,
+    "R07": 1,
+    "R09": 0
+  },
+  "mean_wall_s": 2.829317888506921,
+  "source_integrity": {
+    "original_assertion_failed": "Concurrent processor_size change to the shared vision source; original log retained. No inference rerun.",
+    "archived_source_sha256": "37a47edde364a9af3b23ed6eb31a8a97dfcfdf14a4f5f45155118a5cb56293df",
+    "matches_pre_run_source": true,
+    "post_run_source_sha256": "c01bdc1ec308f870fb1cc5c12cb63cc9bc9e733806c55ee89a9061ac2daa6a5c"
+  },
+  "note": "No negative metrics: routine annotations omit parked forklifts. Frame299 baseline uses adjacent300 only."
+}

@@ -1,0 +1,31 @@
+{
+ "job_id": "18f4f2793d754fd8",
+ "description": "Broader search app run, 2026-10-04",
+ "analysis_seconds": 108.82,
+ "vision_timing": {
+  "wall_s": 87.742,
+  "sampled_frames": 10
+ },
+ "search_profile": {
+  "id": "broader",
+  "label": "Broader search",
+  "description": "Include more possible moments for review. Analysis takes longer and can flag irrelevant objects."
+ },
+ "vision_model": {
+  "id": "IDEA-Research/grounding-dino-tiny",
+  "revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+  "backend": "Grounding DINO CPU"
+ },
+ "source_sha256": "802f70b61ac677b13168acf80e07469b7b94684ef724ef7b60b3da3111957344",
+ "generated_at": "2026-10-03T20:54:51.256560+00:00",
+ "events": 1,
+ "generation_audits": [
+  {
+   "file": "generation-event-001-audit.json",
+   "method": "local-qwen-draft",
+   "subprocess_seconds": 14.848,
+   "load_seconds": 2.842,
+   "generation_seconds": 11.768
+  }
+ ]
+}

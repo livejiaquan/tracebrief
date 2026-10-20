@@ -1,0 +1,1291 @@
+[
+  {
+    "run": "001e53453441935632ae_run_1_seed_1288693302.ceiling_00.rgb.mp4",
+    "vision_sha256": "96659a47315f6f0dfcc4f7fa0bdd237ceb4e5497ddc27e4a837dbfed050c275e",
+    "candidate_count": 1,
+    "events": [
+      {
+        "event": {
+          "id": "event-001",
+          "title": "Interaction awaiting review",
+          "start": 2.0,
+          "end": 10.0,
+          "peak": 5.0,
+          "status": "draft",
+          "summary": "",
+          "observations": [
+            {
+              "id": "event-001-obs-1",
+              "text": "At 3s: Predicted person and forklift boxes are close but do not overlap in the image.",
+              "time": 3.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            },
+            {
+              "id": "event-001-obs-2",
+              "text": "At 5s: Predicted person and forklift boxes overlap in the image.",
+              "time": 5.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            },
+            {
+              "id": "event-001-obs-3",
+              "text": "At 9s: Predicted person and forklift boxes are close but do not overlap in the image.",
+              "time": 9.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            }
+          ],
+          "uncertainties": [
+            "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+            "Predicted object labels and boxes require visual verification."
+          ],
+          "review_questions": [],
+          "notes": "",
+          "reviewer_notes": "",
+          "history": [],
+          "vision_record": {
+            "id": "candidate-001",
+            "kind": "person_forklift_proximity_candidate",
+            "start_s": 2.0,
+            "end_s": 10.0,
+            "peak_s": 5.0,
+            "evidence": [
+              {
+                "frame_index": 90,
+                "time_s": 3.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      798.8,
+                      379.78,
+                      932.78,
+                      668.8
+                    ],
+                    "forklift_bbox": [
+                      998.51,
+                      2.71,
+                      1482.11,
+                      703.62
+                    ],
+                    "gap_px": 65.73,
+                    "gap_person_height_ratio": 0.2274,
+                    "confidence": 0.7722
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 120,
+                "time_s": 4.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      670.46,
+                      463.59,
+                      856.95,
+                      844.38
+                    ],
+                    "forklift_bbox": [
+                      885.17,
+                      1.98,
+                      1480.43,
+                      668.22
+                    ],
+                    "gap_px": 28.22,
+                    "gap_person_height_ratio": 0.0741,
+                    "confidence": 0.7761
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 150,
+                "time_s": 5.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      609.41,
+                      531.6,
+                      785.27,
+                      936.22
+                    ],
+                    "forklift_bbox": [
+                      782.54,
+                      3.67,
+                      1474.3,
+                      627.13
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.3794
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 180,
+                "time_s": 6.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      603.37,
+                      547.39,
+                      767.86,
+                      934.7
+                    ],
+                    "forklift_bbox": [
+                      784.27,
+                      19.46,
+                      1218.71,
+                      608.89
+                    ],
+                    "gap_px": 16.41,
+                    "gap_person_height_ratio": 0.0424,
+                    "confidence": 0.7804
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 210,
+                "time_s": 7.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      604.1,
+                      547.34,
+                      770.23,
+                      933.78
+                    ],
+                    "forklift_bbox": [
+                      839.78,
+                      23.32,
+                      1080.05,
+                      624.88
+                    ],
+                    "gap_px": 69.55,
+                    "gap_person_height_ratio": 0.18,
+                    "confidence": 0.7159
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 240,
+                "time_s": 8.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      602.93,
+                      546.75,
+                      771.34,
+                      934.27
+                    ],
+                    "forklift_bbox": [
+                      839.84,
+                      22.57,
+                      1080.12,
+                      624.77
+                    ],
+                    "gap_px": 68.5,
+                    "gap_person_height_ratio": 0.1768,
+                    "confidence": 0.7245
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 270,
+                "time_s": 9.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      601.38,
+                      547.7,
+                      768.5,
+                      934.34
+                    ],
+                    "forklift_bbox": [
+                      839.3,
+                      23.18,
+                      1080.11,
+                      623.73
+                    ],
+                    "gap_px": 70.8,
+                    "gap_person_height_ratio": 0.1831,
+                    "confidence": 0.7245
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              }
+            ],
+            "limitations": [
+              "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+              "Predicted object labels and boxes require visual verification."
+            ]
+          }
+        },
+        "audit": {
+          "baseline": {
+            "title": "Person\u2013forklift interaction for review",
+            "summary": "At 3s: Predicted person and forklift boxes are close but do not overlap in the image. At 5s: Predicted person and forklift boxes overlap in the image. At 9s: Predicted person and forklift boxes are close but do not overlap in the image.",
+            "review_questions": [
+              "Does the original footage support each observation?",
+              "Does this interaction require follow-up under the site's procedures?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          },
+          "model_output": {
+            "draft": {
+              "title": "Warehouse Review: Box Observations at 3s, 5s, and 9s",
+              "summary": "At 3s, the predicted person and forklift boxes are close but do not overlap. At 5s, they overlap. At 9s, they are close but do not overlap again. Timestamps and box relationships are provided chronologically.",
+              "review_questions": [
+                "Is another camera view available?",
+                "What site procedure applies when boxes overlap?"
+              ],
+              "evidence_ids": [
+                "event-001-obs-1",
+                "event-001-obs-2",
+                "event-001-obs-3"
+              ]
+            },
+            "raw_text": "{\"title\": \"Warehouse Review: Box Observations at 3s, 5s, and 9s\", \"summary\": \"At 3s, the predicted person and forklift boxes are close but do not overlap. At 5s, they overlap. At 9s, they are close but do not overlap again. Timestamps and box relationships are provided chronologically.\", \"review_questions\": [\"Is another camera view available?\", \"What site procedure applies when boxes overlap?\"] , \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\", \"event-001-obs-3\"]}",
+            "model_file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "prompt_sha256": "b75d2f79aad7543095c6ba31b2a9c7611d258dc246133a5144c1807fef4cafb5",
+            "load_seconds": 1.256,
+            "generation_seconds": 24.194,
+            "usage": {
+              "prompt_tokens": 321,
+              "completion_tokens": 140,
+              "total_tokens": 461
+            },
+            "seed": 19,
+            "temperature": 0.0
+          },
+          "validation_errors": [],
+          "method": "local-qwen-draft",
+          "seconds": 25.842,
+          "accepted": {
+            "title": "Warehouse Review: Box Observations at 3s, 5s, and 9s",
+            "summary": "At 3s, the predicted person and forklift boxes are close but do not overlap. At 5s, they overlap. At 9s, they are close but do not overlap again. Timestamps and box relationships are provided chronologically.",
+            "review_questions": [
+              "Is another camera view available?",
+              "What site procedure applies when boxes overlap?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          },
+          "warning": "Local AI draft. Citation and number checks do not establish factual correctness; review the footage."
+        }
+      }
+    ]
+  },
+  {
+    "run": "005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.rgb.mp4",
+    "vision_sha256": "3983a4b8bf66a760e4079cc8567002845cac786ee5aea54a5e7aba987e9a4085",
+    "candidate_count": 1,
+    "events": [
+      {
+        "event": {
+          "id": "event-001",
+          "title": "Interaction awaiting review",
+          "start": 0.0,
+          "end": 7.0,
+          "peak": 0.0,
+          "status": "draft",
+          "summary": "",
+          "observations": [
+            {
+              "id": "event-001-obs-1",
+              "text": "At 0s: Predicted person and forklift boxes overlap in the image.",
+              "time": 0.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            },
+            {
+              "id": "event-001-obs-2",
+              "text": "At 6s: Predicted person and forklift boxes overlap in the image.",
+              "time": 6.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            }
+          ],
+          "uncertainties": [
+            "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+            "Predicted object labels and boxes require visual verification."
+          ],
+          "review_questions": [],
+          "notes": "",
+          "reviewer_notes": "",
+          "history": [],
+          "vision_record": {
+            "id": "candidate-001",
+            "kind": "person_forklift_proximity_candidate",
+            "start_s": 0,
+            "end_s": 7.0,
+            "peak_s": 0.0,
+            "evidence": [
+              {
+                "frame_index": 0,
+                "time_s": 0.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      899.59,
+                      248.38,
+                      1019.84,
+                      562.06
+                    ],
+                    "forklift_bbox": [
+                      372.04,
+                      405.15,
+                      1112.25,
+                      1075.5
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.7952
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 30,
+                "time_s": 1.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      889.12,
+                      249.1,
+                      1019.1,
+                      558.18
+                    ],
+                    "forklift_bbox": [
+                      546.57,
+                      383.5,
+                      1013.16,
+                      1075.49
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8312
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 60,
+                "time_s": 2.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      885.97,
+                      249.43,
+                      1017.88,
+                      556.44
+                    ],
+                    "forklift_bbox": [
+                      620.62,
+                      288.02,
+                      1021.91,
+                      1073.65
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8351
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 90,
+                "time_s": 3.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      890.7,
+                      274.36,
+                      1017.52,
+                      552.52
+                    ],
+                    "forklift_bbox": [
+                      677.08,
+                      212.96,
+                      1031.33,
+                      1070.83
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.6591
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 120,
+                "time_s": 4.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      886.44,
+                      337.0,
+                      1047.37,
+                      486.16
+                    ],
+                    "forklift_bbox": [
+                      722.19,
+                      154.22,
+                      1046.47,
+                      1036.78
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.7054
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 150,
+                "time_s": 5.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      1069.97,
+                      283.24,
+                      1161.7,
+                      612.57
+                    ],
+                    "forklift_bbox": [
+                      759.31,
+                      103.91,
+                      1043.74,
+                      902.54
+                    ],
+                    "gap_px": 26.23,
+                    "gap_person_height_ratio": 0.0796,
+                    "confidence": 0.8211
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 180,
+                "time_s": 6.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      1028.91,
+                      337.52,
+                      1263.89,
+                      585.7
+                    ],
+                    "forklift_bbox": [
+                      789.78,
+                      61.94,
+                      1051.6,
+                      789.93
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.7975
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              }
+            ],
+            "limitations": [
+              "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+              "Predicted object labels and boxes require visual verification."
+            ]
+          }
+        },
+        "audit": {
+          "baseline": {
+            "title": "Person\u2013forklift interaction for review",
+            "summary": "At 0s: Predicted person and forklift boxes overlap in the image. At 6s: Predicted person and forklift boxes overlap in the image.",
+            "review_questions": [
+              "Does the original footage support each observation?",
+              "Does this interaction require follow-up under the site's procedures?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          },
+          "model_output": {
+            "draft": {
+              "title": "Person and Forklift Boxes Overlap at 0s and 6s",
+              "summary": "At 0s and 6s, the predicted person and forklift boxes overlap in the image. This observation indicates potential proximity between the person and forklift, requiring visual verification.",
+              "review_questions": [
+                "Is another camera view available?",
+                "What site procedure applies when boxes overlap?"
+              ],
+              "evidence_ids": [
+                "event-001-obs-1",
+                "event-001-obs-2"
+              ]
+            },
+            "raw_text": "{\"title\": \"Person and Forklift Boxes Overlap at 0s and 6s\", \"summary\": \"At 0s and 6s, the predicted person and forklift boxes overlap in the image. This observation indicates potential proximity between the person and forklift, requiring visual verification.\" , \"review_questions\": [\"Is another camera view available?\", \"What site procedure applies when boxes overlap?\"] , \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]}",
+            "model_file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "prompt_sha256": "976b6ae2cee912cfbacd13c1fe707b33c6c46672c483fa49aea7d1da3b7d40bf",
+            "load_seconds": 1.194,
+            "generation_seconds": 23.372,
+            "usage": {
+              "prompt_tokens": 274,
+              "completion_tokens": 113,
+              "total_tokens": 387
+            },
+            "seed": 19,
+            "temperature": 0.0
+          },
+          "validation_errors": [],
+          "method": "local-qwen-draft",
+          "seconds": 24.948,
+          "accepted": {
+            "title": "Person and Forklift Boxes Overlap at 0s and 6s",
+            "summary": "At 0s and 6s, the predicted person and forklift boxes overlap in the image. This observation indicates potential proximity between the person and forklift, requiring visual verification.",
+            "review_questions": [
+              "Is another camera view available?",
+              "What site procedure applies when boxes overlap?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          },
+          "warning": "Local AI draft. Citation and number checks do not establish factual correctness; review the footage."
+        }
+      }
+    ]
+  },
+  {
+    "run": "00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.rgb.mp4",
+    "vision_sha256": "eeffd7d152c2f0c1a81bcb589df35407d69838b17f82f1ab7a62a315f79a0ab6",
+    "candidate_count": 1,
+    "events": [
+      {
+        "event": {
+          "id": "event-001",
+          "title": "Interaction awaiting review",
+          "start": 0.0,
+          "end": 7.0,
+          "peak": 0.0,
+          "status": "draft",
+          "summary": "",
+          "observations": [
+            {
+              "id": "event-001-obs-1",
+              "text": "At 0s: Predicted person and forklift boxes overlap in the image.",
+              "time": 0.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            },
+            {
+              "id": "event-001-obs-2",
+              "text": "At 6s: Predicted person and forklift boxes overlap in the image.",
+              "time": 6.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            }
+          ],
+          "uncertainties": [
+            "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+            "Predicted object labels and boxes require visual verification."
+          ],
+          "review_questions": [],
+          "notes": "",
+          "reviewer_notes": "",
+          "history": [],
+          "vision_record": {
+            "id": "candidate-001",
+            "kind": "person_forklift_proximity_candidate",
+            "start_s": 0,
+            "end_s": 7.0,
+            "peak_s": 0.0,
+            "evidence": [
+              {
+                "frame_index": 0,
+                "time_s": 0.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      885.76,
+                      267.49,
+                      1012.91,
+                      564.64
+                    ],
+                    "forklift_bbox": [
+                      939.06,
+                      1.75,
+                      1094.62,
+                      281.63
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8124
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 30,
+                "time_s": 1.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      885.74,
+                      269.41,
+                      1012.96,
+                      562.9
+                    ],
+                    "forklift_bbox": [
+                      926.96,
+                      2.1,
+                      1090.92,
+                      312.24
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8099
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 60,
+                "time_s": 2.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      885.97,
+                      269.08,
+                      1012.68,
+                      562.94
+                    ],
+                    "forklift_bbox": [
+                      913.99,
+                      1.81,
+                      1087.77,
+                      351.59
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8015
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 90,
+                "time_s": 3.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      886.59,
+                      267.87,
+                      1012.87,
+                      563.04
+                    ],
+                    "forklift_bbox": [
+                      900.03,
+                      2.27,
+                      1084.54,
+                      393.6
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.7887
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 120,
+                "time_s": 4.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      889.18,
+                      271.9,
+                      1016.16,
+                      564.44
+                    ],
+                    "forklift_bbox": [
+                      882.73,
+                      2.06,
+                      1082.67,
+                      443.9
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.7937
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 150,
+                "time_s": 5.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      1048.94,
+                      311.51,
+                      1143.55,
+                      615.98
+                    ],
+                    "forklift_bbox": [
+                      866.89,
+                      2.78,
+                      1075.75,
+                      495.52
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8354
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 180,
+                "time_s": 6.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      978.78,
+                      330.61,
+                      1135.2,
+                      598.37
+                    ],
+                    "forklift_bbox": [
+                      846.42,
+                      2.7,
+                      1070.56,
+                      552.62
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8154
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              }
+            ],
+            "limitations": [
+              "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+              "Predicted object labels and boxes require visual verification."
+            ]
+          }
+        },
+        "audit": {
+          "baseline": {
+            "title": "Person\u2013forklift interaction for review",
+            "summary": "At 0s: Predicted person and forklift boxes overlap in the image. At 6s: Predicted person and forklift boxes overlap in the image.",
+            "review_questions": [
+              "Does the original footage support each observation?",
+              "Does this interaction require follow-up under the site's procedures?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          },
+          "model_output": {
+            "draft": {
+              "title": "Person and Forklift Boxes Overlap at 0s and 6s",
+              "summary": "At 0s and 6s, the predicted person and forklift boxes overlap in the image. This observation indicates potential proximity between the person and forklift, requiring visual verification.",
+              "review_questions": [
+                "Is another camera view available?",
+                "What site procedure applies when boxes overlap?"
+              ],
+              "evidence_ids": [
+                "event-001-obs-1",
+                "event-001-obs-2"
+              ]
+            },
+            "raw_text": "{\"title\": \"Person and Forklift Boxes Overlap at 0s and 6s\", \"summary\": \"At 0s and 6s, the predicted person and forklift boxes overlap in the image. This observation indicates potential proximity between the person and forklift, requiring visual verification.\" , \"review_questions\": [\"Is another camera view available?\", \"What site procedure applies when boxes overlap?\"] , \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]}",
+            "model_file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "prompt_sha256": "976b6ae2cee912cfbacd13c1fe707b33c6c46672c483fa49aea7d1da3b7d40bf",
+            "load_seconds": 1.367,
+            "generation_seconds": 35.521,
+            "usage": {
+              "prompt_tokens": 274,
+              "completion_tokens": 113,
+              "total_tokens": 387
+            },
+            "seed": 19,
+            "temperature": 0.0
+          },
+          "validation_errors": [],
+          "method": "local-qwen-draft",
+          "seconds": 37.581,
+          "accepted": {
+            "title": "Person and Forklift Boxes Overlap at 0s and 6s",
+            "summary": "At 0s and 6s, the predicted person and forklift boxes overlap in the image. This observation indicates potential proximity between the person and forklift, requiring visual verification.",
+            "review_questions": [
+              "Is another camera view available?",
+              "What site procedure applies when boxes overlap?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          },
+          "warning": "Local AI draft. Citation and number checks do not establish factual correctness; review the footage."
+        }
+      }
+    ]
+  },
+  {
+    "run": "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+    "vision_sha256": "a3d9dd3695f78bfe37676adc2fcd094b9a3747e1c2289d254c7d1fb621f08bac",
+    "candidate_count": 1,
+    "events": [
+      {
+        "event": {
+          "id": "event-001",
+          "title": "Interaction awaiting review",
+          "start": 3.0,
+          "end": 8.0,
+          "peak": 4.0,
+          "status": "draft",
+          "summary": "",
+          "observations": [
+            {
+              "id": "event-001-obs-1",
+              "text": "At 4s: Predicted person and forklift boxes overlap in the image.",
+              "time": 4.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            },
+            {
+              "id": "event-001-obs-2",
+              "text": "At 7s: Predicted person and forklift boxes overlap in the image.",
+              "time": 7.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            }
+          ],
+          "uncertainties": [
+            "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+            "Predicted object labels and boxes require visual verification."
+          ],
+          "review_questions": [],
+          "notes": "",
+          "reviewer_notes": "",
+          "history": [],
+          "vision_record": {
+            "id": "candidate-001",
+            "kind": "person_forklift_proximity_candidate",
+            "start_s": 3.0,
+            "end_s": 8.0,
+            "peak_s": 4.0,
+            "evidence": [
+              {
+                "frame_index": 120,
+                "time_s": 4.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      899.31,
+                      275.8,
+                      1012.78,
+                      548.19
+                    ],
+                    "forklift_bbox": [
+                      1007.11,
+                      15.34,
+                      1434.8,
+                      543.0
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.868
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 150,
+                "time_s": 5.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      810.24,
+                      248.59,
+                      965.51,
+                      495.02
+                    ],
+                    "forklift_bbox": [
+                      904.51,
+                      30.61,
+                      1354.24,
+                      574.27
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8758
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 180,
+                "time_s": 6.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      861.57,
+                      191.02,
+                      933.52,
+                      364.43
+                    ],
+                    "forklift_bbox": [
+                      801.35,
+                      44.15,
+                      1272.09,
+                      604.48
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.841
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 210,
+                "time_s": 7.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      922.45,
+                      159.25,
+                      1007.71,
+                      283.98
+                    ],
+                    "forklift_bbox": [
+                      844.45,
+                      50.04,
+                      1070.77,
+                      622.31
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8144
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              }
+            ],
+            "limitations": [
+              "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+              "Predicted object labels and boxes require visual verification."
+            ]
+          }
+        },
+        "audit": {
+          "baseline": {
+            "title": "Person\u2013forklift interaction for review",
+            "summary": "At 4s: Predicted person and forklift boxes overlap in the image. At 7s: Predicted person and forklift boxes overlap in the image.",
+            "review_questions": [
+              "Does the original footage support each observation?",
+              "Does this interaction require follow-up under the site's procedures?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          },
+          "model_output": {
+            "draft": {
+              "title": "Person and Forklift Boxes Overlap at 4s and 7s",
+              "summary": "At 4s and 7s, the predicted person and forklift boxes overlap in the image. This observation requires visual verification to determine if there is a physical distance, collision, or near miss. The supervisor is preparing an incident brief.",
+              "review_questions": [
+                "Is another camera view available?",
+                "What site procedure applies?"
+              ],
+              "evidence_ids": [
+                "event-001-obs-1",
+                "event-001-obs-2"
+              ]
+            },
+            "raw_text": "{\"title\": \"Person and Forklift Boxes Overlap at 4s and 7s\", \"summary\": \"At 4s and 7s, the predicted person and forklift boxes overlap in the image. This observation requires visual verification to determine if there is a physical distance, collision, or near miss. The supervisor is preparing an incident brief.\", \"review_questions\": [\"Is another camera view available?\", \"What site procedure applies?\"] , \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]}",
+            "model_file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "prompt_sha256": "30d266ae0ea615dc6ffd19ccb2d7cefd662fe73c0728f1fc8bf3378e1e7487b6",
+            "load_seconds": 1.982,
+            "generation_seconds": 40.7,
+            "usage": {
+              "prompt_tokens": 274,
+              "completion_tokens": 120,
+              "total_tokens": 394
+            },
+            "seed": 19,
+            "temperature": 0.0
+          },
+          "validation_errors": [],
+          "method": "local-qwen-draft",
+          "seconds": 43.499,
+          "accepted": {
+            "title": "Person and Forklift Boxes Overlap at 4s and 7s",
+            "summary": "At 4s and 7s, the predicted person and forklift boxes overlap in the image. This observation requires visual verification to determine if there is a physical distance, collision, or near miss. The supervisor is preparing an incident brief.",
+            "review_questions": [
+              "Is another camera view available?",
+              "What site procedure applies?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          },
+          "warning": "Local AI draft. Citation and number checks do not establish factual correctness; review the footage."
+        }
+      }
+    ]
+  },
+  {
+    "run": "016c1396912bfc432997_run_3_seed_1053328212.ceiling_00.rgb.mp4",
+    "vision_sha256": "1d4b22e94ca28eb276a4f5199ef805280818f6927a95bb03886f69d561e5d49c",
+    "candidate_count": 0,
+    "events": []
+  },
+  {
+    "run": "018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.rgb.mp4",
+    "vision_sha256": "7f7839c4ec2d28dbfa1506a40a09323b9715a6c8f4bde1226f45cc5389d56a41",
+    "candidate_count": 1,
+    "events": [
+      {
+        "event": {
+          "id": "event-001",
+          "title": "Interaction awaiting review",
+          "start": 3.0,
+          "end": 9.0,
+          "peak": 5.0,
+          "status": "draft",
+          "summary": "",
+          "observations": [
+            {
+              "id": "event-001-obs-1",
+              "text": "At 4s: Predicted person and forklift boxes are close but do not overlap in the image.",
+              "time": 4.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            },
+            {
+              "id": "event-001-obs-2",
+              "text": "At 5s: Predicted person and forklift boxes overlap in the image.",
+              "time": 5.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            },
+            {
+              "id": "event-001-obs-3",
+              "text": "At 8s: Predicted person and forklift boxes are close but do not overlap in the image.",
+              "time": 8.0,
+              "image_kind": "Original video frame; predicted geometry is recorded in the audit JSON."
+            }
+          ],
+          "uncertainties": [
+            "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+            "Predicted object labels and boxes require visual verification."
+          ],
+          "review_questions": [],
+          "notes": "",
+          "reviewer_notes": "",
+          "history": [],
+          "vision_record": {
+            "id": "candidate-001",
+            "kind": "person_forklift_proximity_candidate",
+            "start_s": 3.0,
+            "end_s": 9.0,
+            "peak_s": 5.0,
+            "evidence": [
+              {
+                "frame_index": 120,
+                "time_s": 4.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      917.89,
+                      290.58,
+                      1002.15,
+                      573.51
+                    ],
+                    "forklift_bbox": [
+                      1042.02,
+                      1.76,
+                      1314.33,
+                      422.15
+                    ],
+                    "gap_px": 39.87,
+                    "gap_person_height_ratio": 0.1409,
+                    "confidence": 0.8189
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 150,
+                "time_s": 5.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      918.29,
+                      291.01,
+                      1001.25,
+                      573.5
+                    ],
+                    "forklift_bbox": [
+                      990.51,
+                      2.79,
+                      1276.61,
+                      464.78
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8052
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 180,
+                "time_s": 6.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      935.62,
+                      302.58,
+                      1035.0,
+                      571.27
+                    ],
+                    "forklift_bbox": [
+                      933.47,
+                      4.5,
+                      1235.72,
+                      510.52
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.8062
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 210,
+                "time_s": 7.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      1042.46,
+                      335.66,
+                      1180.51,
+                      592.77
+                    ],
+                    "forklift_bbox": [
+                      869.98,
+                      21.74,
+                      1189.25,
+                      560.97
+                    ],
+                    "gap_px": 0.0,
+                    "gap_person_height_ratio": 0.0,
+                    "confidence": 0.7697
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              },
+              {
+                "frame_index": 240,
+                "time_s": 8.0,
+                "pairs": [
+                  {
+                    "person_bbox": [
+                      1179.03,
+                      450.25,
+                      1295.04,
+                      734.97
+                    ],
+                    "forklift_bbox": [
+                      796.71,
+                      4.34,
+                      1149.13,
+                      617.16
+                    ],
+                    "gap_px": 29.9,
+                    "gap_person_height_ratio": 0.105,
+                    "confidence": 0.8562
+                  }
+                ],
+                "fact": "Predicted person and forklift boxes are close in image space."
+              }
+            ],
+            "limitations": [
+              "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+              "Predicted object labels and boxes require visual verification."
+            ]
+          }
+        },
+        "audit": {
+          "baseline": {
+            "title": "Person\u2013forklift interaction for review",
+            "summary": "At 4s: Predicted person and forklift boxes are close but do not overlap in the image. At 5s: Predicted person and forklift boxes overlap in the image. At 8s: Predicted person and forklift boxes are close but do not overlap in the image.",
+            "review_questions": [
+              "Does the original footage support each observation?",
+              "Does this interaction require follow-up under the site's procedures?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          },
+          "model_output": {
+            "draft": {
+              "title": "Warehouse Review: Box Observations",
+              "summary": "At 4s, predicted person and forklift boxes are close but do not overlap. At 5s, they overlap. At 8s, they are close but do not overlap again. Timestamps cover close-but-not-overlapping boxes and overlapping boxes.",
+              "review_questions": [
+                "Another camera view is available. Site procedure applies: 'Close but not overlapping boxes do not establish physical distance, collision, or unsafe conduct.'",
+                "Predicted object labels and boxes require visual verification."
+              ],
+              "evidence_ids": [
+                "event-001-obs-1",
+                "event-001-obs-2",
+                "event-001-obs-3"
+              ]
+            },
+            "raw_text": "{\"title\": \"Warehouse Review: Box Observations\", \"summary\": \"At 4s, predicted person and forklift boxes are close but do not overlap. At 5s, they overlap. At 8s, they are close but do not overlap again. Timestamps cover close-but-not-overlapping boxes and overlapping boxes.\", \"review_questions\": [\"Another camera view is available. Site procedure applies: 'Close but not overlapping boxes do not establish physical distance, collision, or unsafe conduct.'\", \"Predicted object labels and boxes require visual verification.\"] , \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\", \"event-001-obs-3\"]}",
+            "model_file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+            "prompt_sha256": "3825063e2fdb57da82c95521a34c8269962414d00b936f2917148dd48f97e238",
+            "load_seconds": 2.158,
+            "generation_seconds": 58.426,
+            "usage": {
+              "prompt_tokens": 321,
+              "completion_tokens": 153,
+              "total_tokens": 474
+            },
+            "seed": 19,
+            "temperature": 0.0
+          },
+          "validation_errors": [],
+          "method": "local-qwen-draft",
+          "seconds": 61.42,
+          "accepted": {
+            "title": "Warehouse Review: Box Observations",
+            "summary": "At 4s, predicted person and forklift boxes are close but do not overlap. At 5s, they overlap. At 8s, they are close but do not overlap again. Timestamps cover close-but-not-overlapping boxes and overlapping boxes.",
+            "review_questions": [
+              "Another camera view is available. Site procedure applies: 'Close but not overlapping boxes do not establish physical distance, collision, or unsafe conduct.'",
+              "Predicted object labels and boxes require visual verification."
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          },
+          "warning": "Local AI draft. Citation and number checks do not establish factual correctness; review the footage."
+        }
+      }
+    ]
+  }
+]

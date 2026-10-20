@@ -1,0 +1,1841 @@
+{
+  "scope": "Sampled simulator tight 2D boxes; not physical safety labels.",
+  "videos": {
+    "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              928.0,
+              288.0,
+              1021.0,
+              553.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              0,
+              0,
+              440.0,
+              538.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              928.0,
+              288.0,
+              1021.0,
+              553.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              0,
+              0,
+              468.0,
+              507.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              928.0,
+              287.0,
+              1021.0,
+              552.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              89.0,
+              0,
+              571.0,
+              522.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              928.0,
+              288.0,
+              1021.0,
+              552.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              189.0,
+              0,
+              678.0,
+              536.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              935.0,
+              290.0,
+              1020.0,
+              559.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              293.0,
+              8.0,
+              788.0,
+              552.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              976.0,
+              260.0,
+              1089.0,
+              492.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              400.0,
+              15.0,
+              902.0,
+              568.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              970.0,
+              285.0,
+              1088.0,
+              526.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              510.0,
+              22.0,
+              1019.0,
+              584.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              975.0,
+              209.0,
+              1059.0,
+              345.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              581.0,
+              31.0,
+              1112.0,
+              590.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1023.0,
+              225.0,
+              1039.0,
+              301.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              621.0,
+              37.0,
+              1125.0,
+              662.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              621.0,
+              37.0,
+              1125.0,
+              662.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "b522a77103e74aa736131f9bcca68224b9c8d15f0407c53e28e93c1efe931a27"
+    },
+    "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              499.0,
+              0,
+              726.0,
+              315.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              528.0,
+              0,
+              768.0,
+              348.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              550.0,
+              0,
+              814.0,
+              384.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              586.0,
+              0,
+              864.0,
+              424.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              893.0,
+              284.0,
+              999.0,
+              562.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              628.0,
+              0,
+              919.0,
+              467.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              955.0,
+              281.0,
+              1135.0,
+              523.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              667.0,
+              0,
+              980.0,
+              515.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1113.0,
+              204.0,
+              1241.0,
+              430.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              710.0,
+              4.0,
+              1049.0,
+              569.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1150.0,
+              182.0,
+              1221.0,
+              431.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              723.0,
+              25.0,
+              1125.0,
+              618.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1147.0,
+              181.0,
+              1220.0,
+              431.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              592.0,
+              31.0,
+              1131.0,
+              606.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1168.0,
+              208.0,
+              1282.0,
+              445.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              843.0,
+              45.0,
+              1072.0,
+              725.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "d7b119727992b6cf64548a1e4b6e4105b023207e0e951ad94748acfd98bdc381"
+    },
+    "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              908.0,
+              277.0,
+              1014.0,
+              543.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              898.0,
+              0,
+              1055.0,
+              356.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              908.0,
+              277.0,
+              1014.0,
+              543.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              900.0,
+              0,
+              1050.0,
+              391.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              901.0,
+              277.0,
+              1014.0,
+              544.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              894.0,
+              0,
+              1053.0,
+              437.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              790.0,
+              260.0,
+              857.0,
+              531.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              888.0,
+              2.0,
+              1057.0,
+              488.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              794.0,
+              295.0,
+              885.0,
+              520.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              884.0,
+              30.0,
+              1061.0,
+              546.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              490.0,
+              324.0,
+              656.0,
+              571.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              861.0,
+              54.0,
+              1083.0,
+              604.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              333.0,
+              309.0,
+              480.0,
+              589.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              807.0,
+              53.0,
+              1163.0,
+              615.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              346.0,
+              302.0,
+              471.0,
+              588.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              718.0,
+              52.0,
+              1114.0,
+              613.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              367.0,
+              321.0,
+              527.0,
+              574.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              612.0,
+              59.0,
+              1126.0,
+              606.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              257.0,
+              271.0,
+              401.0,
+              543.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              856.0,
+              73.0,
+              1072.0,
+              717.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "994d9a3a2cdf2a33d9887690f2e4f8999462d5d3dc8c8828bf26ec60cd48bc09"
+    },
+    "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              884.0,
+              254.0,
+              1017.0,
+              556.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              201.0,
+              16.0,
+              724.0,
+              564.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              293.0,
+              1028.0,
+              592.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              321.0,
+              20.0,
+              842.0,
+              571.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              858.0,
+              177.0,
+              947.0,
+              342.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              442.0,
+              23.0,
+              961.0,
+              578.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              859.0,
+              185.0,
+              864.0,
+              276.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              565.0,
+              26.0,
+              1086.0,
+              585.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              861.0,
+              221.0,
+              874.0,
+              281.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              620.0,
+              36.0,
+              1124.0,
+              666.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              855.0,
+              136.0,
+              881.0,
+              323.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              846.0,
+              40.0,
+              1138.0,
+              717.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              861.0,
+              132.0,
+              945.0,
+              339.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              803.0,
+              26.0,
+              1330.0,
+              581.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              801.0,
+              98.0,
+              885.0,
+              330.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              832.0,
+              25.0,
+              1099.0,
+              610.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              862.0,
+              108.0,
+              990.0,
+              264.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              847.0,
+              31.0,
+              1074.0,
+              614.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              858.0,
+              102.0,
+              960.0,
+              264.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              847.0,
+              31.0,
+              1074.0,
+              614.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "dc9d99787031314455787aa66c91e8976070387a3e1d2b5fe2fbd0987b51d19b"
+    },
+    "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              276.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              819.0,
+              0,
+              969.0,
+              312.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              277.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              821.0,
+              0,
+              981.0,
+              350.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              276.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              822.0,
+              0,
+              991.0,
+              393.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              899.0,
+              291.0,
+              1014.0,
+              568.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              823.0,
+              0,
+              1006.0,
+              441.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1079.0,
+              309.0,
+              1149.0,
+              591.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              827.0,
+              0,
+              1022.0,
+              495.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1004.0,
+              335.0,
+              1146.0,
+              584.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              832.0,
+              5.0,
+              1040.0,
+              556.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1274.0,
+              295.0,
+              1417.0,
+              524.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              769.0,
+              21.0,
+              1091.0,
+              608.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1405.0,
+              245.0,
+              1513.0,
+              500.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              609.0,
+              26.0,
+              1126.0,
+              597.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1400.0,
+              230.0,
+              1489.0,
+              494.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              688.0,
+              42.0,
+              1105.0,
+              707.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1400.0,
+              228.0,
+              1488.0,
+              494.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              816.0,
+              38.0,
+              1241.0,
+              696.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "abeb04c84e8424093772d6a822a2a5ce39ff36fc07b91a2db2785a4e89922fe3"
+    },
+    "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              890.0,
+              277.0,
+              1007.0,
+              556.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              610.0,
+              0,
+              793.0,
+              276.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              889.0,
+              277.0,
+              1006.0,
+              556.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              630.0,
+              0,
+              821.0,
+              308.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              890.0,
+              277.0,
+              1006.0,
+              556.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              650.0,
+              0,
+              852.0,
+              344.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              890.0,
+              277.0,
+              1006.0,
+              556.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              662.0,
+              0,
+              887.0,
+              383.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              889.0,
+              277.0,
+              1007.0,
+              556.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              680.0,
+              0,
+              924.0,
+              426.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              889.0,
+              277.0,
+              1006.0,
+              556.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              708.0,
+              0,
+              955.0,
+              474.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              817.0,
+              357.0,
+              1022.0,
+              627.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              740.0,
+              0,
+              1014.0,
+              524.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              645.0,
+              361.0,
+              856.0,
+              623.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              776.0,
+              13.0,
+              1068.0,
+              588.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              526.0,
+              323.0,
+              669.0,
+              580.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              692.0,
+              24.0,
+              1130.0,
+              615.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              370.0,
+              375.0,
+              574.0,
+              608.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              599.0,
+              34.0,
+              1131.0,
+              638.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "483f6ccb89cad06e453c345c091af0663d952e4af6ffec259b6c91c9691c2db6"
+    },
+    "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              893.0,
+              274.0,
+              1008.0,
+              554.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              1080.0,
+              0,
+              1277.0,
+              460.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              893.0,
+              274.0,
+              1008.0,
+              554.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              994.0,
+              0,
+              1336.0,
+              485.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              875.0,
+              349.0,
+              1099.0,
+              613.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              917.0,
+              0,
+              1283.0,
+              527.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1056.0,
+              366.0,
+              1203.0,
+              644.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              830.0,
+              8.0,
+              1225.0,
+              579.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1054.0,
+              388.0,
+              1260.0,
+              676.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              830.0,
+              25.0,
+              1064.0,
+              603.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1221.0,
+              340.0,
+              1338.0,
+              643.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              712.0,
+              25.0,
+              1127.0,
+              617.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1193.0,
+              327.0,
+              1335.0,
+              623.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              593.0,
+              33.0,
+              1133.0,
+              623.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1192.0,
+              327.0,
+              1334.0,
+              623.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              862.0,
+              42.0,
+              1095.0,
+              720.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1198.0,
+              397.0,
+              1459.0,
+              681.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              792.0,
+              28.0,
+              1321.0,
+              601.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1350.0,
+              350.0,
+              1475.0,
+              656.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              808.0,
+              23.0,
+              1156.0,
+              612.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "2910e78c69dd1ad7c2c140b06c77e50c36bc5634db2232d6d0d0263ff4f6ec4c"
+    },
+    "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              1676.0,
+              0,
+              1919.0,
+              539.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              1638.0,
+              0,
+              1919.0,
+              518.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              1530.0,
+              0,
+              1919.0,
+              527.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              1420.0,
+              2.0,
+              1919.0,
+              535.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              892.0,
+              275.0,
+              1003.0,
+              555.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              1309.0,
+              6.0,
+              1821.0,
+              544.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              909.0,
+              284.0,
+              1000.0,
+              559.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              1195.0,
+              10.0,
+              1708.0,
+              553.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              936.0,
+              352.0,
+              1087.0,
+              611.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              1079.0,
+              14.0,
+              1592.0,
+              562.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1050.0,
+              448.0,
+              1163.0,
+              760.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              961.0,
+              19.0,
+              1475.0,
+              571.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1070.0,
+              523.0,
+              1304.0,
+              888.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              838.0,
+              23.0,
+              1356.0,
+              581.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1150.0,
+              545.0,
+              1269.0,
+              932.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              809.0,
+              23.0,
+              1156.0,
+              612.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "78c85cd7acefe4a20d04a0ca4ea147783dac7406ecf0636bb35ca20b2b45ddbb"
+    },
+    "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4": {
+      "frames": {
+        "0": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              898.0,
+              286.0,
+              1001.0,
+              552.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              798.0,
+              0,
+              963.0,
+              354.0
+            ]
+          }
+        ],
+        "30": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              898.0,
+              286.0,
+              1001.0,
+              552.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              799.0,
+              0,
+              979.0,
+              397.0
+            ]
+          }
+        ],
+        "60": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              898.0,
+              286.0,
+              1000.0,
+              552.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              804.0,
+              0,
+              999.0,
+              445.0
+            ]
+          }
+        ],
+        "90": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              871.0,
+              350.0,
+              1040.0,
+              593.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              812.0,
+              0,
+              1019.0,
+              500.0
+            ]
+          }
+        ],
+        "120": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1036.0,
+              363.0,
+              1173.0,
+              616.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              821.0,
+              6.0,
+              1043.0,
+              561.0
+            ]
+          }
+        ],
+        "150": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1064.0,
+              333.0,
+              1187.0,
+              589.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              735.0,
+              20.0,
+              1100.0,
+              607.0
+            ]
+          }
+        ],
+        "180": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1098.0,
+              393.0,
+              1257.0,
+              607.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              597.0,
+              27.0,
+              1119.0,
+              590.0
+            ]
+          }
+        ],
+        "210": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1296.0,
+              497.0,
+              1404.0,
+              781.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              729.0,
+              43.0,
+              1093.0,
+              718.0
+            ]
+          }
+        ],
+        "240": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1331.0,
+              508.0,
+              1485.0,
+              804.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              806.0,
+              36.0,
+              1273.0,
+              680.0
+            ]
+          }
+        ],
+        "270": [
+          {
+            "class_name": "person",
+            "bbox_xyxy": [
+              1307.0,
+              490.0,
+              1473.0,
+              807.0
+            ]
+          },
+          {
+            "class_name": "forklift",
+            "bbox_xyxy": [
+              792.0,
+              22.0,
+              1290.0,
+              598.0
+            ]
+          }
+        ]
+      },
+      "annotation_sha256": "431c68b7b0edd8878bef96c874585f4c7590689f6989c619ce881ec2b4ad2d82"
+    }
+  }
+}

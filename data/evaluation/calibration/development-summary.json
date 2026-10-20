@@ -1,0 +1,119 @@
+{
+  "parameters": {
+    "scope": "Original 3 development runs only; same 12 frames as first DINO probe; no new held-out access",
+    "model_id": "IDEA-Research/grounding-dino-tiny",
+    "model_revision": "a2bb814dd30d776dcf7e30523b00659f4f141c71",
+    "confidence": 0.6,
+    "text_threshold": 0.25,
+    "nms_iou": 0.45,
+    "threads": 4,
+    "frames": [
+      0,
+      90,
+      150,
+      240
+    ],
+    "sizes": [
+      {
+        "shortest_edge": 384,
+        "longest_edge": 640
+      },
+      {
+        "shortest_edge": 512,
+        "longest_edge": 853
+      }
+    ],
+    "production_sha256": "37a47edde364a9af3b23ed6eb31a8a97dfcfdf14a4f5f45155118a5cb56293df"
+  },
+  "model_load_seconds": 0.22810724400915205,
+  "results": {
+    "384_640": {
+      "n_frames": 12,
+      "counts": {
+        "person": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9166666666666666
+        }
+      },
+      "mean_frame_s": 1.6117330819931037,
+      "median_frame_s": 1.608673941460438,
+      "min_frame_s": 1.5523364880355075,
+      "max_frame_s": 1.675248509971425,
+      "failures": [
+        {
+          "video": "c26853e0837dca932ef9_00f2bbb80d7badad0134_run_25_seed_750796930.ceiling_00.rgb.mp4",
+          "frame_index": 90,
+          "class": "forklift",
+          "kind": "fn",
+          "count": 1
+        }
+      ],
+      "timing_scope": "Measured preprocess+forward+postprocess+NMS; excludes model load and video decoding; sequential shapes on same current CPU process."
+    },
+    "512_853": {
+      "n_frames": 12,
+      "counts": {
+        "person": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "mean_frame_s": 2.867249851270268,
+      "median_frame_s": 2.8198920835275203,
+      "min_frame_s": 2.6657488519558683,
+      "max_frame_s": 3.111500074970536,
+      "failures": [],
+      "timing_scope": "Measured preprocess+forward+postprocess+NMS; excludes model load and video decoding; sequential shapes on same current CPU process."
+    },
+    "cached_800_1333": {
+      "n_frames": 12,
+      "counts": {
+        "person": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "mean_frame_s": 7.122208116508166,
+      "median_frame_s": 7.14605084847426,
+      "min_frame_s": 6.159901511040516,
+      "max_frame_s": 8.512059635017067,
+      "failures": [],
+      "timing_scope": "Historical original probe timing (.20/.20 postprocess); .60/.25 accuracy from filtered original production-development outputs. Uncontrolled workload comparison."
+    }
+  },
+  "limitations": [
+    "Only12developmentframes and3runs; may miss small/occluded objects elsewhere.",
+    "Original800timing was measured earlier and is not a contemporaneous controlled speedup baseline.",
+    "Threshold and resolution decisions from this probe require untouched held-out validation."
+  ]
+}
