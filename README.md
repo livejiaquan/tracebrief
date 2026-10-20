@@ -47,9 +47,11 @@ The detector compiles to a Hailo-10H HEF (Hailo lists `yolox_tiny` for Hailo-10H
 
 ## Install
 
-Linux or WSL with Python 3.11+, several free CPU cores, about 8 GB of free RAM and about 9 GB of free disk for three environments and the models. Native Windows setup is not verified. From this directory:
+Linux or WSL with Python 3.11+, several free CPU cores, about 8 GB of free RAM and about 6 GB of free disk for three environments and the models (5.1 GB in our clean-install test). Native Windows setup is not verified. Check that `python3 --version` is 3.11 or newer; if `python3` is a conda or pyenv interpreter, use `/usr/bin/python3` in the three `venv` commands. Run everything below from the repository root, in the same shell.
 
 ```bash
+git clone https://github.com/livejiaquan/tracebrief && cd tracebrief
+
 # Ubuntu / Debian / WSL prerequisites, once.
 sudo apt-get update
 sudo apt-get install -y python3-venv python3-dev build-essential cmake ffmpeg
@@ -63,7 +65,7 @@ python3 -m venv .venv-vision
 .venv-vision/bin/python -m pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
 .venv-vision/bin/python -m pip install -r scripts/vision_requirements.txt
 
-# 3. Local language and vision-language models (llama.cpp; compiles if no wheel is available, several minutes).
+# 3. Local language and vision-language models (llama.cpp builds from source with a C/C++ compiler, about 3 minutes on 16 cores).
 python3 -m venv .venv-llm
 .venv-llm/bin/python -m pip install --upgrade pip
 CMAKE_BUILD_PARALLEL_LEVEL=4 CMAKE_ARGS="-DGGML_CUDA=OFF" .venv-llm/bin/python -m pip install -r scripts/generation_requirements.txt
@@ -91,7 +93,7 @@ export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
 PYTHONPATH=src .venv-app/bin/python -m tracebrief --host 127.0.0.1 --port 8765
 ```
 
-Open **http://127.0.0.1:8765**, choose **Warehouse interaction 01**, pick **Fast search** and click **Review recording**. On our CPU, Fast search with the visual check and the draft took 30 s for the 10-second clip (detection 0.8 s, visual check 13 s, draft about 15 s); Broader search adds about a minute of detection. Click any observation time to jump to that frame, edit the brief, then **Export review**.
+Open **http://127.0.0.1:8765**, choose **Warehouse interaction 01**, pick **Fast search** and click **Review recording**. On our CPU, Fast search with the visual check and the draft takes about 30 s for the 10-second clip (detection under 1 s, visual check about 13 s, draft about 15 s); Broader search adds about 75 s of detection. Clean install to first report took about 6 minutes in our test, most of it building llama.cpp. Click any observation time to jump to that frame, edit the brief, then **Export review**.
 
 A saved review reopens at `http://127.0.0.1:8765/?review=<job-id>` without rerunning analysis. The server has no login and is meant to stay bound to loopback. Without the two `TRACEBRIEF_VLM_*` variables the app still runs and labels the visual check as unavailable; without the language model it uses the labeled template.
 
@@ -126,10 +128,11 @@ PYTHONPATH=src .venv-vision/bin/python -m pytest tests -q
 The tests cover review integrity, API inputs, the ONNX detector, the visual check, draft composition and the Hailo output mapping; they do not run the language models.
 
 - **Analysis fails:** read `.runtime/jobs/<job-id>/vision.log` and rerun `check_setup.py`.
-- **Visual check unavailable:** read `.runtime/jobs/<job-id>/look-<event>.log`; check both `TRACEBRIEF_VLM_*` paths with `scripts/look_download.py --verify --output models/qwen2-vl`.
+- **Visual check unavailable:** read `.runtime/jobs/<job-id>/look-<event>.log`; check both `TRACEBRIEF_VLM_*` paths with `.venv-app/bin/python scripts/look_download.py --verify --output models/qwen2-vl`.
 - **Template draft shown:** the draft warning and `generation-*-audit.json` say which check failed.
 - **Video does not play:** use an H.264 MP4; evidence frames remain reviewable either way.
 - **Interrupted job:** restarting marks unfinished jobs failed; start a new review.
+- **Port busy:** start the server with another `--port` and open the matching address.
 
 ## Repository map
 

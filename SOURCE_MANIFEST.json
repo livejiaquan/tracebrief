@@ -17,8 +17,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11868,
-      "sha256": "b6d0ae835aae973cfbd7ce7a1932fef73bba505df054930bdcf350e1d0a03571"
+      "bytes": 12400,
+      "sha256": "50a0f7144292fdc64d71365e441ac0ab01aac22b3eacfac14ee742a0395d182b"
     },
     {
       "path": "config/search_profiles.json",
@@ -522,13 +522,13 @@
     },
     {
       "path": "data/evaluation/look/examples_confirmed.jpg",
-      "bytes": 171673,
-      "sha256": "1ae733f53c6cdddb3189e38b6a0591d51996ceecd49b05795e0ca75c1cb6f02f"
+      "bytes": 174204,
+      "sha256": "3ca6b10520550a5187693d2776f18d601ce2bb64599cd0972842f93c62eb7443"
     },
     {
       "path": "data/evaluation/look/examples_flagged.jpg",
-      "bytes": 210031,
-      "sha256": "9f3856a55c7db49b5dddb8cc5de5b6180d25eb6b9fb0ab982fc84f24b151d3e6"
+      "bytes": 220970,
+      "sha256": "f7b74f21d2042d16f88bd24d989703f722b3044a7f469a7904b5eb5170c3b6d7"
     },
     {
       "path": "data/evaluation/look/results.json",
@@ -1067,8 +1067,8 @@
     },
     {
       "path": "docs/COMPACT_DETECTOR.md",
-      "bytes": 4104,
-      "sha256": "36749a2c27a2d746e43ffbad74e0aef0e0ca01294365e194dd3e19f5f717255b"
+      "bytes": 4232,
+      "sha256": "c37188510bd7fd716b09305b7097e00e2fccdc0af57374f9ce911f1fe3bd8c92"
     },
     {
       "path": "docs/FAQ.md",
@@ -1092,8 +1092,8 @@
     },
     {
       "path": "docs/SOURCES.md",
-      "bytes": 8311,
-      "sha256": "6de142a2a3c5fa74dddfd7f67aa4e6c18b678a5e3d35e35ba99baf30aeb1c992"
+      "bytes": 8422,
+      "sha256": "10ef29f94cb0a5f14d2834d6a93ab28e54af052aebec7dc7d699b2d01c0ee966"
     },
     {
       "path": "docs/THIRD_PARTY_NOTICES.md",
@@ -1277,8 +1277,8 @@
     },
     {
       "path": "scripts/vision_requirements.txt",
-      "bytes": 213,
-      "sha256": "2d0e9e7f94f58cf2dbafa940e8fc5aec8707d2a7574381b7d3e8fe922008696f"
+      "bytes": 227,
+      "sha256": "b2749f430ebade30316bab447ca4bc355acc5659aad88fdddea1d394760ce5d1"
     },
     {
       "path": "scripts/vision_summarize.py",
@@ -1322,8 +1322,8 @@
     },
     {
       "path": "src/tracebrief/server.py",
-      "bytes": 31175,
-      "sha256": "edda970a7e658601e755f283e09f00d2c4eb0fb7fce50e135c1e3e92768fd7fb"
+      "bytes": 31321,
+      "sha256": "4bf30c76e5b2e2bcfe5578d57a066264c3bf53e7f49b6ce0a1bb9eba42811167"
     },
     {
       "path": "src/tracebrief/vision.py",

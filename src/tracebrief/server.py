@@ -181,6 +181,7 @@ def process_job(job_id, input_path, source, inference_settings, search_profile=N
             )
             write_json(directory / "process.json", {"pid": process.pid, "started_at": now(), "command": "vision_worker.py", "timeout_seconds": 1800})
             tick = time.monotonic()
+            hint = "" if settings.get("backend") == "compact-onnx" else " · Grounding DINO takes about a minute per 10-second clip on CPU"
             while process.poll() is None:
                 elapsed = time.monotonic() - tick
                 if elapsed > 1800:
@@ -191,7 +192,7 @@ def process_job(job_id, input_path, source, inference_settings, search_profile=N
                         process.kill()
                         process.wait()
                     raise RuntimeError("Vision analysis exceeded the 30-minute runtime limit.")
-                update_job(job_id, progress=min(65, 10+int(elapsed/10)), message=f"Analyzing video locally · {int(elapsed)}s elapsed")
+                update_job(job_id, progress=min(65, 10+int(elapsed/10)), message=f"Analyzing video locally · {int(elapsed)}s elapsed{hint}")
                 time.sleep(1)
             if process.returncode:
                 raise RuntimeError(f"Vision analysis failed (exit {process.returncode}). See the local run log.")

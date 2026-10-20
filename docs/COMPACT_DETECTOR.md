@@ -24,7 +24,7 @@ Same 9 scorable runs / 90 sampled frames, same scorer and coverage exclusion as 
 
 Times are medians over all 10 test clips (including the one excluded from scoring) on the same shared host; Grounding DINO timings include model loading, the compact timing includes its 0.1 s load. These are batch CPU measurements, not UGen300 results. At 5 fps the compact detector processes a 10-second clip in about 2 s, which reduces the risk of missing brief interactions between 1 Hz samples.
 
-End to end in the app (recorded demonstration job `3ee3d1fe1f11435f`, `warehouse-1` sample, 2026-10-12): 19.0 s from video to draft, of which local Qwen drafting took 15.8 s (4.2 s model load, 11.3 s generation). An earlier run the same day took 17.4 s (15.3 s drafting). On CPU, language generation is now the bottleneck, which is the part the Hailo GenAI path for Qwen2.5-1.5B targets.
+End to end in the app (recorded demonstration job `f1a1dc63da35460e`, `warehouse-1` sample, 2026-10-20): 30.4 s from video to draft, of which detection took 0.8 s, the Qwen2-VL-2B visual check 13.4 s on 8 threads and local drafting most of the rest. Before the visual check was added (job `3ee3d1fe1f11435f`, 2026-10-12) the same clip took 19.0 s. On CPU the language models, not the detector, are the bottleneck; Stage II moves the detector and the visual check onto UGen300 ([HARDWARE_PLAN.md](HARDWARE_PLAN.md)).
 
 ## Limits found by inspection
 
