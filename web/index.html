@@ -1,17 +1,234 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#153e3c"><title>TraceBrief · Incident review</title><link rel="stylesheet" href="/static/styles.css"></head>
-<body>
-<header class="topbar"><a class="brand" href="/" aria-label="TraceBrief home"><span class="brandmark">▤</span>TraceBrief<span class="brand-sub">REVIEW WORKSPACE</span></a><span class="local"><i></i> Local workspace</span><span class="stage">HOST PROTOTYPE</span></header>
-<main>
-<section class="page-heading"><div><p class="eyebrow">WAREHOUSE OPERATIONS / FOOTAGE REVIEW</p><h1>Review forklift interactions.</h1><p class="intro">Open a recording, check the frames, and save a reviewed report.</p></div><button id="export" class="button secondary" disabled><span aria-hidden="true">↗</span> Export review</button></section>
-<section class="sourcebar" aria-label="Select footage"><div class="source-icon" aria-hidden="true">▻</div><div class="source-control"><label for="sample">FOOTAGE SOURCE</label><select id="sample"><option value="">Loading available recordings…</option></select></div><div class="source-control profile-control"><label for="search-profile">Search approach</label><select id="search-profile" aria-describedby="profile-help" disabled><option value="">Loading search approaches…</option></select></div><button id="analyze" class="button primary" disabled>Review recording <span aria-hidden="true">→</span></button><span class="divider"></span><label class="button secondary upload" for="file">+ Upload video<input id="file" type="file" accept="video/mp4,video/webm,video/quicktime,.avi,.mkv" aria-label="Upload video"></label></section><p id="profile-help" class="profile-help" aria-live="polite">Choose a search approach for the next review.</p>
-<div id="notice" class="notice" role="status" aria-live="polite">Connecting to the local review service…</div><div id="progress-wrap" hidden><progress id="progress" max="100" value="0" aria-label="Recording analysis progress"></progress></div>
-<section class="workspace" aria-label="Incident review workspace">
-<article class="panel footage-panel"><div class="panel-heading"><h2><span class="step">01</span> Source footage</h2><span id="duration" class="muted">—</span></div><div class="video-wrap"><video id="video" controls preload="metadata" playsinline aria-label="Source footage player"></video><div id="video-empty" class="video-empty"><span class="empty-play">▷</span><strong>Your evidence starts here</strong><p>Choose a recording or upload a video<br>to begin a local review.</p></div><span id="source-badge" class="video-badge" hidden></span></div><div class="footage-info"><div><span class="tiny-label">RECORDING</span><h3 id="recording-title">No recording selected</h3></div><span id="recording-type" class="pill">Awaiting footage</span></div><p id="recorded-profile" class="recorded-profile" hidden></p><div id="scrubber" class="event-track" aria-label="Candidate positions in recording"></div><div class="track-labels"><span>00:00</span><span>Candidate moments are marked above</span><span id="track-end">—</span></div><div class="evidence-section"><div class="section-line"><h3>Evidence frames</h3><span id="evidence-count" class="muted">Select a candidate</span></div><div id="frames" class="frames"><div class="frame-placeholder">Linked frames appear here after analysis.</div></div></div><div class="boundary"><span aria-hidden="true">ⓘ</span><p>Candidate events support a human review. Image proximity alone does not establish a collision, physical distance, or a safety violation.</p></div></article>
-<article class="panel candidates-panel"><div class="panel-heading"><h2><span class="step">02</span> Candidates</h2><span id="event-count" class="count">0</span></div><div class="candidate-caption">Moments to inspect, in recording order.</div><div id="events" class="event-list"><div class="empty-state"><span aria-hidden="true">≋</span><h3>A focused review queue</h3><p>Candidate interactions will appear here with links to their source footage.</p></div></div><div class="queue-footer"><span class="dot"></span><span id="queue-status">Waiting for analysis</span></div></article>
-<article class="panel brief-panel"><div class="panel-heading"><h2><span class="step">03</span> Incident brief</h2><span id="brief-status" class="pill">No selection</span></div><div id="brief-empty" class="empty-state"><span aria-hidden="true">▤</span><h3>Evidence into words</h3><p>Select a candidate to inspect its observations, edit the draft, and record your review.</p></div><form id="brief-form" hidden><div id="brief-content"><div class="brief-top"><span class="tiny-label">REVIEW TITLE</span><input id="brief-title" class="title-input" aria-label="Review title" maxlength="200"><p id="event-range" class="muted"></p></div><label class="field-label" for="summary">Event overview</label><textarea id="summary" rows="3" placeholder="Describe the visible event."></textarea><section id="look-box" class="look-box" hidden><div class="look-head"><h3>Visual check</h3><span id="look-verdict" class="pill"></span></div><div class="look-body"><img id="look-crop" alt="Crop checked by the local vision-language model"><div><p id="look-description"></p><p id="look-meta" class="muted"></p></div></div></section><div class="section-line observation-heading"><h3>Evidence-linked observations</h3><span class="tiny-label">CLICK TIME TO INSPECT</span></div><div id="observations"></div><section class="uncertainty-box"><h3><span aria-hidden="true">◌</span> Keep open for review</h3><ul id="uncertainties"></ul></section><section id="questions-box" class="questions-box" hidden><h3>Questions for the reviewer</h3><ul id="review-questions"></ul></section><p id="generation-label" class="generation-label"></p><label class="field-label" for="review-notes">Reviewer notes <span class="muted">(required to dismiss)</span></label><textarea id="review-notes" rows="2" placeholder="Add confirmed context or a reason for dismissing this candidate."></textarea></div><div class="review-actions"><button type="button" id="save" class="button secondary">Save draft</button><button type="button" id="dismiss" class="button dismiss-button">Dismiss candidate</button><button type="button" id="approve" class="button primary">Mark reviewed <span aria-hidden="true">✓</span></button></div><p id="save-status" class="save-status" role="status">Draft · check the evidence before marking this record reviewed.</p></form></article>
-</section><footer><span><strong>TraceBrief</strong> / Local video review and report export.</span><span id="method-label">Local video review and report export.</span></footer>
-</main>
-<dialog id="export-dialog"><div class="dialog-heading"><h2>Export your review</h2><button id="close-export" class="icon-button" aria-label="Close export dialog">×</button></div><p>Include the observations, source timestamps, review status, and open questions.</p><div class="export-options"><a id="export-html" class="button primary" download>Download report · HTML</a><a id="export-json" class="button secondary" download>Download record · JSON</a></div><p class="muted">Drafts remain labeled as drafts in the exported record.</p></dialog>
-<script src="/static/app.js" defer></script></body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#153e3c" />
+    <title>TraceBrief · Incident review</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="TraceBrief home"
+        ><span class="brandmark">▤</span>TraceBrief<span class="brand-sub"
+          >REVIEW WORKSPACE</span
+        ></a
+      ><span class="local"><i></i> Local workspace</span><span class="stage">HOST PROTOTYPE</span>
+    </header>
+    <main>
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">WAREHOUSE OPERATIONS / FOOTAGE REVIEW</p>
+          <h1>Review forklift interactions.</h1>
+          <p class="intro">Open a recording, check the frames, and save a reviewed report.</p>
+        </div>
+        <button id="export" class="button secondary" disabled>
+          <span aria-hidden="true">↗</span> Export review
+        </button>
+      </section>
+      <section class="sourcebar" aria-label="Select footage">
+        <div class="source-icon" aria-hidden="true">▻</div>
+        <div class="source-control">
+          <label for="sample">FOOTAGE SOURCE</label
+          ><select id="sample">
+            <option value="">Loading available recordings…</option>
+          </select>
+        </div>
+        <div class="source-control profile-control">
+          <label for="search-profile">Search approach</label
+          ><select id="search-profile" aria-describedby="profile-help" disabled>
+            <option value="">Loading search approaches…</option>
+          </select>
+        </div>
+        <button id="analyze" class="button primary" disabled>
+          Review recording <span aria-hidden="true">→</span></button
+        ><span class="divider"></span
+        ><label class="button secondary upload" for="file"
+          >+ Upload video<input
+            id="file"
+            type="file"
+            accept="video/mp4,video/webm,video/quicktime,.avi,.mkv"
+            aria-label="Upload video"
+        /></label>
+      </section>
+      <p id="profile-help" class="profile-help" aria-live="polite">
+        Choose a search approach for the next review.
+      </p>
+      <div id="notice" class="notice" role="status" aria-live="polite">
+        Connecting to the local review service…
+      </div>
+      <div id="progress-wrap" hidden>
+        <progress
+          id="progress"
+          max="100"
+          value="0"
+          aria-label="Recording analysis progress"
+        ></progress>
+      </div>
+      <section class="workspace" aria-label="Incident review workspace">
+        <article class="panel footage-panel">
+          <div class="panel-heading">
+            <h2><span class="step">01</span> Source footage</h2>
+            <span id="duration" class="muted">—</span>
+          </div>
+          <div class="video-wrap">
+            <video
+              id="video"
+              controls
+              preload="metadata"
+              playsinline
+              aria-label="Source footage player"
+            ></video>
+            <div id="video-empty" class="video-empty">
+              <span class="empty-play">▷</span><strong>Your evidence starts here</strong>
+              <p>Choose a recording or upload a video<br />to begin a local review.</p>
+            </div>
+            <span id="source-badge" class="video-badge" hidden></span>
+          </div>
+          <div class="footage-info">
+            <div>
+              <span class="tiny-label">RECORDING</span>
+              <h3 id="recording-title">No recording selected</h3>
+            </div>
+            <span id="recording-type" class="pill">Awaiting footage</span>
+          </div>
+          <p id="recorded-profile" class="recorded-profile" hidden></p>
+          <div
+            id="scrubber"
+            class="event-track"
+            aria-label="Candidate positions in recording"
+          ></div>
+          <div class="track-labels">
+            <span>00:00</span><span>Candidate moments are marked above</span
+            ><span id="track-end">—</span>
+          </div>
+          <div class="evidence-section">
+            <div class="section-line">
+              <h3>Evidence frames</h3>
+              <span id="evidence-count" class="muted">Select a candidate</span>
+            </div>
+            <div id="frames" class="frames">
+              <div class="frame-placeholder">Linked frames appear here after analysis.</div>
+            </div>
+          </div>
+          <div class="boundary">
+            <span aria-hidden="true">ⓘ</span>
+            <p>
+              Candidate events support a human review. Image proximity alone does not establish a
+              collision, physical distance, or a safety violation.
+            </p>
+          </div>
+        </article>
+        <article class="panel candidates-panel">
+          <div class="panel-heading">
+            <h2><span class="step">02</span> Candidates</h2>
+            <span id="event-count" class="count">0</span>
+          </div>
+          <div class="candidate-caption">Moments to inspect, in recording order.</div>
+          <div id="events" class="event-list">
+            <div class="empty-state">
+              <span aria-hidden="true">≋</span>
+              <h3>A focused review queue</h3>
+              <p>Candidate interactions will appear here with links to their source footage.</p>
+            </div>
+          </div>
+          <div class="queue-footer">
+            <span class="dot"></span><span id="queue-status">Waiting for analysis</span>
+          </div>
+        </article>
+        <article class="panel brief-panel">
+          <div class="panel-heading">
+            <h2><span class="step">03</span> Incident brief</h2>
+            <span id="brief-status" class="pill">No selection</span>
+          </div>
+          <div id="brief-empty" class="empty-state">
+            <span aria-hidden="true">▤</span>
+            <h3>Evidence into words</h3>
+            <p>
+              Select a candidate to inspect its observations, edit the draft, and record your
+              review.
+            </p>
+          </div>
+          <form id="brief-form" hidden>
+            <div id="brief-content">
+              <div class="brief-top">
+                <span class="tiny-label">REVIEW TITLE</span
+                ><input
+                  id="brief-title"
+                  class="title-input"
+                  aria-label="Review title"
+                  maxlength="200"
+                />
+                <p id="event-range" class="muted"></p>
+              </div>
+              <label class="field-label" for="summary">Event overview</label
+              ><textarea id="summary" rows="3" placeholder="Describe the visible event."></textarea>
+              <section id="look-box" class="look-box" hidden>
+                <div class="look-head">
+                  <h3>Visual check</h3>
+                  <span id="look-verdict" class="pill"></span>
+                </div>
+                <div class="look-body">
+                  <img id="look-crop" alt="Crop checked by the local vision-language model" />
+                  <div>
+                    <p id="look-description"></p>
+                    <p id="look-meta" class="muted"></p>
+                  </div>
+                </div>
+              </section>
+              <div class="section-line observation-heading">
+                <h3>Evidence-linked observations</h3>
+                <span class="tiny-label">CLICK TIME TO INSPECT</span>
+              </div>
+              <div id="observations"></div>
+              <section class="uncertainty-box">
+                <h3><span aria-hidden="true">◌</span> Keep open for review</h3>
+                <ul id="uncertainties"></ul>
+              </section>
+              <section id="questions-box" class="questions-box" hidden>
+                <h3>Questions for the reviewer</h3>
+                <ul id="review-questions"></ul>
+              </section>
+              <p id="generation-label" class="generation-label"></p>
+              <label class="field-label" for="review-notes"
+                >Reviewer notes <span class="muted">(required to dismiss)</span></label
+              ><textarea
+                id="review-notes"
+                rows="2"
+                placeholder="Add confirmed context or a reason for dismissing this candidate."
+              ></textarea>
+            </div>
+            <div class="review-actions">
+              <button type="button" id="save" class="button secondary">Save draft</button
+              ><button type="button" id="dismiss" class="button dismiss-button">
+                Dismiss candidate</button
+              ><button type="button" id="approve" class="button primary">
+                Mark reviewed <span aria-hidden="true">✓</span>
+              </button>
+            </div>
+            <p id="save-status" class="save-status" role="status">
+              Draft · check the evidence before marking this record reviewed.
+            </p>
+          </form>
+        </article>
+      </section>
+      <footer>
+        <span><strong>TraceBrief</strong> / Local video review and report export.</span
+        ><span id="method-label">Local video review and report export.</span>
+      </footer>
+    </main>
+    <dialog id="export-dialog">
+      <div class="dialog-heading">
+        <h2>Export your review</h2>
+        <button id="close-export" class="icon-button" aria-label="Close export dialog">×</button>
+      </div>
+      <p>Include the observations, source timestamps, review status, and open questions.</p>
+      <div class="export-options">
+        <a id="export-html" class="button primary" download>Download report · HTML</a
+        ><a id="export-json" class="button secondary" download>Download record · JSON</a>
+      </div>
+      <p class="muted">Drafts remain labeled as drafts in the exported record.</p>
+    </dialog>
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>

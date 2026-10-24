@@ -1352,18 +1352,18 @@
     },
     {
       "path": "web/app.js",
-      "bytes": 19889,
-      "sha256": "d73e233c75257c0f4c835c5756aa4f04de3a585b3249f05677d26fed76c13bb3"
+      "bytes": 23723,
+      "sha256": "cc49a4f26e90afaa98bc0d0e2c6f718ff386bf8bff46a52c916e2b3f7e8c17f0"
     },
     {
       "path": "web/index.html",
-      "bytes": 7367,
-      "sha256": "648c5b6593c1167a4e62cc7ccec2183293a94b211ab07a0e382ea56749de9956"
+      "bytes": 10095,
+      "sha256": "aa525cd9b268d427954593d3de3d46319b86d1bcd10bddd1fea0c0d33bceb7cf"
     },
     {
       "path": "web/styles.css",
-      "bytes": 14146,
-      "sha256": "2f0c834cfc0eef84931d1daf9b58b06e4af8c4bb7cf2b37e9158d42d4388db45"
+      "bytes": 17895,
+      "sha256": "be374968cdfa402fd4aa2853f11eebc29874d61a1bb810b3bf463751d48384a7"
     },
     {
       "path": "weights/README.md",
