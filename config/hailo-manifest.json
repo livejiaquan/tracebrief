@@ -1,0 +1,16 @@
+{
+  "hailort": "5.3",
+  "models": {
+    "detector": {
+      "file": "models/hailo/yolox_s_warehouse_v4.hef",
+      "sha256": null,
+      "source": "scripts/hailo/compile_yolox_hef.py with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (Fast search, detector v4)",
+      "onnx_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2"
+    },
+    "vlm": {
+      "file": "models/hailo/Qwen2-VL-2B-Instruct.hef",
+      "sha256": null,
+      "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef"
+    }
+  }
+}

@@ -74,7 +74,55 @@ function profileHelp() {
     ? `For the next review: ${profile.description}`
     : 'Choose a search approach for the next review.';
 }
+// The header badge: the backend /api/health reports (host CPU, or the UGen300 and whether its models are loaded).
+function backendBadge(health) {
+  if (!health || !health.backend)
+    return {
+      text: 'BACKEND UNKNOWN',
+      kind: 'unknown',
+      title: 'The local server did not say which backend it runs on.',
+    };
+  if (health.backend === 'cpu')
+    return {
+      text: 'HOST CPU',
+      kind: 'cpu',
+      title: "Detector, visual check and drafts run on this PC's CPU.",
+    };
+  if (health.backend === 'hailo') {
+    if (health.state === 'ready')
+      return {
+        text: 'UGEN300 DEVICE',
+        kind: 'device',
+        title: health.hardware || 'ASUS UGen300 (Hailo-10H)',
+      };
+    if (health.state === 'failed')
+      return {
+        text: 'UGEN300 · NOT READY',
+        kind: 'fault',
+        title: health.error || 'The UGen300 models could not be loaded.',
+      };
+    return {
+      text: 'UGEN300 · LOADING',
+      kind: 'loading',
+      title: 'The UGen300 models are not loaded yet.',
+    };
+  }
+  return { text: `${String(health.backend).toUpperCase()} BACKEND`, kind: 'unknown', title: '' };
+}
+async function showBackend() {
+  let health = null;
+  try {
+    health = await api('/api/health');
+  } catch {}
+  const badge = backendBadge(health);
+  $('backend-badge').textContent = badge.text;
+  $('backend-badge').title = badge.title;
+  $('backend-badge').dataset.backend = badge.kind;
+  // The models load after the server starts: ask again until the device answers ready or failed.
+  if (badge.kind === 'loading') setTimeout(showBackend, 5000);
+}
 async function init() {
+  showBackend();
   await loadProfiles();
   try {
     const data = await api('/api/samples');
@@ -158,6 +206,8 @@ const METHOD_LABELS = {
   'local-qwen-draft': 'Local Qwen draft',
   'fixed-template': 'Fixed template',
   'fixed-template-after-local-rejection': 'Fixed template (model draft rejected by source checks)',
+  'ugen300-qwen2-vl-draft': 'UGen300 Qwen2-VL draft',
+  'ugen300-qwen2.5-draft': 'UGen300 Qwen2.5 draft',
 };
 function methodLabel(id) {
   return METHOD_LABELS[id] || id || 'Not recorded';
@@ -320,7 +370,7 @@ function renderLook(event) {
     ? check.description
     : check.reason || 'Visual check unavailable.';
   $('look-meta').textContent = ok
-    ? `Local vision-language model · key frame ${formatTime(check.time)} · forklift ${check.forklift}, person ${check.person}${check.status === 'check-suggested' ? ' · it did not see both, so check the frame before dismissing' : ''}`
+    ? `${check.runtime_label || 'Local vision-language model'} · key frame ${formatTime(check.time)} · forklift ${check.forklift}, person ${check.person}${check.status === 'check-suggested' ? ' · it did not see both, so check the frame before dismissing' : ''}`
     : '';
   const crop = $('look-crop');
   if (ok && check.crop_url) {

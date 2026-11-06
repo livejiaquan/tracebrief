@@ -125,6 +125,14 @@ h3 {
   border-radius: 5px;
   color: var(--muted);
 }
+.stage[data-backend='device'] {
+  color: #146b62;
+  border-color: #9cc7b4;
+}
+.stage[data-backend='fault'] {
+  color: #8a6339;
+  border-color: #e7d8bf;
+}
 main {
   max-width: 1760px;
   margin: auto;

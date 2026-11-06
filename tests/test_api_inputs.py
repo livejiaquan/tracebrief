@@ -109,9 +109,9 @@ def test_queued_settings_survive_config_edit_and_export_keeps_run_metadata(tmp_p
     (root/'data'/'samples'/'fixture.mp4').write_bytes(b'fixture-video-no-inference')
     config = root/'config'/f'vision-{profile_id}.json'
     profile = {'id': profile_id, 'label': profile_id.title()+' search', 'description': 'Fixture profile'}
-    (root/'config'/'search_profiles.json').write_text(json.dumps({'default': profile_id, 'profiles': [{**profile, 'settings_file': config.name}]}))
+    (root/'config'/'search_profiles.json').write_text(json.dumps({'default': profile_id, 'profiles': [{**profile, 'settings_file': config.name}]}), encoding='utf-8')
     original = {'confidence': confidence, 'processor_size': {'shortest_edge': edge, 'longest_edge': 853 if edge == 512 else 1333}}
-    config.write_text(json.dumps(original))
+    config.write_text(json.dumps(original), encoding='utf-8')
     monkeypatch.setattr(server, 'ROOT', root)
     monkeypatch.setattr(server, 'RUNTIME', tmp_path/'runtime')
     monkeypatch.setattr(server, 'samples', lambda: [{'id': 'fixture', 'path': 'fixture.mp4',
@@ -131,7 +131,7 @@ def test_queued_settings_survive_config_edit_and_export_keeps_run_metadata(tmp_p
     job_id = responses[0][1]['id']
     assert server.read_job(job_id)['requested_vision_settings'] == original
     # Configuration changes while a worker is occupied must not affect this queued job.
-    config.write_text(json.dumps({'confidence': .35, 'processor_size': {'shortest_edge': 800, 'longest_edge': 1333}}))
+    config.write_text(json.dumps({'confidence': .35, 'processor_size': {'shortest_edge': 800, 'longest_edge': 1333}}), encoding='utf-8')
     responses[0][1]['requested_vision_settings']['processor_size']['shortest_edge'] = 1
     function, args = queued[0]
     assert args[3] == original  # Nested settings were copied, not aliased to the response.
@@ -141,7 +141,7 @@ def test_queued_settings_survive_config_edit_and_export_keeps_run_metadata(tmp_p
         pid = 123
         returncode = 0
         def __init__(self, command, **kwargs):
-            request = json.loads(Path(command[2]).read_text())
+            request = json.loads(Path(command[2]).read_text(encoding='utf-8'))
             captured.append(request)
             server.write_json(Path(command[3]), {
                 'video': {'duration_s': 1}, 'model': {'id': 'fixture'},

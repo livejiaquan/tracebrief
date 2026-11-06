@@ -21,6 +21,22 @@ UNSUPPORTED = re.compile(
     r"violation confirmed|safe to proceed)\b", re.I)
 # Questions may ask about contact or a near miss, but must not presume blame or harm.
 PRESUMPTIVE = re.compile(r"\b(caused|negligent|at fault|injured|injury|safe to proceed)\b", re.I)
+# Every number, with or without a unit suffix: "97s", "12m" and "3.4 seconds" are all checked.
+NUMBER = re.compile(r"(?<![\d.])(?:\d+(?:\.\d+)?|\.\d+)")
+# Kana and CJK ideographs are written without spaces, so each character counts as a term.
+CJK = "\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff"
+TERM = re.compile(rf"[{CJK}]|[^\W\d_{CJK}]+")
+SENTENCE_END = re.compile(r"(?<=[.!?])\s+|(?<=[\u3002\uff01\uff1f])\s*")
+
+
+def numbers(text: str) -> set[float]:
+    """The values of the numbers in text, so "2" and "2.0" are the same number."""
+    return {float(n) for n in NUMBER.findall(text)}
+
+
+def terms(text: str) -> set[str]:
+    """Lower-case words, and single CJK characters, for the visual-check coverage test."""
+    return set(TERM.findall(text.lower()))
 
 
 def visual_text(event: dict) -> str:
@@ -50,11 +66,11 @@ def compose(draft: dict, event: dict) -> dict:
     composed = dict(draft)
     title = re.sub(r"\s+at\s+\d+(?:\.\d+)?\s*s\b", "", draft["title"]).strip()
     composed["title"] = baseline(event)["title"] if not title or re.search(r"\b(box|boxes|overlap\w*)\b", title, re.I) else title
-    sentences = [s for s in re.split(r"(?<=[.!?])\s+", draft["summary"].strip()) if s and not re.search(r"\bboxes\b", s, re.I)]
+    sentences = [s for s in SENTENCE_END.split(draft["summary"].strip()) if s and not re.search(r"\bboxes\b", s, re.I)]
     visual = visual_text(event)
     if visual:
-        description = set(re.findall(r"[a-z]+", visual.lower().split(":", 1)[1]))
-        covered = any(len(description & set(re.findall(r"[a-z]+", s.lower()))) >= 0.6 * len(description) for s in sentences)
+        description = terms(visual.split(":", 1)[1])
+        covered = any(len(description & terms(s)) >= 0.6 * len(description) for s in sentences)
         if not covered:
             sentences.insert(0, visual)
     composed["summary"] = " ".join(sentences + [timeline(event)]).strip()
@@ -91,22 +107,40 @@ def validate_draft(draft: dict, event: dict) -> list[str]:
         errors.append("Review questions must be a short list of questions, not declarations.")
     factual_text = " ".join(str(draft.get(k, "")) for k in ("title", "summary"))
     source_text = " ".join([o["text"] for o in event.get("observations", [])] + [visual_text(event)])
-    allowed_numbers = set(re.findall(r"\b\d+(?:\.\d+)?\b", source_text))
-    if set(re.findall(r"\b\d+(?:\.\d+)?\b", factual_text)) - allowed_numbers:
+    allowed_numbers = numbers(source_text)
+    if numbers(factual_text) - allowed_numbers:
         errors.append("The draft introduced numbers absent from the observations.")
     question_text = " ".join(q for q in questions if isinstance(q, str)) if isinstance(questions, list) else ""
-    if set(re.findall(r"\b\d+(?:\.\d+)?\b", question_text)) - allowed_numbers:
+    if numbers(question_text) - allowed_numbers:
         errors.append("A review question introduced numbers absent from the observations.")
     if UNSUPPORTED.search(factual_text) or PRESUMPTIVE.search(question_text):
         errors.append("The draft inferred an unsupported consequence or responsibility.")
     return errors
 
 
-def generate(event: dict, root: Path, output_dir: Path) -> dict:
+def run_generate_local(root: Path, request: Path, response: Path, log: Path) -> dict:
+    """scripts/generate_local.py in a fresh process, the Stage I per-call path; returns its output record."""
+    interpreter = os.environ.get("TRACEBRIEF_LLM_PYTHON", sys.executable)
+    process = subprocess.run(
+        [interpreter, str(root / "scripts" / "generate_local.py"), str(request), str(response)],
+        cwd=root, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=240,
+        env={**os.environ, "OMP_NUM_THREADS": "4", "OPENBLAS_NUM_THREADS": "4"},
+    )
+    log.write_text(process.stdout + process.stderr, encoding="utf-8")
+    if process.returncode:
+        raise RuntimeError(f"Local generation exited with code {process.returncode}; see run log.")
+    return json.loads(response.read_text(encoding="utf-8"))
+
+
+def generate(event: dict, root: Path, output_dir: Path, run=None) -> dict:
+    """Draft one candidate and check it; any failure leaves the labeled fixed template.
+
+    run(root, request, response, log) returns the model's output record: run_generate_local by
+    default, or the resident draft worker (cpu_pipeline.run_draft_worker).
+    """
     started = time.monotonic()
     base = baseline(event)
     model = os.environ.get("TRACEBRIEF_LLM_MODEL")
-    interpreter = os.environ.get("TRACEBRIEF_LLM_PYTHON", sys.executable)
     audit = {"baseline": base, "model_output": None, "validation_errors": [], "method": "fixed-template", "seconds": 0.0}
     if not model or not Path(model).is_file():
         audit["warning"] = "Local language model is not configured. Fixed-template draft shown."
@@ -114,17 +148,11 @@ def generate(event: dict, root: Path, output_dir: Path) -> dict:
         return audit
     request = output_dir / f"generation-{event['id']}-input.json"
     response = output_dir / f"generation-{event['id']}-output.json"
-    request.write_text(json.dumps({"event": event, "model": model}, ensure_ascii=False, indent=2))
+    log = output_dir / f"generation-{event['id']}.log"
     try:
-        process = subprocess.run(
-            [interpreter, str(root / "scripts" / "generate_local.py"), str(request), str(response)],
-            cwd=root, capture_output=True, text=True, timeout=240,
-            env={**os.environ, "OMP_NUM_THREADS": "4", "OPENBLAS_NUM_THREADS": "4"},
-        )
-        (output_dir / f"generation-{event['id']}.log").write_text(process.stdout + process.stderr)
-        if process.returncode:
-            raise RuntimeError(f"Local generation exited with code {process.returncode}; see run log.")
-        raw = json.loads(response.read_text())
+        # Inside the try: text that cannot be written (an encoding error) gives the template, not a failed job.
+        request.write_text(json.dumps({"event": event, "model": model}, ensure_ascii=False, indent=2), encoding="utf-8")
+        raw = (run or run_generate_local)(root, request, response, log)
         draft = raw["draft"]
         errors = validate_draft(draft, event)
         audit.update(model_output=raw, validation_errors=errors)

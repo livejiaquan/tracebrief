@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "tracebrief"
 version = "0.1.0"
 description = "Offline warehouse candidate-event review with linked evidence and editable briefs"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 license = "Apache-2.0"
 dependencies = []
 
@@ -19,3 +19,4 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
+markers = ["ugen300: needs a UGen300 (Hailo-10H), HailoRT and the HEFs of config/hailo-manifest.json; skipped otherwise"]
