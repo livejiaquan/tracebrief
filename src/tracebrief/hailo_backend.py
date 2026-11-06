@@ -433,7 +433,7 @@ class HailoDetector:
 
     def _collect(self, job, slots, group):
         job.wait(self.timeout_ms)
-        self.last_job = time.monotonic()
+        self.last_job = time.perf_counter()  # monotonic() ticks in ~16 ms steps on Windows
         return [to_source_boxes(bindings.output().get_buffer(), width, height, confidence=self.confidence)
                 for (bindings, _, _), (_, width, height) in zip(slots, group)]
 
@@ -446,7 +446,8 @@ class HailoDetector:
         if self.configured is not None:
             with self.turns.hold("detector"):
                 if self.last_job is not None:  # let the device settle after the last job (see the class docstring)
-                    time.sleep(max(0.0, self.settle_s - (time.monotonic() - self.last_job)))
+                    while (left := self.settle_s - (time.perf_counter() - self.last_job)) > 0:
+                        time.sleep(left)  # sleep() can wake early on Windows
                 self.configured.shutdown()  # blocks until in-flight jobs finish
                 self.configured = None
         self.slots = []

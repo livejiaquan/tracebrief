@@ -254,7 +254,7 @@ def test_detector_close_waits_for_the_device_to_settle_after_the_last_job(fake_h
     def detector(settle_s=None):
         det = hb.HailoDetector(hb.shared_vdevice(fake), hef, batch_size=8, settle_s=settle_s)
         shutdown = det.configured.shutdown
-        det.configured.shutdown = lambda: (events.append(time.monotonic()), shutdown())
+        det.configured.shutdown = lambda: (events.append(time.perf_counter()), shutdown())
         return det
 
     monkeypatch.setattr(hb, "SETTLE_S", 1.0)
