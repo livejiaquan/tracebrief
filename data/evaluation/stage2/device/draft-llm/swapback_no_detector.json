@@ -1,0 +1,52 @@
+{
+  "started_utc": "2026-11-05T21:05:00Z",
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "hailort_version": "5.3.2",
+  "variant": {
+    "detector": false,
+    "draft": true,
+    "settle_s": 0.0
+  },
+  "steps": [
+    {
+      "step": "load the VLM",
+      "seconds": 10.449
+    },
+    {
+      "step": "release the VLM",
+      "seconds": 0.521
+    },
+    {
+      "step": "load the LLM",
+      "seconds": 7.744
+    },
+    {
+      "step": "draft d01",
+      "seconds": 62.906
+    },
+    {
+      "step": "release the LLM",
+      "seconds": 0.483
+    },
+    {
+      "step": "load the VLM again",
+      "error": "HailoRTStatusException: 57",
+      "seconds": 8.628
+    }
+  ],
+  "identity": {
+    "hailort_version": "5.3.2",
+    "devices": [
+      {
+        "id": "usb/001:030",
+        "architecture": "HAILO10H",
+        "firmware": "5.3.2 (release,app)",
+        "serial_number": null,
+        "part_number": null,
+        "product_name": null
+      }
+    ]
+  },
+  "swap_back": "failed",
+  "ended_utc": "2026-11-05T21:06:38Z"
+}

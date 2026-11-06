@@ -1,0 +1,107 @@
+{
+ "set": "kb_test",
+ "dets": "build/o2s/scores/device_hailo/kb_test_dets.jsonl",
+ "confidence": 0.25,
+ "summary": {
+  "images": 42,
+  "forklift": {
+   "gt": 43,
+   "ap50": 0.890663946073669,
+   "tp": 38,
+   "fp": 7,
+   "precision": 0.8444444444444444,
+   "recall": 0.8837209302325582
+  },
+  "person": {
+   "gt": 44,
+   "ap50": 0.4806524154757124,
+   "tp": 21,
+   "fp": 13,
+   "precision": 0.6176470588235294,
+   "recall": 0.4772727272727273
+  },
+  "pair": {
+   "pair_images": 25,
+   "detected": 16,
+   "recall": 0.64,
+   "images_with_pair_output": 24,
+   "precision": 0.6666666666666666
+  }
+ },
+ "bootstrap": {
+  "ci95": {
+   "forklift_ap50": [
+    0.793005741630454,
+    0.9736434108527132
+   ],
+   "person_ap50": [
+    0.31369338221741905,
+    0.6693447852554769
+   ],
+   "pair_recall": [
+    0.44,
+    0.8333333333333334
+   ],
+   "forklift_recall": [
+    0.7916424418604651,
+    0.9535147991543339
+   ],
+   "person_recall": [
+    0.32139285714285715,
+    0.6562723214285713
+   ]
+  },
+  "diff_vs_ref_ci95": {
+   "forklift_ap50": [
+    -0.012419391412107747,
+    0.0008146949406283259
+   ],
+   "person_ap50": [
+    -0.08677872052038345,
+    0.005768164617777566
+   ],
+   "pair_recall": [
+    -0.13043478260869557,
+    0.0
+   ],
+   "forklift_recall": [
+    -0.07317073170731703,
+    0.0
+   ],
+   "person_recall": [
+    -0.07142857142857145,
+    0.0
+   ]
+  }
+ },
+ "reference": {
+  "dets": "build/o2s/scores/onnx_app/kb_test_dets.jsonl",
+  "confidence": 0.25,
+  "summary": {
+   "images": 42,
+   "forklift": {
+    "gt": 43,
+    "ap50": 0.8944674659260279,
+    "tp": 39,
+    "fp": 8,
+    "precision": 0.8297872340425532,
+    "recall": 0.9069767441860465
+   },
+   "person": {
+    "gt": 44,
+    "ap50": 0.5110826468463849,
+    "tp": 22,
+    "fp": 13,
+    "precision": 0.6285714285714286,
+    "recall": 0.5
+   },
+   "pair": {
+    "pair_images": 25,
+    "detected": 17,
+    "recall": 0.68,
+    "images_with_pair_output": 25,
+    "precision": 0.68
+   }
+  }
+ }
+}

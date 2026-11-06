@@ -1,0 +1,27 @@
+{
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "measured_at": "2026-11-05T13:05:29.467697+00:00",
+  "holder": {
+    "hardware": "HAILO10H · device usb/001:024 · firmware 5.3.2 (release,app) · HailoRT 5.3.2",
+    "load_s": 22.115,
+    "detects_afterwards": true
+  },
+  "second_process": {
+    "runtime": {
+      "opened": false,
+      "seconds": 0.291,
+      "error": "The UGen300 (usb/001:024) is already open in another process: HailoRT returned HAILO_LIBUSB_FAILURE (98). On a Windows host over USB only one process can open the device (HailoRT 5.3.2 on Windows: LIBUSB_ERROR_ACCESS), and TraceBrief runs both models in one process. Stop the other process (another TraceBrief server or scan, scripts/hailo/bench_ugen300.py, hailortcli) and try again; if none is running, reconnect the UGen300."
+    },
+    "server_job": {
+      "status": "failed",
+      "seconds": 0.191,
+      "error": "UGen300 backend (TRACEBRIEF_BACKEND=hailo) not ready: The UGen300 (usb/001:024) is already open in another process: HailoRT returned HAILO_LIBUSB_FAILURE (98). On a Windows host over USB only one process can open the device (HailoRT 5.3.2 on Windows: LIBUSB_ERROR_ACCESS), and TraceBrief runs both models in one process. Stop the other process (another TraceBrief server or scan, scripts/hailo/bench_ugen300.py, hailortcli) and try again; if none is running, reconnect the UGen300. To run on the host CPU instead, set TRACEBRIEF_BACKEND=cpu."
+    },
+    "bench": {
+      "exited": true,
+      "seconds": 0.035,
+      "message": "bench_ugen300: The UGen300 (usb/001:024) is already open in another process: HailoRT returned HAILO_LIBUSB_FAILURE (98). On a Windows host over USB only one process can open the device (HailoRT 5.3.2 on Windows: LIBUSB_ERROR_ACCESS), and TraceBrief runs both models in one process. Stop the other process (another TraceBrief server or scan, scripts/hailo/bench_ugen300.py, hailortcli) and try again; if none is running, reconnect the UGen300."
+    },
+    "wall_s_including_start": 1.202
+  }
+}

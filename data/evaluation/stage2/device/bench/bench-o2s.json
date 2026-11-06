@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-11-05T12:13:17.151456+00:00",
+  "hailort_version": "5.3.2",
+  "device": {
+    "hailort_version": "5.3.2",
+    "devices": [
+      {
+        "id": "usb/001:024",
+        "architecture": "HAILO10H",
+        "firmware": "5.3.2 (release,app)",
+        "serial_number": null,
+        "part_number": null,
+        "product_name": null
+      }
+    ]
+  },
+  "hefs": {
+    "detector": {
+      "file": "yolox_s_warehouse_v4_o2s.hef",
+      "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+      "source": "scripts/hailo/compile_yolox_hef.py --optimization-level 2 (defaults: calibration seed 20261105, DFC calibset 64, QFT 1,024 frames x 4 epochs) with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (calibration: work/stage2/hef-build/data/calib)",
+      "hash_s": 0.044
+    },
+    "vlm": {
+      "file": "Qwen2-VL-2B-Instruct.hef",
+      "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+      "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef",
+      "hash_s": 10.693
+    }
+  },
+  "video": "C:\\tb-device\\warehouse-1.mp4",
+  "settings": {
+    "confidence": 0.25,
+    "nms_iou": 0.45
+  },
+  "load_s": {
+    "detector": 0.231,
+    "vlm": 14.01
+  },
+  "detector": [
+    {
+      "batch_size": 1,
+      "frames_per_submission": 1,
+      "load_s": 0.231,
+      "frames": 256,
+      "fps": 72.08,
+      "latency_per_submission": {
+        "p50_ms": 13.81,
+        "p95_ms": 14.433,
+        "samples": 256
+      },
+      "detections": 486
+    },
+    {
+      "batch_size": 8,
+      "frames_per_submission": 8,
+      "load_s": 0.306,
+      "frames": 256,
+      "fps": 204.67,
+      "latency_per_submission": {
+        "p50_ms": 55.746,
+        "p95_ms": 57.743,
+        "samples": 32
+      },
+      "detections": 486
+    }
+  ],
+  "vlm": {
+    "visual_check": {
+      "ttft_s": 2.54,
+      "tokens_per_s": 4.11,
+      "tokens": 46,
+      "seconds": 13.496,
+      "parsed": true,
+      "raw_text": "{\n  \"forklift\": \"yes\",\n  \"person\": \"yes\",\n  \"description\": \"A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting.\"\n}"
+    },
+    "draft": {
+      "ttft_s": 2.545,
+      "tokens_per_s": 4.107,
+      "tokens": 113,
+      "seconds": 29.819,
+      "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 2s\",\n  \"summary\": \"The key frame at 2s shows a person standing next to a forklift in a warehouse setting.\",\n  \"review_questions\": [\n    \"Is the person and forklift boxes close in the image?\",\n    \"Are the boxes of the person and forklift overlapping in the image?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]\n}"
+    }
+  },
+  "concurrent": {
+    "note": "In one process the VLM's token read holds the Python GIL (the HailoRT 5.x binding does not release it), so the same-process figure is what the TraceBrief server would see; the second-process figure isolates device contention.",
+    "same_process": {
+      "detector": {
+        "frames": 5,
+        "seconds": 13.578,
+        "fps": 0.37
+      },
+      "vlm": {
+        "ttft_s": 2.535,
+        "tokens_per_s": 4.097,
+        "tokens": 46,
+        "seconds": 13.524,
+        "parsed": true
+      }
+    },
+    "second_process": "failed: RuntimeError: HailoRTException: libhailort failed with error: 98 (HAILO_LIBUSB_FAILURE)"
+  }
+}

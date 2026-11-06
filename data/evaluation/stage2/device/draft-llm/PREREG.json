@@ -1,0 +1,44 @@
+{
+  "written_utc": "2026-11-05T20:00:15Z",
+  "written": "after probe_defaults.py read the two GenAI HEFs' default generation settings (defaults.json; nothing was generated) and before the Qwen2.5-1.5B-Instruct HEF drafted any candidate",
+  "question": "Should the UGen300 draft with the Qwen2.5-1.5B-Instruct HEF (the CPU path's draft model, compiled by Hailo) instead of the Qwen2-VL-2B HEF in text-only mode? Only one GenAI model can be loaded at a time, so the draft phase would release the VLM and load the LLM on the same VDevice.",
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode), the same host and HailoRT 5.3.2 as ../look-agreement",
+  "model": {
+    "file": "Qwen2.5-1.5B-Instruct.hef",
+    "bytes": 2464582493,
+    "sha256": "0856a10c2b804cfe1590b80aa5e28369eb7169a9b36de836420a0b8cdf5b8d05",
+    "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2.5-1.5B-Instruct.hef",
+    "max_context_capacity": 2048
+  },
+  "candidates": {
+    "file": "../look-agreement/draft_events.json",
+    "sha256": "0970c253f962e019320c3b042b2afe7c51f8fd78ec1d308c97800977285df5c4",
+    "split": "the file's own split field, as in the look-agreement study: d01, d03, ..., d19 = selection; d02, d04, ..., d20 = held-out. The held-out comparison numbers below are on these same 10 candidates."
+  },
+  "generation": {
+    "code": "tracebrief.hailo_backend.HailoLLM.draft through tracebrief.device_pipeline.generate (parse, generation.validate_draft, generation.compose; a rejected draft gives the labeled fixed template), as the app runs a device draft",
+    "messages": "drafting.prompt(event): the draft-v2 system message with the device format hint appended (as HailoVLM.draft), and the user message; content as plain strings, the form the HEF's chat template takes",
+    "decoding": "greedy (do_sample=False), seed 19, at most 320 generated tokens: the CPU worker's temperature 0, seed 19 and max_tokens 320",
+    "frequency_penalty": "1.0, set explicitly. The HEF's default is 1.1 (defaults.json; Qwen2.5's repetition_penalty), the CPU worker's llama.cpp call applies none (repeat_penalty 1.0, frequency_penalty 0.0), and the VLM HEF's default, which the VLM-text drafts used, is 1.0.",
+    "context": "cleared before and after every draft; the reply is left at the end of its first complete JSON object (ObjectEnd), as HailoVLM does",
+    "not_available": "the CPU worker's JSON grammar: HailoRT's GenAI API has none"
+  },
+  "format_hints": {
+    "primary": "draft-v2-device (drafting.DEVICE_FORMAT, the hint the device drafts with now), on all 20 candidates",
+    "candidates": "draft-v2-device1 and draft-v2-device2 (drafting.DEVICE_FORMATS, unchanged), on the 10 selection candidates only",
+    "rule": "As ../look-agreement/SELECTION.json, with the LLM's draft-v2-device as the baseline: a candidate hint is eligible if, on the selection half, at least as many of its drafts pass the source checks as with draft-v2-device and its shown briefs hold no more unsupported sentences. Among eligible hints choose the most passing drafts, then the most format checks met by the raw replies (title three to eight words, summary at most 70 words, asks about another camera view, asks about the site procedure, cites every evidence ID), then the lower median generation time. If none is eligible, or none beats draft-v2-device on that order, draft-v2-device stays. A chosen hint is run once on the 10 held-out candidates and the decision uses it; draft-v2-device's held-out result is reported either way."
+  },
+  "checks": "Per draft, as ../look-agreement/analyze.py (assess, totals) computes them: passed the source checks (model draft shown), template fallback, unreadable reply, rejection reasons, unsupported sentences in the shown brief (evidence.coverage), raw-reply format checks, seconds per draft (the audit's seconds: device_pipeline.generate wall time), generation seconds, time to first token, tokens. Also reported, not part of the rule: titles that name neither a person nor a forklift, and the most repeated title.",
+  "switch_cost": "In one process on the shared VDevice, with the detector HEF loaded as the app keeps it: VLM loaded, one visual check of a fixed crop; then three cycles of VLM release -> LLM load -> draft(s) -> LLM release -> VLM load -> the same visual check. The first cycle drafts the candidates; the other two draft d01 once. Recorded per cycle: each release and load time, the first draft's time to first token after the load against the median of the others, the reloaded VLM's time to first token and whether its reply equals the one before the swap, and one detector batch after the swap back.",
+  "references": {
+    "vlm_text": {"file": "../look-agreement/device_drafts_fixed.json", "sha256": "3be988464c4fa71309f7a5de4656691294a104dec4602f05147ba3c104060259",
+                 "held_out_accepted": "8 / 10", "held_out_shown_unsupported_sentences": 0, "median_seconds_per_draft_all_20": 41.891,
+                 "median_seconds_per_draft_held_out": 42.852},
+    "cpu": {"file": "../look-agreement/cpu_drafts.json", "sha256": "3a4d5fe7463c34eca465f9f8d37c7bbccd7df7d7187044c174f8e4a471beeadf",
+            "accepted": "20 / 20 (held-out 10 / 10)", "held_out_shown_unsupported_sentences": 2, "median_seconds_per_draft_all_20": 11.593,
+            "note": "the resident llama.cpp worker on the host CPU, 4 threads, JSON grammar; reported beside the device results, not part of the rule"}
+  },
+  "decision_rule": "Adopt the LLM HEF for the device draft phase only if all four hold, with the hint chosen above: (1) on the held-out half at least 8 of 10 drafts pass the source checks (the VLM-text result); (2) its shown held-out briefs hold at most 2 unsupported sentences (the CPU path's count on the same half; the VLM-text drafts had 0, with 2 of their 10 briefs being templates); (3) the median seconds per draft over its 20 drafts is below 41.891 s (VLM-text after the early-stop fix, all 20); (4) the swap pays for itself in a draft phase the size of the demo night's: the median round-trip swap cost (VLM release + LLM load + LLM release + VLM load) is below 9 x (41.891 s - the LLM's median seconds per draft). Otherwise the device keeps drafting with the VLM in text-only mode, and the result is documented only.",
+  "if_adopted": "The device draft phase (single clip and scan) swaps models once per phase: release the VLM, load the LLM, draft every candidate, release the LLM; the VLM is loaded again when next needed. Never two GenAI models loaded at once; the detector never runs during generation. Swaps and their times go into the job and scan records. The demo night (scripts/make_demo_site.py, ../run_phases.py night) is run again with that configuration.",
+  "if_not_adopted": "The demo night is run again with the current configuration (VLM-text drafts) for comparison with ../night."
+}

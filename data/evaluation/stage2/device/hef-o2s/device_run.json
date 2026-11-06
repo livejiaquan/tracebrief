@@ -1,0 +1,62 @@
+{
+ "hailort_version": "5.3.2",
+ "identity": {
+  "hailort_version": "5.3.2",
+  "devices": [
+   {
+    "id": "usb/001:024",
+    "architecture": "HAILO10H",
+    "firmware": "5.3.2 (release,app)",
+    "serial_number": null,
+    "part_number": null,
+    "product_name": null
+   }
+  ]
+ },
+ "hef": "C:\\tb-device\\yolox_s_warehouse_v4_o2s.hef",
+ "hef_sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+ "confidence": 0.05,
+ "nms_iou": 0.45,
+ "power_note": "USB-C source advertised 0.9 A (reduced-performance mode)",
+ "sets": {
+  "stage1": {
+   "frames": 100,
+   "npz_load_s": 0.66,
+   "batch1_s": 1.42,
+   "batch1_fps_incl_host": 70.32,
+   "raw_parser_mismatching_frames": 0,
+   "boxes": 198,
+   "batch8_s": 0.53,
+   "batch8_frames_per_submission": 8,
+   "batch8_fps_incl_host": 188.68,
+   "batch8_equals_batch1": true,
+   "batch8_differing_frames": 0
+  },
+  "kb_test": {
+   "frames": 42,
+   "npz_load_s": 0.3,
+   "batch1_s": 0.59,
+   "batch1_fps_incl_host": 70.83,
+   "raw_parser_mismatching_frames": 0,
+   "boxes": 108,
+   "batch8_s": 0.23,
+   "batch8_frames_per_submission": 8,
+   "batch8_fps_incl_host": 182.61,
+   "batch8_equals_batch1": true,
+   "batch8_differing_frames": 0
+  },
+  "loco_test": {
+   "frames": 873,
+   "npz_load_s": 5.64,
+   "batch1_s": 12.36,
+   "batch1_fps_incl_host": 70.64,
+   "raw_parser_mismatching_frames": 0,
+   "boxes": 545,
+   "batch8_s": 4.22,
+   "batch8_frames_per_submission": 8,
+   "batch8_fps_incl_host": 206.87,
+   "batch8_equals_batch1": true,
+   "batch8_differing_frames": 0
+  }
+ }
+}

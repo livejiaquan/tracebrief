@@ -1,0 +1,56 @@
+{
+  "started_utc": "2026-11-05T21:04:05Z",
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "hailort_version": "5.3.2",
+  "variant": {
+    "detector": true,
+    "draft": false,
+    "settle_s": 0.0
+  },
+  "steps": [
+    {
+      "step": "load the detector",
+      "seconds": 0.243
+    },
+    {
+      "step": "load the VLM",
+      "seconds": 10.354
+    },
+    {
+      "step": "release the VLM",
+      "seconds": 0.526
+    },
+    {
+      "step": "load the LLM",
+      "seconds": 7.712
+    },
+    {
+      "step": "release the LLM",
+      "seconds": 0.48
+    },
+    {
+      "step": "load the VLM again",
+      "error": "HailoRTStatusException: 57",
+      "seconds": 8.387
+    },
+    {
+      "step": "release the detector",
+      "error": "HailoCommunicationClosedException: Communication closed failure. Check server-client connection"
+    }
+  ],
+  "identity": {
+    "hailort_version": "5.3.2",
+    "devices": [
+      {
+        "id": "usb/001:029",
+        "architecture": "HAILO10H",
+        "firmware": "5.3.2 (release,app)",
+        "serial_number": null,
+        "part_number": null,
+        "product_name": null
+      }
+    ]
+  },
+  "swap_back": "failed",
+  "ended_utc": "2026-11-05T21:04:40Z"
+}

@@ -1,0 +1,75 @@
+{
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "hefs": {
+    "detector": {
+      "file": "yolox_s_warehouse_v4_o2s.hef",
+      "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+      "source": "scripts/hailo/compile_yolox_hef.py --optimization-level 2 (defaults: calibration seed 20261105, DFC calibset 64, QFT 1,024 frames x 4 epochs) with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (calibration: hef-build/data/calib)",
+      "hash_s": 0.029
+    },
+    "vlm": {
+      "file": "Qwen2-VL-2B-Instruct.hef",
+      "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+      "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef",
+      "hash_s": 6.716
+    },
+    "llm": {
+      "file": "Qwen2.5-1.5B-Instruct.hef",
+      "sha256": "0856a10c2b804cfe1590b80aa5e28369eb7169a9b36de836420a0b8cdf5b8d05",
+      "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2.5-1.5B-Instruct.hef",
+      "hash_s": 5.136
+    }
+  },
+  "note": "copied_from names where a copy came from on the device host; files without copied_from were written here. Host paths are shortened to C:\\tb-device, in this manifest and in the records, so those records differ from their originals only in that path. Every SHA-256 is of the file as published here.",
+  "files": {
+    "PREREG.json": {
+      "sha256": "2e7cf26a8f6d8046f4306d20194cc57df4aa3b7c2e79f0fb7ba21c841ced2162"
+    },
+    "README.md": {
+      "sha256": "a90381204f24cc6e9b62dbd7b79d8ac0699ece4b6791778f0fbc727fa7178f64"
+    },
+    "comparison.json": {
+      "sha256": "54c7ea49fb151142b356e5e924399778153e70ad247f2b7c6060cfc1fbf861e5"
+    },
+    "defaults.json": {
+      "sha256": "ad4b53f11ff0c2b55e75e11ab77b62256c96d570e047278e4d5d825d10cad3f1",
+      "copied_from": "C:\\tb-device\\draft-llm\\defaults.json"
+    },
+    "llm_drafts.json": {
+      "sha256": "f8d736e9339d6aa29cc4b34ce0f5b41e2d76849a59191063bff6fd407aaf52cf",
+      "copied_from": "C:\\tb-device\\draft-llm\\drafts-llm-v2-device\\llm_drafts.json"
+    },
+    "llm_drafts_device1_selection.json": {
+      "sha256": "72fd1039917c69c19b89aaf70f8a28839245f77b4f181e2059c3ac63006c56d0",
+      "copied_from": "C:\\tb-device\\draft-llm\\drafts-llm-device1-selection\\llm_drafts.json"
+    },
+    "llm_drafts_device2_selection.json": {
+      "sha256": "44401caa8f2978c190a73e71ef6aac18ec8a690671728d86b4fb3f717a2891d9",
+      "copied_from": "C:\\tb-device\\draft-llm\\drafts-llm-device2-selection\\llm_drafts.json"
+    },
+    "llm_drafts_run1_replies.json": {
+      "sha256": "85236d028559019dcb57748de983d3afcc46c9a11a97f9b7813773ef88cf69df",
+      "made_from": "C:\\tb-device\\draft-llm\\drafts-llm-v2-device-run1\\<key>\\generation-*-output.json"
+    },
+    "llm_switch.json": {
+      "sha256": "e15e638dd9b7eac41f3ea23261772931e799daf2c6e5e6fcd4990adefdd4cd0c",
+      "copied_from": "C:\\tb-device\\draft-llm\\switch\\llm_drafts.json"
+    },
+    "swapback_no_detector.json": {
+      "sha256": "94eb3feafa7d2eeeb4f38146618933eb1f13fd648c73e22a2294d7dfc1f4edae",
+      "copied_from": "C:\\tb-device\\draft-llm\\swapback-no-detector.json"
+    },
+    "swapback_no_draft.json": {
+      "sha256": "430bcc4efd1a68e30ae37703d1c01985869c0de98bb84aeed871e6f8d4f60ad9",
+      "copied_from": "C:\\tb-device\\draft-llm\\swapback-no-draft.json"
+    },
+    "swapback_no_llm.json": {
+      "sha256": "7fc199333fb5cb2b65c893dd4b1a2e6a6d789e97daa8cf970c9ca0ba91bd9a10",
+      "copied_from": "C:\\tb-device\\draft-llm\\swapback-no-llm.json"
+    },
+    "swapback_settle10.json": {
+      "sha256": "83d59741761da81c4b667345e76ab697871de07661d70f326193e267359230a9",
+      "copied_from": "C:\\tb-device\\draft-llm\\swapback-settle10.json"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 ## Current drafting design (2026-10-20)
 
-The review below led to a change in what the language model is allowed to write. Since 2026-10-20 the local Qwen2.5-1.5B writes only the title, one scene sentence and open review questions, using the visual check's description when one is available (prompt `draft-v2`). Box relations are no longer paraphrased: `src/tracebrief/generation.py` appends the detector timeline exactly as recorded, a JSON grammar restricts citations to real observation IDs, and the existing rule checks and labeled template fallback still apply. The five-draft review below describes the earlier text-only prompt and is kept as recorded.
+The review below led to a change in what the language model is allowed to write. Since 2026-10-20 the local Qwen2.5-1.5B writes only the title, one scene sentence and open review questions, using the visual check's description when one is available (prompt `draft-v2`). Box relations are no longer paraphrased: `src/tracebrief/generation.py` drops the model's sentences about boxes and appends one sentence restating the detector record, listing the times the boxes are close and then the times they overlap; a JSON grammar restricts citations to real observation IDs, and the existing rule checks and labeled template fallback still apply. In the Stage II device mode the same draft-v2 messages go to Qwen2-VL-2B in text-only mode on the UGen300; HailoRT has no grammar-constrained decoding, so the reply is parsed and then goes through the same checks and template fallback. That path has run only against a fake device. The five-draft review below describes the earlier text-only prompt and is kept as recorded.
 
 The local Qwen2.5-1.5B Q4_K_M model ran successfully, but this small evaluation did **not** establish an advantage over the deterministic template. A rubric-based review found an unsupported statement in one of five drafts that had passed automatic checks. The failure and the later guard repair are reported separately.
 
@@ -12,13 +12,13 @@ Every candidate from the first six baseline v1 held-out detector runs was includ
 
 | Measure | Result |
 |---|---:|
-| Selected runs / actual drafts | 6 / 5 |
-| Raw drafts passing original automatic checks | 5 / 5 |
-| Drafts with unsupported factual additions (rubric review) | 1 / 5 |
-| Supplied timestamp/box-state observations preserved | 12 / 12 |
+| Selected runs / actual drafts | <!-- fact: gen.runs_drafts -->6 / 5 |
+| Raw drafts passing original automatic checks | <!-- fact: gen.checks_passed -->5 / 5 |
+| Drafts with unsupported factual additions (rubric review) | <!-- fact: gen.unsupported -->1 / 5 |
+| Supplied timestamp/box-state observations preserved | <!-- fact: gen.observations -->12 / 12 |
 | Drafts with citation sets matching supplied observations | 5 / 5 |
 | Summary words: deterministic template / model, total | 152 / 161 |
-| End-to-end CPU generation median | 37.581 s |
+| End-to-end CPU generation median | <!-- fact: gen.median_s -->37.581 s |
 | End-to-end CPU generation range | 24.948–61.420 s |
 
 Timings include startup under concurrent workload. These are not isolated throughput measurements. Word counts exclude title/questions. Factuality was assessed in a single rubric-based review against the supplied observations; it was not a human user study and did not check the full source video.

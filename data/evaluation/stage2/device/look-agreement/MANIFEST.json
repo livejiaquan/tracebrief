@@ -1,0 +1,73 @@
+{
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "hefs": {
+    "detector": {
+      "file": "yolox_s_warehouse_v4_o2s.hef",
+      "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+      "source": "scripts/hailo/compile_yolox_hef.py --optimization-level 2 (defaults: calibration seed 20261105, DFC calibset 64, QFT 1,024 frames x 4 epochs) with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (calibration: hef-build/data/calib)",
+      "hash_s": 0.029
+    },
+    "vlm": {
+      "file": "Qwen2-VL-2B-Instruct.hef",
+      "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+      "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef",
+      "hash_s": 6.586
+    }
+  },
+  "files": {
+    "README.md": {
+      "sha256": "2e809adda4f84c98b56edfee541e71568ddff9f84bd17ca9208bca5bf9680cf4"
+    },
+    "SELECTION.json": {
+      "sha256": "2601f66618113f74997504fdc6968cf635aafbf213bfeadf220c5d3f7c38e069"
+    },
+    "cpu_drafts.json": {
+      "sha256": "3a4d5fe7463c34eca465f9f8d37c7bbccd7df7d7187044c174f8e4a471beeadf",
+      "copied_from": "device/look-agreement/cpu/cpu_drafts.json (WSL)"
+    },
+    "device_answers.jsonl": {
+      "sha256": "35eec5d5ce5bf9f846ea00153ff72b235158eb4d3547814d3dce588719293569"
+    },
+    "device_answers_fixed.jsonl": {
+      "sha256": "463d4147636a27c4a3606fce55db5ae2765a1a205f0b12a8edc5610dc027706a"
+    },
+    "device_drafts.json": {
+      "sha256": "ed3ef8f5cee4884979b3db8b61e33e0ad4becf25d883af84bb33938859e71c85",
+      "copied_from": "C:\\tb-device\\look-agreement\\drafts-v2-device\\device_drafts.json"
+    },
+    "device_drafts_device1_selection.json": {
+      "sha256": "2f320b2a09ec263df6c6210a07930c826676673c29912a0e6859ed385381297a",
+      "copied_from": "C:\\tb-device\\look-agreement\\drafts-device1-selection\\device_drafts.json"
+    },
+    "device_drafts_device2_selection.json": {
+      "sha256": "32d3bfcc39c52722b15b451679f5b75ba4cae8210e5adbbbab81faf04e213053",
+      "copied_from": "C:\\tb-device\\look-agreement\\drafts-device2-selection\\device_drafts.json"
+    },
+    "device_drafts_fixed.json": {
+      "sha256": "3be988464c4fa71309f7a5de4656691294a104dec4602f05147ba3c104060259",
+      "copied_from": "C:\\tb-device\\look-agreement\\drafts-v2-device-fixed\\device_drafts.json"
+    },
+    "device_meta.json": {
+      "sha256": "fd4977efc5c3cbfaf675635b5505eb61e4d51e8f462d0db1b95dbb90eb93922a",
+      "copied_from": "C:\\tb-device\\look-agreement\\look\\device_meta.json"
+    },
+    "device_meta_fixed.json": {
+      "sha256": "e88626ab9d98d4ec4cb100d34c925e56751ec0d0b5f17b5a4dcdc155e103cb70",
+      "copied_from": "C:\\tb-device\\look-agreement\\look-fixed\\device_meta.json"
+    },
+    "draft_comparison.json": {
+      "sha256": "199e5af582f1118b31e138333d6a0f3d39fa1dd6c04b15e02cae71659498ce8b"
+    },
+    "draft_events.json": {
+      "sha256": "0970c253f962e019320c3b042b2afe7c51f8fd78ec1d308c97800977285df5c4"
+    },
+    "look_agreement.json": {
+      "sha256": "727c8b62c4f5b81d3c7dab8c34370f843b4cc1c136b12a436c6539c111544830"
+    },
+    "probe_early_stop.json": {
+      "sha256": "d83226df0fb38761e65cf3b0eff56c05d5b52d885aef65e0a3a580f75415b790",
+      "copied_from": "C:\\tb-device\\look-agreement\\probe_early_stop.json"
+    }
+  },
+  "note": "copied_from names where a copy came from on the device host; files without copied_from were written here. Host paths are shortened to C:\\tb-device, in this manifest and in the records, so those records differ from their originals only in that path. Every SHA-256 is of the file as published here."
+}

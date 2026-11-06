@@ -1,0 +1,18 @@
+{
+  "written_utc": "2026-11-05T18:38:21Z",
+  "written": "after the draft-v2-device run on all 20 candidates and before any candidate hint was run",
+  "why": "draft-v2-device passed the source checks on 17 of 20 candidates (CPU: 20 of 20), and its raw replies rarely asked the review questions draft-v2 asks for.",
+  "candidates": {
+    "draft-v2-device1": {
+      "text": "Reply with one JSON object and nothing after it, with exactly these keys: \"title\" (three to eight words), \"summary\" (at most three short sentences), \"review_questions\" (exactly these two questions: \"Is another camera view available?\" and \"Which site procedure applies?\") and \"evidence_ids\" (every ID listed under Detector observations, copied exactly, and no other).",
+      "sha256": "892ebbad2688ed7a7f42701f07db449f3c4a689a2c18d54dce821d1f2078d335"
+    },
+    "draft-v2-device2": {
+      "text": "Reply with only this JSON object, filled in, and nothing after it: {\"title\": \"<three to eight words>\", \"summary\": \"<at most three short sentences>\", \"review_questions\": [\"Is another camera view available?\", \"Which site procedure applies?\"], \"evidence_ids\": [<every ID listed under Detector observations, in quotes>]}",
+      "sha256": "dc36c1afac7bcdb76e966f589047fbcda64175b5cdff172008c51a7b919bb3ca"
+    }
+  },
+  "baseline": "draft-v2-device",
+  "selection_set": "the 10 candidates with split 'selection' in draft_events.json",
+  "rule": "A candidate hint is eligible if, on the selection set, at least as many of its drafts pass the source checks as with draft-v2-device and its shown briefs hold no more unsupported sentences. Among eligible hints choose the most passing drafts, then the most format checks met by the raw replies (title three to eight words, summary at most 70 words, asks about another camera view, asks about the site procedure, cites every evidence ID), then the lower median generation time. If none is eligible, draft-v2-device stays. The chosen hint is run once on the 10 held-out candidates; both halves are reported. The selection run uses the same generation code as the draft-v2-device run (the stream is read to the end)."
+}

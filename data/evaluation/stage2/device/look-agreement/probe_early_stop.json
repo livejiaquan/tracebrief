@@ -1,0 +1,129 @@
+{
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "probes": [
+    {
+      "id": "t-050ce71e-f150-a",
+      "full_run": {
+        "seconds": 41.476,
+        "tokens": 156,
+        "answer": {
+          "forklift": "yes",
+          "person": "yes",
+          "description": "A person is standing next to a forklift, seemingly in the process of moving or loading goods."
+        }
+      },
+      "stopped": {
+        "raw_text": "{\n  \"forklift\": \"yes\",\n  \"person\": \"yes\",\n  \"description\": \"A person is standing next to a forklift, seemingly in the process of moving or loading goods.\"\n}",
+        "tokens": 43,
+        "left_stream_s": 12.762,
+        "seconds": 13.256,
+        "release_s": 0.489,
+        "answer": {
+          "forklift": "yes",
+          "person": "yes",
+          "description": "A person is standing next to a forklift, seemingly in the process of moving or loading goods."
+        }
+      },
+      "same_answer": true,
+      "next_check": {
+        "id": "t-0505436a-f150-a",
+        "seconds": 14.475,
+        "tokens": 50,
+        "same_raw_text_as_full_run": true
+      }
+    },
+    {
+      "id": "t-059b6b08-f000-a",
+      "full_run": {
+        "seconds": 38.229,
+        "tokens": 143,
+        "answer": {
+          "forklift": "yes",
+          "person": "yes",
+          "description": "The person is standing in front of a forklift, which is a powered industrial truck, in a warehouse setting. The person appears to be waiting or observing the forklift, possibly preparing to use it or having just finished using it."
+        }
+      },
+      "stopped": {
+        "raw_text": "{\n  \"forklift\": \"yes\",\n  \"person\": \"yes\",\n  \"description\": \"The person is standing in front of a forklift, which is a powered industrial truck, in a warehouse setting. The person appears to be waiting or observing the forklift, possibly preparing to use it or having just finished using it.\"\n}",
+        "tokens": 71,
+        "left_stream_s": 19.596,
+        "seconds": 20.092,
+        "release_s": 0.49,
+        "answer": {
+          "forklift": "yes",
+          "person": "yes",
+          "description": "The person is standing in front of a forklift, which is a powered industrial truck, in a warehouse setting. The person appears to be waiting or observing the forklift, possibly preparing to use it or having just finished using it."
+        }
+      },
+      "same_answer": true,
+      "next_check": {
+        "id": "t-0505436a-f180-a",
+        "seconds": 13.511,
+        "tokens": 46,
+        "same_raw_text_as_full_run": true
+      }
+    },
+    {
+      "id": "t-059b6b08-f030-a",
+      "full_run": {
+        "seconds": 34.202,
+        "tokens": 127,
+        "answer": {
+          "forklift": "yes",
+          "person": "yes",
+          "description": "A person is standing in front of a forklift, which is positioned in the middle of a large warehouse area. The person appears to be waiting or observing the forklift, possibly waiting for it to move or to load/unload goods."
+        }
+      },
+      "stopped": {
+        "raw_text": "{\n  \"forklift\": \"yes\",\n  \"person\": \"yes\",\n  \"description\": \"A person is standing in front of a forklift, which is positioned in the middle of a large warehouse area. The person appears to be waiting or observing the forklift, possibly waiting for it to move or to load/unload goods.\"\n}",
+        "tokens": 72,
+        "left_stream_s": 19.833,
+        "seconds": 20.327,
+        "release_s": 0.489,
+        "answer": {
+          "forklift": "yes",
+          "person": "yes",
+          "description": "A person is standing in front of a forklift, which is positioned in the middle of a large warehouse area. The person appears to be waiting or observing the forklift, possibly waiting for it to move or to load/unload goods."
+        }
+      },
+      "same_answer": true,
+      "next_check": {
+        "id": "t-0505436a-f210-a",
+        "seconds": 13.502,
+        "tokens": 46,
+        "same_raw_text_as_full_run": true
+      }
+    },
+    {
+      "id": "t-059b6b08-f090-a",
+      "full_run": {
+        "seconds": 42.494,
+        "tokens": 161,
+        "answer": {
+          "forklift": "yes",
+          "person": "yes",
+          "description": "A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting. The person appears to be waiting or observing the forklift, possibly waiting for it to move or to load/unload goods."
+        }
+      },
+      "stopped": {
+        "raw_text": "{\n  \"forklift\": \"yes\",\n  \"person\": \"yes\",\n  \"description\": \"A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting. The person appears to be waiting or observing the forklift, possibly waiting for it to move or to load/unload goods.\"\n}",
+        "tokens": 71,
+        "left_stream_s": 19.587,
+        "seconds": 20.081,
+        "release_s": 0.488,
+        "answer": {
+          "forklift": "yes",
+          "person": "yes",
+          "description": "A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting. The person appears to be waiting or observing the forklift, possibly waiting for it to move or to load/unload goods."
+        }
+      },
+      "same_answer": true,
+      "next_check": {
+        "id": "t-050ce71e-f060-a",
+        "seconds": 14.731,
+        "tokens": 51,
+        "same_raw_text_as_full_run": true
+      }
+    }
+  ]
+}

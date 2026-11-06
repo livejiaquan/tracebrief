@@ -1,0 +1,2102 @@
+{
+ "description": "The frozen look-v2 check re-run on the frame-exact Stage I test crops through the app's resident CPU worker (scripts/look_worker.py), with the published model, projector, prompt and decoding.",
+ "meta": {
+  "model_file": "Qwen2-VL-2B-Instruct-Q4_K_M.gguf",
+  "model_sha256": "5745685d2e607a82a0696c1118e56a2a1ae0901da450fd9cd4f161c6b62867d7",
+  "projector_sha256": "a0ad91f00a7a80dcf84d719a61b00ee2e07b71794f4ee2dfa81a254621a8c418",
+  "prompt_version": "look-v2",
+  "runtime": {
+   "llama-cpp-python": "0.3.36"
+  },
+  "threads": 6,
+  "threads_published_run": 12,
+  "note": "The published run used 12 threads; this re-run used 6."
+ },
+ "summary": {
+  "items": 148,
+  "same_answer": 148,
+  "same_raw_text": 148,
+  "changed": [],
+  "unreadable": 1,
+  "rerun_tp_confirmed": [
+   104,
+   106
+  ],
+  "rerun_fp_flagged": [
+   1,
+   7
+  ],
+  "rerun_agreement_both": [
+   144,
+   148
+  ]
+ },
+ "items": [
+  {
+   "id": "t-0505436a-f150-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0505436a-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0505436a-f210-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f090-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f120-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f150-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f210-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f000-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f030-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f090-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f120-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f150-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f210-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f000-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f030-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f090-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f120-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f030-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f210-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "no"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "no"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f270-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "no"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "no"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f270-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "no"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "no"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f000-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f030-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f090-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f120-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f150-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f000-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f030-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f090-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f120-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f150-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f210-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f270-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f000-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f030-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f090-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f120-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f150-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f210-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0624a7b3-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0624a7b3-f210-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0624a7b3-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0624a7b3-f270-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f000-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f030-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f090-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f120-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f150-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f270-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f120-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f120-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f000-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f030-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f060-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f090-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f120-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f150-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f180-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f210-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f240-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f270-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f300-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f330-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f360-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01db36b5-f390-a",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01fb00c3-f000-a",
+   "published_answer": {
+    "forklift": "no",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "no",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-01fb00c3-f390-a",
+   "published_answer": {
+    "forklift": "no",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "no",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0505436a-f150-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0505436a-f180-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0505436a-f210-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f090-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f120-c",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f150-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f180-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f210-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-050ce71e-f240-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f000-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f030-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f060-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f090-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f120-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f150-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f180-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f210-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-052961d2-f240-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f000-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f030-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f060-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f090-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-054b0c8f-f120-c",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f030-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f060-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f180-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05601faa-f210-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f000-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f030-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f060-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f090-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f120-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05761a14-f150-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f060-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f090-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f120-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f150-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f180-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f210-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f240-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-059b6b08-f270-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f000-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f030-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f060-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f090-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f120-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f180-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-05f91749-f240-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0624a7b3-f180-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0624a7b3-f210-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0624a7b3-f240-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f000-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f030-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f060-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f090-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f120-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f150-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f240-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-0729fd10-f270-b",
+   "published_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_answer": {
+    "forklift": "yes",
+    "person": "yes"
+   },
+   "rerun_error": null,
+   "same_answer": true,
+   "same_raw_text": true
+  },
+  {
+   "id": "t-017e8454-f060-a",
+   "published_answer": null,
+   "rerun_answer": null,
+   "rerun_error": "Invalid forklift answer: ''",
+   "same_answer": true,
+   "same_raw_text": true
+  }
+ ]
+}

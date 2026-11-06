@@ -1,0 +1,605 @@
+{
+  "id": "fd8aad5854b3455d",
+  "status": "completed",
+  "progress": 100,
+  "message": "Analysis complete. Review each observation before approval.",
+  "created_at": "2026-11-05T12:55:00.600594+00:00",
+  "source": {
+    "id": "warehouse-1",
+    "name": "Warehouse interaction 01",
+    "description": "Synthetic warehouse footage. Development example; review candidate interactions, not a verified safety incident.",
+    "path": "warehouse-1.mp4",
+    "duration": 10.0,
+    "source_label": "NVIDIA synthetic warehouse · development example",
+    "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes",
+    "source_file": "0851b7a332077a4fc0e2_01021d3989e38beb3395_run_10_seed_213384163.ceiling_00.rgb.mp4",
+    "license": "OpenMDW-1.1",
+    "sha256": "802f70b61ac677b13168acf80e07469b7b94684ef724ef7b60b3da3111957344",
+    "video_url": "/media/samples/warehouse-1"
+  },
+  "requested_vision_settings": {
+    "backend": "compact-onnx",
+    "model_path": "weights/yolox-s-warehouse-v4.onnx",
+    "model_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "model_revision": "75d7feefe1c3eabbaefee6eb5eca7cf7c2b1e7cab90f7ce394a4c4fc24ded0c0",
+    "input_size": 416,
+    "sample_fps": 1.0,
+    "confidence": 0.25,
+    "nms_iou": 0.45,
+    "gap_ratio": 0.3,
+    "min_samples": 2,
+    "merge_gap_s": 2.1,
+    "threads": 4
+  },
+  "search_profile": {
+    "id": "fast",
+    "label": "Fast search",
+    "description": "Purpose-trained compact detector (YOLOX-s, detector v4, trained on synthetic and real warehouse images). About a second per clip on CPU, but at an unseen real site it found only about a third of the forklifts; review the original footage."
+  },
+  "updated_at": "2026-11-05T12:55:58.078986+00:00",
+  "phase": "done",
+  "phases": {
+    "detection": {
+      "seconds": 5.225,
+      "started_at": "2026-11-05T12:55:00.649760+00:00",
+      "sampled_frames": 10,
+      "inference_s": 0.071725,
+      "candidates": 1,
+      "finished_at": "2026-11-05T12:55:05.891810+00:00",
+      "model_switches": 0
+    },
+    "visual_check": {
+      "seconds": 14.911,
+      "started_at": "2026-11-05T12:55:05.891810+00:00",
+      "candidates": 1,
+      "finished_at": "2026-11-05T12:55:20.813604+00:00",
+      "model_switches": 1
+    },
+    "draft": {
+      "seconds": 37.222,
+      "started_at": "2026-11-05T12:55:20.827555+00:00",
+      "candidates": 1,
+      "finished_at": "2026-11-05T12:55:58.060195+00:00",
+      "model_switches": 0
+    }
+  },
+  "result": {
+    "id": "fd8aad5854b3455d",
+    "title": "Warehouse interaction 01",
+    "video_url": "/media/samples/warehouse-1",
+    "duration": 10.0,
+    "source_label": "NVIDIA synthetic warehouse · development example",
+    "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes",
+    "source_sha256": "802f70b61ac677b13168acf80e07469b7b94684ef724ef7b60b3da3111957344",
+    "method_label": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "events": [
+      {
+        "id": "event-001",
+        "title": "Review of Warehouse Key Frame",
+        "start": 0.0,
+        "end": 9.0,
+        "peak": 3.0,
+        "status": "draft",
+        "summary": "Visual check at 3s: A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting. Detector record: predicted person and forklift boxes are close at 0s and overlap at 3s and 8s.",
+        "observations": [
+          {
+            "id": "event-001-obs-1",
+            "text": "At 0s: Predicted person and forklift boxes are close but do not overlap in the image.",
+            "time": 0.0,
+            "frame_url": "/media/jobs/fd8aad5854b3455d/frames/event-001-1-predicted.jpg",
+            "image_kind": "Model-predicted boxes overlaid on the source frame; labels require visual verification.",
+            "original_frame_url": "/media/jobs/fd8aad5854b3455d/frames/event-001-1.jpg"
+          },
+          {
+            "id": "event-001-obs-2",
+            "text": "At 3s: Predicted person and forklift boxes overlap in the image.",
+            "time": 3.0,
+            "frame_url": "/media/jobs/fd8aad5854b3455d/frames/event-001-2-predicted.jpg",
+            "image_kind": "Model-predicted boxes overlaid on the source frame; labels require visual verification.",
+            "original_frame_url": "/media/jobs/fd8aad5854b3455d/frames/event-001-2.jpg"
+          },
+          {
+            "id": "event-001-obs-3",
+            "text": "At 8s: Predicted person and forklift boxes overlap in the image.",
+            "time": 8.0,
+            "frame_url": "/media/jobs/fd8aad5854b3455d/frames/event-001-3-predicted.jpg",
+            "image_kind": "Model-predicted boxes overlaid on the source frame; labels require visual verification.",
+            "original_frame_url": "/media/jobs/fd8aad5854b3455d/frames/event-001-3.jpg"
+          }
+        ],
+        "uncertainties": [
+          "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+          "Predicted object labels and boxes require visual verification."
+        ],
+        "review_questions": [
+          "Is the predicted person and forklift boxes overlapping at 3s?",
+          "What is the significance of the predicted boxes at 3s?",
+          "Are there any other camera views available for verification?"
+        ],
+        "notes": "",
+        "reviewer_notes": "",
+        "history": [],
+        "vision_record": {
+          "id": "candidate-001",
+          "kind": "person_forklift_proximity_candidate",
+          "start_s": 0,
+          "end_s": 9.0,
+          "peak_s": 3.0,
+          "evidence": [
+            {
+              "frame_index": 0,
+              "time_s": 0.0,
+              "image_path": "C:\\tb-device\\stage2-phases\\final-runtime-clip\\jobs\\fd8aad5854b3455d\\vision\\frame_000000.jpg",
+              "pairs": [
+                {
+                  "person_bbox": [
+                    890.9,
+                    276.74,
+                    998.17,
+                    552.54
+                  ],
+                  "forklift_bbox": [
+                    978.78,
+                    586.01,
+                    1820.95,
+                    1078.93
+                  ],
+                  "gap_px": 33.47,
+                  "gap_person_height_ratio": 0.1214,
+                  "confidence": 0.8826
+                }
+              ],
+              "fact": "Predicted person and forklift boxes are close in image space."
+            },
+            {
+              "frame_index": 60,
+              "time_s": 2.0,
+              "image_path": "C:\\tb-device\\stage2-phases\\final-runtime-clip\\jobs\\fd8aad5854b3455d\\vision\\frame_000060.jpg",
+              "pairs": [
+                {
+                  "person_bbox": [
+                    892.53,
+                    275.12,
+                    999.79,
+                    550.92
+                  ],
+                  "forklift_bbox": [
+                    1051.33,
+                    465.36,
+                    1746.86,
+                    1073.72
+                  ],
+                  "gap_px": 51.54,
+                  "gap_person_height_ratio": 0.1869,
+                  "confidence": 0.9419
+                }
+              ],
+              "fact": "Predicted person and forklift boxes are close in image space."
+            },
+            {
+              "frame_index": 90,
+              "time_s": 3.0,
+              "image_path": "C:\\tb-device\\stage2-phases\\final-runtime-clip\\jobs\\fd8aad5854b3455d\\vision\\frame_000090.jpg",
+              "pairs": [
+                {
+                  "person_bbox": [
+                    890.9,
+                    275.12,
+                    998.17,
+                    550.92
+                  ],
+                  "forklift_bbox": [
+                    996.13,
+                    358.71,
+                    1529.13,
+                    1067.83
+                  ],
+                  "gap_px": 0.0,
+                  "gap_person_height_ratio": 0.0,
+                  "confidence": 0.9449
+                }
+              ],
+              "fact": "Predicted person and forklift boxes are close in image space."
+            },
+            {
+              "frame_index": 120,
+              "time_s": 4.0,
+              "image_path": "C:\\tb-device\\stage2-phases\\final-runtime-clip\\jobs\\fd8aad5854b3455d\\vision\\frame_000120.jpg",
+              "pairs": [
+                {
+                  "person_bbox": [
+                    892.64,
+                    275.94,
+                    1001.88,
+                    556.02
+                  ],
+                  "forklift_bbox": [
+                    946.81,
+                    280.76,
+                    1403.42,
+                    1075.95
+                  ],
+                  "gap_px": 0.0,
+                  "gap_person_height_ratio": 0.0,
+                  "confidence": 0.9458
+                }
+              ],
+              "fact": "Predicted person and forklift boxes are close in image space."
+            },
+            {
+              "frame_index": 150,
+              "time_s": 5.0,
+              "image_path": "C:\\tb-device\\stage2-phases\\final-runtime-clip\\jobs\\fd8aad5854b3455d\\vision\\frame_000150.jpg",
+              "pairs": [
+                {
+                  "person_bbox": [
+                    917.09,
+                    287.4,
+                    977.43,
+                    540.24
+                  ],
+                  "forklift_bbox": [
+                    905.87,
+                    204.12,
+                    1337.0,
+                    1079.13
+                  ],
+                  "gap_px": 0.0,
+                  "gap_person_height_ratio": 0.0,
+                  "confidence": 0.8809
+                }
+              ],
+              "fact": "Predicted person and forklift boxes are close in image space."
+            },
+            {
+              "frame_index": 180,
+              "time_s": 6.0,
+              "image_path": "C:\\tb-device\\stage2-phases\\final-runtime-clip\\jobs\\fd8aad5854b3455d\\vision\\frame_000180.jpg",
+              "pairs": [
+                {
+                  "person_bbox": [
+                    996.13,
+                    338.78,
+                    1085.16,
+                    452.59
+                  ],
+                  "forklift_bbox": [
+                    890.92,
+                    139.67,
+                    1257.86,
+                    984.99
+                  ],
+                  "gap_px": 0.0,
+                  "gap_person_height_ratio": 0.0,
+                  "confidence": 0.6486
+                }
+              ],
+              "fact": "Predicted person and forklift boxes are close in image space."
+            },
+            {
+              "frame_index": 210,
+              "time_s": 7.0,
+              "image_path": "C:\\tb-device\\stage2-phases\\final-runtime-clip\\jobs\\fd8aad5854b3455d\\vision\\frame_000210.jpg",
+              "pairs": [
+                {
+                  "person_bbox": [
+                    1107.28,
+                    296.8,
+                    1164.03,
+                    571.21
+                  ],
+                  "forklift_bbox": [
+                    869.17,
+                    103.86,
+                    1183.82,
+                    878.09
+                  ],
+                  "gap_px": 0.0,
+                  "gap_person_height_ratio": 0.0,
+                  "confidence": 0.4398
+                }
+              ],
+              "fact": "Predicted person and forklift boxes are close in image space."
+            },
+            {
+              "frame_index": 240,
+              "time_s": 8.0,
+              "image_path": "C:\\tb-device\\stage2-phases\\final-runtime-clip\\jobs\\fd8aad5854b3455d\\vision\\frame_000240.jpg",
+              "pairs": [
+                {
+                  "person_bbox": [
+                    1102.39,
+                    307.07,
+                    1280.15,
+                    538.43
+                  ],
+                  "forklift_bbox": [
+                    840.12,
+                    68.65,
+                    1122.05,
+                    762.37
+                  ],
+                  "gap_px": 0.0,
+                  "gap_person_height_ratio": 0.0,
+                  "confidence": 0.9001
+                }
+              ],
+              "fact": "Predicted person and forklift boxes are close in image space."
+            }
+          ],
+          "limitations": [
+            "Image-space proximity does not establish physical distance, collision, near miss, or unsafe conduct.",
+            "Predicted object labels and boxes require visual verification."
+          ]
+        },
+        "visual_check": {
+          "time": 3.0,
+          "crop_region": [
+            507,
+            0,
+            1405,
+            1080
+          ],
+          "crop_url": "/media/jobs/fd8aad5854b3455d/frames/event-001-look.jpg",
+          "seconds": 13.82,
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "prompt_version": "look-v2",
+          "prompt_sha256": "d0b7f94a4a91f22e0c253fe9a433c14a386f66548e45c19460343fffb0c300f1",
+          "system_prompt": "You are a helpful assistant that can see images.",
+          "raw_text": "{\n  \"forklift\": \"yes\",\n  \"person\": \"yes\",\n  \"description\": \"A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting.\"\n}",
+          "runtime": "hailo",
+          "runtime_label": "UGen300 Qwen2-VL-2B",
+          "ttft_s": 2.56,
+          "tokens": 46,
+          "tokens_per_s": 4.0,
+          "forklift": "yes",
+          "person": "yes",
+          "description": "A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting.",
+          "status": "confirmed"
+        },
+        "generation_method": "ugen300-qwen2-vl-draft",
+        "generation_warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage.",
+        "cited_evidence_ids": [
+          "event-001-obs-1",
+          "event-001-obs-2",
+          "event-001-obs-3"
+        ],
+        "generation_provenance": {
+          "original_input_observations": [
+            {
+              "id": "event-001-obs-1",
+              "time": 0.0,
+              "text": "At 0s: Predicted person and forklift boxes are close but do not overlap in the image."
+            },
+            {
+              "id": "event-001-obs-2",
+              "time": 3.0,
+              "text": "At 3s: Predicted person and forklift boxes overlap in the image."
+            },
+            {
+              "id": "event-001-obs-3",
+              "time": 8.0,
+              "text": "At 8s: Predicted person and forklift boxes overlap in the image."
+            }
+          ],
+          "raw_model_output": {
+            "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 3s\",\n  \"summary\": \"At 3s, the predicted person and forklift boxes overlap, indicating a potential collision or near miss.\",\n  \"review_questions\": [\n    \"Is the predicted person and forklift boxes overlapping at 3s?\",\n    \"What is the significance of the predicted boxes at 3s?\",\n    \"Are there any other camera views available for verification?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\", \"event-001-obs-3\"]\n}",
+            "model_file": "Qwen2-VL-2B-Instruct.hef",
+            "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+            "runtime": {
+              "hailort": "5.3.2"
+            },
+            "prompt_sha256": "c98ed1c25f3807d1073a7bebe24f3a98e1547aec37b642c1e5b97ef623a3b717",
+            "prompt_version": "draft-v2-device",
+            "generation_seconds": 37.193,
+            "ttft_s": 3.199,
+            "tokens": 137,
+            "tokens_per_s": 4.002,
+            "max_generated_tokens": 320,
+            "seed": 19,
+            "decoding": "greedy (do_sample=False)",
+            "draft": {
+              "title": "Review of Warehouse Key Frame at 3s",
+              "summary": "At 3s, the predicted person and forklift boxes overlap, indicating a potential collision or near miss.",
+              "review_questions": [
+                "Is the predicted person and forklift boxes overlapping at 3s?",
+                "What is the significance of the predicted boxes at 3s?",
+                "Are there any other camera views available for verification?"
+              ],
+              "evidence_ids": [
+                "event-001-obs-1",
+                "event-001-obs-2",
+                "event-001-obs-3"
+              ]
+            }
+          },
+          "automatic_check_errors": [],
+          "original_accepted_draft": {
+            "title": "Review of Warehouse Key Frame",
+            "summary": "Visual check at 3s: A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting. Detector record: predicted person and forklift boxes are close at 0s and overlap at 3s and 8s.",
+            "review_questions": [
+              "Is the predicted person and forklift boxes overlapping at 3s?",
+              "What is the significance of the predicted boxes at 3s?",
+              "Are there any other camera views available for verification?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        }
+      }
+    ],
+    "warnings": [
+      "Synthetic-domain validation only; real warehouse generalization unverified.",
+      "No detected candidates does not establish safety.",
+      "Sampling may miss short events.",
+      "HEF agreement with the frozen ONNX detector was measured for one build on test frames only (docs/HARDWARE_PLAN.md); a rebuilt HEF needs its own comparison."
+    ],
+    "analysis_seconds": 57.45,
+    "hardware_label": "HAILO10H · device usb/001:024 · firmware 5.3.2 (release,app) · HailoRT 5.3.2",
+    "backend": "hailo",
+    "generated_at": "2026-11-05T12:55:58.068857+00:00",
+    "evidence_version": "1.0",
+    "vision_timing": {
+      "wall_s": 1.804,
+      "sampled_frames": 10,
+      "model_load_s": 0.0,
+      "wall_without_model_load_s": 1.804426,
+      "inference_s": 0.071725,
+      "inference_ms_per_frame": 7.172
+    },
+    "vision_model": {
+      "id": "YOLOX-s-warehouse-person-forklift-v4-S",
+      "revision": "75d7feefe1c3eabbaefee6eb5eca7cf7c2b1e7cab90f7ce394a4c4fc24ded0c0",
+      "backend": "YOLOX HEF on Hailo-10H (HailoRT 5.3.2)",
+      "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+      "hef": "yolox_s_warehouse_v4_o2s.hef",
+      "onnx_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2"
+    },
+    "vision_implementation": {
+      "vision_sha256": "25241b63e9b27e2cb720d6e99090957506d3e958b6acfafded58377944ecf852",
+      "backend_sha256": "8be1a1fe64b24c1d47783958220bf4449e01485757922f772b3bfebf0a89270e"
+    },
+    "requested_vision_settings": {
+      "backend": "compact-onnx",
+      "model_path": "weights/yolox-s-warehouse-v4.onnx",
+      "model_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+      "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+      "model_revision": "75d7feefe1c3eabbaefee6eb5eca7cf7c2b1e7cab90f7ce394a4c4fc24ded0c0",
+      "input_size": 416,
+      "sample_fps": 1.0,
+      "confidence": 0.25,
+      "nms_iou": 0.45,
+      "gap_ratio": 0.3,
+      "min_samples": 2,
+      "merge_gap_s": 2.1,
+      "threads": 4
+    },
+    "search_profile": {
+      "id": "fast",
+      "label": "Fast search",
+      "description": "Purpose-trained compact detector (YOLOX-s, detector v4, trained on synthetic and real warehouse images). About a second per clip on CPU, but at an unseen real site it found only about a third of the forklifts; review the original footage."
+    },
+    "vision_settings": {
+      "sample_fps": 1.0,
+      "confidence": 0.25,
+      "text_threshold": 0.25,
+      "nms_iou": 0.45,
+      "gap_ratio": 0.3,
+      "min_samples": 2,
+      "merge_gap_s": 2.1,
+      "threads": 4,
+      "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+      "model_revision": "75d7feefe1c3eabbaefee6eb5eca7cf7c2b1e7cab90f7ce394a4c4fc24ded0c0",
+      "backend": "compact-onnx",
+      "input_size": 416,
+      "model_path": "weights/yolox-s-warehouse-v4.onnx",
+      "model_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+      "hef": "yolox_s_warehouse_v4_o2s.hef"
+    },
+    "review_status": "unreviewed",
+    "source": {
+      "id": "warehouse-1",
+      "name": "Warehouse interaction 01",
+      "description": "Synthetic warehouse footage. Development example; review candidate interactions, not a verified safety incident.",
+      "path": "warehouse-1.mp4",
+      "duration": 10.0,
+      "source_label": "NVIDIA synthetic warehouse · development example",
+      "source_url": "https://huggingface.co/datasets/nvidia/PhysicalAI-WorldModel-Synthetic-Warehouse-Operations-Scenes",
+      "source_file": "0851b7a332077a4fc0e2_01021d3989e38beb3395_run_10_seed_213384163.ceiling_00.rgb.mp4",
+      "license": "OpenMDW-1.1",
+      "sha256": "802f70b61ac677b13168acf80e07469b7b94684ef724ef7b60b3da3111957344",
+      "video_url": "/media/samples/warehouse-1"
+    },
+    "device": {
+      "backend": "hailo",
+      "hailort_version": "5.3.2",
+      "devices": [
+        {
+          "id": "usb/001:024",
+          "architecture": "HAILO10H",
+          "firmware": "5.3.2 (release,app)",
+          "serial_number": null,
+          "part_number": null,
+          "product_name": null
+        }
+      ],
+      "hefs": {
+        "detector": {
+          "file": "yolox_s_warehouse_v4_o2s.hef",
+          "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+          "source": "scripts/hailo/compile_yolox_hef.py --optimization-level 2 (defaults: calibration seed 20261105, DFC calibset 64, QFT 1,024 frames x 4 epochs) with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (calibration: work/stage2/hef-build/data/calib)"
+        },
+        "vlm": {
+          "file": "Qwen2-VL-2B-Instruct.hef",
+          "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef"
+        }
+      },
+      "load_seconds": {
+        "detector": 0.286,
+        "vlm": 13.082
+      },
+      "vdevice": {
+        "group_id": "SHARED",
+        "scheduling": "ROUND_ROBIN",
+        "models": "one at a time; jobs run in phases"
+      },
+      "detector": {
+        "confidence": 0.25,
+        "nms_iou": 0.45,
+        "batch_size": 8,
+        "max_boxes_per_class": 100,
+        "frames_per_submission": 8
+      },
+      "vlm": {
+        "frame_shape": [
+          336,
+          336,
+          3
+        ],
+        "system_prompt": "You are a helpful assistant that can see images.",
+        "decoding": "greedy (do_sample=False)",
+        "seed": 19
+      }
+    },
+    "schedule": {
+      "mode": "phased",
+      "order": [
+        "detection",
+        "visual_check",
+        "draft"
+      ],
+      "phases": {
+        "detection": {
+          "seconds": 5.225,
+          "started_at": "2026-11-05T12:55:00.649760+00:00",
+          "sampled_frames": 10,
+          "inference_s": 0.071725,
+          "candidates": 1,
+          "finished_at": "2026-11-05T12:55:05.891810+00:00",
+          "model_switches": 0
+        },
+        "visual_check": {
+          "seconds": 14.911,
+          "started_at": "2026-11-05T12:55:05.891810+00:00",
+          "candidates": 1,
+          "finished_at": "2026-11-05T12:55:20.813604+00:00",
+          "model_switches": 1
+        },
+        "draft": {
+          "seconds": 37.222,
+          "started_at": "2026-11-05T12:55:20.827555+00:00",
+          "candidates": 1,
+          "finished_at": "2026-11-05T12:55:58.060195+00:00",
+          "model_switches": 0
+        }
+      },
+      "total_s": 57.358
+    }
+  }
+}

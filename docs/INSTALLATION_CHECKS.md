@@ -11,7 +11,7 @@ Checked 2026-10-04 on Linux, Python 3.13.5. A separate copy of the source tree a
 - The pinned Qwen GGUF passed SHA-256 verification. A tiny local-generation smoke returned `READY`; this checks runtime operation, not incident-draft quality.
 - Full setup preflight passed; vision and generation environments passed `pip check`.
 - The documented source server launch served HTML, JavaScript and health endpoints from the copied checkout, with the local generation model configured.
-- All 10 review-integrity and API-handler regression tests that existed on 2026-10-04 passed in the new application environment. Later tests were added; the current count is reported by `pytest`.
+- All 10 review-integrity and API-handler regression tests that existed on 2026-10-04 passed in the new application environment. Later tests were added; the current count is in [FACTS.md](FACTS.md).
 - Eleven isolated HTTP checks passed, covering static assets, health, malformed JSON shapes, unknown sources, invalid uploads, path traversal and invalid observation edits.
 
 Pinned model bytes were reused from verified local caches, copied into the new checkout's model directory. Model weights were not downloaded again in full. Small Qwen license/card files and Python packages were fetched through the documented setup path. System compiler, CMake, FFmpeg and Python were already installed, so the OS package-manager prerequisite command was not rerun.

@@ -1,13 +1,15 @@
 # RGB validation results
 
-**Broader search is the product default. On the same nine scorable new synthetic runs, it achieved 90.2% localized image-space pair precision and 93.2% recall; Stricter search achieved 90.2% precision and 62.7% recall. The Broader comparison and default selection were made after seeing the prospective Stricter results. These are not near-miss or collision detection scores.**
+> **Erratum (2026-11-06).** Evidence frames and visual-check crops could show a later frame than the detector analysed; detection results in this file are not affected. See [ERRATA.md](ERRATA.md).
+
+**Broader search is the product default. On the same nine scorable new synthetic runs, it achieved <!-- fact: broader.pair_precision -->90.2% localized image-space pair precision and <!-- fact: broader.pair_recall -->93.2% recall; Stricter search achieved <!-- fact: stricter.pair_precision -->90.2% precision and <!-- fact: stricter.pair_recall -->62.7% recall. The Broader comparison and default selection were made after seeing the prospective Stricter results. These are not near-miss or collision detection scores.** Fast search's compact detector (the Stage I model and detector v4) is reported separately in [COMPACT_DETECTOR.md](COMPACT_DETECTOR.md).
 
 ## Fixed-profile comparison and default decision
 
 | Profile | Pair precision / recall | Pair counts | Median CPU time, all ten inputs |
 |---|---|---|---|
-| **Broader search — default**: 0.35, 800/1333 | **90.2% / 93.2%** | 55 TP, 6 FP, 4 FN | 71.280 s per 10 s video |
-| Stricter search: 0.65, 512/853 | 90.2% / 62.7% | 37 TP, 4 FP, 22 FN | 36.590 s per 10 s video |
+| **Broader search — default**: 0.35, 800/1333 | <!-- fact: broader.pair_precision -->**90.2% / <!-- fact: broader.pair_recall -->93.2%** | <!-- fact: broader.pair_counts -->55 TP, 6 FP, 4 FN | <!-- fact: broader.wall_s -->71.280 s per 10 s video |
+| Stricter search: 0.65, 512/853 | <!-- fact: stricter.pair_precision -->90.2% / <!-- fact: stricter.pair_recall -->62.7% | <!-- fact: stricter.pair_counts -->37 TP, 4 FP, 22 FN | <!-- fact: stricter.wall_s -->36.590 s per 10 s video |
 
 Both profiles processed the same ten videos and retained all 100 sampled predictions. The same annotation-integrity exclusion leaves nine scorable runs and 90 frames. The exact original v1 source/configuration was used for the Broader comparison after the frozen Stricter evaluation. This is an explicit **post-result paired comparison and product-default selection**, not a fresh heldout validation of the selected default. The original baseline results remain separate below.
 
@@ -58,7 +60,7 @@ The [prospective v2 bundle](../data/evaluation/phase2/README.md) retains all 20 
 
 # Original baseline (v1)
 
-**TraceBrief discovers review candidates from raw RGB. On 24 heldout synthetic runs, the stricter actor-localized image-space pair metric achieved 92.1% precision and 95.9% recall. These are not near-miss or collision detection scores.**
+**TraceBrief discovers review candidates from raw RGB. On 24 heldout synthetic runs, the stricter actor-localized image-space pair metric achieved <!-- fact: v1.pair_precision -->92.1% precision and <!-- fact: v1.pair_recall -->95.9% recall. These are not near-miss or collision detection scores.**
 
 ## What was frozen and measured
 
@@ -92,7 +94,7 @@ All errors are preserved in [results.json](../data/evaluation/results.json), tog
 
 ## Runtime and hardware scope
 
-The primary cohort used an Intel Core i7-10700 host under WSL, with at most four PyTorch/OpenCV threads. Median end-to-end time was **71.786 seconds per 10-second video**, with a range of 65.491–153.976 seconds. Timing includes model loading and JPEG export and reflects concurrent workstation workloads. It is not a controlled throughput benchmark or a real-time capability claim.
+The primary cohort used an Intel Core i7-10700 host under WSL, with at most four PyTorch/OpenCV threads. Median end-to-end time was <!-- fact: v1.wall_s -->**71.786 seconds per 10-second video**, with a range of 65.491–153.976 seconds. Timing includes model loading and JPEG export and reflects concurrent workstation workloads. It is not a controlled throughput benchmark or a real-time capability claim.
 
 No UGen300 speed, power, memory or accuracy measurement is included. The CPU Grounding DINO path is not asserted to compile to Hailo. A compatible deployment path and the actual benefit of accelerator-backed generation remain to be measured in Stage II.
 

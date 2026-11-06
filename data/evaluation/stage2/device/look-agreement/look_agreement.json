@@ -1,0 +1,539 @@
+{
+ "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+ "device": {
+  "hailort_version": "5.3.2",
+  "hefs": {
+   "detector": {
+    "file": "yolox_s_warehouse_v4_o2s.hef",
+    "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+    "source": "scripts/hailo/compile_yolox_hef.py --optimization-level 2 (defaults: calibration seed 20261105, DFC calibset 64, QFT 1,024 frames x 4 epochs) with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (calibration: work/stage2/hef-build/data/calib)",
+    "hash_s": 0.029
+   },
+   "vlm": {
+    "file": "Qwen2-VL-2B-Instruct.hef",
+    "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+    "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef",
+    "hash_s": 6.586
+   }
+  },
+  "vlm_load_s": 10.238,
+  "frame_shape": [
+   336,
+   336,
+   3
+  ],
+  "system_prompt": "You are a helpful assistant that can see images.",
+  "prompt_version": "look-v2",
+  "prompt_sha256": "d0b7f94a4a91f22e0c253fe9a433c14a386f66548e45c19460343fffb0c300f1",
+  "max_generated_tokens": 160,
+  "decoding": "greedy (do_sample=False)",
+  "seed": 19,
+  "run_utc": [
+   "2026-11-05T17:36:28Z",
+   "2026-11-05T18:19:26Z"
+  ]
+ },
+ "cpu_reference": {
+  "record": "data/evaluation/look/results.json",
+  "model_file": "Qwen2-VL-2B-Instruct-Q4_K_M.gguf",
+  "model_sha256": "5745685d2e607a82a0696c1118e56a2a1ae0901da450fd9cd4f161c6b62867d7",
+  "projector_sha256": "a0ad91f00a7a80dcf84d719a61b00ee2e07b71794f4ee2dfa81a254621a8c418",
+  "threads": 12,
+  "prompt_sha256": "d0b7f94a4a91f22e0c253fe9a433c14a386f66548e45c19460343fffb0c300f1"
+ },
+ "crops": {
+  "n": 148,
+  "sha256_match_published": 148
+ },
+ "device_vs_cpu": {
+  "both_readable": 147,
+  "forklift_agreement": {
+   "numerator": 145,
+   "denominator": 147,
+   "rate": 0.9864
+  },
+  "person_agreement": {
+   "numerator": 146,
+   "denominator": 147,
+   "rate": 0.9932
+  },
+  "both_fields_agreement": {
+   "numerator": 144,
+   "denominator": 147,
+   "rate": 0.9796
+  },
+  "verdict_agreement_all_items": {
+   "numerator": 144,
+   "denominator": 148,
+   "rate": 0.973
+  },
+  "verdict_confusion_cpu_vs_device": {
+   "cpu_check-suggested/device_check-suggested": 3,
+   "cpu_check-suggested/device_confirmed": 2,
+   "cpu_confirmed/device_check-suggested": 1,
+   "cpu_confirmed/device_confirmed": 141,
+   "cpu_unavailable/device_confirmed": 1
+  },
+  "unreadable": {
+   "cpu": {
+    "numerator": 1,
+    "denominator": 148,
+    "rate": 0.0068
+   },
+   "device": {
+    "numerator": 0,
+    "denominator": 148,
+    "rate": 0.0
+   }
+  },
+  "identical_description": {
+   "numerator": 0,
+   "denominator": 147,
+   "rate": 0.0
+  },
+  "disagreements": [
+   {
+    "id": "t-054b0c8f-f120-b",
+    "gold_status": "tp",
+    "visual_label": {
+     "forklift": "yes",
+     "person": "yes"
+    },
+    "cpu": {
+     "forklift": "yes",
+     "person": "yes"
+    },
+    "device": {
+     "forklift": "yes",
+     "person": "no"
+    },
+    "cpu_description": "A person is sitting on a forklift, which is parked on a red floor.",
+    "device_description": "A forklift is parked on a red floor, with a person standing next to it, possibly preparing to load or unload goods."
+   },
+   {
+    "id": "t-01fb00c3-f000-a",
+    "gold_status": "routine",
+    "visual_label": {
+     "forklift": "no",
+     "person": "yes"
+    },
+    "cpu": {
+     "forklift": "no",
+     "person": "yes"
+    },
+    "device": {
+     "forklift": "yes",
+     "person": "yes"
+    },
+    "cpu_description": "A person in a uniform is standing in the middle of a warehouse, facing a forklift. The person appears to be observing the forklift or preparing to interact with it.",
+    "device_description": "A person is standing in a warehouse, holding a cardboard box, with a forklift in the background, which is being used to move the box."
+   },
+   {
+    "id": "t-01fb00c3-f390-a",
+    "gold_status": "routine",
+    "visual_label": {
+     "forklift": "no",
+     "person": "yes"
+    },
+    "cpu": {
+     "forklift": "no",
+     "person": "yes"
+    },
+    "device": {
+     "forklift": "yes",
+     "person": "yes"
+    },
+    "cpu_description": "A woman in a white uniform and hat stands in the middle of a warehouse, holding a cardboard box. She is positioned between two rows of shelves, with a fire extinguisher visible in the background.",
+    "device_description": "A person is standing in a warehouse, holding a box, with a forklift nearby, which is likely used for transporting goods."
+   },
+   {
+    "id": "t-017e8454-f060-a",
+    "gold_status": "routine",
+    "visual_label": {
+     "forklift": "no",
+     "person": "yes"
+    },
+    "cpu": "unreadable",
+    "device": {
+     "forklift": "yes",
+     "person": "yes"
+    },
+    "cpu_description": null,
+    "device_description": "A person is standing in front of a forklift, which is lifting a box. The person appears to be in the process of lifting or moving the box."
+   }
+  ]
+ },
+ "stage1_metrics": {
+  "cpu_published": {
+   "gold_tp_confirmed": {
+    "numerator": 104,
+    "denominator": 106,
+    "rate": 0.9811
+   },
+   "gold_tp_flagged": {
+    "numerator": 2,
+    "denominator": 106,
+    "rate": 0.0189
+   },
+   "gold_fp_flagged": {
+    "numerator": 1,
+    "denominator": 7,
+    "rate": 0.1429
+   },
+   "routine_nonforklift_box_flagged": {
+    "numerator": 2,
+    "denominator": 3,
+    "rate": 0.6667
+   },
+   "routine_real_forklift_box_confirmed": {
+    "numerator": 14,
+    "denominator": 14,
+    "rate": 1.0
+   },
+   "unscorable_run_confirmed": {
+    "numerator": 18,
+    "denominator": 18,
+    "rate": 1.0
+   },
+   "all_flagged": {
+    "numerator": 5,
+    "denominator": 148,
+    "rate": 0.0338
+   },
+   "unreadable": {
+    "numerator": 1,
+    "denominator": 148,
+    "rate": 0.0068
+   },
+   "agreement_with_visual_labels": {
+    "forklift": {
+     "numerator": 147,
+     "denominator": 147,
+     "rate": 1.0
+    },
+    "person": {
+     "numerator": 144,
+     "denominator": 147,
+     "rate": 0.9796
+    },
+    "both_fields_exact_all_items": {
+     "numerator": 144,
+     "denominator": 148,
+     "rate": 0.973
+    }
+   }
+  },
+  "device": {
+   "gold_tp_confirmed": {
+    "numerator": 103,
+    "denominator": 106,
+    "rate": 0.9717
+   },
+   "gold_tp_flagged": {
+    "numerator": 3,
+    "denominator": 106,
+    "rate": 0.0283
+   },
+   "gold_fp_flagged": {
+    "numerator": 1,
+    "denominator": 7,
+    "rate": 0.1429
+   },
+   "routine_nonforklift_box_flagged": {
+    "numerator": 0,
+    "denominator": 3,
+    "rate": 0.0
+   },
+   "routine_real_forklift_box_confirmed": {
+    "numerator": 14,
+    "denominator": 14,
+    "rate": 1.0
+   },
+   "unscorable_run_confirmed": {
+    "numerator": 18,
+    "denominator": 18,
+    "rate": 1.0
+   },
+   "all_flagged": {
+    "numerator": 4,
+    "denominator": 148,
+    "rate": 0.027
+   },
+   "unreadable": {
+    "numerator": 0,
+    "denominator": 148,
+    "rate": 0.0
+   },
+   "agreement_with_visual_labels": {
+    "forklift": {
+     "numerator": 145,
+     "denominator": 148,
+     "rate": 0.9797
+    },
+    "person": {
+     "numerator": 144,
+     "denominator": 148,
+     "rate": 0.973
+    },
+    "both_fields_exact_all_items": {
+     "numerator": 141,
+     "denominator": 148,
+     "rate": 0.9527
+    }
+   }
+  }
+ },
+ "per_candidate_group_as_app_runs": {
+  "note": "One key pair per candidate group (evidence frame closest to the peak, then the closest pair), as look.key_pair picks it, mapped onto the same crops.",
+  "broader": {
+   "events": 11,
+   "cpu": {
+    "confirmed": 11
+   },
+   "device": {
+    "confirmed": 11
+   },
+   "differ": []
+  },
+  "stricter": {
+   "events": 11,
+   "cpu": {
+    "confirmed": 11
+   },
+   "device": {
+    "confirmed": 11
+   },
+   "differ": []
+  },
+  "fast": {
+   "events": 11,
+   "cpu": {
+    "confirmed": 11
+   },
+   "device": {
+    "confirmed": 11
+   },
+   "differ": []
+  }
+ },
+ "descriptions": {
+  "words": {
+   "cpu": {
+    "n": 147,
+    "median": 18.0,
+    "p95": 27.7,
+    "min": 10,
+    "max": 40,
+    "mean": 18.796
+   },
+   "device": {
+    "n": 147,
+    "median": 20.0,
+    "p95": 38.0,
+    "min": 14,
+    "max": 40,
+    "mean": 22.755
+   }
+  },
+  "over_20_words": {
+   "cpu": {
+    "numerator": 37,
+    "denominator": 147,
+    "rate": 0.2517
+   },
+   "device": {
+    "numerator": 71,
+    "denominator": 147,
+    "rate": 0.483
+   }
+  },
+  "repeats_prompt_phrase_powered_industrial_truck": {
+   "cpu": {
+    "numerator": 0,
+    "denominator": 147,
+    "rate": 0.0
+   },
+   "device": {
+    "numerator": 70,
+    "denominator": 147,
+    "rate": 0.4762
+   }
+  }
+ },
+ "timing": {
+  "label": "UGen300 at 0.9 A (reduced-performance mode); generation only, model resident",
+  "device_seconds_per_crop": {
+   "n": 148,
+   "median": 14.867,
+   "p95": 38.232,
+   "min": 12.613,
+   "max": 42.516,
+   "mean": 17.237
+  },
+  "device_ttft_s": {
+   "n": 148,
+   "median": 2.553,
+   "p95": 2.561,
+   "min": 2.549,
+   "max": 2.562,
+   "mean": 2.554
+  },
+  "device_tokens_per_s": {
+   "n": 148,
+   "median": 3.981,
+   "p95": 3.985,
+   "min": 3.976,
+   "max": 4.007,
+   "mean": 3.982
+  },
+  "device_tokens_per_answer": {
+   "n": 148,
+   "median": 50.0,
+   "p95": 143.0,
+   "min": 41,
+   "max": 161,
+   "mean": 59.432
+  },
+  "device_answers_at_token_limit": 4,
+  "text_after_the_json_object": {
+   "device": {
+    "numerator": 15,
+    "denominator": 148,
+    "rate": 0.1014
+   },
+   "cpu": {
+    "numerator": 0,
+    "denominator": 148,
+    "rate": 0.0
+   },
+   "device_seconds_per_crop_with": {
+    "n": 15,
+    "median": 38.233,
+    "p95": 42.513,
+    "min": 20.41,
+    "max": 42.516,
+    "mean": 36.173
+   },
+   "device_seconds_per_crop_without": {
+    "n": 133,
+    "median": 14.368,
+    "p95": 19.641,
+    "min": 12.613,
+    "max": 21.665,
+    "mean": 15.101
+   },
+   "device_tokens_with": {
+    "n": 15,
+    "median": 143.0,
+    "p95": 161.0,
+    "min": 72,
+    "max": 161,
+    "mean": 135.067
+   },
+   "device_tokens_without": {
+    "n": 133,
+    "median": 48.0,
+    "p95": 69.0,
+    "min": 41,
+    "max": 77,
+    "mean": 50.902
+   },
+   "same_answer_if_cut_at_the_object_end": {
+    "numerator": 15,
+    "denominator": 15,
+    "rate": 1.0
+   },
+   "note": "The model kept writing after the closing brace of its JSON answer; the parser reads the first '{' to the last '}', so these tokens only cost time (and would break the parse if they held a '}')."
+  },
+  "cpu_seconds_per_crop": {
+   "n": 148,
+   "median": 8.297,
+   "p95": 10.191,
+   "min": 5.013,
+   "max": 12.168,
+   "mean": 8.272,
+   "threads": 12,
+   "note": "Published Stage I run: llama.cpp on the Intel Core i7-10700, shared workstation."
+  },
+  "cpu_tokens_per_answer": {
+   "n": 148,
+   "median": 48.0,
+   "p95": 60.65,
+   "min": 40,
+   "max": 82,
+   "mean": 49.243
+  }
+ },
+ "after_fix": {
+  "crops": 148,
+  "same_answer": {
+   "numerator": 148,
+   "denominator": 148,
+   "rate": 1.0
+  },
+  "reply_is_a_prefix_of_the_first_runs": {
+   "numerator": 148,
+   "denominator": 148,
+   "rate": 1.0
+  },
+  "stopped_at_object_end": {
+   "numerator": 148,
+   "denominator": 148,
+   "rate": 1.0
+  },
+  "device_seconds_per_crop": {
+   "n": 148,
+   "median": 14.393,
+   "p95": 20.339,
+   "min": 12.621,
+   "max": 21.687,
+   "mean": 15.27
+  },
+  "device_tokens_per_answer": {
+   "n": 148,
+   "median": 47.0,
+   "p95": 70.65,
+   "min": 40,
+   "max": 76,
+   "mean": 50.405
+  },
+  "device_ttft_s": {
+   "n": 148,
+   "median": 2.553,
+   "p95": 2.562,
+   "min": 2.549,
+   "max": 2.564,
+   "mean": 2.554
+  },
+  "device_tokens_per_s": {
+   "n": 148,
+   "median": 3.976,
+   "p95": 3.98,
+   "min": 3.967,
+   "max": 3.982,
+   "mean": 3.976
+  },
+  "crops_with_a_trailer_in_the_first_run": {
+   "seconds_first_run": {
+    "n": 15,
+    "median": 38.233,
+    "p95": 42.513,
+    "min": 20.41,
+    "max": 42.516,
+    "mean": 36.173
+   },
+   "seconds_after_fix": {
+    "n": 15,
+    "median": 15.63,
+    "p95": 20.746,
+    "min": 13.124,
+    "max": 20.922,
+    "mean": 16.634
+   }
+  },
+  "total_seconds": {
+   "first_run": 2551.1,
+   "after_fix": 2260.0
+  }
+ }
+}

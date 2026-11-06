@@ -1,0 +1,141 @@
+{
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "started_at": "2026-11-05T12:54:37.732308+00:00",
+  "sample": "warehouse-1",
+  "job": "fd8aad5854b3455d",
+  "device_load": {
+    "warm_up_s": 22.649,
+    "detector": 0.286,
+    "vlm": 13.082
+  },
+  "hardware": "HAILO10H · device usb/001:024 · firmware 5.3.2 (release,app) · HailoRT 5.3.2",
+  "hefs": {
+    "detector": {
+      "file": "yolox_s_warehouse_v4_o2s.hef",
+      "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+      "source": "scripts/hailo/compile_yolox_hef.py --optimization-level 2 (defaults: calibration seed 20261105, DFC calibset 64, QFT 1,024 frames x 4 epochs) with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (calibration: work/stage2/hef-build/data/calib)"
+    },
+    "vlm": {
+      "file": "Qwen2-VL-2B-Instruct.hef",
+      "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+      "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef"
+    }
+  },
+  "submitted_to_completed_s": 57.731,
+  "analysis_seconds": 57.45,
+  "schedule": {
+    "mode": "phased",
+    "order": [
+      "detection",
+      "visual_check",
+      "draft"
+    ],
+    "phases": {
+      "detection": {
+        "seconds": 5.225,
+        "started_at": "2026-11-05T12:55:00.649760+00:00",
+        "sampled_frames": 10,
+        "inference_s": 0.071725,
+        "candidates": 1,
+        "finished_at": "2026-11-05T12:55:05.891810+00:00",
+        "model_switches": 0
+      },
+      "visual_check": {
+        "seconds": 14.911,
+        "started_at": "2026-11-05T12:55:05.891810+00:00",
+        "candidates": 1,
+        "finished_at": "2026-11-05T12:55:20.813604+00:00",
+        "model_switches": 1
+      },
+      "draft": {
+        "seconds": 37.222,
+        "started_at": "2026-11-05T12:55:20.827555+00:00",
+        "candidates": 1,
+        "finished_at": "2026-11-05T12:55:58.060195+00:00",
+        "model_switches": 0
+      }
+    },
+    "total_s": 57.358
+  },
+  "model_switches_in_job": 1,
+  "detector": {
+    "sampled_frames": 10,
+    "inference_s": 0.071725,
+    "inference_ms_per_frame": 7.172,
+    "frames_per_submission": 8
+  },
+  "candidates": [
+    {
+      "id": "event-001",
+      "start": 0.0,
+      "end": 9.0,
+      "visual_check": "confirmed",
+      "visual_check_s": 13.82,
+      "ttft_s": 2.56,
+      "tokens_per_s": 4.0,
+      "draft_method": "ugen300-qwen2-vl-draft",
+      "draft_tokens_per_s": 4.002,
+      "draft_s": 37.193
+    }
+  ],
+  "trace": [
+    {
+      "t_s": 0.27,
+      "status": "running",
+      "phase": "detection",
+      "progress": 10,
+      "message": "Detecting on the UGen300"
+    },
+    {
+      "t_s": 2.15,
+      "status": "running",
+      "phase": "detection",
+      "progress": 70,
+      "message": "Building observations and linked frames"
+    },
+    {
+      "t_s": 5.55,
+      "status": "running",
+      "phase": "visual_check",
+      "progress": 72.0,
+      "message": "Visual check of candidate 1 of 1 on the UGen300"
+    },
+    {
+      "t_s": 27.7,
+      "status": "running",
+      "phase": "draft",
+      "progress": 83.2,
+      "message": "Drafting review 1 of 1 on the UGen300"
+    },
+    {
+      "t_s": 57.73,
+      "status": "completed",
+      "phase": "done",
+      "progress": 100,
+      "message": "Analysis complete. Review each observation before approval."
+    }
+  ],
+  "trace_note": "Polled from this process: during generation the answers are late (see poll_latency), so use schedule.phases for the phase times.",
+  "poll_latency": {
+    "detection": {
+      "polls": 20,
+      "median_s": 0.003,
+      "max_s": 0.019
+    },
+    "visual_check": {
+      "polls": 7,
+      "median_s": 0.014,
+      "max_s": 7.179
+    },
+    "draft": {
+      "polls": 8,
+      "median_s": 4.003,
+      "max_s": 4.502
+    },
+    "done": {
+      "polls": 1,
+      "median_s": 0.025,
+      "max_s": 0.025
+    }
+  }
+}

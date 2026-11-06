@@ -1,0 +1,1355 @@
+{
+  "started_utc": "2026-11-05T18:19:51Z",
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "host": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.10.22"
+  },
+  "hailort_version": "5.3.2",
+  "format": "draft-v2-device",
+  "split": null,
+  "max_generated_tokens": 320,
+  "seed": 19,
+  "decoding": "greedy (do_sample=False)",
+  "drafts": [
+    {
+      "key": "d01",
+      "wall_s": 82.739,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 8s: A person is standing next to a forklift, seemingly preparing to operate it or inspect it. At 5s: Predicted person and forklift boxes are close but do not overlap in the image. At 8s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Person and forklift boxes overlap in the image at 8s\",\n  \"summary\": \"The person and forklift boxes overlap in the image at 8s, suggesting that the person is likely preparing to operate or inspect the forklift.\",\n  \"review_questions\": [\n    \"Is the person and forklift boxes overlap in the image at 8s?\",\n    \"Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at 8s? Is the person and forklift boxes overlap in the image at ",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "8f959ab916689017246cebd56b717d758733a8aa6e298feda89e74f07052b179",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 82.724,
+          "ttft_s": 2.574,
+          "tokens": 321,
+          "tokens_per_s": 3.993,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)"
+        },
+        "validation_errors": [
+          "Device draft could not be read: No JSON object in the device draft."
+        ],
+        "method": "fixed-template-after-local-rejection",
+        "seconds": 82.734,
+        "warning": "Device draft failed automatic source checks. Fixed-template draft shown for review.",
+        "accepted": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 8s: A person is standing next to a forklift, seemingly preparing to operate it or inspect it. At 5s: Predicted person and forklift boxes are close but do not overlap in the image. At 8s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        }
+      }
+    },
+    {
+      "key": "d02",
+      "wall_s": 31.872,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 5s: A person is sitting on a forklift, which is a powered industrial truck, in a warehouse setting. At 3s: Predicted person and forklift boxes are close but do not overlap in the image. At 5s: Predicted person and forklift boxes overlap in the image. At 8s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Warehouse Review: Forklift and Person Interaction\",\n  \"summary\": \"At 5s, the predicted person and forklift boxes overlap, indicating a potential interaction.\",\n  \"review_questions\": [\n    \"Is the forklift and person interaction a potential hazard?\",\n    \"Are there any other cameras or sensors that could provide additional information?\",\n    \"What is the significance of the overlap in the predicted boxes at 5s?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "d3278a8a12c07230e4a3a304a97577be01ff934c8d584bf4539c645c81c54d4d",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 31.853,
+          "ttft_s": 3.205,
+          "tokens": 115,
+          "tokens_per_s": 3.981,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Warehouse Review: Forklift and Person Interaction",
+            "summary": "At 5s, the predicted person and forklift boxes overlap, indicating a potential interaction.",
+            "review_questions": [
+              "Is the forklift and person interaction a potential hazard?",
+              "Are there any other cameras or sensors that could provide additional information?",
+              "What is the significance of the overlap in the predicted boxes at 5s?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 31.875,
+        "accepted": {
+          "title": "Warehouse Review: Forklift and Person Interaction",
+          "summary": "Visual check at 5s: A person is sitting on a forklift, which is a powered industrial truck, in a warehouse setting. Detector record: predicted person and forklift boxes are close at 3s and 8s and overlap at 5s.",
+          "review_questions": [
+            "Is the forklift and person interaction a potential hazard?",
+            "Are there any other cameras or sensors that could provide additional information?",
+            "What is the significance of the overlap in the predicted boxes at 5s?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d03",
+      "wall_s": 37.411,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 3s: A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting. At 0s: Predicted person and forklift boxes are close but do not overlap in the image. At 3s: Predicted person and forklift boxes overlap in the image. At 8s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 3s\",\n  \"summary\": \"At 3s, the predicted person and forklift boxes overlap, indicating a potential collision or near miss.\",\n  \"review_questions\": [\n    \"Is the predicted person and forklift boxes overlapping at 3s?\",\n    \"What is the significance of the predicted boxes at 3s?\",\n    \"Are there any other camera views available for verification?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\", \"event-001-obs-3\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "c98ed1c25f3807d1073a7bebe24f3a98e1547aec37b642c1e5b97ef623a3b717",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 37.396,
+          "ttft_s": 3.214,
+          "tokens": 137,
+          "tokens_per_s": 3.98,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 3s",
+            "summary": "At 3s, the predicted person and forklift boxes overlap, indicating a potential collision or near miss.",
+            "review_questions": [
+              "Is the predicted person and forklift boxes overlapping at 3s?",
+              "What is the significance of the predicted boxes at 3s?",
+              "Are there any other camera views available for verification?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 37.422,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "Visual check at 3s: A person is standing next to a forklift, which is a powered industrial truck, in a warehouse setting. Detector record: predicted person and forklift boxes are close at 0s and overlap at 3s and 8s.",
+          "review_questions": [
+            "Is the predicted person and forklift boxes overlapping at 3s?",
+            "What is the significance of the predicted boxes at 3s?",
+            "Are there any other camera views available for verification?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d04",
+      "wall_s": 43.666,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 18s: A man in a white hat and overalls is standing in front of a forklift, which is positioned in a warehouse setting, likely involved in loading or unloading goods. At 15s: Predicted person and forklift boxes are close but do not overlap in the image. At 18s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-002-obs-1",
+            "event-002-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Warehouse Review: Man in White Hat and Overalls\",\n  \"summary\": \"The supervisor reviews a warehouse scene where a man in white hat and overalls is standing in front of a forklift, likely involved in loading or unloading goods. The boxes overlap at 18 seconds, suggesting a potential for collision or near miss.\",\n  \"review_questions\": [\n    \"Is the forklift in the warehouse scene relevant to the man's activity?\",\n    \"What is the significance of the man's proximity to the forklift?\",\n    \"How can the boxes overlap at 18 seconds be interpreted?\"\n  ],\n  \"evidence_ids\": [\"event-002-obs-1\", \"event-002-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "3957eb247eca5456b14d5dce005e41ffa601ddcf37524d592e31706c3cd5aa26",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 43.654,
+          "ttft_s": 3.2,
+          "tokens": 162,
+          "tokens_per_s": 3.981,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Warehouse Review: Man in White Hat and Overalls",
+            "summary": "The supervisor reviews a warehouse scene where a man in white hat and overalls is standing in front of a forklift, likely involved in loading or unloading goods. The boxes overlap at 18 seconds, suggesting a potential for collision or near miss.",
+            "review_questions": [
+              "Is the forklift in the warehouse scene relevant to the man's activity?",
+              "What is the significance of the man's proximity to the forklift?",
+              "How can the boxes overlap at 18 seconds be interpreted?"
+            ],
+            "evidence_ids": [
+              "event-002-obs-1",
+              "event-002-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 43.656,
+        "accepted": {
+          "title": "Warehouse Review: Man in White Hat and Overalls",
+          "summary": "The supervisor reviews a warehouse scene where a man in white hat and overalls is standing in front of a forklift, likely involved in loading or unloading goods. Detector record: predicted person and forklift boxes are close at 15s and overlap at 18s.",
+          "review_questions": [
+            "Is the forklift in the warehouse scene relevant to the man's activity?",
+            "What is the significance of the man's proximity to the forklift?",
+            "How can the boxes overlap at 18 seconds be interpreted?"
+          ],
+          "evidence_ids": [
+            "event-002-obs-1",
+            "event-002-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d05",
+      "wall_s": 40.418,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 8s: A man in a white hat and overalls is standing in front of a forklift, which is positioned in a warehouse setting, likely involved in loading or unloading goods. At 5s: Predicted person and forklift boxes are close but do not overlap in the image. At 8s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 8s\",\n  \"summary\": \"At 8s, a man in a white hat and overalls is standing in front of a forklift, which is positioned in a warehouse setting, likely involved in loading or unloading goods.\",\n  \"review_questions\": [\n    \"Is the forklift in the warehouse setting?\",\n    \"Are the boxes of the man and the forklift overlapping?\",\n    \"Is there any evidence of the man's actions or the forklift's behavior in the image?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "5836772f0340feef13b16f4c618e2059ffb009d1bb573de3340ffe0de296a2e7",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 40.406,
+          "ttft_s": 3.209,
+          "tokens": 149,
+          "tokens_per_s": 3.98,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 8s",
+            "summary": "At 8s, a man in a white hat and overalls is standing in front of a forklift, which is positioned in a warehouse setting, likely involved in loading or unloading goods.",
+            "review_questions": [
+              "Is the forklift in the warehouse setting?",
+              "Are the boxes of the man and the forklift overlapping?",
+              "Is there any evidence of the man's actions or the forklift's behavior in the image?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 40.422,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "At 8s, a man in a white hat and overalls is standing in front of a forklift, which is positioned in a warehouse setting, likely involved in loading or unloading goods. Detector record: predicted person and forklift boxes are close at 5s and overlap at 8s.",
+          "review_questions": [
+            "Is the forklift in the warehouse setting?",
+            "Are the boxes of the man and the forklift overlapping?",
+            "Is there any evidence of the man's actions or the forklift's behavior in the image?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d06",
+      "wall_s": 34.385,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 5s: A person is sitting on a forklift, which is a powered industrial truck, in a warehouse setting. At 3s: Predicted person and forklift boxes are close but do not overlap in the image. At 5s: Predicted person and forklift boxes overlap in the image. At 18s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"A person is sitting on a forklift in a warehouse setting.\",\n  \"summary\": \"The forklift is a powered industrial truck, and the person is sitting on it.\",\n  \"review_questions\": [\n    \"Is the forklift a powered industrial truck?\",\n    \"What is the person doing?\",\n    \"Are there any other objects or people in the image?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\", \"event-001-obs-3\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "c434b8053aa78bfc2d50175d626a3f06e1669446f3e3a25b971be29356a8cac5",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 34.373,
+          "ttft_s": 3.212,
+          "tokens": 125,
+          "tokens_per_s": 3.981,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "A person is sitting on a forklift in a warehouse setting.",
+            "summary": "The forklift is a powered industrial truck, and the person is sitting on it.",
+            "review_questions": [
+              "Is the forklift a powered industrial truck?",
+              "What is the person doing?",
+              "Are there any other objects or people in the image?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 34.391,
+        "accepted": {
+          "title": "A person is sitting on a forklift in a warehouse setting.",
+          "summary": "The forklift is a powered industrial truck, and the person is sitting on it. Detector record: predicted person and forklift boxes are close at 3s and overlap at 5s and 18s.",
+          "review_questions": [
+            "Is the forklift a powered industrial truck?",
+            "What is the person doing?",
+            "Are there any other objects or people in the image?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d07",
+      "wall_s": 39.16,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 3s: A person in a white uniform is standing next to a forklift in a warehouse. At 2s: Predicted person and forklift boxes are close but do not overlap in the image. At 3s: Predicted person and forklift boxes overlap in the image. At 8s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 3s\",\n  \"summary\": \"At 3s, the predicted person and forklift boxes overlap, indicating physical proximity, but the boxes are not close enough to establish a safe conduct.\",\n  \"review_questions\": [\n    \"Is the overlap significant enough to consider a potential collision?\",\n    \"Are there any other objects or conditions in the image that could affect the safety of the person and forklift?\",\n    \"Is there any additional information or context that could clarify the situation?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-2\", \"event-001-obs-3\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "90fa7629feb2bcf52c606ddf38579dffbe39dced90a63bbaa97a510b0ed43c09",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 39.145,
+          "ttft_s": 3.198,
+          "tokens": 144,
+          "tokens_per_s": 3.979,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 3s",
+            "summary": "At 3s, the predicted person and forklift boxes overlap, indicating physical proximity, but the boxes are not close enough to establish a safe conduct.",
+            "review_questions": [
+              "Is the overlap significant enough to consider a potential collision?",
+              "Are there any other objects or conditions in the image that could affect the safety of the person and forklift?",
+              "Is there any additional information or context that could clarify the situation?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 39.156,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "Visual check at 3s: A person in a white uniform is standing next to a forklift in a warehouse. Detector record: predicted person and forklift boxes are close at 2s and overlap at 3s and 8s.",
+          "review_questions": [
+            "Is the overlap significant enough to consider a potential collision?",
+            "Are there any other objects or conditions in the image that could affect the safety of the person and forklift?",
+            "Is there any additional information or context that could clarify the situation?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d08",
+      "wall_s": 52.353,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 0s: A person is standing in front of a blue forklift, which is parked in the background. At 0s: Predicted person and forklift boxes overlap in the image. At 5s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of a Warehouse Supervisor's Visual Check\",\n  \"summary\": \"The supervisor reviewed a visual check of a warehouse, observing a person standing in front of a blue forklift parked in the background. The boxes of the person and forklift were predicted to overlap, suggesting a potential hazard. The supervisor noted that the boxes did not overlap in the image, indicating that the boxes were not close to each other. The supervisor recommended verifying the predicted object labels and boxes to ensure the safety of the workers.\",\n  \"review_questions\": [\n    \"Could the supervisor have used another camera view to verify the boxes?\",\n    \"Was there any evidence of the person and forklift being in close proximity to each other?\",\n    \"What safety measures should be taken to prevent accidents involving the forklift?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "0f250c48e03f9304b7558dfb8574d76c6b75dd335edc910415bd4b7302a226d8",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 52.336,
+          "ttft_s": 2.567,
+          "tokens": 199,
+          "tokens_per_s": 3.979,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of a Warehouse Supervisor's Visual Check",
+            "summary": "The supervisor reviewed a visual check of a warehouse, observing a person standing in front of a blue forklift parked in the background. The boxes of the person and forklift were predicted to overlap, suggesting a potential hazard. The supervisor noted that the boxes did not overlap in the image, indicating that the boxes were not close to each other. The supervisor recommended verifying the predicted object labels and boxes to ensure the safety of the workers.",
+            "review_questions": [
+              "Could the supervisor have used another camera view to verify the boxes?",
+              "Was there any evidence of the person and forklift being in close proximity to each other?",
+              "What safety measures should be taken to prevent accidents involving the forklift?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 52.36,
+        "accepted": {
+          "title": "Review of a Warehouse Supervisor's Visual Check",
+          "summary": "The supervisor reviewed a visual check of a warehouse, observing a person standing in front of a blue forklift parked in the background. Detector record: predicted person and forklift boxes overlap at 0s and 5s.",
+          "review_questions": [
+            "Could the supervisor have used another camera view to verify the boxes?",
+            "Was there any evidence of the person and forklift being in close proximity to each other?",
+            "What safety measures should be taken to prevent accidents involving the forklift?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d09",
+      "wall_s": 32.62,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 4s: A person is standing next to a forklift, which is parked on the floor of a warehouse. At 2s: Predicted person and forklift boxes are close but do not overlap in the image. At 4s: Predicted person and forklift boxes overlap in the image. At 8s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 4s\",\n  \"summary\": \"At 4s, the predicted person and forklift boxes overlap, indicating a potential collision or near miss.\",\n  \"review_questions\": [\n    \"Is the forklift in the same warehouse as the person?\",\n    \"Are the predicted boxes for the person and forklift in the same location?\",\n    \"What is the significance of the overlap in the predicted boxes?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "e37e522751b4bd36d665b563959df9fba60de263f43c331ca35fbd62ab1e4e7a",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 32.606,
+          "ttft_s": 3.2,
+          "tokens": 118,
+          "tokens_per_s": 3.98,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 4s",
+            "summary": "At 4s, the predicted person and forklift boxes overlap, indicating a potential collision or near miss.",
+            "review_questions": [
+              "Is the forklift in the same warehouse as the person?",
+              "Are the predicted boxes for the person and forklift in the same location?",
+              "What is the significance of the overlap in the predicted boxes?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 32.609,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "Visual check at 4s: A person is standing next to a forklift, which is parked on the floor of a warehouse. Detector record: predicted person and forklift boxes are close at 2s and 8s and overlap at 4s.",
+          "review_questions": [
+            "Is the forklift in the same warehouse as the person?",
+            "Are the predicted boxes for the person and forklift in the same location?",
+            "What is the significance of the overlap in the predicted boxes?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d10",
+      "wall_s": 44.536,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 6s: A person is standing on a blue cube, which is on top of a forklift. The person appears to be interacting with the cube or the forklift. At 6s: Predicted person and forklift boxes overlap in the image. At 9s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of a Warehouse Scene\",\n  \"summary\": \"The key frame at 6s shows a person standing on a blue cube, which is on top of a forklift. The person appears to be interacting with the cube or the forklift. The boxes overlap in the image, suggesting a possible interaction.\",\n  \"review_questions\": [\n    \"Is there a physical interaction between the person and the cube or forklift?\",\n    \"Are the boxes in the image close enough to establish a physical interaction?\",\n    \"Is there any evidence of a near miss or unsafe conduct in the image?\"\n  ],\n  \"evidence_ids\": [\n    \"event-001-obs-1\",\n    \"event-001-obs-2\",\n    \"Unknown\"\n  ]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "a8d1dfb728746cd1f92c85d73a83db9ac0e95076122124a0e209da7ec3d81aad",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 44.522,
+          "ttft_s": 2.562,
+          "tokens": 168,
+          "tokens_per_s": 3.981,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of a Warehouse Scene",
+            "summary": "The key frame at 6s shows a person standing on a blue cube, which is on top of a forklift. The person appears to be interacting with the cube or the forklift. The boxes overlap in the image, suggesting a possible interaction.",
+            "review_questions": [
+              "Is there a physical interaction between the person and the cube or forklift?",
+              "Are the boxes in the image close enough to establish a physical interaction?",
+              "Is there any evidence of a near miss or unsafe conduct in the image?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "Unknown"
+            ]
+          }
+        },
+        "validation_errors": [
+          "Evidence references do not match the observation record."
+        ],
+        "method": "fixed-template-after-local-rejection",
+        "seconds": 44.531,
+        "warning": "Device draft failed automatic source checks. Fixed-template draft shown for review.",
+        "accepted": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 6s: A person is standing on a blue cube, which is on top of a forklift. The person appears to be interacting with the cube or the forklift. At 6s: Predicted person and forklift boxes overlap in the image. At 9s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        }
+      }
+    },
+    {
+      "key": "d11",
+      "wall_s": 47.451,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 3s: A person is standing in the middle of a large, empty warehouse, facing a blue forklift that is parked nearby. At 0s: Predicted person and forklift boxes are close but do not overlap in the image. At 3s: Predicted person and forklift boxes overlap in the image. At 9s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Warehouse Review: Person and Forklift Interaction\",\n  \"summary\": \"The key frame at 3s shows a person standing in the middle of a large, empty warehouse, facing a blue forklift that is parked nearby. The boxes overlap, indicating a potential interaction, but further verification is required.\",\n  \"review_questions\": [\n    \"What is the significance of the boxes' overlap in the image?\",\n    \"Is there any evidence of a potential collision or near miss between the person and the forklift?\",\n    \"What additional information is needed to determine the nature of the interaction between the person and the forklift?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\", \"event-001-obs-3\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "4860241b1b3fec8e5b79260a56d3f8bbb0ca78e881fdef9e5e23d9c73ec630f7",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 47.437,
+          "ttft_s": 3.205,
+          "tokens": 177,
+          "tokens_per_s": 3.98,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Warehouse Review: Person and Forklift Interaction",
+            "summary": "The key frame at 3s shows a person standing in the middle of a large, empty warehouse, facing a blue forklift that is parked nearby. The boxes overlap, indicating a potential interaction, but further verification is required.",
+            "review_questions": [
+              "What is the significance of the boxes' overlap in the image?",
+              "Is there any evidence of a potential collision or near miss between the person and the forklift?",
+              "What additional information is needed to determine the nature of the interaction between the person and the forklift?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 47.453,
+        "accepted": {
+          "title": "Warehouse Review: Person and Forklift Interaction",
+          "summary": "The key frame at 3s shows a person standing in the middle of a large, empty warehouse, facing a blue forklift that is parked nearby. Detector record: predicted person and forklift boxes are close at 0s and 9s and overlap at 3s.",
+          "review_questions": [
+            "What is the significance of the boxes' overlap in the image?",
+            "Is there any evidence of a potential collision or near miss between the person and the forklift?",
+            "What additional information is needed to determine the nature of the interaction between the person and the forklift?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d12",
+      "wall_s": 64.783,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 1s: A person in a white uniform stands next to a forklift in a warehouse. At 0s: Predicted person and forklift boxes are close but do not overlap in the image. At 1s: Predicted person and forklift boxes overlap in the image. At 7s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 1s\",\n  \"summary\": \"At 1s, the predicted boxes of a person in a white uniform and a forklift overlap, indicating a potential collision. At 4s, the boxes are close but do not overlap, suggesting a safe distance. At 7s, the boxes are again close but do not overlap, indicating a safe distance. The boxes are not overlapping, suggesting a safe distance.\",\n  \"review_questions\": [\n    \"Is the person in a white uniform and the forklift in the warehouse at 1s close enough to be considered a potential collision?\",\n    \"Are the predicted boxes of the person in a white uniform and the forklift at 9s close enough to be considered a potential collision?\",\n    \"Are the predicted boxes of the person in a white uniform and the forklift at 10s close enough to be considered a potential collision?\"\n  ],\n  \"evidence_ids\": [\n    \"event-001-obs-1\",\n    \"event-001-obs-2\",\n    \"event-001-obs-3\"\n  ]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "1e2ae7afed55e1090544f9167bd902c364e450a1e9490268632656876cfc99a4",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 64.771,
+          "ttft_s": 3.209,
+          "tokens": 246,
+          "tokens_per_s": 3.98,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 1s",
+            "summary": "At 1s, the predicted boxes of a person in a white uniform and a forklift overlap, indicating a potential collision. At 4s, the boxes are close but do not overlap, suggesting a safe distance. At 7s, the boxes are again close but do not overlap, indicating a safe distance. The boxes are not overlapping, suggesting a safe distance.",
+            "review_questions": [
+              "Is the person in a white uniform and the forklift in the warehouse at 1s close enough to be considered a potential collision?",
+              "Are the predicted boxes of the person in a white uniform and the forklift at 9s close enough to be considered a potential collision?",
+              "Are the predicted boxes of the person in a white uniform and the forklift at 10s close enough to be considered a potential collision?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        },
+        "validation_errors": [
+          "The draft introduced numbers absent from the observations.",
+          "A review question introduced numbers absent from the observations."
+        ],
+        "method": "fixed-template-after-local-rejection",
+        "seconds": 64.781,
+        "warning": "Device draft failed automatic source checks. Fixed-template draft shown for review.",
+        "accepted": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 1s: A person in a white uniform stands next to a forklift in a warehouse. At 0s: Predicted person and forklift boxes are close but do not overlap in the image. At 1s: Predicted person and forklift boxes overlap in the image. At 7s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        }
+      }
+    },
+    {
+      "key": "d13",
+      "wall_s": 44.243,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 1s: A person in a white uniform stands next to a forklift in a warehouse. At 0s: Predicted person and forklift boxes are close but do not overlap in the image. At 1s: Predicted person and forklift boxes overlap in the image. At 8s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 1s\",\n  \"summary\": \"At 1s, the predicted boxes of a person in a white uniform and a forklift in a warehouse overlap, indicating a potential collision or near miss.\",\n  \"review_questions\": [\n    \"Is the predicted person and forklift boxes close enough to establish a physical distance?\",\n    \"Are the predicted boxes of the person and forklift overlapping, suggesting a potential collision or near miss?\",\n    \"What additional information is needed to verify the physical distance and potential collision or near miss?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\", \"event-001-obs-3\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "1d8fe218c47912cb16647e81c20569ec9fbcb51f472e5ef006c056db1e04f841",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 44.231,
+          "ttft_s": 3.213,
+          "tokens": 164,
+          "tokens_per_s": 3.975,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 1s",
+            "summary": "At 1s, the predicted boxes of a person in a white uniform and a forklift in a warehouse overlap, indicating a potential collision or near miss.",
+            "review_questions": [
+              "Is the predicted person and forklift boxes close enough to establish a physical distance?",
+              "Are the predicted boxes of the person and forklift overlapping, suggesting a potential collision or near miss?",
+              "What additional information is needed to verify the physical distance and potential collision or near miss?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 44.235,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "Visual check at 1s: A person in a white uniform stands next to a forklift in a warehouse. Detector record: predicted person and forklift boxes are close at 0s and overlap at 1s and 8s.",
+          "review_questions": [
+            "Is the predicted person and forklift boxes close enough to establish a physical distance?",
+            "Are the predicted boxes of the person and forklift overlapping, suggesting a potential collision or near miss?",
+            "What additional information is needed to verify the physical distance and potential collision or near miss?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d14",
+      "wall_s": 42.558,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 6s: A person in a white suit is standing on a forklift in a warehouse, possibly operating it or inspecting it. At 6s: Predicted person and forklift boxes overlap in the image. At 7s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-002-obs-1",
+            "event-002-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Person in a white suit operating a forklift in a warehouse\",\n  \"summary\": \"The visual check observed a person in a white suit standing on a forklift in a warehouse, possibly operating or inspecting it. The boxes overlap at 6s and 7s, suggesting a close proximity, but the exact nature of the interaction is unclear.\",\n  \"review_questions\": [\n    \"Is the person in a white suit operating the forklift?\",\n    \"What is the purpose of the forklift?\",\n    \"Is there any evidence of the person being unsafe or near a collision?\"\n  ],\n  \"evidence_ids\": [\"event-002-obs-1\", \"event-002-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "fd0348e7d8b76808e07141a1afaf00d2eb529513ea401fcdf2c337a9a6d84812",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 42.543,
+          "ttft_s": 2.562,
+          "tokens": 160,
+          "tokens_per_s": 3.978,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Person in a white suit operating a forklift in a warehouse",
+            "summary": "The visual check observed a person in a white suit standing on a forklift in a warehouse, possibly operating or inspecting it. The boxes overlap at 6s and 7s, suggesting a close proximity, but the exact nature of the interaction is unclear.",
+            "review_questions": [
+              "Is the person in a white suit operating the forklift?",
+              "What is the purpose of the forklift?",
+              "Is there any evidence of the person being unsafe or near a collision?"
+            ],
+            "evidence_ids": [
+              "event-002-obs-1",
+              "event-002-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 42.562,
+        "accepted": {
+          "title": "Person in a white suit operating a forklift in a warehouse",
+          "summary": "The visual check observed a person in a white suit standing on a forklift in a warehouse, possibly operating or inspecting it. Detector record: predicted person and forklift boxes overlap at 6s and 7s.",
+          "review_questions": [
+            "Is the person in a white suit operating the forklift?",
+            "What is the purpose of the forklift?",
+            "Is there any evidence of the person being unsafe or near a collision?"
+          ],
+          "evidence_ids": [
+            "event-002-obs-1",
+            "event-002-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d15",
+      "wall_s": 37.75,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 0s: A woman is standing in the middle of a warehouse, facing a blue forklift. She appears to be observing the forklift or waiting for it to move. At 0s: Predicted person and forklift boxes overlap in the image. At 9s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 0s\",\n  \"summary\": \"At 0s, a woman is standing in the middle of a warehouse, facing a blue forklift. The boxes for the woman and forklift overlap, suggesting a potential interaction.\",\n  \"review_questions\": [\n    \"What is the woman doing in the image?\",\n    \"Is there a risk of collision between the woman and the forklift?\",\n    \"What is the significance of the boxes' overlap in the image?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "df0adf824717a2fb148243bd4e910179c8984e57b93b3c12884ac6874f239af8",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 37.735,
+          "ttft_s": 2.565,
+          "tokens": 141,
+          "tokens_per_s": 3.982,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 0s",
+            "summary": "At 0s, a woman is standing in the middle of a warehouse, facing a blue forklift. The boxes for the woman and forklift overlap, suggesting a potential interaction.",
+            "review_questions": [
+              "What is the woman doing in the image?",
+              "Is there a risk of collision between the woman and the forklift?",
+              "What is the significance of the boxes' overlap in the image?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 37.75,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "Visual check at 0s: A woman is standing in the middle of a warehouse, facing a blue forklift. She appears to be observing the forklift or waiting for it to move. At 0s, a woman is standing in the middle of a warehouse, facing a blue forklift. Detector record: predicted person and forklift boxes are close at 9s and overlap at 0s.",
+          "review_questions": [
+            "What is the woman doing in the image?",
+            "Is there a risk of collision between the woman and the forklift?",
+            "What is the significance of the boxes' overlap in the image?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d16",
+      "wall_s": 48.304,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 4s: A person is standing next to a blue box on a forklift, which is parked in a warehouse. At 4s: Predicted person and forklift boxes overlap in the image. At 9s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 4s\",\n  \"summary\": \"The key frame at 4s shows a person standing next to a blue box on a forklift, which is parked in a warehouse. The boxes overlap, suggesting a close proximity, but the person and the forklift are not physically touching. The boxes are predicted to be forklift and person, but the actual objects in the image are not visible.\",\n  \"review_questions\": [\n    \"Is the person and forklift boxes close enough to be considered a near miss?\",\n    \"Are the boxes forklift and person in the correct locations?\",\n    \"How can the boxes be verified to be forklift and person?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "42550b274973f1150aedb6b42f8231c8469f20073468102152dbb30e55d56ff4",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 48.292,
+          "ttft_s": 2.562,
+          "tokens": 183,
+          "tokens_per_s": 3.981,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 4s",
+            "summary": "The key frame at 4s shows a person standing next to a blue box on a forklift, which is parked in a warehouse. The boxes overlap, suggesting a close proximity, but the person and the forklift are not physically touching. The boxes are predicted to be forklift and person, but the actual objects in the image are not visible.",
+            "review_questions": [
+              "Is the person and forklift boxes close enough to be considered a near miss?",
+              "Are the boxes forklift and person in the correct locations?",
+              "How can the boxes be verified to be forklift and person?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 48.313,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "The key frame at 4s shows a person standing next to a blue box on a forklift, which is parked in a warehouse. Detector record: predicted person and forklift boxes are close at 9s and overlap at 4s.",
+          "review_questions": [
+            "Is the person and forklift boxes close enough to be considered a near miss?",
+            "Are the boxes forklift and person in the correct locations?",
+            "How can the boxes be verified to be forklift and person?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d17",
+      "wall_s": 42.285,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 0s: A woman in a white shirt and gray pants is standing in the middle of a warehouse, facing a blue forklift. At 0s: Predicted person and forklift boxes overlap in the image. At 9s: Predicted person and forklift boxes are close but do not overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 0s\",\n  \"summary\": \"The image at 0s shows a woman in a white shirt and gray pants standing in the middle of a warehouse, facing a blue forklift. The boxes for the woman and forklift are predicted to overlap, suggesting a potential collision risk.\",\n  \"review_questions\": [\n    \"Is there a risk of collision between the woman and the forklift?\",\n    \"How can the boxes for the woman and the forklift be verified?\",\n    \"What is the significance of the boxes' proximity in the image?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "0a049912cf24982a1649a928174286f4f1f74c4577540c16f01fb10f409c9136",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 42.273,
+          "ttft_s": 2.562,
+          "tokens": 159,
+          "tokens_per_s": 3.98,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 0s",
+            "summary": "The image at 0s shows a woman in a white shirt and gray pants standing in the middle of a warehouse, facing a blue forklift. The boxes for the woman and forklift are predicted to overlap, suggesting a potential collision risk.",
+            "review_questions": [
+              "Is there a risk of collision between the woman and the forklift?",
+              "How can the boxes for the woman and the forklift be verified?",
+              "What is the significance of the boxes' proximity in the image?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 42.281,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "The image at 0s shows a woman in a white shirt and gray pants standing in the middle of a warehouse, facing a blue forklift. Detector record: predicted person and forklift boxes are close at 9s and overlap at 0s.",
+          "review_questions": [
+            "Is there a risk of collision between the woman and the forklift?",
+            "How can the boxes for the woman and the forklift be verified?",
+            "What is the significance of the boxes' proximity in the image?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d18",
+      "wall_s": 29.966,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 2s: A person is sitting on a forklift in a warehouse, likely operating it. At 1s: Predicted person and forklift boxes are close but do not overlap in the image. At 2s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Person operating a forklift in a warehouse\",\n  \"summary\": \"The person is sitting on a forklift in a warehouse, likely operating it.\",\n  \"review_questions\": [\n    \"Is the person operating the forklift?\",\n    \"Are there any other objects or people in the image that could be related to the forklift operation?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "25fdbecac7a3cced09600b9391fbcc267286bc9d4f9c3bc0c282b1bf98b6334d",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 29.954,
+          "ttft_s": 2.565,
+          "tokens": 110,
+          "tokens_per_s": 3.981,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Person operating a forklift in a warehouse",
+            "summary": "The person is sitting on a forklift in a warehouse, likely operating it.",
+            "review_questions": [
+              "Is the person operating the forklift?",
+              "Are there any other objects or people in the image that could be related to the forklift operation?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 29.969,
+        "accepted": {
+          "title": "Person operating a forklift in a warehouse",
+          "summary": "The person is sitting on a forklift in a warehouse, likely operating it. Detector record: predicted person and forklift boxes are close at 1s and overlap at 2s.",
+          "review_questions": [
+            "Is the person operating the forklift?",
+            "Are there any other objects or people in the image that could be related to the forklift operation?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d19",
+      "wall_s": 44.182,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 1s: A man in a vest and pants is standing in front of a forklift, which is parked on the floor. At 0s: Predicted person and forklift boxes are close but do not overlap in the image. At 1s: Predicted person and forklift boxes overlap in the image. At 8s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of a Warehouse Scene\",\n  \"summary\": \"The key frame at 1s shows a man in a vest and pants standing in front of a forklift, which is parked on the floor. The boxes overlap, indicating physical proximity, but the scene is not safe to assume without further verification.\",\n  \"review_questions\": [\n    \"Is the forklift parked on the floor, or is it in motion?\",\n    \"Are the man's clothes visible in the image?\",\n    \"Is there any indication of the man's intentions or actions in the image?\"\n  ],\n  \"evidence_ids\": [\"event-001-obs-1\", \"event-001-obs-2\", \"event-001-obs-3\"]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "a7b15c0fc5085f8595cede9d99bf4a55412f43f6610e34bb93e09316b2177a18",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 44.167,
+          "ttft_s": 3.199,
+          "tokens": 164,
+          "tokens_per_s": 3.98,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of a Warehouse Scene",
+            "summary": "The key frame at 1s shows a man in a vest and pants standing in front of a forklift, which is parked on the floor. The boxes overlap, indicating physical proximity, but the scene is not safe to assume without further verification.",
+            "review_questions": [
+              "Is the forklift parked on the floor, or is it in motion?",
+              "Are the man's clothes visible in the image?",
+              "Is there any indication of the man's intentions or actions in the image?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 44.187,
+        "accepted": {
+          "title": "Review of a Warehouse Scene",
+          "summary": "The key frame at 1s shows a man in a vest and pants standing in front of a forklift, which is parked on the floor. Detector record: predicted person and forklift boxes are close at 0s and overlap at 1s and 8s.",
+          "review_questions": [
+            "Is the forklift parked on the floor, or is it in motion?",
+            "Are the man's clothes visible in the image?",
+            "Is there any indication of the man's intentions or actions in the image?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    },
+    {
+      "key": "d20",
+      "wall_s": 48.198,
+      "audit": {
+        "baseline": {
+          "title": "Person–forklift interaction for review",
+          "summary": "Visual check at 7s: A person in a white hat and yellow vest is walking towards a forklift, which is parked on the floor of a warehouse. At 6s: Predicted person and forklift boxes are close but do not overlap in the image. At 7s: Predicted person and forklift boxes overlap in the image. At 9s: Predicted person and forklift boxes overlap in the image.",
+          "review_questions": [
+            "Does the original footage support each observation?",
+            "Does this interaction require follow-up under the site's procedures?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "model_output": {
+          "raw_text": "{\n  \"title\": \"Review of Warehouse Key Frame at 7s\",\n  \"summary\": \"At 7s, the predicted boxes of a person in a white hat and yellow vest walking towards a forklift, parked on the floor of a warehouse, overlap, indicating a potential collision. The boxes are not close enough to establish physical distance or safety concerns.\",\n  \"review_questions\": [\n    \"Is the person and forklift boxes close enough to establish a potential collision?\",\n    \"Are the predicted boxes of the person and forklift in the same image?\",\n    \"What is the significance of the overlap in the predicted boxes?\"\n  ],\n  \"evidence_ids\": [\n    \"event-001-obs-1\",\n    \"event-001-obs-2\",\n    \"event-001-obs-3\"\n  ]\n}",
+          "model_file": "Qwen2-VL-2B-Instruct.hef",
+          "model_sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+          "runtime": {
+            "hailort": "5.3.2"
+          },
+          "prompt_sha256": "7beee6d9c0f9dc0adbe06c7a5573367e6d2d37f824643634e9eb01cddb130b1f",
+          "prompt_version": "draft-v2-device",
+          "generation_seconds": 48.185,
+          "ttft_s": 3.199,
+          "tokens": 180,
+          "tokens_per_s": 3.98,
+          "max_generated_tokens": 320,
+          "seed": 19,
+          "decoding": "greedy (do_sample=False)",
+          "draft": {
+            "title": "Review of Warehouse Key Frame at 7s",
+            "summary": "At 7s, the predicted boxes of a person in a white hat and yellow vest walking towards a forklift, parked on the floor of a warehouse, overlap, indicating a potential collision. The boxes are not close enough to establish physical distance or safety concerns.",
+            "review_questions": [
+              "Is the person and forklift boxes close enough to establish a potential collision?",
+              "Are the predicted boxes of the person and forklift in the same image?",
+              "What is the significance of the overlap in the predicted boxes?"
+            ],
+            "evidence_ids": [
+              "event-001-obs-1",
+              "event-001-obs-2",
+              "event-001-obs-3"
+            ]
+          }
+        },
+        "validation_errors": [],
+        "method": "ugen300-qwen2-vl-draft",
+        "seconds": 48.188,
+        "accepted": {
+          "title": "Review of Warehouse Key Frame",
+          "summary": "Visual check at 7s: A person in a white hat and yellow vest is walking towards a forklift, which is parked on the floor of a warehouse. Detector record: predicted person and forklift boxes are close at 6s and overlap at 7s and 9s.",
+          "review_questions": [
+            "Is the person and forklift boxes close enough to establish a potential collision?",
+            "Are the predicted boxes of the person and forklift in the same image?",
+            "What is the significance of the overlap in the predicted boxes?"
+          ],
+          "evidence_ids": [
+            "event-001-obs-1",
+            "event-001-obs-2",
+            "event-001-obs-3"
+          ]
+        },
+        "warning": "UGen300 draft. Citation and number checks do not establish factual correctness; review the footage."
+      }
+    }
+  ],
+  "identity": {
+    "hailort_version": "5.3.2",
+    "devices": [
+      {
+        "id": "usb/001:024",
+        "architecture": "HAILO10H",
+        "firmware": "5.3.2 (release,app)",
+        "serial_number": null,
+        "part_number": null,
+        "product_name": null
+      }
+    ]
+  },
+  "hefs": {
+    "detector": {
+      "file": "yolox_s_warehouse_v4_o2s.hef",
+      "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+      "source": "scripts/hailo/compile_yolox_hef.py --optimization-level 2 (defaults: calibration seed 20261105, DFC calibset 64, QFT 1,024 frames x 4 epochs) with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (calibration: work/stage2/hef-build/data/calib)",
+      "hash_s": 0.028
+    },
+    "vlm": {
+      "file": "Qwen2-VL-2B-Instruct.hef",
+      "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+      "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef",
+      "hash_s": 6.668
+    }
+  },
+  "vlm_load_s": 10.399,
+  "ended_utc": "2026-11-05T18:35:01Z"
+}

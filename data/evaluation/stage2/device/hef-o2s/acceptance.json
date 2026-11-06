@@ -1,0 +1,120 @@
+{
+  "min_snr_db": 10.0,
+  "held_out_frames": 64,
+  "optimization_level": 2,
+  "compression_level": null,
+  "calibration_frames": 1024,
+  "calibration_seed": 20261105,
+  "calibset_size": "DFC default (64)",
+  "calibration_order_sha256": "d03f2a57ae2dbcb87d0d8cf05e526d18bcc854c7721ebd415b414ac186d2f5eb",
+  "outputs": [
+    {
+      "layer": "conv56",
+      "stride": 8,
+      "role": "reg_layer",
+      "shape": [
+        64,
+        52,
+        52,
+        4
+      ],
+      "snr_db": 24.82
+    },
+    {
+      "layer": "conv55",
+      "stride": 8,
+      "role": "objectness_layer",
+      "shape": [
+        64,
+        52,
+        52,
+        1
+      ],
+      "snr_db": 20.89
+    },
+    {
+      "layer": "conv54",
+      "stride": 8,
+      "role": "cls_layer",
+      "shape": [
+        64,
+        52,
+        52,
+        2
+      ],
+      "snr_db": 20.12
+    },
+    {
+      "layer": "conv70",
+      "stride": 16,
+      "role": "reg_layer",
+      "shape": [
+        64,
+        26,
+        26,
+        4
+      ],
+      "snr_db": 29.46
+    },
+    {
+      "layer": "conv69",
+      "stride": 16,
+      "role": "objectness_layer",
+      "shape": [
+        64,
+        26,
+        26,
+        1
+      ],
+      "snr_db": 21.82
+    },
+    {
+      "layer": "conv68",
+      "stride": 16,
+      "role": "cls_layer",
+      "shape": [
+        64,
+        26,
+        26,
+        2
+      ],
+      "snr_db": 21.06
+    },
+    {
+      "layer": "conv83",
+      "stride": 32,
+      "role": "reg_layer",
+      "shape": [
+        64,
+        13,
+        13,
+        4
+      ],
+      "snr_db": 32.92
+    },
+    {
+      "layer": "conv82",
+      "stride": 32,
+      "role": "objectness_layer",
+      "shape": [
+        64,
+        13,
+        13,
+        1
+      ],
+      "snr_db": 23.24
+    },
+    {
+      "layer": "conv81",
+      "stride": 32,
+      "role": "cls_layer",
+      "shape": [
+        64,
+        13,
+        13,
+        2
+      ],
+      "snr_db": 23.98
+    }
+  ]
+}

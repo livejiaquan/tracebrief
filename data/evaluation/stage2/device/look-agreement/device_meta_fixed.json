@@ -1,0 +1,55 @@
+{
+  "started_utc": "2026-11-05T18:54:55Z",
+  "conditions": "UGen300 over USB at 0.9 A (reduced-performance mode)",
+  "host": {
+    "platform": "Windows-10-10.0.26300-SP0",
+    "python": "3.10.22",
+    "numpy": "2.2.6",
+    "pillow": "12.3.0"
+  },
+  "freeze_sha256": "b2f0b67c35af50b068ad930ebbe5ca1e5fc9f7543cf9794b5ec0d1f7ae0478c5",
+  "items": 148,
+  "already_answered": 0,
+  "prompt_version": "look-v2",
+  "prompt_sha256": "d0b7f94a4a91f22e0c253fe9a433c14a386f66548e45c19460343fffb0c300f1",
+  "system_prompt": "You are a helpful assistant that can see images.",
+  "max_generated_tokens": 160,
+  "seed": 19,
+  "decoding": "greedy (do_sample=False)",
+  "context": "cleared before and after every crop",
+  "hailort_version": "5.3.2",
+  "identity": {
+    "hailort_version": "5.3.2",
+    "devices": [
+      {
+        "id": "usb/001:024",
+        "architecture": "HAILO10H",
+        "firmware": "5.3.2 (release,app)",
+        "serial_number": null,
+        "part_number": null,
+        "product_name": null
+      }
+    ]
+  },
+  "hefs": {
+    "detector": {
+      "file": "yolox_s_warehouse_v4_o2s.hef",
+      "sha256": "87597f869386091b5bcdeddf0b2cb43e32ae3914be07969b3b8e96c72128053e",
+      "source": "scripts/hailo/compile_yolox_hef.py --optimization-level 2 (defaults: calibration seed 20261105, DFC calibset 64, QFT 1,024 frames x 4 epochs) with Dataflow Compiler 5.3.0 from weights/yolox-s-warehouse-v4.onnx (calibration: work/stage2/hef-build/data/calib)",
+      "hash_s": 0.082
+    },
+    "vlm": {
+      "file": "Qwen2-VL-2B-Instruct.hef",
+      "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
+      "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef",
+      "hash_s": 6.813
+    }
+  },
+  "vlm_load_s": 10.397,
+  "frame_shape": [
+    336,
+    336,
+    3
+  ],
+  "ended_utc": "2026-11-05T19:33:02Z"
+}

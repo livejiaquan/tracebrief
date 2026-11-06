@@ -1,0 +1,57 @@
+{
+  "note": "copied_from names where a copy came from on the device host; files without copied_from were written here. Host paths are shortened to C:\\tb-device, in this manifest and in the records, so those records differ from their originals only in that path. Every SHA-256 is of the file as published here.",
+  "files": {
+    "README.md": {
+      "sha256": "85f016b2fea74c928855ef294c47373073d496ddb1b1d78f89b25c54fdf33acd",
+      "copied_from": null
+    },
+    "bench/bench-o0.json": {
+      "sha256": "2bd9fb99c65dd33cb4f6f155ca89147158b6ad8b006b03c01e1309621ad4ade8",
+      "copied_from": "C:\\tb-device\\bench\\bench_o0_run2.json"
+    },
+    "bench/bench-o2s-phases.json": {
+      "sha256": "c3e248bd6a3e64c4e3f37c9711aa9f74ee0903b87ba57e7fb4c59c13fabda6fb",
+      "copied_from": "C:\\tb-device\\stage2-phases\\final\\bench-o2s-phases.json"
+    },
+    "bench/bench-o2s.json": {
+      "sha256": "d4b077693626dc52e7a9e5fb908aea657a81ab67c491a54d2871fcb24ca41381",
+      "copied_from": "C:\\tb-device\\bench\\bench_o2s.json"
+    },
+    "clip/clip-job.json": {
+      "sha256": "f700769a382d0f0aea23203e491211c37b2ca8f6008395d07a911c5d19afcd03",
+      "copied_from": "C:\\tb-device\\stage2-phases\\final\\clip\\clip-job.json"
+    },
+    "clip/clip-summary.json": {
+      "sha256": "82cd640722ae08a151d5016a8a5fd5e6b19eb2a2b10fe624be7affbe24a95ede",
+      "copied_from": "C:\\tb-device\\stage2-phases\\final\\clip\\clip-summary.json"
+    },
+    "hef-o2s/acceptance.json": {
+      "sha256": "5820c4d6d0dbb2fceff187706ab54baaba548ce5c699ff87dd1a2fd8919b3b57",
+      "copied_from": "hef-build/build/o2s/acceptance.json"
+    },
+    "hef-o2s/device_agreement.json": {
+      "sha256": "946132c299bdf15a564d313ba3646d256ae89afc8503460075d486dc022c2d83",
+      "copied_from": "hef-build/build/o2s/device_agreement.json"
+    },
+    "hef-o2s/device_run.json": {
+      "sha256": "7484d9013711dc522a3996daac9cb12c27de17843f7a007a86e53c2901f86516",
+      "copied_from": "hef-build/build/o2s/device/device_run.json"
+    },
+    "hef-o2s/kb_test_device_results.json": {
+      "sha256": "8138988e6b25a4c844b9e0de763d79f91adb8a4258b8340b3f110efeeaba0342",
+      "copied_from": "hef-build/build/o2s/scores/device_hailo/kb_test_results.json"
+    },
+    "hef-o2s/loco_test_device_results.json": {
+      "sha256": "33c1c350a4444f1b5de2e26028d0041836f24a07007ad58916c49469896dea53",
+      "copied_from": "hef-build/build/o2s/scores/device_hailo/loco_test_results.json"
+    },
+    "hef-o2s/stage1_device_eval.json": {
+      "sha256": "143f901bfa20ef8fcc4f6cac86d35fcae04214f4f6825ee80473993479226938",
+      "copied_from": "hef-build/build/o2s/scores/device_hailo/stage1_eval.json"
+    },
+    "held-guard.json": {
+      "sha256": "74f3299f300ce92c49fc2ba55b3860ecd19cae0f25cb1def8a1d15e75a2f70d8",
+      "copied_from": "C:\\tb-device\\stage2-phases\\final\\held-guard.json"
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+ "description": "End-to-end CPU jobs (server.process_job, Fast search, resident look and draft workers) on data/samples/warehouse-1.mp4 after the fix, at the shipped 1 frame/s and at 5 frames/s. For each evidence frame and visual-check crop, new_frame is the frame it shows (the closest of the 300 frames of OpenCV's sequential read, by mean absolute pixel difference, diff on 0-255) and old_frame the frame shown by the ffmpeg -ss command it replaces (server.frame_image before the fix, look.crop_frame).",
+ "video": "data/samples/warehouse-1.mp4",
+ "opencv_fps": 30.0,
+ "frames": 300,
+ "runs": [
+  {
+   "label": "1 frame/s (shipped)",
+   "sample_fps": 1.0,
+   "events": 1,
+   "detector_confidence": [
+    {
+     "score": 0.8922,
+     "person": 0.9497,
+     "forklift": 0.9395,
+     "time": 3.0
+    }
+   ],
+   "rows": [
+    {
+     "kind": "evidence",
+     "event": "event-001",
+     "time_s": 0.0,
+     "detector_frame": 0,
+     "new_frame": 0,
+     "new_offset": 0,
+     "new_diff": 0.96,
+     "old_frame": 0,
+     "old_offset": 0,
+     "old_diff": 0.96
+    },
+    {
+     "kind": "evidence",
+     "event": "event-001",
+     "time_s": 3.0,
+     "detector_frame": 90,
+     "new_frame": 90,
+     "new_offset": 0,
+     "new_diff": 0.96,
+     "old_frame": 90,
+     "old_offset": 0,
+     "old_diff": 1.01
+    },
+    {
+     "kind": "evidence",
+     "event": "event-001",
+     "time_s": 8.0,
+     "detector_frame": 240,
+     "new_frame": 240,
+     "new_offset": 0,
+     "new_diff": 0.93,
+     "old_frame": 240,
+     "old_offset": 0,
+     "old_diff": 0.97
+    },
+    {
+     "kind": "crop",
+     "event": "event-001",
+     "time_s": 3.0,
+     "detector_frame": 90,
+     "new_frame": 90,
+     "new_offset": 0,
+     "new_diff": 1.96,
+     "old_frame": 90,
+     "old_offset": 0,
+     "old_diff": 1.96,
+     "visual_check": {
+      "status": "confirmed",
+      "forklift": "yes",
+      "person": "yes",
+      "description": "A person in a white shirt and hat is standing next to a blue forklift in a warehouse."
+     }
+    }
+   ]
+  },
+  {
+   "label": "5 frames/s",
+   "sample_fps": 5.0,
+   "events": 1,
+   "detector_confidence": [
+    {
+     "score": 0.8827,
+     "person": 0.9474,
+     "forklift": 0.9317,
+     "time": 2.8
+    }
+   ],
+   "rows": [
+    {
+     "kind": "evidence",
+     "event": "event-001",
+     "time_s": 0.0,
+     "detector_frame": 0,
+     "new_frame": 0,
+     "new_offset": 0,
+     "new_diff": 0.96,
+     "old_frame": 0,
+     "old_offset": 0,
+     "old_diff": 0.96
+    },
+    {
+     "kind": "evidence",
+     "event": "event-001",
+     "time_s": 2.8,
+     "detector_frame": 84,
+     "new_frame": 84,
+     "new_offset": 0,
+     "new_diff": 1.05,
+     "old_frame": 90,
+     "old_offset": 6,
+     "old_diff": 1.01
+    },
+    {
+     "kind": "evidence",
+     "event": "event-001",
+     "time_s": 8.2,
+     "detector_frame": 246,
+     "new_frame": 246,
+     "new_offset": 0,
+     "new_diff": 0.96,
+     "old_frame": 270,
+     "old_offset": 24,
+     "old_diff": 0.97
+    },
+    {
+     "kind": "crop",
+     "event": "event-001",
+     "time_s": 2.8,
+     "detector_frame": 84,
+     "new_frame": 84,
+     "new_offset": 0,
+     "new_diff": 1.51,
+     "old_frame": 90,
+     "old_offset": 6,
+     "old_diff": 1.44,
+     "visual_check": {
+      "status": "confirmed",
+      "forklift": "yes",
+      "person": "yes",
+      "description": "A person in a white shirt and hat is standing next to a blue forklift in a large warehouse."
+     }
+    }
+   ]
+  }
+ ],
+ "all_new_offsets_zero": true
+}

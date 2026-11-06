@@ -1,0 +1,1495 @@
+{
+ "description": "Stage I look test crops (data/evaluation/look/results.json): the frame each published crop shows, against the frame the detector analysed. Each published crop (frozen look.crop_frame, ffmpeg -ss) was compared with the frame-exact crop of the intended frame (media.crop_at: same region, filters and JPEG quality, frame chosen by number); a crop that differed would have been matched against the following frames.",
+ "summary": {
+  "items": 148,
+  "identical": 148,
+  "offset_distribution": {
+   "0": 148
+  },
+  "frame_index_mod_30": {
+   "0": 148
+  }
+ },
+ "items": [
+  {
+   "id": "t-0505436a-f150-a",
+   "video": "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "831dbe80dccba8788aa85ad53806587de5f28d8b0349e3a7f6c32c855d04d026",
+   "exact_sha256": "831dbe80dccba8788aa85ad53806587de5f28d8b0349e3a7f6c32c855d04d026",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0505436a-f180-a",
+   "video": "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "0caaba5712bfce63450527f3db129506d4704218dcffccd76b63fb5dca3b1460",
+   "exact_sha256": "0caaba5712bfce63450527f3db129506d4704218dcffccd76b63fb5dca3b1460",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0505436a-f210-a",
+   "video": "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "6d3eb2ed6af96759502040ea33cb2d86bc6555dfd205ad4effa98340d5c089fe",
+   "exact_sha256": "6d3eb2ed6af96759502040ea33cb2d86bc6555dfd205ad4effa98340d5c089fe",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f060-a",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "b12e0355631955ced1a6175035f198be92350cebb14472aead6acc051c215720",
+   "exact_sha256": "b12e0355631955ced1a6175035f198be92350cebb14472aead6acc051c215720",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f090-a",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "02ccd62b28223af761dd81a7a977194f2703a170ce8671b36d4dd6f5d4bcf914",
+   "exact_sha256": "02ccd62b28223af761dd81a7a977194f2703a170ce8671b36d4dd6f5d4bcf914",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f120-a",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "ee201a4d847bf2c347daca6328bd9d818603b8706e54c3cd4a617e5f093443d4",
+   "exact_sha256": "ee201a4d847bf2c347daca6328bd9d818603b8706e54c3cd4a617e5f093443d4",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f150-a",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "bed72b3e059a210162ccb8229199d603787f0e1a4af5a2089bed6ac3d7019bbc",
+   "exact_sha256": "bed72b3e059a210162ccb8229199d603787f0e1a4af5a2089bed6ac3d7019bbc",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f180-a",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "4a5e16e3857caabb43b6f148e176e2fdffc2555e692a4e5666375e2c65a0b1c8",
+   "exact_sha256": "4a5e16e3857caabb43b6f148e176e2fdffc2555e692a4e5666375e2c65a0b1c8",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f210-a",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "6bce42167873390848f4c9cbd17f8b898682a24a88c0a137ab02d0efcf5a3b3c",
+   "exact_sha256": "6bce42167873390848f4c9cbd17f8b898682a24a88c0a137ab02d0efcf5a3b3c",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f240-a",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "5eeabcf95db125526ee6c5e48f42e4d1c5c0c8e0e83e807ebee281536cc3e3d7",
+   "exact_sha256": "5eeabcf95db125526ee6c5e48f42e4d1c5c0c8e0e83e807ebee281536cc3e3d7",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f000-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "6858daac9b59970e9a1e270ff62c640c4865bf5cbff98e7b98826c5ee24a6564",
+   "exact_sha256": "6858daac9b59970e9a1e270ff62c640c4865bf5cbff98e7b98826c5ee24a6564",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f030-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "85bcb342b65fb858b67a2c5611a1e6363916a1509a98c888112eacf72368026d",
+   "exact_sha256": "85bcb342b65fb858b67a2c5611a1e6363916a1509a98c888112eacf72368026d",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f060-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "1706cece7faf3387ee4861fc3b44d5387d68e7b06640a9554d1d4594e1b6f966",
+   "exact_sha256": "1706cece7faf3387ee4861fc3b44d5387d68e7b06640a9554d1d4594e1b6f966",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f090-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "d67fb5e1da0fa1f006d66689031ba1fae860f18b5fbcec5adde51b7cca9ec270",
+   "exact_sha256": "d67fb5e1da0fa1f006d66689031ba1fae860f18b5fbcec5adde51b7cca9ec270",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f120-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "a3c5875dfea128537852f55f00532638ce333fbb2009617f99a6a8877466f4f3",
+   "exact_sha256": "a3c5875dfea128537852f55f00532638ce333fbb2009617f99a6a8877466f4f3",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f150-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "11ebe1a99e50ab0b7ef5c7edb81890d192358bbb97f5e5a957a97af6905ea0bd",
+   "exact_sha256": "11ebe1a99e50ab0b7ef5c7edb81890d192358bbb97f5e5a957a97af6905ea0bd",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f180-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "2ba95180394cd9a101e66433b0c6246aa1e708310029b4a32533096373e6ad29",
+   "exact_sha256": "2ba95180394cd9a101e66433b0c6246aa1e708310029b4a32533096373e6ad29",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f210-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "a12df5f31ffcb2c7f0ee072cc828772c631ce38662313ed5fe4348486d9ffa9b",
+   "exact_sha256": "a12df5f31ffcb2c7f0ee072cc828772c631ce38662313ed5fe4348486d9ffa9b",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f240-a",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "20f97f5faa4ac9f06205bd7d0c5d8797ed929988ad17873f7a0dcb1869730607",
+   "exact_sha256": "20f97f5faa4ac9f06205bd7d0c5d8797ed929988ad17873f7a0dcb1869730607",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f000-a",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "64b33657b21b9fc33cfa9f9e023272c3ef697f4a67382a0580df59303cf28afa",
+   "exact_sha256": "64b33657b21b9fc33cfa9f9e023272c3ef697f4a67382a0580df59303cf28afa",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f030-a",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "c096962fefbb30e957c555ee41637ba21dc2df3b6061b69c2eff8212178b2f4f",
+   "exact_sha256": "c096962fefbb30e957c555ee41637ba21dc2df3b6061b69c2eff8212178b2f4f",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f060-a",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "4f5b826f679228f2cea078551dd1f647ebf50fbba82086c03b1ae684e7efa83e",
+   "exact_sha256": "4f5b826f679228f2cea078551dd1f647ebf50fbba82086c03b1ae684e7efa83e",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f090-a",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "93be193e983b328022791e16cf72b3f7367af7cb9abdc96ff1c2d8d399f9c303",
+   "exact_sha256": "93be193e983b328022791e16cf72b3f7367af7cb9abdc96ff1c2d8d399f9c303",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f120-a",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "8aa1a152a7985f747ce1c2530a37da75622bf53c6437693219646402184025d6",
+   "exact_sha256": "8aa1a152a7985f747ce1c2530a37da75622bf53c6437693219646402184025d6",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f240-a",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "9130decb4a007445545c4a5c4aec15cb77ad88581e5b5ca3920ac6125d4420ad",
+   "exact_sha256": "9130decb4a007445545c4a5c4aec15cb77ad88581e5b5ca3920ac6125d4420ad",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f030-a",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "7e440547414fcd77049c19e94306fc2761366abc7232f0558bc6ded60af1e0c8",
+   "exact_sha256": "7e440547414fcd77049c19e94306fc2761366abc7232f0558bc6ded60af1e0c8",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f060-a",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "f1691f798847016615ac340671f93cf4b2c96b1b52f456fe8c14511d1b624a9f",
+   "exact_sha256": "f1691f798847016615ac340671f93cf4b2c96b1b52f456fe8c14511d1b624a9f",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f180-a",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "2aeef4c202a8ea971694c8e9d5912ff588327826b7a3002723a18e5b6f9856ff",
+   "exact_sha256": "2aeef4c202a8ea971694c8e9d5912ff588327826b7a3002723a18e5b6f9856ff",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f210-a",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "8a1f899336757b2cc8ab4665dd4aafaeab674801a3b125fe1967da75c28d24d7",
+   "exact_sha256": "8a1f899336757b2cc8ab4665dd4aafaeab674801a3b125fe1967da75c28d24d7",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f240-a",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "092e632f5c6813c17f54b577700f81df18a4fd9def7f86802be3f8552c3ae982",
+   "exact_sha256": "092e632f5c6813c17f54b577700f81df18a4fd9def7f86802be3f8552c3ae982",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f270-a",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 270,
+   "time_s": 9.0,
+   "published_sha256": "0c57b18227e5551d66beddeb489856d3235a70eefc16cefc46d293d8bcf2cde4",
+   "exact_sha256": "0c57b18227e5551d66beddeb489856d3235a70eefc16cefc46d293d8bcf2cde4",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f270-b",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 270,
+   "time_s": 9.0,
+   "published_sha256": "0c57b18227e5551d66beddeb489856d3235a70eefc16cefc46d293d8bcf2cde4",
+   "exact_sha256": "0c57b18227e5551d66beddeb489856d3235a70eefc16cefc46d293d8bcf2cde4",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f000-a",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "deee0924d94746ab979e85d3e44e12e30969a64de2984f284c5d6d9f81d0c639",
+   "exact_sha256": "deee0924d94746ab979e85d3e44e12e30969a64de2984f284c5d6d9f81d0c639",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f030-a",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "652ed62b468f10c48d070b3f94094e7517e654967d88682815d4b8496d99bd23",
+   "exact_sha256": "652ed62b468f10c48d070b3f94094e7517e654967d88682815d4b8496d99bd23",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f060-a",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "9808d219864f9f5c5bc37f420016867add5885657cef2fd804f8483d0015dc93",
+   "exact_sha256": "9808d219864f9f5c5bc37f420016867add5885657cef2fd804f8483d0015dc93",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f090-a",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "d884f7e67f470e9334bd87658590c237e721ad3908552282fdfb389ff02d7b33",
+   "exact_sha256": "d884f7e67f470e9334bd87658590c237e721ad3908552282fdfb389ff02d7b33",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f120-a",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "c91037146054b540615a2dc2815dabcffb564f11832b4323cb2add86d20a4abe",
+   "exact_sha256": "c91037146054b540615a2dc2815dabcffb564f11832b4323cb2add86d20a4abe",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f150-a",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "8c4845fd99af6a0da94d5d8cd341f9f33c1e663bb44b1861fad97180538dcd79",
+   "exact_sha256": "8c4845fd99af6a0da94d5d8cd341f9f33c1e663bb44b1861fad97180538dcd79",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f000-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "67ab846d7efe75187c91bad53302b42fbfe888e7e7c204ce236faa1b48451362",
+   "exact_sha256": "67ab846d7efe75187c91bad53302b42fbfe888e7e7c204ce236faa1b48451362",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f030-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "52273cd71089549cbaaa5b6417516dd27ac8da83873e18893e24344667ecf82a",
+   "exact_sha256": "52273cd71089549cbaaa5b6417516dd27ac8da83873e18893e24344667ecf82a",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f060-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "d377cf0992f70af17a1696bf8d1d3d18b9b07ed34b6163101d0870b186bcd66d",
+   "exact_sha256": "d377cf0992f70af17a1696bf8d1d3d18b9b07ed34b6163101d0870b186bcd66d",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f090-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "2763c2ce2a3ed9827030f63e18a30746feb5ec290884d1e097323743a2c830be",
+   "exact_sha256": "2763c2ce2a3ed9827030f63e18a30746feb5ec290884d1e097323743a2c830be",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f120-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "c3ad846b5610acd259c37812215f26b578307edaef3a10eb292778c80f48a855",
+   "exact_sha256": "c3ad846b5610acd259c37812215f26b578307edaef3a10eb292778c80f48a855",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f150-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "8af81f01e58486cca1d1b1c28e302f0b3dbd69a2d107995bd4cf496f48c3bdac",
+   "exact_sha256": "8af81f01e58486cca1d1b1c28e302f0b3dbd69a2d107995bd4cf496f48c3bdac",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f180-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "176d160dbeb52819dbe35abb5d6c193acd80edca6869f534e6850d92ed32c432",
+   "exact_sha256": "176d160dbeb52819dbe35abb5d6c193acd80edca6869f534e6850d92ed32c432",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f210-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "93574abd58491fb1112d856dff514fbfd49fd723a227588793d04a428fce49b0",
+   "exact_sha256": "93574abd58491fb1112d856dff514fbfd49fd723a227588793d04a428fce49b0",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f240-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "ae06971f96f6ea0ae7227af544ae6cbb9d4c1000a49b0bfe0aa7715618ffbf0f",
+   "exact_sha256": "ae06971f96f6ea0ae7227af544ae6cbb9d4c1000a49b0bfe0aa7715618ffbf0f",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f270-a",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 270,
+   "time_s": 9.0,
+   "published_sha256": "e5fcfa437e3730899a095177c3d46e7b355e7c16e3a957fc0bd7d2dc06795467",
+   "exact_sha256": "e5fcfa437e3730899a095177c3d46e7b355e7c16e3a957fc0bd7d2dc06795467",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f000-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "fadf0bb3a90ebadc4533391748e992e9251e9e388d3759981a6a498b2553b774",
+   "exact_sha256": "fadf0bb3a90ebadc4533391748e992e9251e9e388d3759981a6a498b2553b774",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f030-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "2dd095bde7466f5088332814859ca28852d21c9b790da607f9b8064a845dd3ce",
+   "exact_sha256": "2dd095bde7466f5088332814859ca28852d21c9b790da607f9b8064a845dd3ce",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f060-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "bfa5d2377ca03eea29aed87630c2c92b2bd4c25759a276eb1d8782d38160c6a5",
+   "exact_sha256": "bfa5d2377ca03eea29aed87630c2c92b2bd4c25759a276eb1d8782d38160c6a5",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f090-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "5eb9b2df082e77fc2dd98d6a7ad574794853478b823fe066349a7cbc30e56502",
+   "exact_sha256": "5eb9b2df082e77fc2dd98d6a7ad574794853478b823fe066349a7cbc30e56502",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f120-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "8ec6901053f8967f3e0b092ede88bbdc0516230989032fb085686a1d42ff3cf8",
+   "exact_sha256": "8ec6901053f8967f3e0b092ede88bbdc0516230989032fb085686a1d42ff3cf8",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f150-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "d2640d20b6a816b60ecfb1a79ab6cd9fbb33cc7064d608c741fd894a56d2e915",
+   "exact_sha256": "d2640d20b6a816b60ecfb1a79ab6cd9fbb33cc7064d608c741fd894a56d2e915",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f180-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "6aff9a79f529d8892aeadf39a994a2541b9ca9c5b449acc6382a8fb104b1afed",
+   "exact_sha256": "6aff9a79f529d8892aeadf39a994a2541b9ca9c5b449acc6382a8fb104b1afed",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f210-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "5a438ea0e7cb09377180b4939c29f4b19a1aeae4b97f54f3e6318da197579f51",
+   "exact_sha256": "5a438ea0e7cb09377180b4939c29f4b19a1aeae4b97f54f3e6318da197579f51",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f240-a",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "d8ec810ffc07cc7afff2eaf93f4283744fedff4082c5b58505ef22d0631b55b8",
+   "exact_sha256": "d8ec810ffc07cc7afff2eaf93f4283744fedff4082c5b58505ef22d0631b55b8",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0624a7b3-f180-a",
+   "video": "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "819f83ff75a0a85d379030be456373b6c480953c3ccce3630cc6dfcc5d6c4b37",
+   "exact_sha256": "819f83ff75a0a85d379030be456373b6c480953c3ccce3630cc6dfcc5d6c4b37",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0624a7b3-f210-a",
+   "video": "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "4ea5be33635b26f3308af6a6e80c5f0907d2e8fd4c704c2eedd4a5e7aac00780",
+   "exact_sha256": "4ea5be33635b26f3308af6a6e80c5f0907d2e8fd4c704c2eedd4a5e7aac00780",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0624a7b3-f240-a",
+   "video": "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "765ff5deafce235de6d266a8d9f0d772cfd06b23803561e1ff87152e87d9d3e3",
+   "exact_sha256": "765ff5deafce235de6d266a8d9f0d772cfd06b23803561e1ff87152e87d9d3e3",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0624a7b3-f270-a",
+   "video": "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+   "frame_index": 270,
+   "time_s": 9.0,
+   "published_sha256": "3ea97342b39749d4be125207427e270ee42ce1bd02ed6d1826e57a07281f88b4",
+   "exact_sha256": "3ea97342b39749d4be125207427e270ee42ce1bd02ed6d1826e57a07281f88b4",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f000-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "091e043dc42153a993b74f410d22aa5ae0ac20d8cdc15e4663cf91e1717b618b",
+   "exact_sha256": "091e043dc42153a993b74f410d22aa5ae0ac20d8cdc15e4663cf91e1717b618b",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f030-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "4aeb60b8380fd58a9d2667d49ae82588c710c4cec0a484c133e3ca5f2c603032",
+   "exact_sha256": "4aeb60b8380fd58a9d2667d49ae82588c710c4cec0a484c133e3ca5f2c603032",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f060-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "2e20270b7d2d93376933c915999337b842ba1f5475abd5107dd57088155cf80f",
+   "exact_sha256": "2e20270b7d2d93376933c915999337b842ba1f5475abd5107dd57088155cf80f",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f090-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "2c6dae0fcd530c0a6f2af1d1bba77da86e13a270f56952efb3ea10e372305c48",
+   "exact_sha256": "2c6dae0fcd530c0a6f2af1d1bba77da86e13a270f56952efb3ea10e372305c48",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f120-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "4eec46d2cdbe505385c8a1b3af3961da588930ee26f8d50ffb3afef1cfa06bcf",
+   "exact_sha256": "4eec46d2cdbe505385c8a1b3af3961da588930ee26f8d50ffb3afef1cfa06bcf",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f150-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "3c7267018d0a693adca7e290e6abcd52830ed9c11e36ede91e09f513fce61cfd",
+   "exact_sha256": "3c7267018d0a693adca7e290e6abcd52830ed9c11e36ede91e09f513fce61cfd",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f180-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "8bc5c0ebb94fed8b1e6da6b67bba7143eac22464a1aa0810d23ecae5651e241e",
+   "exact_sha256": "8bc5c0ebb94fed8b1e6da6b67bba7143eac22464a1aa0810d23ecae5651e241e",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f240-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "a4a4a7762f8f6f46b8b0f02f25358b28a4a4264c52953792581850db5cad2a6d",
+   "exact_sha256": "a4a4a7762f8f6f46b8b0f02f25358b28a4a4264c52953792581850db5cad2a6d",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f270-a",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 270,
+   "time_s": 9.0,
+   "published_sha256": "e0d97b75707fb6bd879fb27e986adbb61884eca28decdd9b0c250241a26c8ec3",
+   "exact_sha256": "e0d97b75707fb6bd879fb27e986adbb61884eca28decdd9b0c250241a26c8ec3",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f120-b",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "4e1109d697d9d308e0aafd6e32d464c8dd8abb2980614eac5826767afe59408b",
+   "exact_sha256": "4e1109d697d9d308e0aafd6e32d464c8dd8abb2980614eac5826767afe59408b",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f120-b",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "13a138cb587b293d31f2e5c7899e0df5661c8689271162d04b80674f5247cf19",
+   "exact_sha256": "13a138cb587b293d31f2e5c7899e0df5661c8689271162d04b80674f5247cf19",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f000-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "847413af3329e64a7f95ed7eb0a0588432dc8ada946f0aa2a13b4919fbba6184",
+   "exact_sha256": "847413af3329e64a7f95ed7eb0a0588432dc8ada946f0aa2a13b4919fbba6184",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f030-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "0d5114ca58335fb4b7d7e5d9e967a6de1035d6f63458f77db5b7751170187888",
+   "exact_sha256": "0d5114ca58335fb4b7d7e5d9e967a6de1035d6f63458f77db5b7751170187888",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f060-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "f32db41c6958efeaa0428d8f5f6521c70796da053b9c603667e6094ba7a585a6",
+   "exact_sha256": "f32db41c6958efeaa0428d8f5f6521c70796da053b9c603667e6094ba7a585a6",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f090-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "de23dd35ce8d28898bd406c653eb464cbd03335dff308754a0984b25f7a874ec",
+   "exact_sha256": "de23dd35ce8d28898bd406c653eb464cbd03335dff308754a0984b25f7a874ec",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f120-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "4142aafec1c1f4a6a2be8ed15efea92b01d574c64e46216900baaf6f43d4b184",
+   "exact_sha256": "4142aafec1c1f4a6a2be8ed15efea92b01d574c64e46216900baaf6f43d4b184",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f150-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "581c52f8ffd1cd374770277e1d5e9daa47e1944f2976f354cdfd3abeeeceae5c",
+   "exact_sha256": "581c52f8ffd1cd374770277e1d5e9daa47e1944f2976f354cdfd3abeeeceae5c",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f180-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "7deb8fbee0d7c2ca06b7242e033c76a424f637b96c04bad59f6071e075b5a5dd",
+   "exact_sha256": "7deb8fbee0d7c2ca06b7242e033c76a424f637b96c04bad59f6071e075b5a5dd",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f210-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "6e0d7defa78a250d851e4521708c8da7d260f945a9b5d6f1d09fe58f55747c65",
+   "exact_sha256": "6e0d7defa78a250d851e4521708c8da7d260f945a9b5d6f1d09fe58f55747c65",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f240-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "e0e668bfefe797f0b3abe19b4fd6944946114db0f5eb1381d8680eec8260970d",
+   "exact_sha256": "e0e668bfefe797f0b3abe19b4fd6944946114db0f5eb1381d8680eec8260970d",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f270-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 270,
+   "time_s": 9.0,
+   "published_sha256": "4399e1bddce20adcfe368576001988b59a60d3423dace18dd8095be3d0deebb3",
+   "exact_sha256": "4399e1bddce20adcfe368576001988b59a60d3423dace18dd8095be3d0deebb3",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f300-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 300,
+   "time_s": 10.0,
+   "published_sha256": "480e095972f7417a64ca35bc2e0b8e49df712ff2671deb46955ec7860fc1ba7f",
+   "exact_sha256": "480e095972f7417a64ca35bc2e0b8e49df712ff2671deb46955ec7860fc1ba7f",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f330-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 330,
+   "time_s": 11.0,
+   "published_sha256": "ff07573e84b815a3a32a9df3addfaf9f25789687c227803d2b34a3c589617dab",
+   "exact_sha256": "ff07573e84b815a3a32a9df3addfaf9f25789687c227803d2b34a3c589617dab",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f360-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 360,
+   "time_s": 12.0,
+   "published_sha256": "27669365b2421d75bfe80bf8e571bd26233c7fbc2aa5ee3b40f2eb1fca5fcfe6",
+   "exact_sha256": "27669365b2421d75bfe80bf8e571bd26233c7fbc2aa5ee3b40f2eb1fca5fcfe6",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01db36b5-f390-a",
+   "video": "01db36b56c4daa26452e_run_10_seed_2010980325.cam_00.rgb.mp4",
+   "frame_index": 390,
+   "time_s": 13.0,
+   "published_sha256": "1c3e0e1118a4e3a098c2a49513efbf2ae1374c06fb8c3560fdc254cb36d005e1",
+   "exact_sha256": "1c3e0e1118a4e3a098c2a49513efbf2ae1374c06fb8c3560fdc254cb36d005e1",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01fb00c3-f000-a",
+   "video": "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "faa13c7bf268aa38901b9ea910cb436b63815ad7b63a294af9cbba6ec4f0c7c6",
+   "exact_sha256": "faa13c7bf268aa38901b9ea910cb436b63815ad7b63a294af9cbba6ec4f0c7c6",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-01fb00c3-f390-a",
+   "video": "01fb00c3126ef31816d1_run_2_seed_529070768.cam_00.rgb.mp4",
+   "frame_index": 390,
+   "time_s": 13.0,
+   "published_sha256": "22cf6e2bd7d6a44b9c85f0d7282e613472b61e07dfee98c7ff401ff433a3ad80",
+   "exact_sha256": "22cf6e2bd7d6a44b9c85f0d7282e613472b61e07dfee98c7ff401ff433a3ad80",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0505436a-f150-b",
+   "video": "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "054bb064f4a7f4c1c362bedf89b587ec6955ab5e0362ae3ac17dc10561746dcc",
+   "exact_sha256": "054bb064f4a7f4c1c362bedf89b587ec6955ab5e0362ae3ac17dc10561746dcc",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0505436a-f180-b",
+   "video": "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "8ed6303ff328dc0bbcebe85895f7398f12f62ec39c55ec1013fd3930aeee6bac",
+   "exact_sha256": "8ed6303ff328dc0bbcebe85895f7398f12f62ec39c55ec1013fd3930aeee6bac",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0505436a-f210-b",
+   "video": "0505436ac678a28890be_run_4_seed_359878350.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "3f414fdf4b8014a64538895d00e81f13c677a08da7e5d7b53078d3e51025f6ca",
+   "exact_sha256": "3f414fdf4b8014a64538895d00e81f13c677a08da7e5d7b53078d3e51025f6ca",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f090-b",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "4ed972ccc11cc213040bdad643a387a1d03e762a14501064dc142673ecdf5c27",
+   "exact_sha256": "4ed972ccc11cc213040bdad643a387a1d03e762a14501064dc142673ecdf5c27",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f120-c",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "82d39c3e601f9d72cf395f8b29b80a87d9bc48fe2b8cd5e21d598d6179447500",
+   "exact_sha256": "82d39c3e601f9d72cf395f8b29b80a87d9bc48fe2b8cd5e21d598d6179447500",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f150-b",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "6f38c0eaf4c633e2b91bb2ade0b75a3ab658a3494a9440b7ba146d344bf58730",
+   "exact_sha256": "6f38c0eaf4c633e2b91bb2ade0b75a3ab658a3494a9440b7ba146d344bf58730",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f180-b",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "4feaf6b314160460477953e2f5221e75ec248116f8471bdf2926781c01fac22b",
+   "exact_sha256": "4feaf6b314160460477953e2f5221e75ec248116f8471bdf2926781c01fac22b",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f210-b",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "db7101b327418d6eceb45e5fe543e6cbfc2679f7f41a272c126130066a23ced2",
+   "exact_sha256": "db7101b327418d6eceb45e5fe543e6cbfc2679f7f41a272c126130066a23ced2",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-050ce71e-f240-b",
+   "video": "050ce71e92100771ae46_run_9_seed_1794414351.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "6aceff253cbdffb18005c46348c5e4226c8dea67cb19c12a05d816a5cc191509",
+   "exact_sha256": "6aceff253cbdffb18005c46348c5e4226c8dea67cb19c12a05d816a5cc191509",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f000-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "5065b977e51d61c66f14a29ddabd3a91f7507104b8c9c046f14f8a921a48e9f9",
+   "exact_sha256": "5065b977e51d61c66f14a29ddabd3a91f7507104b8c9c046f14f8a921a48e9f9",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f030-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "c40d64dc6cfa0f3c6ab1407a88c989fc5bea6425f0936332eb07e44da3bdf853",
+   "exact_sha256": "c40d64dc6cfa0f3c6ab1407a88c989fc5bea6425f0936332eb07e44da3bdf853",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f060-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "11008a6068faaad1ebf8448c4eba8fbe922446f70325bf6a83e338fe3e0c5d40",
+   "exact_sha256": "11008a6068faaad1ebf8448c4eba8fbe922446f70325bf6a83e338fe3e0c5d40",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f090-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "db25dc6346d854eeba69cca7f7a5a773028714f663cee9bd0f5e96e4d1d8fd8d",
+   "exact_sha256": "db25dc6346d854eeba69cca7f7a5a773028714f663cee9bd0f5e96e4d1d8fd8d",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f120-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "b3957f56c417169d123e02f8ce48919b60198ac660ef39a0dfd5e34db04037af",
+   "exact_sha256": "b3957f56c417169d123e02f8ce48919b60198ac660ef39a0dfd5e34db04037af",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f150-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "13b8fdef460add72ff02ae17b76d62fdc2ecebdbe7bcd8cf4399e60e852d4c72",
+   "exact_sha256": "13b8fdef460add72ff02ae17b76d62fdc2ecebdbe7bcd8cf4399e60e852d4c72",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f180-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "502d47f9ef3c4905187dc14fd414da98765d81c8ca0d9e9807ac741e99951b68",
+   "exact_sha256": "502d47f9ef3c4905187dc14fd414da98765d81c8ca0d9e9807ac741e99951b68",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f210-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "884a366fe58522bbd0fcb0d601cac1708cce0d68aa323a69643db01b51e75ed5",
+   "exact_sha256": "884a366fe58522bbd0fcb0d601cac1708cce0d68aa323a69643db01b51e75ed5",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-052961d2-f240-b",
+   "video": "052961d2a2e7eeaf2652_run_5_seed_1856081553.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "5a77e90d36f5f857a0eff19df716c95dd17e9b50a9cc8a907f4e4887712c83e2",
+   "exact_sha256": "5a77e90d36f5f857a0eff19df716c95dd17e9b50a9cc8a907f4e4887712c83e2",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f000-b",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "b7c4e1b196f5b37ea318f5c18b2d6894d581f3cd77ab828105f0a4ce98a3cc09",
+   "exact_sha256": "b7c4e1b196f5b37ea318f5c18b2d6894d581f3cd77ab828105f0a4ce98a3cc09",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f030-b",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "213549e75a4c82d18529dbbc6f386cda0712d6b877e1d01d91add79357770927",
+   "exact_sha256": "213549e75a4c82d18529dbbc6f386cda0712d6b877e1d01d91add79357770927",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f060-b",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "a740716fd81a297a57c65456ef03d83d772637636c39c144e1d28d4beec106cc",
+   "exact_sha256": "a740716fd81a297a57c65456ef03d83d772637636c39c144e1d28d4beec106cc",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f090-b",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "d59d041f15f6ceceddcce447ac33d823ecf06814364a23e1cf41b3f3d04e4794",
+   "exact_sha256": "d59d041f15f6ceceddcce447ac33d823ecf06814364a23e1cf41b3f3d04e4794",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-054b0c8f-f120-c",
+   "video": "054b0c8fbf9231bb5e64_run_5_seed_1298670252.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "bc0ad1694d4d180bb74a50599067cfebd41b29f46821815c7fef893630e560fa",
+   "exact_sha256": "bc0ad1694d4d180bb74a50599067cfebd41b29f46821815c7fef893630e560fa",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f030-b",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "9d40e92202b10af3638a2d90d2b1719460665ab0c0662cc5b37cb14da7ee0e78",
+   "exact_sha256": "9d40e92202b10af3638a2d90d2b1719460665ab0c0662cc5b37cb14da7ee0e78",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f060-b",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "0b296aafeb3208caa2d10f9411ea6559ace8d3662d2a5576c08c373facd9219d",
+   "exact_sha256": "0b296aafeb3208caa2d10f9411ea6559ace8d3662d2a5576c08c373facd9219d",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f180-b",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "29975192b95d9ffaad88ab5593a8fe244336dc7845e3be5fcdf16f73a62bb979",
+   "exact_sha256": "29975192b95d9ffaad88ab5593a8fe244336dc7845e3be5fcdf16f73a62bb979",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05601faa-f210-b",
+   "video": "05601faa87d2b873def5_run_5_seed_2048712839.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "8c7b8e36eb4725fde2735753b49a795b6ed6aab787ceabd9b79378f86009fab5",
+   "exact_sha256": "8c7b8e36eb4725fde2735753b49a795b6ed6aab787ceabd9b79378f86009fab5",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f000-b",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "be47d5b1fb118cb5d5ff2dc6df69006508deb8bcadf8a5620cb6c437b72126a4",
+   "exact_sha256": "be47d5b1fb118cb5d5ff2dc6df69006508deb8bcadf8a5620cb6c437b72126a4",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f030-b",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "582904198b6faa71bc61aa74d85322fe708fa834fc0c1999471f01b27a856919",
+   "exact_sha256": "582904198b6faa71bc61aa74d85322fe708fa834fc0c1999471f01b27a856919",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f060-b",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "a391e71ef839cb0fb748767486754a6b451e351694e2a4978c4dc248be0b7e50",
+   "exact_sha256": "a391e71ef839cb0fb748767486754a6b451e351694e2a4978c4dc248be0b7e50",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f090-b",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "e43064d674ea615b9aaded6a915fec5fcf94d66ab035b7babd6e13d952b48fe0",
+   "exact_sha256": "e43064d674ea615b9aaded6a915fec5fcf94d66ab035b7babd6e13d952b48fe0",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f120-b",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "c34754779bf99a6c8d0de14a8eb2daad942a31fc1c70837a89e51b4973030cf7",
+   "exact_sha256": "c34754779bf99a6c8d0de14a8eb2daad942a31fc1c70837a89e51b4973030cf7",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05761a14-f150-b",
+   "video": "05761a14cf211fdb7562_run_21_seed_742094177.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "fe2c855317414b46a306d8558e994af067fca53619a28d649e70a1a0893e0996",
+   "exact_sha256": "fe2c855317414b46a306d8558e994af067fca53619a28d649e70a1a0893e0996",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f060-b",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "81233610078c19afd24b980b11eb644fa6c8266fa5d9d45a3c5c0cb54c4f5059",
+   "exact_sha256": "81233610078c19afd24b980b11eb644fa6c8266fa5d9d45a3c5c0cb54c4f5059",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f090-b",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "4b3ee0d6751c9b155430ffc1b9158f8a59c7d315ce392d79f9bf542f52855351",
+   "exact_sha256": "4b3ee0d6751c9b155430ffc1b9158f8a59c7d315ce392d79f9bf542f52855351",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f120-b",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "11becfec3f5c12b6639743b3bd2d5a87f8314ef16c9aa3f8d156d8ef7923b03b",
+   "exact_sha256": "11becfec3f5c12b6639743b3bd2d5a87f8314ef16c9aa3f8d156d8ef7923b03b",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f150-b",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "8f4d25e4930ca3e59dd6586a3c8ef0cff1792b13a967b06618c69c80f0bdeda2",
+   "exact_sha256": "8f4d25e4930ca3e59dd6586a3c8ef0cff1792b13a967b06618c69c80f0bdeda2",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f180-b",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "6954e2ca28d359f6af1ef3a6b9c58716283ab31a4595f89cc69675f0511bb065",
+   "exact_sha256": "6954e2ca28d359f6af1ef3a6b9c58716283ab31a4595f89cc69675f0511bb065",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f210-b",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "079117fc54a47faf53aa6ad09d6b3e5d4cc62b7afbdf22724453661420deecbc",
+   "exact_sha256": "079117fc54a47faf53aa6ad09d6b3e5d4cc62b7afbdf22724453661420deecbc",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f240-b",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "073411112043c3e55d180d76ed21998014a8b2259f2d8c6b948b88e408da97cb",
+   "exact_sha256": "073411112043c3e55d180d76ed21998014a8b2259f2d8c6b948b88e408da97cb",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-059b6b08-f270-b",
+   "video": "059b6b0837427d36a85f_run_6_seed_811801615.ceiling_00.rgb.mp4",
+   "frame_index": 270,
+   "time_s": 9.0,
+   "published_sha256": "13f6d8c8d5a3c7ddc055607f578402b04630936cdd4c1bffb32051aec8449591",
+   "exact_sha256": "13f6d8c8d5a3c7ddc055607f578402b04630936cdd4c1bffb32051aec8449591",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f000-b",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "c82f1b5f173e95059847b71ec14b64bc4bef86bcf1be7fa3087a243e1433037f",
+   "exact_sha256": "c82f1b5f173e95059847b71ec14b64bc4bef86bcf1be7fa3087a243e1433037f",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f030-b",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "972b43ce7f1c3b35170a80d58e7ecbda541ea16ed91b43f8ecae95af7a99e5dd",
+   "exact_sha256": "972b43ce7f1c3b35170a80d58e7ecbda541ea16ed91b43f8ecae95af7a99e5dd",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f060-b",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "76013f0c3570d6682bbdbb31ae321ae04cb1635127f603346985ff6dec68bb9b",
+   "exact_sha256": "76013f0c3570d6682bbdbb31ae321ae04cb1635127f603346985ff6dec68bb9b",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f090-b",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "87ad5cb96d8f76c533ee0451876965b698f8592e950e4901a773e0c2792f5022",
+   "exact_sha256": "87ad5cb96d8f76c533ee0451876965b698f8592e950e4901a773e0c2792f5022",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f120-b",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "05cfa88b1dc2683c68d361a8f2fa64669a09baaa6a6fd8c84a806b9f004cc27b",
+   "exact_sha256": "05cfa88b1dc2683c68d361a8f2fa64669a09baaa6a6fd8c84a806b9f004cc27b",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f180-b",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "a35b1aaac1588bdadbbbccab5260bfde4d721cd0dc3eaaf27d9b8a7ffb4de55a",
+   "exact_sha256": "a35b1aaac1588bdadbbbccab5260bfde4d721cd0dc3eaaf27d9b8a7ffb4de55a",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-05f91749-f240-b",
+   "video": "05f91749a05e847d3508_run_19_seed_1136414482.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "18945e1cfdb0248a1f00e79591b3b7576394b63c551454af8bff9959d4b676f9",
+   "exact_sha256": "18945e1cfdb0248a1f00e79591b3b7576394b63c551454af8bff9959d4b676f9",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0624a7b3-f180-b",
+   "video": "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+   "frame_index": 180,
+   "time_s": 6.0,
+   "published_sha256": "7d5602a6d75fa7d2d8b540a42b56bc65bf29661efe0b3947c7c75ec337c48bb0",
+   "exact_sha256": "7d5602a6d75fa7d2d8b540a42b56bc65bf29661efe0b3947c7c75ec337c48bb0",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0624a7b3-f210-b",
+   "video": "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+   "frame_index": 210,
+   "time_s": 7.0,
+   "published_sha256": "22cda9c560412e71f80296c91a012c3a79fb99f949a9d2b68a8f1ed51b505390",
+   "exact_sha256": "22cda9c560412e71f80296c91a012c3a79fb99f949a9d2b68a8f1ed51b505390",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0624a7b3-f240-b",
+   "video": "0624a7b397510500ee00_run_53_seed_418875157.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "3330912428dabac6e2c9b071da6bc6f9166fe5f539076c07417b2df61f5fe7a4",
+   "exact_sha256": "3330912428dabac6e2c9b071da6bc6f9166fe5f539076c07417b2df61f5fe7a4",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f000-b",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 0,
+   "time_s": 0.0,
+   "published_sha256": "4b4c80533d0671d99dc857491b8985637361f1c59251a05ffcef57cf8e53c562",
+   "exact_sha256": "4b4c80533d0671d99dc857491b8985637361f1c59251a05ffcef57cf8e53c562",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f030-b",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 30,
+   "time_s": 1.0,
+   "published_sha256": "3e5fc720c7a432bf756a1f1d45bf0e515c9d455c73201d922e046fb5db5c79f0",
+   "exact_sha256": "3e5fc720c7a432bf756a1f1d45bf0e515c9d455c73201d922e046fb5db5c79f0",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f060-b",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "653f65237f36ad3bd0ea382fda3a69d24c9b8843de5914bcf6f7dd7406ec4bd1",
+   "exact_sha256": "653f65237f36ad3bd0ea382fda3a69d24c9b8843de5914bcf6f7dd7406ec4bd1",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f090-b",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 90,
+   "time_s": 3.0,
+   "published_sha256": "0b1497d8cf27a24f393655e87c198dfe99647b86fc23154a291321b7835df694",
+   "exact_sha256": "0b1497d8cf27a24f393655e87c198dfe99647b86fc23154a291321b7835df694",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f120-b",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 120,
+   "time_s": 4.0,
+   "published_sha256": "bc8b4e839a40e4ac2d66c90c43670068d52d63d26b43837a7fcadea8735e07fa",
+   "exact_sha256": "bc8b4e839a40e4ac2d66c90c43670068d52d63d26b43837a7fcadea8735e07fa",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f150-b",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 150,
+   "time_s": 5.0,
+   "published_sha256": "df30d7ab44f973a8cb9d73cb915b86183354eb6931ca7b81cbceee322bcfe7c4",
+   "exact_sha256": "df30d7ab44f973a8cb9d73cb915b86183354eb6931ca7b81cbceee322bcfe7c4",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f240-b",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 240,
+   "time_s": 8.0,
+   "published_sha256": "a7885b40e3571b276fa17b4b845a069c4dd98a36ddb5d5b6f94ceee9ab4555b2",
+   "exact_sha256": "a7885b40e3571b276fa17b4b845a069c4dd98a36ddb5d5b6f94ceee9ab4555b2",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-0729fd10-f270-b",
+   "video": "0729fd108949f741ded8_run_26_seed_477965812.ceiling_00.rgb.mp4",
+   "frame_index": 270,
+   "time_s": 9.0,
+   "published_sha256": "ce9bbac9833a695737e8fb577a14b72e25df4f08c4a004de880a50c4d55d7859",
+   "exact_sha256": "ce9bbac9833a695737e8fb577a14b72e25df4f08c4a004de880a50c4d55d7859",
+   "identical": true,
+   "offset_frames": 0
+  },
+  {
+   "id": "t-017e8454-f060-a",
+   "video": "017e84541eeadcaf7ba1_run_7_seed_1502988365.cam_00.rgb.mp4",
+   "frame_index": 60,
+   "time_s": 2.0,
+   "published_sha256": "dfacc230bd6f2a00249351f2fc4655b3e042d10d699d73d4bc19ad796aa3d067",
+   "exact_sha256": "dfacc230bd6f2a00249351f2fc4655b3e042d10d699d73d4bc19ad796aa3d067",
+   "identical": true,
+   "offset_frames": 0
+  }
+ ]
+}

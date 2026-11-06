@@ -1,0 +1,11 @@
+# Frame timing of evidence frames and visual-check crops (2026-11-06)
+
+Records behind the erratum in [docs/ERRATA.md](../../../../docs/ERRATA.md): until 2026-11-06 the app cut evidence frames and visual-check crops with an ffmpeg `-ss` seek, which on the SDG-Warehouse clips could return a later frame than the one the detector analysed. These records measure what that did to the published Stage I visual check and to a job on a bundled sample. No file in `data/evaluation/look/` was changed.
+
+| File | What it holds |
+|---|---|
+| `stage1_look_crops.json` | For each of the 148 Stage I look test crops (`data/evaluation/look/results.json`): the published crop's SHA-256 (made by the frozen `look.crop_frame`), the SHA-256 of the frame-exact crop of the intended frame (`media.crop_at`: same region, filters and JPEG quality, frame chosen by number), and the frame offset. All 148 are identical (offset 0): every test frame was a multiple of 30, a real keyframe of these clips. |
+| `stage1_look_rerun.json` | The frozen look-v2 check re-run on the frame-exact crops through the resident CPU worker (`scripts/look_worker.py`; same model, projector, prompt and decoding; 6 threads instead of 12), with the published and the re-run answer per crop. All 148 answers, and all 148 raw replies, are the same as published. |
+| `sample_jobs.json` | Two end-to-end CPU jobs on `data/samples/warehouse-1.mp4` with the fixed app (Fast search, 1 and 5 frames per second): the frame each evidence frame and crop shows, found by comparing it with every frame of OpenCV's sequential read, against the frame shown by the `-ss` command it replaces. At 1 frame/s both show the detector's frames; at 5 frames/s the replaced command was 6 and 24 frames late on two of three evidence frames and 6 frames late on the crop. |
+
+How it was measured: the Stage I clips are the phase2 test runs of NVIDIA's synthetic warehouse dataset (not redistributed here; `data/evaluation/phase2/`). The frame-exact crops were cut with `src/tracebrief/media.py` as of this date, and the re-run used the model files the app uses (`scripts/look_download.py`). A crop that differed from the published one would have been compared with the frame-exact crops from 2 frames before to 60 frames after its intended frame, to find the frame it came from; none differed.
