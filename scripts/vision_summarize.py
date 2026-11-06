@@ -3,7 +3,7 @@
 import argparse,json,random,statistics
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('evaluation');p.add_argument('--output',required=True);a=p.parse_args()
-j=json.loads(Path(a.evaluation).read_text());runs=j['runs'];rng=random.Random(20261004);values={'precision':[],'recall':[]};pair_values={'precision':[],'recall':[]}
+j=json.loads(Path(a.evaluation).read_text(encoding='utf-8'));runs=j['runs'];rng=random.Random(20261004);values={'precision':[],'recall':[]};pair_values={'precision':[],'recall':[]}
 for _ in range(2000):
     selected=[rng.choice(runs) for _ in runs]
     sample=[r['candidate'] for r in selected]
@@ -24,4 +24,4 @@ result={'n_runs':len(runs),'method':'2000 percentile bootstrap replicates resamp
 'runs_with_negative_sampled_frames':sum(r['candidate']['tn']+r['candidate']['fp']>0 for r in runs),
 'fully_negative_runs':sum(r['candidate']['tp']+r['candidate']['fn']==0 for r in runs),
 'candidate_groups':sum(r['events'] for r in runs)}
-Path(a.output).write_text(json.dumps(result,indent=2));print(json.dumps(result,indent=2))
+Path(a.output).write_text(json.dumps(result,indent=2), encoding='utf-8');print(json.dumps(result,indent=2))

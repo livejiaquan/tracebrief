@@ -29,7 +29,7 @@ def model():
 
 class CocoFrames(Dataset):
     def __init__(self,split):
-        coco=json.loads((BASE/'coco'/f'{split}.json').read_text())
+        coco=json.loads((BASE/'coco'/f'{split}.json').read_text(encoding='utf-8'))
         self.images=coco['images'];self.targets=defaultdict(list);self.train=split=='train'
         self.transform=TrainTransform(max_labels=80,flip_prob=.5,hsv_prob=.5) if self.train else ValTransform()
         for a in coco['annotations']:
@@ -107,7 +107,7 @@ if __name__=='__main__':
             'mosaic':False,'mixup':False,'flip_prob':.5,'hsv_prob':.5,'ema_decay':.99,'seed':20261012,'data_workers':0,
             'initial_person_coco_class':0,'initial_forklift_coco_class':7,'validation_iou':.5,'nms_iou':.45,
             'pretrained_sha256':hashlib.sha256((BASE/'yolox_tiny_coco.pth').read_bytes()).hexdigest(),'start_utc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
-    (BASE/'training_config.json').write_text(json.dumps(config,indent=2));history=[];best=None;qualified_epochs=0;start=time.monotonic();steps=0
+    (BASE/'training_config.json').write_text(json.dumps(config,indent=2), encoding='utf-8');history=[];best=None;qualified_epochs=0;start=time.monotonic();steps=0
     for epoch in range(1,a.epochs+1):
         net.train();losses=[];epoch_start=time.monotonic()
         net.head.use_l1=epoch>=max(5,a.epochs-5)
@@ -123,10 +123,10 @@ if __name__=='__main__':
         evaluation=validate(ema.ema,val);result['validation']=evaluation;history.append(result)
         torch.save({'model':ema.ema.state_dict(),'epoch':epoch,'config':config},BASE/'latest.pth')
         if best is None or rank(evaluation)>rank(best):
-            best=evaluation;torch.save({'model':ema.ema.state_dict(),'epoch':epoch,'config':config},BASE/'best.pth');(BASE/'best_validation.json').write_text(json.dumps(evaluation,indent=2))
-        (BASE/'training_history.json').write_text(json.dumps(history,indent=2))
+            best=evaluation;torch.save({'model':ema.ema.state_dict(),'epoch':epoch,'config':config},BASE/'best.pth');(BASE/'best_validation.json').write_text(json.dumps(evaluation,indent=2), encoding='utf-8')
+        (BASE/'training_history.json').write_text(json.dumps(history,indent=2), encoding='utf-8')
         print('VAL',epoch,json.dumps(evaluation['selected']),flush=True)
-        with (BASE/'REPORT.md').open('a') as f:
+        with (BASE/'REPORT.md').open('a', encoding='utf-8') as f:
             f.write(f'\n### Training epoch {epoch} ({time.strftime("%H:%M UTC",time.gmtime())})\n\nLoss {result["mean_loss"]:.4f}; validation-selected confidence {evaluation["selected"]["confidence"]}; '+
                     '; '.join(f'{name} P={m["precision"]:.3f}, R={m["recall"]:.3f}' for name,m in evaluation['selected']['detection'].items())+f'. Elapsed {time.monotonic()-start:.0f} s; no inference on the evaluation clips yet.\n')
         qualified_epochs=qualified_epochs+1 if evaluation['selected']['both_recall_ge_0_9'] else 0

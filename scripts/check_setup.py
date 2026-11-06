@@ -13,17 +13,19 @@ checks = []
 def check(name, ready, detail, required=True):
     checks.append({'check': name, 'ready': bool(ready), 'detail': detail, 'required': required})
 
-check('Python', sys.version_info >= (3, 11), sys.version.split()[0])
+check('Python', sys.version_info >= (3, 10), sys.version.split()[0])
 for binary in ('ffmpeg', 'ffprobe'):
-    check(binary, shutil.which(binary), shutil.which(binary) or 'Install ffmpeg using your OS package manager')
-for asset in ('web/index.html', 'web/app.js', 'config/vision.json', 'config/search_profiles.json', 'weights/yolox-tiny-warehouse.onnx', 'data/samples/manifest.json'):
+    # TRACEBRIEF_FFMPEG / TRACEBRIEF_FFPROBE name the executable; otherwise it is looked up on PATH.
+    found = shutil.which(os.environ.get(f'TRACEBRIEF_{binary.upper()}') or binary)
+    check(binary, found, found or f'Install ffmpeg using your OS package manager, or set TRACEBRIEF_{binary.upper()} to the executable')
+for asset in ('web/index.html', 'web/app.js', 'config/vision.json', 'config/search_profiles.json', 'weights/yolox-s-warehouse-v4.onnx', 'weights/yolox-tiny-warehouse.onnx', 'data/samples/manifest.json'):
     check(asset, (root/asset).is_file(), asset)
 vision_python = os.environ.get('TRACEBRIEF_VISION_PYTHON', sys.executable)
 llm_python = os.environ.get('TRACEBRIEF_LLM_PYTHON', sys.executable)
 for label, interpreter, packages in (('vision imports', vision_python, ['torch', 'torchvision', 'transformers', 'cv2', 'PIL', 'numpy', 'scipy', 'onnxruntime']), ('generation and visual-check imports', llm_python, ['llama_cpp', 'llama_cpp.mtmd_cpp'])):
     expression = ';'.join(f'import {name}' for name in packages)
     try:
-        result = subprocess.run([interpreter, '-c', expression], capture_output=True, text=True, timeout=60)
+        result = subprocess.run([interpreter, '-c', expression], capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=60)
         check(label, result.returncode == 0, 'Imports succeeded' if result.returncode == 0 else result.stderr[-2000:])
     except (OSError, subprocess.TimeoutExpired) as exc:
         check(label, False, str(exc))

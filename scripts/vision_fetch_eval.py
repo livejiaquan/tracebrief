@@ -31,7 +31,7 @@ class Remote(io.RawIOBase):
         if len(content)!=n:raise RuntimeError('Incomplete range response')
         self.pos+=n;return content
 
-rows=json.loads(Path(a.manifest).read_text())[a.cohort];by_url={}
+rows=json.loads(Path(a.manifest).read_text(encoding='utf-8'))[a.cohort];by_url={}
 for row in rows:
     item=row.get(a.asset)
     if not item or item.get('status')=='missing':

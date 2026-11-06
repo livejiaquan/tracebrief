@@ -18,22 +18,22 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--metadata', default='metadata/clips.parquet', help='pinned dataset clip metadata (parquet)')
 parser.add_argument('--videos-only', action='store_true', help='skip the annotation download step')
 args = parser.parse_args()
-SOURCE = json.loads(Path('tracebrief/data/evaluation/sources.json').read_text())
+SOURCE = json.loads(Path('tracebrief/data/evaluation/sources.json').read_text(encoding='utf-8'))
 URL = f"https://huggingface.co/datasets/{SOURCE['dataset_id']}/resolve/{SOURCE['dataset_revision']}/"
 CAP = 3_000_000_000
 lock = threading.Lock()
-reserved = json.loads((BASE/'download_budget.json').read_text())['reserved_response_bytes'] if (BASE/'download_budget.json').exists() else 0
-excluded = set(json.loads((BASE/'excluded_runs.json').read_text()))
+reserved = json.loads((BASE/'download_budget.json').read_text(encoding='utf-8'))['reserved_response_bytes'] if (BASE/'download_budget.json').exists() else 0
+excluded = set(json.loads((BASE/'excluded_runs.json').read_text(encoding='utf-8')))
 pattern = re.compile(r'[a-f0-9]{20}_run_\d+_seed_\d+')
 clips = pd.read_parquet(args.metadata)
 eligible = clips[((clips.scenario=='nearmiss') & (clips.camera_alias=='ceiling_00')) |
                  ((clips.scenario=='box_pickup') & (clips.camera_alias=='cam_00'))]
 eligible = {r['clip_key']:r for r in eligible.to_dict(orient='records') if r['run_id'] not in excluded}
-records = json.loads((BASE/'download_manifest.json').read_text()) if (BASE/'download_manifest.json').exists() else []
+records = json.loads((BASE/'download_manifest.json').read_text(encoding='utf-8')) if (BASE/'download_manifest.json').exists() else []
 for d in ['annotations','videos','logs']: (BASE/d).mkdir(exist_ok=True)
 
 def save(name, value):
-    (BASE/name).write_text(json.dumps(value, indent=2))
+    (BASE/name).write_text(json.dumps(value, indent=2), encoding='utf-8')
 
 class Remote(io.RawIOBase):
     def __init__(self,url): self.url=url; self.pos=0; self.session=requests.Session(); self.cache_start=-1; self.cache=b''

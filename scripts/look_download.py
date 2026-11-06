@@ -58,7 +58,7 @@ def main():
                 'source_url': f'https://huggingface.co/{REPO}/tree/{REVISION}',
                 'files': {name: {'sha256': sha, 'bytes': (args.output / name).stat().st_size} for name, sha in FILES.items()}}
     if not args.verify:
-        (args.output / 'tracebrief_model_manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+        (args.output / 'tracebrief_model_manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
     model, projector = (args.output.resolve() / name for name in FILES)
     print(f'TRACEBRIEF_VLM_MODEL={model}\nTRACEBRIEF_VLM_PROJECTOR={projector}')
 

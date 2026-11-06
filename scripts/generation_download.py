@@ -55,7 +55,7 @@ def main():
     verify(args.output / FILENAME)
     files = {name: {'sha256': digest(args.output/name), 'bytes': (args.output/name).stat().st_size} for name in (FILENAME, 'LICENSE', 'README.md')}
     manifest = {'repository': REPO, 'revision': REVISION, 'license': 'Apache-2.0', 'quantization': 'Q4_K_M', 'source_url': f'https://huggingface.co/{REPO}/tree/{REVISION}', 'files': files}
-    (args.output/'tracebrief_model_manifest.json').write_text(json.dumps(manifest, indent=2)+'\n')
+    (args.output/'tracebrief_model_manifest.json').write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf-8')
     print(f'TRACEBRIEF_LLM_MODEL={args.output.resolve()/FILENAME}')
 
 

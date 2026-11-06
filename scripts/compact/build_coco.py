@@ -13,7 +13,7 @@ ev=importlib.util.module_from_spec(spec);spec.loader.exec_module(ev)
 
 def extract(record):
     cv2.setNumThreads(1)
-    rows=[json.loads(line) for line in Path(record['annotation']['path']).read_text().splitlines()]
+    rows=[json.loads(line) for line in Path(record['annotation']['path']).read_text(encoding='utf-8').splitlines()]
     cap=cv2.VideoCapture(record['video']['path'])
     fps=cap.get(cv2.CAP_PROP_FPS);total=int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     w=int(cap.get(cv2.CAP_PROP_FRAME_WIDTH));h=int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -39,13 +39,13 @@ def extract(record):
     return {'record':info,'frames':frames}
 
 if __name__=='__main__':
-    manifest=json.loads((BASE/'download_manifest.json').read_text());rejected=[];accepted=[]
+    manifest=json.loads((BASE/'download_manifest.json').read_text(encoding='utf-8'));rejected=[];accepted=[]
     with futures.ThreadPoolExecutor(max_workers=4) as pool:
         for result in pool.map(extract,manifest):
             if 'rejected' in result:rejected.append(result)
             else:accepted.append(result)
             print('EXTRACT',len(accepted),len(rejected),flush=True)
-    (BASE/'annotation_integrity.json').write_text(json.dumps({'accepted':[r['record'] for r in accepted],'rejected':rejected},indent=2))
+    (BASE/'annotation_integrity.json').write_text(json.dumps({'accepted':[r['record'] for r in accepted],'rejected':rejected},indent=2), encoding='utf-8')
     splits={}
     for scenario in ['nearmiss','box_pickup']:
         cohort=sorted([r for r in accepted if r['record']['scenario']==scenario],key=lambda r:hashlib.sha256(('compact-20261012-'+r['record']['run_id']).encode()).hexdigest())
@@ -64,12 +64,12 @@ if __name__=='__main__':
                     x1,y1,x2,y2=[x/3 for x in box['bbox_xyxy']]
                     coco['annotations'].append({'id':len(coco['annotations'])+1,'image_id':image_id,'category_id':1 if box['class_name']=='person' else 2,
                        'bbox':[x1,y1,x2-x1,y2-y1],'area':(x2-x1)*(y2-y1),'iscrowd':0})
-        (BASE/'coco'/f'{split}.json').write_text(json.dumps(coco))
+        (BASE/'coco'/f'{split}.json').write_text(json.dumps(coco), encoding='utf-8')
         summary[split]={'frames':len(coco['images']),'boxes':len(coco['annotations']),'classes':dict(Counter(a['category_id'] for a in coco['annotations']))}
-    (BASE/'split.json').write_text(json.dumps(summary,indent=2))
-    prior=json.loads((BASE/'overlap_audit.json').read_text());excluded=set(json.loads((BASE/'excluded_runs.json').read_text()))
+    (BASE/'split.json').write_text(json.dumps(summary,indent=2), encoding='utf-8')
+    prior=json.loads((BASE/'overlap_audit.json').read_text(encoding='utf-8'));excluded=set(json.loads((BASE/'excluded_runs.json').read_text(encoding='utf-8')))
     train={r for r,s in splits.items() if s=='train'};val={r for r,s in splits.items() if s=='val'}
     prior.update({'accepted_runs_count':len(splits),'train_val_overlap':sorted(train&val),'accepted_excluded_overlap':sorted(set(splits)&excluded)})
     assert not train&val and not set(splits)&excluded
-    (BASE/'overlap_audit.json').write_text(json.dumps(prior,indent=2))
+    (BASE/'overlap_audit.json').write_text(json.dumps(prior,indent=2), encoding='utf-8')
     print('COCO COMPLETE',summary,flush=True)

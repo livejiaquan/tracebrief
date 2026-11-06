@@ -18,7 +18,7 @@ if __name__=='__main__':
     p.add_argument('--model-path',default='weights/yolox-tiny-warehouse.onnx',help='model_path written to the frozen settings')
     args=p.parse_args()
     torch.set_num_threads(4)
-    selected=json.loads((BASE/'best_validation.json').read_text())
+    selected=json.loads((BASE/'best_validation.json').read_text(encoding='utf-8'))
     checkpoint=torch.load(BASE/'best.pth',map_location='cpu',weights_only=True)
     net=model();net.load_state_dict(checkpoint['model']);net.eval();net.head.decode_in_inference=False
     target=BASE/'yolox_tiny_warehouse.onnx'
@@ -40,14 +40,14 @@ if __name__=='__main__':
         delta=float(np.abs(reference-actual).max())
         np.testing.assert_allclose(actual,reference,rtol=1e-3,atol=1e-3)
         parity.append({'val_image_index':int(i),'max_abs_error':delta})
-    (BASE/'onnx_validation_parity.json').write_text(json.dumps(parity,indent=2))
+    (BASE/'onnx_validation_parity.json').write_text(json.dumps(parity,indent=2), encoding='utf-8')
     shape=lambda value:[d.dim_value if d.HasField('dim_value') else d.dim_param for d in value.type.tensor_type.shape.dim]
     info={'opset':[{ 'domain':o.domain,'version':o.version} for o in graph.opset_import],
           'inputs':{v.name:shape(v) for v in graph.graph.input},'outputs':{v.name:shape(v) for v in graph.graph.output},
           'operators':dict(Counter(n.op_type for n in graph.graph.node)),'node_count':len(graph.graph.node),
           'conv_nodes':[{'name':n.name,'outputs':list(n.output)} for n in graph.graph.node if n.op_type=='Conv'],
           'sha256':sha(target),'bytes':target.stat().st_size,'metadata':meta,'compiled_hef':False}
-    (BASE/'onnx_manifest.json').write_text(json.dumps(info,indent=2))
+    (BASE/'onnx_manifest.json').write_text(json.dumps(info,indent=2), encoding='utf-8')
     config={'backend':'compact-onnx','model_path':args.model_path,
             'model_sha256':sha(target),'model_id':'YOLOX-tiny-warehouse-person-forklift',
             'model_revision':sha(BASE/'best.pth'),'input_size':416,'sample_fps':1.0,
@@ -61,8 +61,8 @@ if __name__=='__main__':
                                'routine':'same phase2 10 runs; candidate groups and overlays only; no false-positive rate'},
             'compact_vision_sha256':sha('tracebrief/src/tracebrief/compact_vision.py')}
     # No inference on held-out primary/routine has been run before this write.
-    (BASE/'FREEZE.json').write_text(json.dumps(freeze,indent=2))
-    Path('tracebrief/config/vision-compact.json').write_text(json.dumps(config,indent=2))
-    with (BASE/'REPORT.md').open('a') as stream:
+    (BASE/'FREEZE.json').write_text(json.dumps(freeze,indent=2), encoding='utf-8')
+    Path('tracebrief/config/vision-compact.json').write_text(json.dumps(config,indent=2), encoding='utf-8')
+    with (BASE/'REPORT.md').open('a', encoding='utf-8') as stream:
         stream.write(f'\n### Validation, export and freeze\n\nFrozen at `{freeze["timestamp_utc"]}`; best epoch {checkpoint["epoch"]}; confidence {config["confidence"]}. Validation recall >= 0.9 for both classes: {selected["selected"]["both_recall_ge_0_9"]}. ONNX opset 11, input 1x3x416x416, raw two-class grid output; PyTorch/ONNX numerical parity passed on 8 validation frames. Weight and ONNX SHA-256 values and all inference settings are in `FREEZE.json`. No HEF has been compiled.\n')
     print('FROZEN',json.dumps(config),flush=True)

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Build a source-only release from an explicit allowlist after local content checks.
 
-Weights, environments, runtime records, private research, caches and Git metadata
-are excluded. Run --check while documents are still being edited; package only
-after final review. The scan supplements manual review, not a secrets guarantee.
+Environments, runtime records, private research, caches and Git metadata are
+excluded; our two detector weights in weights/ are included, and every file must
+stay under GitHub's 100 MB per-file limit. Run --check while documents are still
+being edited; package only after final review. The scan supplements manual
+review, not a secrets guarantee.
 """
 import argparse
 import hashlib
@@ -14,13 +16,14 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 TOP = {'README.md', 'LICENSE', 'NOTICE', 'pyproject.toml', '.gitignore'}
-TREES = {'src', 'web', 'config', 'docs', 'tests', 'scripts'}
+TREES = {'src', 'web', 'config', 'docs', 'tests', 'scripts', '.github'}
 WEIGHTS = {'.onnx'}
+GITHUB_FILE_LIMIT = 100 * 1024 * 1024  # GitHub rejects larger files in a push
 EXCLUDE = {'__pycache__', 'pycache', '.pytest_cache', '.runtime', '.git', 'models', 'dist', 'build'}
-TEXT_SUFFIXES = {'.py', '.js', '.html', '.css', '.md', '.json', '.toml', '.txt', '.sh', '.yml', '.yaml'}
+TEXT_SUFFIXES = {'.py', '.js', '.html', '.css', '.md', '.json', '.toml', '.txt', '.sh', '.ps1', '.yml', '.yaml'}
 PATTERNS = {
     'private-home-path': re.compile(r'/(?:home|Users)/[A-Za-z0-9_.-]+/'),
-    'Windows-user-path': re.compile(r'[A-Za-z]:[\\/]Users[\\/][A-Za-z0-9_.-]+'),
+    'Windows-user-path': re.compile(r'[A-Za-z]:(?:\\{1,2}|/)Users(?:\\{1,2}|/)[A-Za-z0-9_.-]+'),  # also JSON-escaped
     'provider-secret-shape': re.compile(r'\b(?:sk-[A-Za-z0-9_-]{24,}|gh[pousr]_[A-Za-z0-9]{30,}|hf_[A-Za-z0-9]{24,}|AKIA[A-Z0-9]{16})\b'),
 }
 
@@ -35,12 +38,14 @@ def allowed(path):
         return path.suffix in WEIGHTS or path.suffix == '.md'
     if relative.parts[:2] == ('docs', 'images'):
         return path.suffix in {'.png', '.jpg'}
+    if relative.parts[:2] == ('tests', 'fixtures'):
+        return path.suffix in TEXT_SUFFIXES or path.suffix == '.npz'
     if relative.parts[0] in TREES:
         return path.suffix in TEXT_SUFFIXES or relative.name.startswith(('LICENSE', 'NOTICE'))
     if relative.parts[:3] == ('data', 'evaluation', 'look'):
         return path.suffix in {'.json', '.md', '.jpg'}
     if relative.parts[:2] == ('data', 'evaluation'):
-        return path.suffix in {'.json', '.md', '.csv', '.txt'}
+        return path.suffix in {'.json', '.jsonl', '.md', '.csv', '.txt'}
     if relative.parts[:2] == ('data', 'samples'):
         return path.suffix in {'.mp4', '.json', '.txt', '.md'}
     return False
@@ -61,15 +66,17 @@ def main():
             issues.append({'file': relative, 'kind': 'symlink-not-permitted'})
             continue
         content = path.read_bytes()
+        if len(content) >= GITHUB_FILE_LIMIT:
+            issues.append({'file': relative, 'kind': 'over-github-file-limit', 'bytes': len(content)})
         payloads[relative] = content
         entries.append({'path': relative, 'bytes': len(content), 'sha256': hashlib.sha256(content).hexdigest()})
-        if path.suffix not in {'.mp4', '.jpg', '.png', '.onnx'}:
+        if path.suffix not in {'.mp4', '.jpg', '.png', '.onnx', '.npz'}:
             text = content.decode('utf-8', errors='replace')
             for label, pattern in PATTERNS.items():
                 for match in pattern.finditer(text):
                     issues.append({'file': relative, 'line': text.count('\n', 0, match.start())+1, 'kind': label})
     manifest_path = ROOT/'data'/'samples'/'manifest.json'
-    for sample in json.loads(manifest_path.read_text()).get('samples', []):
+    for sample in json.loads(manifest_path.read_text(encoding='utf-8')).get('samples', []):
         clip = ROOT/'data'/'samples'/sample['path']
         if not clip.is_file() or hashlib.sha256(clip.read_bytes()).hexdigest() != sample['sha256']:
             issues.append({'file': sample['path'], 'kind': 'sample-hash-mismatch-or-missing'})

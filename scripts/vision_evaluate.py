@@ -34,18 +34,18 @@ def metrics(c):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--predictions',required=True);p.add_argument('--annotations');p.add_argument('--compact-gold');p.add_argument('--output',required=True);p.add_argument('--coverage-exclusions',help='Explicit JSON excluded_runs mapping for annotation integrity failures; retain predictions');a=p.parse_args()
     if not (a.annotations or a.compact_gold):p.error('Provide --annotations or --compact-gold')
-    compact=json.loads(Path(a.compact_gold).read_text())['videos'] if a.compact_gold else None
-    coverage=json.loads(Path(a.coverage_exclusions).read_text()) if a.coverage_exclusions else {}
+    compact=json.loads(Path(a.compact_gold).read_text(encoding='utf-8'))['videos'] if a.compact_gold else None
+    coverage=json.loads(Path(a.coverage_exclusions).read_text(encoding='utf-8')) if a.coverage_exclusions else {}
     excluded=coverage.get('excluded_runs',{});unscorable=[]
     counts={k:Counter(tp=0,fp=0,fn=0) for k in ['person','forklift']};candidate=Counter(tp=0,fp=0,fn=0,tn=0);pair_counts=Counter(tp=0,fp=0,fn=0);runs=[];failure=[]
     for pred in sorted(Path(a.predictions).glob('*/analysis.json')):
-        r=json.loads(pred.read_text());video_name=Path(r['video']['path']).name
+        r=json.loads(pred.read_text(encoding='utf-8'));video_name=Path(r['video']['path']).name
         if video_name in excluded:
             unscorable.append({'video':video_name,'sampled_frames':len(r['observations']),'reason':excluded[video_name],'events':len(r['events']),'wall_s':r['timing']['wall_s']});continue
         if compact is None:
             key=video_name.replace('.rgb.mp4','.object_detection.jsonl');matches=list(Path(a.annotations).glob('*'+key))
             if len(matches)!=1:raise ValueError(f'Expected exactly one annotation for {video_name}, got {len(matches)}')
-            gold=[json.loads(x) for x in matches[0].read_text().splitlines()]
+            gold=[json.loads(x) for x in matches[0].read_text(encoding='utf-8').splitlines()]
         cc=Counter(tp=0,fp=0,fn=0,tn=0);pc=Counter(tp=0,fp=0,fn=0);per={k:Counter(tp=0,fp=0,fn=0) for k in counts}
         for obs in r['observations']:
             gs=compact[video_name]['frames'][str(obs['frame_index'])] if compact is not None else boxes(gold[obs['frame_index']]);gt=near(gs,r['settings']['gap_ratio']);pr=bool(obs['proximity_pairs']);key2=('tp' if gt else 'fp') if pr else ('fn' if gt else 'tn');candidate[key2]+=1;cc[key2]+=1
@@ -76,5 +76,5 @@ def main():
         if coverage.get('pair_evidence_scope'):result['pair_evidence_scope']=coverage['pair_evidence_scope']
         if set(excluded)!={x['video'] for x in unscorable}:raise ValueError('Coverage exclusions do not match prediction inputs')
         result.update({'n_inferred_runs':len(runs)+len(unscorable),'n_sampled_frames':sum(x['sampled_frames'] for x in runs+unscorable),'n_scored_runs':len(runs),'n_scored_frames':sum(x['sampled_frames'] for x in runs),'unscorable_runs':unscorable,'coverage_scope':'All predictions retained; annotation integrity exclusions only, no replacements or outcome-based filtering.'})
-    Path(a.output).write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k not in ['runs','failures']},indent=2))
+    Path(a.output).write_text(json.dumps(result,indent=2), encoding='utf-8');print(json.dumps({k:v for k,v in result.items() if k not in ['runs','failures']},indent=2))
 if __name__=='__main__':main()
