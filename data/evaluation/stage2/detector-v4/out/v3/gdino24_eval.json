@@ -1,0 +1,1198 @@
+{
+  "scope": "Synthetic ceiling_00 sampled-frame image-space proxy; not near-miss/collision safety accuracy",
+  "n_runs": 24,
+  "n_frames": 240,
+  "candidate": {
+    "tp": 116,
+    "fp": 1,
+    "fn": 6,
+    "tn": 117,
+    "precision": 0.9914529914529915,
+    "recall": 0.9508196721311475
+  },
+  "pair_evidence": {
+    "tp": 114,
+    "fp": 4,
+    "fn": 8,
+    "precision": 0.9661016949152542,
+    "recall": 0.9344262295081968
+  },
+  "pair_evidence_scope": "Supplementary post-freeze audit: each predicted proximity pair requires both actor boxes IoU>=0.50 with a gold proximity pair. Not physical safety truth.",
+  "detection": {
+    "person": {
+      "tp": 232,
+      "fp": 2,
+      "fn": 8,
+      "precision": 0.9914529914529915,
+      "recall": 0.9666666666666667
+    },
+    "forklift": {
+      "tp": 238,
+      "fp": 3,
+      "fn": 2,
+      "precision": 0.9875518672199171,
+      "recall": 0.9916666666666667
+    }
+  },
+  "runs": [
+    {
+      "video": "001e53453441935632ae_run_1_seed_1288693302.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.585
+    },
+    {
+      "video": "005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "tn": 3,
+        "precision": 1.0,
+        "recall": 0.8571428571428571
+      },
+      "pair_evidence": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143
+      },
+      "detection": {
+        "person": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.8888888888888888,
+          "recall": 0.8
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.663
+    },
+    {
+      "video": "00e0991fbc61ad24102b_run_4_seed_1246964153.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.377
+    },
+    {
+      "video": "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 3,
+        "tn": 4,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "pair_evidence": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "detection": {
+        "person": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.7
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.633
+    },
+    {
+      "video": "016c1396912bfc432997_run_3_seed_1053328212.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 0,
+      "candidate": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 9,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.527
+    },
+    {
+      "video": "018461e5b5cf7a482d3f_run_7_seed_659607876.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.263
+    },
+    {
+      "video": "019b03676f77ba21f644_run_5_seed_946900070.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 6,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.463
+    },
+    {
+      "video": "01ce771b887143b4a592_run_13_seed_1930806231.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "tn": 6,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.251
+    },
+    {
+      "video": "01d845d245e362161c7e_run_11_seed_2081127967.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 9,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.9,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.9090909090909091,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.327
+    },
+    {
+      "video": "01ef74f98b72cc506daf_run_10_seed_618522198.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.446
+    },
+    {
+      "video": "01f95a365901208d48d3_run_17_seed_1189260733.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 1,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 0.8
+      },
+      "pair_evidence": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8
+      },
+      "detection": {
+        "person": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.501
+    },
+    {
+      "video": "02191b34f6b6e0ef2db4_run_19_seed_1390860058.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 8,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.603
+    },
+    {
+      "video": "027324c52d159ed93f1d_run_3_seed_1515015089.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.393
+    },
+    {
+      "video": "030a3619cbb8c73e15ee_run_27_seed_1264018830.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.388
+    },
+    {
+      "video": "03346ff432a0fe57151d_run_7_seed_428454731.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "tn": 4,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334
+      },
+      "detection": {
+        "person": {
+          "tp": 9,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.9,
+          "recall": 0.9
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.511
+    },
+    {
+      "video": "036c383522ca703ef6fd_run_1_seed_83132534.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "tn": 2,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.371
+    },
+    {
+      "video": "03a2937960b9e61f1c99_run_7_seed_900334964.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "tn": 5,
+        "precision": 0.8,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 8,
+          "fp": 2,
+          "fn": 2,
+          "precision": 0.8,
+          "recall": 0.8
+        }
+      },
+      "wall_s": 1.36
+    },
+    {
+      "video": "03ce361363ed08a91e1c_run_14_seed_908913191.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 8,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.482
+    },
+    {
+      "video": "03dde99492fa6570fb42_run_16_seed_1305281951.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 10,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.694
+    },
+    {
+      "video": "04573755960a76f10119_run_46_seed_1402403531.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.874
+    },
+    {
+      "video": "047fca619ecf7a56b2e4_run_4_seed_795834165.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 0,
+      "candidate": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 10,
+        "precision": null,
+        "recall": null
+      },
+      "pair_evidence": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.67
+    },
+    {
+      "video": "049c83ec42a34cacaff4_run_20_seed_2118878844.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 8,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.264
+    },
+    {
+      "video": "04ea23649a6f7cb2eea7_run_27_seed_523198994.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 1,
+        "tn": 4,
+        "precision": 1.0,
+        "recall": 0.8333333333333334
+      },
+      "pair_evidence": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.8333333333333334
+      },
+      "detection": {
+        "person": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.9
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.472
+    },
+    {
+      "video": "04eb0ba18568ad567724_run_12_seed_2001147106.ceiling_00.rgb.mp4",
+      "sampled_frames": 10,
+      "events": 1,
+      "candidate": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "tn": 5,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "pair_evidence": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "detection": {
+        "person": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "forklift": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0
+        }
+      },
+      "wall_s": 1.559
+    }
+  ],
+  "failures": [
+    {
+      "video": "005bc639df8c4a2b36e0_run_21_seed_1062601381.ceiling_00.rgb.mp4",
+      "frame_index": 90,
+      "type": "fn",
+      "gold_boxes": [
+        {
+          "class_name": "person",
+          "bbox_xyxy": [
+            898.0,
+            303.0,
+            1013.0,
+            544.0
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "bbox_xyxy": [
+            682.0,
+            219.0,
+            1022.0,
+            1079.0
+          ]
+        }
+      ],
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.9345,
+          "bbox_xyxy": [
+            707.47,
+            247.84,
+            1021.79,
+            1080
+          ]
+        }
+      ]
+    },
+    {
+      "video": "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+      "frame_index": 210,
+      "type": "fn",
+      "gold_boxes": [
+        {
+          "class_name": "person",
+          "bbox_xyxy": [
+            927.0,
+            134.0,
+            995.0,
+            278.0
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "bbox_xyxy": [
+            852.0,
+            58.0,
+            1064.0,
+            609.0
+          ]
+        }
+      ],
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.9547,
+          "bbox_xyxy": [
+            854.52,
+            49.31,
+            1060.99,
+            609.14
+          ]
+        }
+      ]
+    },
+    {
+      "video": "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+      "frame_index": 240,
+      "type": "fn",
+      "gold_boxes": [
+        {
+          "class_name": "person",
+          "bbox_xyxy": [
+            944.0,
+            115.0,
+            949.0,
+            272.0
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "bbox_xyxy": [
+            669.0,
+            53.0,
+            1128.0,
+            608.0
+          ]
+        }
+      ],
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.9648,
+          "bbox_xyxy": [
+            665.79,
+            53.44,
+            1127.31,
+            602.13
+          ]
+        }
+      ]
+    },
+    {
+      "video": "014f5a0f9461dfae29d5_run_13_seed_587824276.ceiling_00.rgb.mp4",
+      "frame_index": 270,
+      "type": "fn",
+      "gold_boxes": [
+        {
+          "class_name": "person",
+          "bbox_xyxy": [
+            936.0,
+            108.0,
+            960.0,
+            295.0
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "bbox_xyxy": [
+            642.0,
+            66.0,
+            1120.0,
+            665.0
+          ]
+        }
+      ],
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.9607,
+          "bbox_xyxy": [
+            639.63,
+            69.19,
+            1119.26,
+            655.13
+          ]
+        }
+      ]
+    },
+    {
+      "video": "01f95a365901208d48d3_run_17_seed_1189260733.ceiling_00.rgb.mp4",
+      "frame_index": 30,
+      "type": "fn",
+      "gold_boxes": [
+        {
+          "class_name": "person",
+          "bbox_xyxy": [
+            915.0,
+            350.0,
+            949.0,
+            386.0
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "bbox_xyxy": [
+            751.0,
+            95.0,
+            1031.0,
+            864.0
+          ]
+        }
+      ],
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.9363,
+          "bbox_xyxy": [
+            765.7,
+            89.14,
+            1034.11,
+            873.75
+          ]
+        }
+      ]
+    },
+    {
+      "video": "03a2937960b9e61f1c99_run_7_seed_900334964.ceiling_00.rgb.mp4",
+      "frame_index": 270,
+      "type": "fp",
+      "gold_boxes": [
+        {
+          "class_name": "person",
+          "bbox_xyxy": [
+            873.0,
+            587.0,
+            1004.0,
+            931.0
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "bbox_xyxy": [
+            875.0,
+            31.0,
+            1063.0,
+            481.0
+          ]
+        }
+      ],
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.9633,
+          "bbox_xyxy": [
+            849.03,
+            40.4,
+            1075.54,
+            620.02
+          ]
+        },
+        {
+          "class_name": "person",
+          "confidence": 0.9513,
+          "bbox_xyxy": [
+            871.5,
+            585.49,
+            1006.51,
+            933.89
+          ]
+        }
+      ]
+    },
+    {
+      "video": "04ea23649a6f7cb2eea7_run_27_seed_523198994.ceiling_00.rgb.mp4",
+      "frame_index": 150,
+      "type": "fn",
+      "gold_boxes": [
+        {
+          "class_name": "person",
+          "bbox_xyxy": [
+            841.0,
+            359.0,
+            936.0,
+            637.0
+          ]
+        },
+        {
+          "class_name": "forklift",
+          "bbox_xyxy": [
+            539.0,
+            70.0,
+            1025.0,
+            774.0
+          ]
+        }
+      ],
+      "detections": [
+        {
+          "class_name": "forklift",
+          "confidence": 0.9494,
+          "bbox_xyxy": [
+            511.78,
+            72.6,
+            1027.74,
+            776.94
+          ]
+        }
+      ]
+    }
+  ]
+}

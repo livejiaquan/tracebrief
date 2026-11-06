@@ -1,0 +1,107 @@
+{
+ "set": "kb_test",
+ "dets": "out/v3/kb_test_dets.jsonl",
+ "confidence": 0.35,
+ "summary": {
+  "images": 42,
+  "forklift": {
+   "gt": 43,
+   "ap50": 0.0,
+   "tp": 0,
+   "fp": 0,
+   "precision": null,
+   "recall": 0.0
+  },
+  "person": {
+   "gt": 44,
+   "ap50": 0.03297074127096298,
+   "tp": 3,
+   "fp": 52,
+   "precision": 0.05454545454545454,
+   "recall": 0.06818181818181818
+  },
+  "pair": {
+   "pair_images": 25,
+   "detected": 0,
+   "recall": 0.0,
+   "images_with_pair_output": 0,
+   "precision": null
+  }
+ },
+ "bootstrap": {
+  "ci95": {
+   "forklift_ap50": [
+    0.0,
+    0.0
+   ],
+   "person_ap50": [
+    0.002688926629076549,
+    0.09801631902561181
+   ],
+   "pair_recall": [
+    0.0,
+    0.0
+   ],
+   "forklift_recall": [
+    0.0,
+    0.0
+   ],
+   "person_recall": [
+    0.0,
+    0.14292207792207756
+   ]
+  },
+  "diff_vs_ref_ci95": {
+   "forklift_ap50": [
+    0.0,
+    0.0
+   ],
+   "person_ap50": [
+    -0.13648497169692245,
+    0.013666551842655203
+   ],
+   "pair_recall": [
+    0.0,
+    0.0
+   ],
+   "forklift_recall": [
+    0.0,
+    0.0
+   ],
+   "person_recall": [
+    -0.125,
+    0.0784313725490196
+   ]
+  }
+ },
+ "reference": {
+  "dets": "out/old/kb_test_dets.jsonl",
+  "confidence": 0.4,
+  "summary": {
+   "images": 42,
+   "forklift": {
+    "gt": 43,
+    "ap50": 0.0,
+    "tp": 0,
+    "fp": 1,
+    "precision": 0.0,
+    "recall": 0.0
+   },
+   "person": {
+    "gt": 44,
+    "ap50": 0.08722943722943723,
+    "tp": 4,
+    "fp": 7,
+    "precision": 0.36363636363636365,
+    "recall": 0.09090909090909091
+   },
+   "pair": {
+    "pair_images": 25,
+    "detected": 0,
+    "recall": 0.0,
+    "images_with_pair_output": 0,
+    "precision": null
+   }
+  }
+ }
+}

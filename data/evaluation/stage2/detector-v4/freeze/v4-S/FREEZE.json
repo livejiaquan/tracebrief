@@ -1,0 +1,533 @@
+{
+ "frozen_utc": "2026-11-05T01:06:29Z",
+ "name": "v4-S",
+ "run_dir": "work/stage2/detector-v4/runs/S",
+ "arm": "S",
+ "checkpoint_epoch": 11,
+ "checkpoint_sha256": "75d7feefe1c3eabbaefee6eb5eca7cf7c2b1e7cab90f7ce394a4c4fc24ded0c0",
+ "onnx_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+ "onnx_bytes": 35776936,
+ "confidence": 0.25,
+ "selection": {
+  "criterion": "max mean F1 of 7 validation cells over epochs x confidences 0.25..0.80 subject to the precision floors (PREREG.json selection)",
+  "selected": {
+   "confidence": 0.25,
+   "cells": {
+    "sdg_person": {
+     "tp": 398,
+     "fp": 26,
+     "fn": 39,
+     "precision": 0.9386792452830188,
+     "recall": 0.9107551487414187,
+     "f1": 0.924506387921022
+    },
+    "sdg_forklift": {
+     "tp": 460,
+     "fp": 5,
+     "fn": 5,
+     "precision": 0.989247311827957,
+     "recall": 0.989247311827957,
+     "f1": 0.989247311827957
+    },
+    "ss_person": {
+     "tp": 4520,
+     "fp": 812,
+     "fn": 1886,
+     "precision": 0.8477119279819955,
+     "recall": 0.705588510771152,
+     "f1": 0.7701482364968478
+    },
+    "ss_forklift": {
+     "tp": 66,
+     "fp": 128,
+     "fn": 94,
+     "precision": 0.3402061855670103,
+     "recall": 0.4125,
+     "f1": 0.3728813559322034
+    },
+    "loco_person": {
+     "tp": 97,
+     "fp": 46,
+     "fn": 60,
+     "precision": 0.6783216783216783,
+     "recall": 0.6178343949044586,
+     "f1": 0.6466666666666666
+    },
+    "loco_forklift": {
+     "tp": 41,
+     "fp": 33,
+     "fn": 39,
+     "precision": 0.5540540540540541,
+     "recall": 0.5125,
+     "f1": 0.5324675324675324
+    },
+    "kb_person": {
+     "tp": 44,
+     "fp": 20,
+     "fn": 31,
+     "precision": 0.6875,
+     "recall": 0.5866666666666667,
+     "f1": 0.6330935251798561
+    },
+    "kb_forklift": {
+     "tp": 79,
+     "fp": 10,
+     "fn": 17,
+     "precision": 0.8876404494382022,
+     "recall": 0.8229166666666666,
+     "f1": 0.8540540540540539
+    }
+   },
+   "score_mean_f1": 0.7251997719827817,
+   "pooled_precision": {
+    "sdg": 0.9651293588301463,
+    "ss": 0.829895041621426,
+    "loco": 0.6359447004608295,
+    "kb": 0.803921568627451
+   },
+   "constraints": {
+    "sdg_precision_pooled": true,
+    "sdg_recall_each_class": true,
+    "ss_precision_pooled": true,
+    "kb_precision_pooled": true,
+    "loco_forklift_precision": true
+   },
+   "constraints_met": 5,
+   "feasible": true
+  },
+  "per_group_at_selected": {
+   "kb:kb": {
+    "person": {
+     "tp": 44,
+     "fp": 20,
+     "fn": 31,
+     "precision": 0.6875,
+     "recall": 0.5866666666666667,
+     "f1": 0.6330935251798561
+    },
+    "forklift": {
+     "tp": 79,
+     "fp": 10,
+     "fn": 17,
+     "precision": 0.8876404494382022,
+     "recall": 0.8229166666666666,
+     "f1": 0.8540540540540539
+    }
+   },
+   "loco:loco-sub2-v1-train.json": {
+    "person": {
+     "tp": 9,
+     "fp": 10,
+     "fn": 13,
+     "precision": 0.47368421052631576,
+     "recall": 0.4090909090909091,
+     "f1": 0.43902439024390244
+    },
+    "forklift": {
+     "tp": 11,
+     "fp": 2,
+     "fn": 7,
+     "precision": 0.8461538461538461,
+     "recall": 0.6111111111111112,
+     "f1": 0.7096774193548387
+    }
+   },
+   "loco:loco-sub4-v1-val.json": {
+    "person": {
+     "tp": 49,
+     "fp": 13,
+     "fn": 19,
+     "precision": 0.7903225806451613,
+     "recall": 0.7205882352941176,
+     "f1": 0.7538461538461538
+    },
+    "forklift": {
+     "tp": 13,
+     "fp": 13,
+     "fn": 11,
+     "precision": 0.5,
+     "recall": 0.5416666666666666,
+     "f1": 0.52
+    }
+   },
+   "loco:loco-sub5-v1-train.json": {
+    "person": {
+     "tp": 39,
+     "fp": 23,
+     "fn": 28,
+     "precision": 0.6290322580645161,
+     "recall": 0.582089552238806,
+     "f1": 0.6046511627906976
+    },
+    "forklift": {
+     "tp": 17,
+     "fp": 18,
+     "fn": 21,
+     "precision": 0.4857142857142857,
+     "recall": 0.4473684210526316,
+     "f1": 0.4657534246575342
+    }
+   },
+   "sdg:ceiling": {
+    "person": {
+     "tp": 153,
+     "fp": 4,
+     "fn": 6,
+     "precision": 0.9745222929936306,
+     "recall": 0.9622641509433962,
+     "f1": 0.9683544303797469
+    },
+    "forklift": {
+     "tp": 160,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "sdg:non_ceiling": {
+    "person": {
+     "tp": 245,
+     "fp": 22,
+     "fn": 33,
+     "precision": 0.9176029962546817,
+     "recall": 0.8812949640287769,
+     "f1": 0.8990825688073394
+    },
+    "forklift": {
+     "tp": 300,
+     "fp": 5,
+     "fn": 5,
+     "precision": 0.9836065573770492,
+     "recall": 0.9836065573770492,
+     "f1": 0.9836065573770492
+    }
+   },
+   "ss:Warehouse_012": {
+    "person": {
+     "tp": 485,
+     "fp": 83,
+     "fn": 125,
+     "precision": 0.8538732394366197,
+     "recall": 0.7950819672131147,
+     "f1": 0.8234295415959252
+    },
+    "forklift": {
+     "tp": 0,
+     "fp": 8,
+     "fn": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "ss:Warehouse_013": {
+    "person": {
+     "tp": 641,
+     "fp": 133,
+     "fn": 172,
+     "precision": 0.8281653746770026,
+     "recall": 0.7884378843788438,
+     "f1": 0.8078134845620667
+    },
+    "forklift": {
+     "tp": 0,
+     "fp": 24,
+     "fn": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "ss:Warehouse_014": {
+    "person": {
+     "tp": 1122,
+     "fp": 264,
+     "fn": 580,
+     "precision": 0.8095238095238095,
+     "recall": 0.6592244418331374,
+     "f1": 0.7266839378238342
+    },
+    "forklift": {
+     "tp": 0,
+     "fp": 24,
+     "fn": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "ss:Warehouse_015": {
+    "person": {
+     "tp": 1157,
+     "fp": 161,
+     "fn": 586,
+     "precision": 0.877845220030349,
+     "recall": 0.663798049340218,
+     "f1": 0.7559621038876184
+    },
+    "forklift": {
+     "tp": 0,
+     "fp": 28,
+     "fn": 0,
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0
+    }
+   },
+   "ss:Warehouse_016": {
+    "person": {
+     "tp": 1115,
+     "fp": 171,
+     "fn": 423,
+     "precision": 0.8670295489891136,
+     "recall": 0.7249674902470741,
+     "f1": 0.7896600566572237
+    },
+    "forklift": {
+     "tp": 66,
+     "fp": 44,
+     "fn": 94,
+     "precision": 0.6,
+     "recall": 0.4125,
+     "f1": 0.4888888888888889
+    }
+   }
+  }
+ },
+ "onnx_io": {
+  "inputs": {
+   "images": [
+    1,
+    3,
+    416,
+    416
+   ]
+  },
+  "outputs": {
+   "raw_predictions": [
+    1,
+    3549,
+    7
+   ]
+  },
+  "opset": [
+   {
+    "domain": "",
+    "version": 11
+   }
+  ]
+ },
+ "onnx_io_matches_current_app_model": true,
+ "current_app_model_sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d",
+ "operators": {
+  "Constant": 40,
+  "Slice": 9,
+  "Concat": 21,
+  "Conv": 83,
+  "Sigmoid": 80,
+  "Mul": 74,
+  "Add": 7,
+  "MaxPool": 3,
+  "Resize": 2,
+  "Shape": 3,
+  "Reshape": 3,
+  "Transpose": 1
+ },
+ "parity": [
+  {
+   "val_index": 0,
+   "path": "work/stage2/detector-v3/data/sdg_coco/images/09789d1476cddc454371_run_1_seed_584839674.ceiling_00_000000.jpg",
+   "max_abs_error": 4.246830940246582e-06,
+   "app_decode_detections_at_0.25": 2
+  },
+  {
+   "val_index": 479,
+   "path": "work/stage2/detector-v3/data/sdg_coco/images/0b3cfb70346b22cfaf53_run_3_seed_938904625.eye_04_000285.jpg",
+   "max_abs_error": 4.291534423828125e-06,
+   "app_decode_detections_at_0.25": 2
+  },
+  {
+   "val_index": 480,
+   "path": "work/stage2/detector-v3/data/ss_frames/images/ss_strict_train/Warehouse_012_Camera_0000_000000.jpg",
+   "max_abs_error": 4.708766937255859e-06,
+   "app_decode_detections_at_0.25": 6
+  },
+  {
+   "val_index": 1479,
+   "path": "work/stage2/detector-v3/data/ss_frames/images/ss_strict_train/Warehouse_016_Camera_0010_008550.jpg",
+   "max_abs_error": 4.470348358154297e-06,
+   "app_decode_detections_at_0.25": 7
+  },
+  {
+   "val_index": 1480,
+   "path": "work/stage2/detector-v4/data/real_frames/kb_val/0000.jpg",
+   "max_abs_error": 3.0994415283203125e-06,
+   "app_decode_detections_at_0.25": 1
+  },
+  {
+   "val_index": 1563,
+   "path": "work/stage2/detector-v4/data/real_frames/kb_val/0083.jpg",
+   "max_abs_error": 5.0514936447143555e-06,
+   "app_decode_detections_at_0.25": 1
+  },
+  {
+   "val_index": 1564,
+   "path": "work/stage2/detector-v4/data/real_frames/loco_val/sub2_14244.jpg",
+   "max_abs_error": 4.5299530029296875e-06,
+   "app_decode_detections_at_0.25": 0
+  },
+  {
+   "val_index": 2141,
+   "path": "work/stage2/detector-v4/data/real_frames/loco_val/sub5_24447.jpg",
+   "max_abs_error": 4.0531158447265625e-06,
+   "app_decode_detections_at_0.25": 0
+  }
+ ],
+ "hailo_end_node_check": {
+  "script": "tracebrief/scripts/hailo/compile_yolox_hef.py",
+  "script_sha256": "86b2e34249f3b6b12b39c95cc1da34eb1cf0c808d4accc9ff8eca381510b28bc",
+  "end_nodes": [
+   "/head/reg_preds.0/Conv",
+   "/head/Sigmoid",
+   "/head/Sigmoid_1",
+   "/head/reg_preds.1/Conv",
+   "/head/Sigmoid_2",
+   "/head/Sigmoid_3",
+   "/head/reg_preds.2/Conv",
+   "/head/Sigmoid_4",
+   "/head/Sigmoid_5"
+  ],
+  "problems": [],
+  "passed": true
+ },
+ "app_settings": {
+  "backend": "compact-onnx",
+  "model_path": "work/stage2/detector-v4/freeze/v4-S/yolox-s-warehouse-v4-S.onnx",
+  "model_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+  "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+  "model_revision": "75d7feefe1c3eabbaefee6eb5eca7cf7c2b1e7cab90f7ce394a4c4fc24ded0c0",
+  "input_size": 416,
+  "sample_fps": 1.0,
+  "confidence": 0.25,
+  "nms_iou": 0.45,
+  "gap_ratio": 0.3,
+  "min_samples": 2,
+  "merge_gap_s": 2.1,
+  "threads": 4
+ },
+ "training_config": {
+  "arm": "S",
+  "architecture": "YOLOX-s",
+  "depth": 0.33,
+  "width": 0.5,
+  "num_classes": 2,
+  "input_size": [
+   416,
+   416
+  ],
+  "optimizer": "AdamW",
+  "base_lr": 0.0005,
+  "weight_decay": 0.0005,
+  "batch_size": 8,
+  "threads": 7,
+  "max_epochs": 12,
+  "per_epoch": {
+   "ss": 1500,
+   "loco": 2000,
+   "kb_repeats": 2
+  },
+  "frames_per_epoch": 6130,
+  "pool_sizes": {
+   "sdg_train": 2040,
+   "sdg_val": 480,
+   "ss_train": 6300,
+   "ss_val": 1000,
+   "loco_train": 3646,
+   "loco_val": 578,
+   "kb_train": 295,
+   "kb_val": 84
+  },
+  "steps_per_epoch": 767,
+  "mosaic": false,
+  "mixup": false,
+  "scale_jitter": {
+   "prob": 0.5,
+   "range": [
+    0.6,
+    1.5
+   ]
+  },
+  "flip_prob": 0.5,
+  "hsv_prob": 0.5,
+  "ema_decay": 0.99,
+  "seed": 20261105,
+  "data_workers": 0,
+  "patience": 4,
+  "min_epochs": 8,
+  "budget_hours": 6.5,
+  "thresholds": [
+   0.25,
+   0.3,
+   0.35,
+   0.4,
+   0.45,
+   0.5,
+   0.55,
+   0.6,
+   0.65,
+   0.7,
+   0.75,
+   0.8
+  ],
+  "cells": [
+   "sdg_person",
+   "sdg_forklift",
+   "ss_person",
+   "ss_forklift",
+   "kb_person",
+   "kb_forklift",
+   "loco_forklift"
+  ],
+  "floors": {
+   "sdg_precision_pooled": 0.9,
+   "sdg_recall_each_class": 0.85,
+   "ss_precision_pooled": 0.6,
+   "kb_precision_pooled": 0.6,
+   "loco_forklift_precision": 0.5
+  },
+  "pretrained": "work/stage2/detector-v4/data/downloads/weights/yolox_s.pth",
+  "pretrained_sha256": "f55ded7181e1b0c13285c56e7790b8f0e8f8db590fe4edb37f0b7f345c913a30",
+  "pretrained_tensors_loaded": [
+   456,
+   462
+  ],
+  "code_sha256": "28ed4aa3da4bea3eff8f5b27e8b79ebdded4c9c8ee72dfae6754ff045dbce4e9",
+  "start_utc": "2026-11-04T19:00:07Z",
+  "smoke": 0
+ },
+ "code_sha256": {
+  "audit_overlap.py": "139756409c31a89de45b9e9feeb6b53cf0193f2df38827741757eab4e0afb425",
+  "bench_cpu.py": "59ecf0af16a6ede4f655f43e2e4e2c0610353038acd6dced4df957c0ecbf2601",
+  "dup_audit.py": "681920397bbbb9a2d351f77c9ea39c61a0e361e20334a66a5f23c0f9aec557b3",
+  "freeze_export.py": "96c4fa002967f5c512176c0776c9ca3edc9e51bbb4baec94aeff26d14b390f52",
+  "make_prereg.py": "d7a136e7474bad0bedef3b821b1db489877a7c5ea7e78064a3f6b73d417351e7",
+  "merge_teacher.py": "c1b4e13605ac300c943ec3f43e3162e11309f528b41da17fbc24de570a2def8a",
+  "prep_real.py": "a14d5e3316d6068e02869401ca04504c4cc1f2d14bcf2111acf14b2421de795b",
+  "prep_ss.py": "155e6ca19c71163c8864f6d70dd7483ea1bfc09c40773b722159295d817e34ea",
+  "render_failures.py": "91de1fa834cd281b3bdaff968fc3ef02c941a9cecfdd7ff97d39f5ce12a28840",
+  "report_tables.py": "8f4326b031e3f797d6c5d565c38c4208df3ecd6d3c3f317597fc9b24098ae0d1",
+  "run_app_eval.py": "007e33d402494e93157fe0527078b31e89b77ef80bba2d2324f94487af965352",
+  "run_images.py": "58b5d76ce9f137d9887097c1db10004c96c6b112865998e1ecb976cc04616bd4",
+  "run_ss_detector.py": "4f6ed0fbe58debfd96d40376a8b3c0f12ebfda32a86ef6ca5a7941c52d05cbdd",
+  "score_images.py": "7058ed395c5586e780d08113f66ef8863e1e3807c6c0554942f67900a68990cb",
+  "score_ss.py": "3e928dd05693173e183360e95b94261026ca9b4b129517337075734d7b2cef8f",
+  "splits.py": "ef1541751e76be4f161eacd977a177be9e9c8f9ba001fdc38afd0d847015b08f",
+  "tables.py": "8c6c00d1eaa3f8c82a0afb1179dd88148a990413d5e745aef424309d7618d1e2",
+  "teacher_check.py": "997543737e2fd9dc87f2151110471643139438adb6697c7b638aba3832a77771",
+  "teacher_persons.py": "c051dfa2cefcc6dcc053083e365ad87a5aa1ddf10970006e1f1156ce243b9219",
+  "train_v4.py": "28ed4aa3da4bea3eff8f5b27e8b79ebdded4c9c8ee72dfae6754ff045dbce4e9"
+ },
+ "test_inference_before_freeze": false
+}

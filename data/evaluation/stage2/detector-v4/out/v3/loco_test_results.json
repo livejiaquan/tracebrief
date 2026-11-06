@@ -1,0 +1,123 @@
+{
+ "set": "loco_test",
+ "dets": "out/v3/loco_test_dets.jsonl",
+ "confidence": 0.35,
+ "summary": {
+  "images": 873,
+  "forklift": {
+   "gt": 188,
+   "ap50": 0.005267673301304049,
+   "tp": 1,
+   "fp": 13,
+   "precision": 0.07142857142857142,
+   "recall": 0.005319148936170213
+  },
+  "large_gt": 187,
+  "large_recall": 0.0053475935828877,
+  "small_gt": 1,
+  "small_recall": 0.0,
+  "false_forklift_rate": {
+   "pallet_truck": 0.006493506493506494,
+   "stillage": 0.0
+  },
+  "false_forklift_hits": {
+   "pallet_truck": 2,
+   "stillage": 0
+  },
+  "class_totals": {
+   "pallet_truck": 308,
+   "stillage": 402
+  },
+  "fp_per_100_images": 1.4891179839633448,
+  "fp_confusion": {
+   "background": 11,
+   "small_load_carrier": 1,
+   "pallet_truck": 1
+  },
+  "person_detections_at_conf": 903
+ },
+ "bootstrap": {
+  "ci95": {
+   "forklift_ap50": [
+    0.0003910269428067588,
+    0.021253841149740348
+   ],
+   "forklift_recall": [
+    0.0,
+    0.017543859649122806
+   ],
+   "forklift_precision": [
+    0.0,
+    0.25
+   ],
+   "pallet_truck_rate": [
+    0.0,
+    0.022142271422714216
+   ],
+   "stillage_rate": [
+    0.0,
+    0.0
+   ]
+  },
+  "diff_vs_ref_ci95": {
+   "forklift_ap50": [
+    0.00027896946988137714,
+    0.02121529431233203
+   ],
+   "forklift_recall": [
+    0.0,
+    0.017543859649122806
+   ],
+   "forklift_precision": [
+    0.0,
+    0.25
+   ],
+   "pallet_truck_rate": [
+    0.0,
+    0.022142271422714216
+   ],
+   "stillage_rate": [
+    -0.012136660524886022,
+    0.0
+   ]
+  }
+ },
+ "reference": {
+  "dets": "out/old/loco_test_dets.jsonl",
+  "confidence": 0.4,
+  "summary": {
+   "images": 873,
+   "forklift": {
+    "gt": 188,
+    "ap50": 5.114566284779051e-05,
+    "tp": 0,
+    "fp": 30,
+    "precision": 0.0,
+    "recall": 0.0
+   },
+   "large_gt": 187,
+   "large_recall": 0.0,
+   "small_gt": 1,
+   "small_recall": 0.0,
+   "false_forklift_rate": {
+    "pallet_truck": 0.0,
+    "stillage": 0.004975124378109453
+   },
+   "false_forklift_hits": {
+    "pallet_truck": 0,
+    "stillage": 2
+   },
+   "class_totals": {
+    "pallet_truck": 308,
+    "stillage": 402
+   },
+   "fp_per_100_images": 3.4364261168384878,
+   "fp_confusion": {
+    "background": 25,
+    "pallet": 3,
+    "stillage": 2
+   },
+   "person_detections_at_conf": 73
+  }
+ }
+}

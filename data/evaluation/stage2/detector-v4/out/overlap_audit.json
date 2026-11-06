@@ -1,0 +1,663 @@
+{
+ "sdg": {
+  "train_frames": 2040,
+  "val_frames": 480,
+  "runs": {
+   "train": 34,
+   "val": 8
+  },
+  "same_as_v2_split": true,
+  "train_val_overlap": [],
+  "lists": {
+   "tracebrief/data/evaluation/sources.json:primary": 24,
+   "tracebrief/data/evaluation/sources.json:routine": 10,
+   "tracebrief/data/evaluation/freeze.json:heldout+development": 27,
+   "tracebrief/data/evaluation/gold.json": 24,
+   "tracebrief/data/evaluation/phase2/sources.json:primary": 10,
+   "tracebrief/data/evaluation/phase2/sources.json:routine": 10,
+   "tracebrief/data/evaluation/phase2/gold.json": 9,
+   "tracebrief/data/evaluation/phase2/coverage_exclusions.json": 1,
+   "work/stage2/eval-events/inputs/heldout_runs.json": 33,
+   "work/stage2/eval-events/inputs/dev_runs.json": 3,
+   "work/stage2/eval-events/inputs/inventory.json:heldout_pool": 37,
+   "work/stage2/eval-events/inputs/inventory.json:routine_runs_excluded_from_event_gt": 20,
+   "work/stage2/eval-events/inputs/inventory.json:role_table non-training roles": 63
+  },
+  "overlap_with_heldout_lists": {
+   "tracebrief/data/evaluation/sources.json:primary": [],
+   "tracebrief/data/evaluation/sources.json:routine": [],
+   "tracebrief/data/evaluation/freeze.json:heldout+development": [],
+   "tracebrief/data/evaluation/gold.json": [],
+   "tracebrief/data/evaluation/phase2/sources.json:primary": [],
+   "tracebrief/data/evaluation/phase2/sources.json:routine": [],
+   "tracebrief/data/evaluation/phase2/gold.json": [],
+   "tracebrief/data/evaluation/phase2/coverage_exclusions.json": [],
+   "work/stage2/eval-events/inputs/heldout_runs.json": [],
+   "work/stage2/eval-events/inputs/dev_runs.json": [],
+   "work/stage2/eval-events/inputs/inventory.json:heldout_pool": [],
+   "work/stage2/eval-events/inputs/inventory.json:routine_runs_excluded_from_event_gt": [],
+   "work/stage2/eval-events/inputs/inventory.json:role_table non-training roles": []
+  },
+  "total_overlap": 0,
+  "role_check": {
+   "train_runs_with_role_compact_v1_train": 34,
+   "val_runs_with_role_compact_v1_val": 8,
+   "runs_missing_from_role_table": []
+  },
+  "sha256": {
+   "sdg_coco/train.json": "4ead462635a38e7883c59bee4f077eeb94015edda203b622a9acb2f29d2f6c8d",
+   "sdg_coco/val.json": "31d79c40f491e6d0b4a04161011ae902b8da2622681a8d45b44f796890385085",
+   "stage1 v2/coco/train.json": "4ead462635a38e7883c59bee4f077eeb94015edda203b622a9acb2f29d2f6c8d",
+   "stage1 v2/coco/val.json": "31d79c40f491e6d0b4a04161011ae902b8da2622681a8d45b44f796890385085"
+  },
+  "identical_to_stage1_v2": true
+ },
+ "smartspaces": {
+  "roles": {
+   "train": [
+    "Warehouse_000",
+    "Warehouse_002",
+    "Warehouse_004",
+    "Warehouse_006",
+    "Warehouse_008",
+    "Warehouse_009"
+   ],
+   "selection": [
+    "Warehouse_012",
+    "Warehouse_013",
+    "Warehouse_014",
+    "Warehouse_015",
+    "Warehouse_016"
+   ],
+   "test": [
+    "Warehouse_010",
+    "Warehouse_018",
+    "Warehouse_019",
+    "Warehouse_022"
+   ]
+  },
+  "families": {
+   "Warehouse_000": [
+    "Warehouse_000",
+    "Warehouse_001",
+    "Warehouse_002",
+    "Warehouse_003",
+    "Warehouse_004",
+    "Warehouse_005",
+    "Warehouse_006",
+    "Warehouse_007",
+    "Warehouse_020",
+    "Warehouse_021",
+    "Warehouse_023",
+    "Warehouse_024"
+   ],
+   "Warehouse_002": [
+    "Warehouse_000",
+    "Warehouse_001",
+    "Warehouse_002",
+    "Warehouse_003",
+    "Warehouse_004",
+    "Warehouse_005",
+    "Warehouse_006",
+    "Warehouse_007",
+    "Warehouse_020",
+    "Warehouse_021",
+    "Warehouse_023",
+    "Warehouse_024"
+   ],
+   "Warehouse_004": [
+    "Warehouse_000",
+    "Warehouse_001",
+    "Warehouse_002",
+    "Warehouse_003",
+    "Warehouse_004",
+    "Warehouse_005",
+    "Warehouse_006",
+    "Warehouse_007",
+    "Warehouse_020",
+    "Warehouse_021",
+    "Warehouse_023",
+    "Warehouse_024"
+   ],
+   "Warehouse_006": [
+    "Warehouse_000",
+    "Warehouse_001",
+    "Warehouse_002",
+    "Warehouse_003",
+    "Warehouse_004",
+    "Warehouse_005",
+    "Warehouse_006",
+    "Warehouse_007",
+    "Warehouse_020",
+    "Warehouse_021",
+    "Warehouse_023",
+    "Warehouse_024"
+   ],
+   "Warehouse_008": [
+    "Warehouse_008",
+    "Warehouse_009"
+   ],
+   "Warehouse_009": [
+    "Warehouse_008",
+    "Warehouse_009"
+   ],
+   "Warehouse_012": [
+    "Warehouse_012",
+    "Warehouse_013",
+    "Warehouse_014",
+    "Warehouse_015",
+    "Warehouse_016"
+   ],
+   "Warehouse_013": [
+    "Warehouse_012",
+    "Warehouse_013",
+    "Warehouse_014",
+    "Warehouse_015",
+    "Warehouse_016"
+   ],
+   "Warehouse_014": [
+    "Warehouse_012",
+    "Warehouse_013",
+    "Warehouse_014",
+    "Warehouse_015",
+    "Warehouse_016"
+   ],
+   "Warehouse_015": [
+    "Warehouse_012",
+    "Warehouse_013",
+    "Warehouse_014",
+    "Warehouse_015",
+    "Warehouse_016"
+   ],
+   "Warehouse_016": [
+    "Warehouse_012",
+    "Warehouse_013",
+    "Warehouse_014",
+    "Warehouse_015",
+    "Warehouse_016"
+   ],
+   "Warehouse_010": [
+    "Warehouse_010",
+    "Warehouse_011"
+   ],
+   "Warehouse_018": [
+    "Warehouse_017",
+    "Warehouse_018",
+    "Warehouse_019"
+   ],
+   "Warehouse_019": [
+    "Warehouse_017",
+    "Warehouse_018",
+    "Warehouse_019"
+   ],
+   "Warehouse_022": [
+    "Warehouse_022"
+   ]
+  },
+  "cross_role_conflicts": [],
+  "pool_scenes": {
+   "ss_train_v4": [
+    "Warehouse_000",
+    "Warehouse_002",
+    "Warehouse_004",
+    "Warehouse_006",
+    "Warehouse_008",
+    "Warehouse_009"
+   ],
+   "ss_sel_D": [
+    "Warehouse_012",
+    "Warehouse_013",
+    "Warehouse_014",
+    "Warehouse_015",
+    "Warehouse_016"
+   ]
+  },
+  "other_scenes_in_the_same_buildings": {
+   "train": [
+    "Warehouse_001",
+    "Warehouse_003",
+    "Warehouse_005",
+    "Warehouse_007",
+    "Warehouse_020",
+    "Warehouse_021",
+    "Warehouse_023",
+    "Warehouse_024"
+   ],
+   "selection": [],
+   "test": [
+    "Warehouse_011",
+    "Warehouse_017"
+   ]
+  },
+  "note": "family A (000-007) also contains 020/021 (v3 selection scene) and 023/024 (unused test split); none of them is used here"
+ },
+ "loco": {
+  "images_by_role": {
+   "train": 3646,
+   "val": 578,
+   "test": 873
+  },
+  "test_sites": [
+   "loco-sub3-v1-train.json"
+  ],
+  "train_and_val_sites": [
+   "loco-sub1-v1-val.json",
+   "loco-sub2-v1-train.json",
+   "loco-sub4-v1-val.json",
+   "loco-sub5-v1-train.json"
+  ],
+  "test_site_in_training_sites": false,
+  "sessions_with_mixed_roles": [],
+  "val_sessions": {
+   "loco-sub2-v1-train.json": "2019-11-25_0/",
+   "loco-sub4-v1-val.json": "2020-01-16_16/",
+   "loco-sub5-v1-train.json": "2020-03-05_1/"
+  },
+  "test_keys_in_train_or_val_pools": 0,
+  "test_keys_given_to_teacher": 0,
+  "test_images_near_duplicate_of_train_or_val (dHash Hamming <= 8)": [
+   {
+    "test": "loco:loco-sub3-v1-train.json:17799",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17813",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18472",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17797",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18060",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17842",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17997",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18612",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18605",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18033",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18023",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17998",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18628",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18378",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17812",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17844",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17846",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18019",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18018",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17825",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17994",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18016",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18420",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18012",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18015",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17862",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18371",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17847",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17848",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17819",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17834",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17818",
+    "min_hamming": 3
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18429",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18421",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18034",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18431",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18447",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17836",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18001",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17816",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17835",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17827",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18436",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18002",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17829",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17828",
+    "min_hamming": 3
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18045",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18040",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17838",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17870",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17937",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18424",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18406",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17820",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17831",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18430",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18476",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17866",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17843",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17933",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17826",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17996",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17832",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17809",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18031",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18462",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18041",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18021",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17867",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17837",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18367",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18603",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17976",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18029",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17795",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17869",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18355",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18619",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17849",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18020",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18633",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18463",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18370",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17810",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17883",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17824",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17817",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18425",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18427",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17805",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18000",
+    "min_hamming": 3
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17845",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17814",
+    "min_hamming": 5
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17815",
+    "min_hamming": 7
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18003",
+    "min_hamming": 8
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:17872",
+    "min_hamming": 6
+   },
+   {
+    "test": "loco:loco-sub3-v1-train.json:18419",
+    "min_hamming": 8
+   }
+  ]
+ },
+ "keremberke": {
+  "near_duplicate_pairs": [],
+  "same_source_name_pairs": [],
+  "removed": {
+   "train": [],
+   "valid": []
+  },
+  "test_keys_in_train_or_val_pools": 0,
+  "images": {
+   "train": 295,
+   "valid": 84,
+   "test": 42
+  }
+ }
+}

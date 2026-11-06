@@ -72,10 +72,13 @@ def test_static_files_cannot_escape_root(tmp_path):
     public = tmp_path / "public"
     public.mkdir()
     secret = tmp_path / "private.txt"
-    secret.write_text("private")
+    secret.write_text("private", encoding="utf-8")
     with pytest.raises(FileNotFoundError):
         safe_file(public, "../private.txt")
-    (public / "escape").symlink_to(secret)
+    try:
+        (public / "escape").symlink_to(secret)
+    except OSError:  # Windows without the symlink privilege
+        pytest.skip("cannot create a symlink here")
     with pytest.raises(FileNotFoundError):
         safe_file(public, "escape")
 
@@ -89,11 +92,16 @@ def test_empty_result_export_does_not_claim_safety():
 def test_shipped_profiles_point_to_frozen_compact_weights():
     import hashlib
     root = Path(__file__).resolve().parents[1]
-    profiles = json.loads((root/'config'/'search_profiles.json').read_text())
+    profiles = json.loads((root/'config'/'search_profiles.json').read_text(encoding="utf-8"))
     assert profiles['default'] == 'broader'
-    assert [p['id'] for p in profiles['profiles']] == ['broader', 'fast', 'stricter']
-    fast = next(p for p in profiles['profiles'] if p['id'] == 'fast')
-    settings = json.loads((root/'config'/fast['settings_file']).read_text())
-    assert settings['backend'] == 'compact-onnx'
-    weights = root/settings['model_path']
-    assert hashlib.sha256(weights.read_bytes()).hexdigest() == settings['model_sha256']
+    assert [p['id'] for p in profiles['profiles']] == ['broader', 'fast', 'stricter', 'stage1']
+    models = {}
+    for profile_id in ('fast', 'stage1'):
+        profile = next(p for p in profiles['profiles'] if p['id'] == profile_id)
+        settings = json.loads((root/'config'/profile['settings_file']).read_text(encoding="utf-8"))
+        assert settings['backend'] == 'compact-onnx'
+        weights = root/settings['model_path']
+        assert hashlib.sha256(weights.read_bytes()).hexdigest() == settings['model_sha256']
+        models[profile_id] = (settings['model_path'], profile.get('device', True))
+    # Fast search runs detector v4; the Stage I detector stays selectable on the CPU only.
+    assert models == {'fast': ('weights/yolox-s-warehouse-v4.onnx', True), 'stage1': ('weights/yolox-tiny-warehouse.onnx', False)}

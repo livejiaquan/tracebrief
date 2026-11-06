@@ -1,0 +1,2963 @@
+{
+ "results": {
+  "old": {
+   "label": "old",
+   "stage1": {
+    "pair": {
+     "tp": 51,
+     "fp": 1,
+     "fn": 8,
+     "precision": 0.9807692307692307,
+     "recall": 0.864406779661017
+    },
+    "detection": {
+     "person": {
+      "tp": 83,
+      "fp": 0,
+      "fn": 6,
+      "precision": 1.0,
+      "recall": 0.9325842696629213
+     },
+     "forklift": {
+      "tp": 90,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+     }
+    }
+   },
+   "gdino24": {
+    "pair": {
+     "tp": 104,
+     "fp": 10,
+     "fn": 18,
+     "precision": 0.9122807017543859,
+     "recall": 0.8524590163934426
+    }
+   },
+   "events_a1": {
+    "primary_peak_time_and_location": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "time_only_peak": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "interval_overlap_with_location": {
+     "strict": 30,
+     "n": 33,
+     "prec_k": 31,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.7642739435353026,
+      0.9685960584754184
+     ]
+    },
+    "onset_first_evidence_with_location": {
+     "strict": 24,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.5578244099712737,
+      0.8493255911457935
+     ]
+    },
+    "in_view_60px_events_peak_with_location": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    }
+   },
+   "events_miss_causes": {
+    "both actors detected but image-space gap above rule threshold": 1,
+    "candidate interval overlaps but its peak is outside the window": 4,
+    "one positive 1 Hz sample only (grouping requires 2)": 2
+   },
+   "events_frozen_truth": {
+    "primary_peak_time_and_location": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "time_only_peak": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "interval_overlap_with_location": {
+     "strict": 30,
+     "n": 33,
+     "prec_k": 31,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.7642739435353026,
+      0.9685960584754184
+     ]
+    },
+    "onset_first_evidence_with_location": {
+     "strict": 24,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.5578244099712737,
+      0.8493255911457935
+     ]
+    },
+    "in_view_60px_events_peak_with_location": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    }
+   },
+   "ss": {
+    "found_pooled": 0.12222387559986608,
+    "found": [
+     6571.0,
+     53762
+    ],
+    "person": {
+     "tp": 68004,
+     "fp": 32716,
+     "fn": 199428,
+     "P": 0.6751787132644956,
+     "R": 0.254285201471776
+    },
+    "forklift": {
+     "tp": 6534,
+     "fp": 235,
+     "fn": 47228,
+     "P": 0.9652829073718422,
+     "R": 0.12153565715561176
+    },
+    "alerts": {
+     "events": 61,
+     "alerts": 9,
+     "strict": 8,
+     "covered": 25,
+     "false_alerts": 1,
+     "strict_recall": 0.1311,
+     "covered_recall": 0.4098,
+     "alert_precision": 0.8889
+    },
+    "app_native": {
+     "events": 61,
+     "candidates": 29,
+     "strict": 27,
+     "events_with_any_candidate": 29,
+     "false_candidates": 2,
+     "strict_recall": 0.4426,
+     "any_recall": 0.4754
+    },
+    "per_scene": {
+     "Warehouse_010": {
+      "found_rate": 0.2008,
+      "any_camera_found": 0.6691,
+      "person_P": 0.6357,
+      "person_R": 0.2444,
+      "forklift_P": 0.9773,
+      "forklift_R": 0.2008,
+      "ap50": {
+       "person": 0.2064,
+       "forklift": 0.2353
+      },
+      "alerts": {
+       "events": 42,
+       "alerts": 9,
+       "strict": 8,
+       "strict_recall": 0.1905,
+       "covered": 25,
+       "covered_recall": 0.5952,
+       "false_alerts": 1,
+       "alert_precision": 0.8889
+      },
+      "fp_confusion": {
+       "person": {
+        "FourierGR1T2": 9319,
+        "AgilityDigit": 8728,
+        "background": 3960,
+        "same-class poor localisation": 3350,
+        "Transporter": 1410,
+        "NovaCarter": 1010
+       },
+       "forklift": {
+        "Transporter": 113,
+        "Person": 19,
+        "background": 7,
+        "NovaCarter": 1
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 26405,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 63517,
+         "tp": 8,
+         "recall": 0.0001
+        },
+        "96-inf": {
+         "gt": 108342,
+         "tp": 48453,
+         "recall": 0.4472
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 88,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 11912,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 17997,
+         "tp": 6022,
+         "recall": 0.3346
+        }
+       }
+      }
+     },
+     "Warehouse_018": {
+      "found_rate": 0.0211,
+      "any_camera_found": 0.0566,
+      "person_P": 0.4305,
+      "person_R": 0.3211,
+      "forklift_P": 0.8253,
+      "forklift_R": 0.0189,
+      "ap50": {
+       "person": 0.3517,
+       "forklift": 0.1165
+      },
+      "alerts": {
+       "events": 8,
+       "alerts": 0,
+       "strict": 0,
+       "strict_recall": 0.0,
+       "covered": 0,
+       "covered_recall": 0.0,
+       "false_alerts": 0,
+       "alert_precision": null
+      },
+      "fp_confusion": {
+       "person": {
+        "PalletTruck": 1780,
+        "background": 1197,
+        "same-class poor localisation": 62,
+        "Forklift": 41
+       },
+       "forklift": {
+        "same-class poor localisation": 57,
+        "background": 8
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 15,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 45,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 7191,
+         "tp": 2328,
+         "recall": 0.3237
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 177,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 138,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 15921,
+         "tp": 307,
+         "recall": 0.0193
+        }
+       }
+      }
+     },
+     "Warehouse_019": {
+      "found_rate": 0.0295,
+      "any_camera_found": 0.0577,
+      "person_P": 0.8228,
+      "person_R": 0.2789,
+      "forklift_P": 0.8798,
+      "forklift_R": 0.0294,
+      "ap50": {
+       "person": 0.3017,
+       "forklift": 0.0481
+      },
+      "alerts": {
+       "events": 11,
+       "alerts": 0,
+       "strict": 0,
+       "strict_recall": 0.0,
+       "covered": 0,
+       "covered_recall": 0.0,
+       "false_alerts": 0,
+       "alert_precision": null
+      },
+      "fp_confusion": {
+       "person": {
+        "same-class poor localisation": 357,
+        "background": 231,
+        "PalletTruck": 160,
+        "Forklift": 146
+       },
+       "forklift": {
+        "same-class poor localisation": 17,
+        "background": 11
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 1282,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 1898,
+         "tp": 87,
+         "recall": 0.0458
+        },
+        "96-inf": {
+         "gt": 11700,
+         "tp": 4063,
+         "recall": 0.3473
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 275,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 120,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 6588,
+         "tp": 205,
+         "recall": 0.0311
+        }
+       }
+      }
+     },
+     "Warehouse_022": {
+      "found_rate": 0.0,
+      "any_camera_found": 0.0,
+      "person_P": 0.9312,
+      "person_R": 0.2778,
+      "forklift_P": 0.0,
+      "forklift_R": 0.0,
+      "ap50": {
+       "person": 0.3045,
+       "forklift": 0.0
+      },
+      "alerts": {
+       "events": 0,
+       "alerts": 0,
+       "strict": 0,
+       "strict_recall": null,
+       "covered": 0,
+       "covered_recall": null,
+       "false_alerts": 0,
+       "alert_precision": null
+      },
+      "fp_confusion": {
+       "person": {
+        "same-class poor localisation": 965
+       },
+       "forklift": {
+        "background": 2
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 2359,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 13682,
+         "tp": 68,
+         "recall": 0.005
+        },
+        "96-inf": {
+         "gt": 30996,
+         "tp": 12997,
+         "recall": 0.4193
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 34,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 50,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 462,
+         "tp": 0,
+         "recall": 0.0
+        }
+       }
+      }
+     }
+    },
+    "source": "work/stage2/detector-v3/out/old/ss_results.json"
+   },
+   "loco_test": {
+    "set": "loco_test",
+    "dets": "out/old/loco_test_dets.jsonl",
+    "confidence": 0.4,
+    "summary": {
+     "images": 873,
+     "forklift": {
+      "gt": 188,
+      "ap50": 5.114566284779051e-05,
+      "tp": 0,
+      "fp": 30,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "large_gt": 187,
+     "large_recall": 0.0,
+     "small_gt": 1,
+     "small_recall": 0.0,
+     "false_forklift_rate": {
+      "pallet_truck": 0.0,
+      "stillage": 0.004975124378109453
+     },
+     "false_forklift_hits": {
+      "pallet_truck": 0,
+      "stillage": 2
+     },
+     "class_totals": {
+      "pallet_truck": 308,
+      "stillage": 402
+     },
+     "fp_per_100_images": 3.4364261168384878,
+     "fp_confusion": {
+      "background": 25,
+      "pallet": 3,
+      "stillage": 2
+     },
+     "person_detections_at_conf": 73
+    },
+    "bootstrap": {
+     "ci95": {
+      "forklift_ap50": [
+       0.0,
+       0.0005100639276992981
+      ],
+      "forklift_recall": [
+       0.0,
+       0.0
+      ],
+      "forklift_precision": [
+       0.0,
+       0.0
+      ],
+      "pallet_truck_rate": [
+       0.0,
+       0.0
+      ],
+      "stillage_rate": [
+       0.0,
+       0.012136660524886019
+      ]
+     }
+    }
+   },
+   "kb_test": {
+    "set": "kb_test",
+    "dets": "out/old/kb_test_dets.jsonl",
+    "confidence": 0.4,
+    "summary": {
+     "images": 42,
+     "forklift": {
+      "gt": 43,
+      "ap50": 0.0,
+      "tp": 0,
+      "fp": 1,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "person": {
+      "gt": 44,
+      "ap50": 0.08722943722943723,
+      "tp": 4,
+      "fp": 7,
+      "precision": 0.36363636363636365,
+      "recall": 0.09090909090909091
+     },
+     "pair": {
+      "pair_images": 25,
+      "detected": 0,
+      "recall": 0.0,
+      "images_with_pair_output": 0,
+      "precision": null
+     }
+    },
+    "bootstrap": {
+     "ci95": {
+      "forklift_ap50": [
+       0.0,
+       0.0
+      ],
+      "person_ap50": [
+       0.012194824799125184,
+       0.1815251855779427
+      ],
+      "pair_recall": [
+       0.0,
+       0.0
+      ],
+      "forklift_recall": [
+       0.0,
+       0.0
+      ],
+      "person_recall": [
+       0.021739130434782608,
+       0.18181818181818182
+      ]
+     }
+    }
+   }
+  },
+  "v3": {
+   "label": "v3",
+   "stage1": {
+    "pair": {
+     "tp": 53,
+     "fp": 5,
+     "fn": 6,
+     "precision": 0.9137931034482759,
+     "recall": 0.8983050847457628
+    },
+    "detection": {
+     "person": {
+      "tp": 83,
+      "fp": 4,
+      "fn": 6,
+      "precision": 0.9540229885057471,
+      "recall": 0.9325842696629213
+     },
+     "forklift": {
+      "tp": 90,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+     }
+    }
+   },
+   "gdino24": {
+    "pair": {
+     "tp": 114,
+     "fp": 4,
+     "fn": 8,
+     "precision": 0.9661016949152542,
+     "recall": 0.9344262295081968
+    }
+   },
+   "events_a1": {
+    "primary_peak_time_and_location": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 26,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "time_only_peak": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 26,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "interval_overlap_with_location": {
+     "strict": 31,
+     "n": 33,
+     "prec_k": 31,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.8039375519135219,
+      0.9832191169128082
+     ]
+    },
+    "onset_first_evidence_with_location": {
+     "strict": 24,
+     "n": 33,
+     "prec_k": 24,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.5578244099712737,
+      0.8493255911457935
+     ]
+    },
+    "in_view_60px_events_peak_with_location": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 26,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    }
+   },
+   "events_miss_causes": {
+    "both actors detected but image-space gap above rule threshold": 1,
+    "candidate interval overlaps but its peak is outside the window": 5,
+    "one positive 1 Hz sample only (grouping requires 2)": 1
+   },
+   "events_frozen_truth": {
+    "primary_peak_time_and_location": {
+     "strict": 25,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.5897538017044264,
+      0.8716828662282499
+     ]
+    },
+    "time_only_peak": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 26,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "interval_overlap_with_location": {
+     "strict": 30,
+     "n": 33,
+     "prec_k": 30,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.7642739435353026,
+      0.9685960584754184
+     ]
+    },
+    "onset_first_evidence_with_location": {
+     "strict": 24,
+     "n": 33,
+     "prec_k": 24,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.5578244099712737,
+      0.8493255911457935
+     ]
+    },
+    "in_view_60px_events_peak_with_location": {
+     "strict": 25,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 31,
+     "recall_wilson95": [
+      0.5897538017044264,
+      0.8716828662282499
+     ]
+    }
+   },
+   "ss": {
+    "found_pooled": 0.2728321119005989,
+    "found": [
+     14668.0,
+     53762
+    ],
+    "person": {
+     "tp": 150855,
+     "fp": 39233,
+     "fn": 116577,
+     "P": 0.7936061192710745,
+     "R": 0.5640873193933411
+    },
+    "forklift": {
+     "tp": 14658,
+     "fp": 20,
+     "fn": 39104,
+     "P": 0.9986374165417632,
+     "R": 0.2726461069156653
+    },
+    "alerts": {
+     "events": 61,
+     "alerts": 14,
+     "strict": 14,
+     "covered": 36,
+     "false_alerts": 0,
+     "strict_recall": 0.2295,
+     "covered_recall": 0.5902,
+     "alert_precision": 1.0
+    },
+    "app_native": {
+     "events": 61,
+     "candidates": 41,
+     "strict": 39,
+     "events_with_any_candidate": 43,
+     "false_candidates": 2,
+     "strict_recall": 0.6393,
+     "any_recall": 0.7049
+    },
+    "per_scene": {
+     "Warehouse_010": {
+      "found_rate": 0.4812,
+      "any_camera_found": 0.9988,
+      "person_P": 0.7959,
+      "person_R": 0.5876,
+      "forklift_P": 0.9987,
+      "forklift_R": 0.4808,
+      "ap50": {
+       "person": 0.6024,
+       "forklift": 0.5179
+      },
+      "alerts": {
+       "events": 42,
+       "alerts": 14,
+       "strict": 14,
+       "strict_recall": 0.3333,
+       "covered": 36,
+       "covered_recall": 0.8571,
+       "false_alerts": 0,
+       "alert_precision": 1.0
+      },
+      "fp_confusion": {
+       "person": {
+        "background": 25332,
+        "same-class poor localisation": 3925,
+        "AgilityDigit": 274,
+        "FourierGR1T2": 233,
+        "Transporter": 61,
+        "NovaCarter": 55
+       },
+       "forklift": {
+        "same-class poor localisation": 11,
+        "background": 6,
+        "Person": 2
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 26405,
+         "tp": 152,
+         "recall": 0.0058
+        },
+        "32-96": {
+         "gt": 63517,
+         "tp": 17004,
+         "recall": 0.2677
+        },
+        "96-inf": {
+         "gt": 108342,
+         "tp": 99346,
+         "recall": 0.917
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 88,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 11912,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 17997,
+         "tp": 14424,
+         "recall": 0.8015
+        }
+       }
+      }
+     },
+     "Warehouse_018": {
+      "found_rate": 0.0139,
+      "any_camera_found": 0.0322,
+      "person_P": 0.699,
+      "person_R": 0.7294,
+      "forklift_P": 1.0,
+      "forklift_R": 0.014,
+      "ap50": {
+       "person": 0.7581,
+       "forklift": 0.0291
+      },
+      "alerts": {
+       "events": 8,
+       "alerts": 0,
+       "strict": 0,
+       "strict_recall": 0.0,
+       "covered": 0,
+       "covered_recall": 0.0,
+       "false_alerts": 0,
+       "alert_precision": null
+      },
+      "fp_confusion": {
+       "person": {
+        "background": 2001,
+        "same-class poor localisation": 240,
+        "Forklift": 31,
+        "PalletTruck": 6
+       },
+       "forklift": {}
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 15,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 45,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 7191,
+         "tp": 5289,
+         "recall": 0.7355
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 177,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 138,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 15921,
+         "tp": 228,
+         "recall": 0.0143
+        }
+       }
+      }
+     },
+     "Warehouse_019": {
+      "found_rate": 0.001,
+      "any_camera_found": 0.0023,
+      "person_P": 0.8328,
+      "person_R": 0.5851,
+      "forklift_P": 0.8571,
+      "forklift_R": 0.0009,
+      "ap50": {
+       "person": 0.6066,
+       "forklift": 0.004
+      },
+      "alerts": {
+       "events": 11,
+       "alerts": 0,
+       "strict": 0,
+       "strict_recall": 0.0,
+       "covered": 0,
+       "covered_recall": 0.0,
+       "false_alerts": 0,
+       "alert_precision": null
+      },
+      "fp_confusion": {
+       "person": {
+        "background": 1294,
+        "same-class poor localisation": 404,
+        "Forklift": 48,
+        "PalletTruck": 2
+       },
+       "forklift": {
+        "same-class poor localisation": 1
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 1282,
+         "tp": 1,
+         "recall": 0.0008
+        },
+        "32-96": {
+         "gt": 1898,
+         "tp": 76,
+         "recall": 0.04
+        },
+        "96-inf": {
+         "gt": 11700,
+         "tp": 8630,
+         "recall": 0.7376
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 275,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 120,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 6588,
+         "tp": 6,
+         "recall": 0.0009
+        }
+       }
+      }
+     },
+     "Warehouse_022": {
+      "found_rate": 0.0,
+      "any_camera_found": 0.0,
+      "person_P": 0.7926,
+      "person_R": 0.4328,
+      "forklift_P": null,
+      "forklift_R": 0.0,
+      "ap50": {
+       "person": 0.4689,
+       "forklift": 0.0
+      },
+      "alerts": {
+       "events": 0,
+       "alerts": 0,
+       "strict": 0,
+       "strict_recall": null,
+       "covered": 0,
+       "covered_recall": null,
+       "false_alerts": 0,
+       "alert_precision": null
+      },
+      "fp_confusion": {
+       "person": {
+        "background": 3915,
+        "same-class poor localisation": 1411,
+        "NovaCarter": 1
+       },
+       "forklift": {}
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 2359,
+         "tp": 24,
+         "recall": 0.0102
+        },
+        "32-96": {
+         "gt": 13682,
+         "tp": 775,
+         "recall": 0.0566
+        },
+        "96-inf": {
+         "gt": 30996,
+         "tp": 19558,
+         "recall": 0.631
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 34,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 50,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 462,
+         "tp": 0,
+         "recall": 0.0
+        }
+       }
+      }
+     }
+    },
+    "source": "work/stage2/detector-v3/out/v3/ss_results.json"
+   },
+   "loco_test": {
+    "set": "loco_test",
+    "dets": "out/v3/loco_test_dets.jsonl",
+    "confidence": 0.35,
+    "summary": {
+     "images": 873,
+     "forklift": {
+      "gt": 188,
+      "ap50": 0.005267673301304049,
+      "tp": 1,
+      "fp": 13,
+      "precision": 0.07142857142857142,
+      "recall": 0.005319148936170213
+     },
+     "large_gt": 187,
+     "large_recall": 0.0053475935828877,
+     "small_gt": 1,
+     "small_recall": 0.0,
+     "false_forklift_rate": {
+      "pallet_truck": 0.006493506493506494,
+      "stillage": 0.0
+     },
+     "false_forklift_hits": {
+      "pallet_truck": 2,
+      "stillage": 0
+     },
+     "class_totals": {
+      "pallet_truck": 308,
+      "stillage": 402
+     },
+     "fp_per_100_images": 1.4891179839633448,
+     "fp_confusion": {
+      "background": 11,
+      "small_load_carrier": 1,
+      "pallet_truck": 1
+     },
+     "person_detections_at_conf": 903
+    },
+    "bootstrap": {
+     "ci95": {
+      "forklift_ap50": [
+       0.0003910269428067588,
+       0.021253841149740348
+      ],
+      "forklift_recall": [
+       0.0,
+       0.017543859649122806
+      ],
+      "forklift_precision": [
+       0.0,
+       0.25
+      ],
+      "pallet_truck_rate": [
+       0.0,
+       0.022142271422714216
+      ],
+      "stillage_rate": [
+       0.0,
+       0.0
+      ]
+     },
+     "diff_vs_ref_ci95": {
+      "forklift_ap50": [
+       0.00027896946988137714,
+       0.02121529431233203
+      ],
+      "forklift_recall": [
+       0.0,
+       0.017543859649122806
+      ],
+      "forklift_precision": [
+       0.0,
+       0.25
+      ],
+      "pallet_truck_rate": [
+       0.0,
+       0.022142271422714216
+      ],
+      "stillage_rate": [
+       -0.012136660524886022,
+       0.0
+      ]
+     }
+    },
+    "reference": {
+     "dets": "out/old/loco_test_dets.jsonl",
+     "confidence": 0.4,
+     "summary": {
+      "images": 873,
+      "forklift": {
+       "gt": 188,
+       "ap50": 5.114566284779051e-05,
+       "tp": 0,
+       "fp": 30,
+       "precision": 0.0,
+       "recall": 0.0
+      },
+      "large_gt": 187,
+      "large_recall": 0.0,
+      "small_gt": 1,
+      "small_recall": 0.0,
+      "false_forklift_rate": {
+       "pallet_truck": 0.0,
+       "stillage": 0.004975124378109453
+      },
+      "false_forklift_hits": {
+       "pallet_truck": 0,
+       "stillage": 2
+      },
+      "class_totals": {
+       "pallet_truck": 308,
+       "stillage": 402
+      },
+      "fp_per_100_images": 3.4364261168384878,
+      "fp_confusion": {
+       "background": 25,
+       "pallet": 3,
+       "stillage": 2
+      },
+      "person_detections_at_conf": 73
+     }
+    }
+   },
+   "kb_test": {
+    "set": "kb_test",
+    "dets": "out/v3/kb_test_dets.jsonl",
+    "confidence": 0.35,
+    "summary": {
+     "images": 42,
+     "forklift": {
+      "gt": 43,
+      "ap50": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "precision": null,
+      "recall": 0.0
+     },
+     "person": {
+      "gt": 44,
+      "ap50": 0.03297074127096298,
+      "tp": 3,
+      "fp": 52,
+      "precision": 0.05454545454545454,
+      "recall": 0.06818181818181818
+     },
+     "pair": {
+      "pair_images": 25,
+      "detected": 0,
+      "recall": 0.0,
+      "images_with_pair_output": 0,
+      "precision": null
+     }
+    },
+    "bootstrap": {
+     "ci95": {
+      "forklift_ap50": [
+       0.0,
+       0.0
+      ],
+      "person_ap50": [
+       0.002688926629076549,
+       0.09801631902561181
+      ],
+      "pair_recall": [
+       0.0,
+       0.0
+      ],
+      "forklift_recall": [
+       0.0,
+       0.0
+      ],
+      "person_recall": [
+       0.0,
+       0.14292207792207756
+      ]
+     },
+     "diff_vs_ref_ci95": {
+      "forklift_ap50": [
+       0.0,
+       0.0
+      ],
+      "person_ap50": [
+       -0.13648497169692245,
+       0.013666551842655203
+      ],
+      "pair_recall": [
+       0.0,
+       0.0
+      ],
+      "forklift_recall": [
+       0.0,
+       0.0
+      ],
+      "person_recall": [
+       -0.125,
+       0.0784313725490196
+      ]
+     }
+    },
+    "reference": {
+     "dets": "out/old/kb_test_dets.jsonl",
+     "confidence": 0.4,
+     "summary": {
+      "images": 42,
+      "forklift": {
+       "gt": 43,
+       "ap50": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "precision": 0.0,
+       "recall": 0.0
+      },
+      "person": {
+       "gt": 44,
+       "ap50": 0.08722943722943723,
+       "tp": 4,
+       "fp": 7,
+       "precision": 0.36363636363636365,
+       "recall": 0.09090909090909091
+      },
+      "pair": {
+       "pair_images": 25,
+       "detected": 0,
+       "recall": 0.0,
+       "images_with_pair_output": 0,
+       "precision": null
+      }
+     }
+    }
+   }
+  },
+  "v4-T": {
+   "label": "v4-T",
+   "stage1": {
+    "pair": {
+     "tp": 53,
+     "fp": 2,
+     "fn": 6,
+     "precision": 0.9636363636363636,
+     "recall": 0.8983050847457628
+    },
+    "detection": {
+     "person": {
+      "tp": 83,
+      "fp": 2,
+      "fn": 6,
+      "precision": 0.9764705882352941,
+      "recall": 0.9325842696629213
+     },
+     "forklift": {
+      "tp": 90,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+     }
+    }
+   },
+   "gdino24": {
+    "pair": {
+     "tp": 113,
+     "fp": 5,
+     "fn": 9,
+     "precision": 0.9576271186440678,
+     "recall": 0.9262295081967213
+    }
+   },
+   "events_a1": {
+    "primary_peak_time_and_location": {
+     "strict": 25,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.5897538017044264,
+      0.8716828662282499
+     ]
+    },
+    "time_only_peak": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 26,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "interval_overlap_with_location": {
+     "strict": 29,
+     "n": 33,
+     "prec_k": 29,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.7267449482892476,
+      0.9518383869058644
+     ]
+    },
+    "onset_first_evidence_with_location": {
+     "strict": 23,
+     "n": 33,
+     "prec_k": 23,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.5266186485419944,
+      0.8262446857594641
+     ]
+    },
+    "in_view_60px_events_peak_with_location": {
+     "strict": 25,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.5897538017044264,
+      0.8716828662282499
+     ]
+    }
+   },
+   "events_miss_causes": {
+    "both actors detected but image-space gap above rule threshold": 1,
+    "candidate in time window but person location > 2.5 m (or assigned to another event)": 1,
+    "candidate interval overlaps but its peak is outside the window": 4,
+    "one positive 1 Hz sample only (grouping requires 2)": 2
+   },
+   "events_frozen_truth": {
+    "primary_peak_time_and_location": {
+     "strict": 25,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.5897538017044264,
+      0.8716828662282499
+     ]
+    },
+    "time_only_peak": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 26,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "interval_overlap_with_location": {
+     "strict": 29,
+     "n": 33,
+     "prec_k": 29,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.7267449482892476,
+      0.9518383869058644
+     ]
+    },
+    "onset_first_evidence_with_location": {
+     "strict": 23,
+     "n": 33,
+     "prec_k": 23,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.5266186485419944,
+      0.8262446857594641
+     ]
+    },
+    "in_view_60px_events_peak_with_location": {
+     "strict": 25,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 30,
+     "recall_wilson95": [
+      0.5897538017044264,
+      0.8716828662282499
+     ]
+    }
+   },
+   "ss": {
+    "found_pooled": 0.2756035861761095,
+    "found": [
+     14817.0,
+     53762
+    ],
+    "person": {
+     "tp": 144120,
+     "fp": 12606,
+     "fn": 123312,
+     "P": 0.9195666322116305,
+     "R": 0.5389033473929822
+    },
+    "forklift": {
+     "tp": 14617,
+     "fp": 246,
+     "fn": 39145,
+     "P": 0.9834488326717352,
+     "R": 0.2718834864774376
+    },
+    "alerts": {
+     "events": 61,
+     "alerts": 26,
+     "strict": 20,
+     "covered": 50,
+     "false_alerts": 1,
+     "strict_recall": 0.3279,
+     "covered_recall": 0.8197,
+     "alert_precision": 0.9615
+    },
+    "app_native": {
+     "events": 61,
+     "candidates": 62,
+     "strict": 44,
+     "events_with_any_candidate": 47,
+     "false_candidates": 9,
+     "strict_recall": 0.7213,
+     "any_recall": 0.7705
+    },
+    "per_scene": {
+     "Warehouse_010": {
+      "found_rate": 0.365,
+      "any_camera_found": 0.9144,
+      "person_P": 0.9182,
+      "person_R": 0.4891,
+      "forklift_P": 0.9986,
+      "forklift_R": 0.365,
+      "ap50": {
+       "person": 0.5353,
+       "forklift": 0.5096
+      },
+      "alerts": {
+       "events": 42,
+       "alerts": 12,
+       "strict": 12,
+       "strict_recall": 0.2857,
+       "covered": 35,
+       "covered_recall": 0.8333,
+       "false_alerts": 0,
+       "alert_precision": 1.0
+      },
+      "fp_confusion": {
+       "person": {
+        "same-class poor localisation": 3197,
+        "background": 3140,
+        "FourierGR1T2": 1208,
+        "AgilityDigit": 881,
+        "Transporter": 118,
+        "NovaCarter": 96
+       },
+       "forklift": {
+        "background": 10,
+        "same-class poor localisation": 4,
+        "FourierGR1T2": 1
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 26405,
+         "tp": 20,
+         "recall": 0.0008
+        },
+        "32-96": {
+         "gt": 63517,
+         "tp": 7144,
+         "recall": 0.1125
+        },
+        "96-inf": {
+         "gt": 108342,
+         "tp": 89804,
+         "recall": 0.8289
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 88,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 11912,
+         "tp": 2277,
+         "recall": 0.1912
+        },
+        "96-inf": {
+         "gt": 17997,
+         "tp": 8671,
+         "recall": 0.4818
+        }
+       }
+      }
+     },
+     "Warehouse_018": {
+      "found_rate": 0.1386,
+      "any_camera_found": 0.1899,
+      "person_P": 0.9776,
+      "person_R": 0.7955,
+      "forklift_P": 0.9881,
+      "forklift_R": 0.1386,
+      "ap50": {
+       "person": 0.9066,
+       "forklift": 0.2023
+      },
+      "alerts": {
+       "events": 8,
+       "alerts": 5,
+       "strict": 3,
+       "strict_recall": 0.375,
+       "covered": 5,
+       "covered_recall": 0.625,
+       "false_alerts": 0,
+       "alert_precision": 1.0
+      },
+      "fp_confusion": {
+       "person": {
+        "same-class poor localisation": 108,
+        "background": 21,
+        "PalletTruck": 3
+       },
+       "forklift": {
+        "same-class poor localisation": 27
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 15,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 45,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 7191,
+         "tp": 5768,
+         "recall": 0.8021
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 177,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 138,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 15921,
+         "tp": 2250,
+         "recall": 0.1413
+        }
+       }
+      }
+     },
+     "Warehouse_019": {
+      "found_rate": 0.196,
+      "any_camera_found": 0.242,
+      "person_P": 0.8298,
+      "person_R": 0.6732,
+      "forklift_P": 0.8515,
+      "forklift_R": 0.1675,
+      "ap50": {
+       "person": 0.7024,
+       "forklift": 0.251
+      },
+      "alerts": {
+       "events": 11,
+       "alerts": 9,
+       "strict": 5,
+       "strict_recall": 0.4545,
+       "covered": 10,
+       "covered_recall": 0.9091,
+       "false_alerts": 1,
+       "alert_precision": 0.8889
+      },
+      "fp_confusion": {
+       "person": {
+        "PalletTruck": 1749,
+        "background": 201,
+        "same-class poor localisation": 104,
+        "Forklift": 1
+       },
+       "forklift": {
+        "same-class poor localisation": 204
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 1282,
+         "tp": 1,
+         "recall": 0.0008
+        },
+        "32-96": {
+         "gt": 1898,
+         "tp": 107,
+         "recall": 0.0564
+        },
+        "96-inf": {
+         "gt": 11700,
+         "tp": 9909,
+         "recall": 0.8469
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 275,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 120,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 6588,
+         "tp": 1170,
+         "recall": 0.1776
+        }
+       }
+      }
+     },
+     "Warehouse_022": {
+      "found_rate": 0.4524,
+      "any_camera_found": 0.4524,
+      "person_P": 0.9463,
+      "person_R": 0.6669,
+      "forklift_P": 1.0,
+      "forklift_R": 0.456,
+      "ap50": {
+       "person": 0.7103,
+       "forklift": 0.6359
+      },
+      "alerts": {
+       "events": 0,
+       "alerts": 0,
+       "strict": 0,
+       "strict_recall": null,
+       "covered": 0,
+       "covered_recall": null,
+       "false_alerts": 0,
+       "alert_precision": null
+      },
+      "fp_confusion": {
+       "person": {
+        "same-class poor localisation": 1568,
+        "background": 211
+       },
+       "forklift": {}
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 2359,
+         "tp": 7,
+         "recall": 0.003
+        },
+        "32-96": {
+         "gt": 13682,
+         "tp": 5657,
+         "recall": 0.4135
+        },
+        "96-inf": {
+         "gt": 30996,
+         "tp": 25703,
+         "recall": 0.8292
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 34,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 50,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 462,
+         "tp": 249,
+         "recall": 0.539
+        }
+       }
+      }
+     }
+    },
+    "source": "work/stage2/detector-v4/out/v4-T/ss_results.json"
+   },
+   "loco_test": {
+    "set": "loco_test",
+    "dets": "out/v4-T/loco_test_dets.jsonl",
+    "confidence": 0.45,
+    "summary": {
+     "images": 873,
+     "forklift": {
+      "gt": 188,
+      "ap50": 0.27069423044102814,
+      "tp": 29,
+      "fp": 10,
+      "precision": 0.7435897435897436,
+      "recall": 0.15425531914893617
+     },
+     "large_gt": 187,
+     "large_recall": 0.15508021390374332,
+     "small_gt": 1,
+     "small_recall": 0.0,
+     "false_forklift_rate": {
+      "pallet_truck": 0.0,
+      "stillage": 0.0
+     },
+     "false_forklift_hits": {
+      "pallet_truck": 0,
+      "stillage": 0
+     },
+     "class_totals": {
+      "pallet_truck": 308,
+      "stillage": 402
+     },
+     "fp_per_100_images": 1.145475372279496,
+     "fp_confusion": {
+      "background": 10
+     },
+     "person_detections_at_conf": 79
+    },
+    "bootstrap": {
+     "ci95": {
+      "forklift_ap50": [
+       0.20012104706281164,
+       0.34441080837965077
+      ],
+      "forklift_recall": [
+       0.10526315789473684,
+       0.20814477042645319
+      ],
+      "forklift_precision": [
+       0.5897058823529412,
+       0.8823529411764706
+      ],
+      "pallet_truck_rate": [
+       0.0,
+       0.0
+      ],
+      "stillage_rate": [
+       0.0,
+       0.0
+      ]
+     },
+     "diff_vs_ref_ci95": {
+      "forklift_ap50": [
+       0.20003176242607906,
+       0.34432876251062355
+      ],
+      "forklift_recall": [
+       0.10526315789473684,
+       0.20814477042645319
+      ],
+      "forklift_precision": [
+       0.5897058823529412,
+       0.8823529411764706
+      ],
+      "pallet_truck_rate": [
+       0.0,
+       0.0
+      ],
+      "stillage_rate": [
+       -0.012136660524886022,
+       0.0
+      ]
+     }
+    },
+    "reference": {
+     "dets": "out/old/loco_test_dets.jsonl",
+     "confidence": 0.4,
+     "summary": {
+      "images": 873,
+      "forklift": {
+       "gt": 188,
+       "ap50": 5.114566284779051e-05,
+       "tp": 0,
+       "fp": 30,
+       "precision": 0.0,
+       "recall": 0.0
+      },
+      "large_gt": 187,
+      "large_recall": 0.0,
+      "small_gt": 1,
+      "small_recall": 0.0,
+      "false_forklift_rate": {
+       "pallet_truck": 0.0,
+       "stillage": 0.004975124378109453
+      },
+      "false_forklift_hits": {
+       "pallet_truck": 0,
+       "stillage": 2
+      },
+      "class_totals": {
+       "pallet_truck": 308,
+       "stillage": 402
+      },
+      "fp_per_100_images": 3.4364261168384878,
+      "fp_confusion": {
+       "background": 25,
+       "pallet": 3,
+       "stillage": 2
+      },
+      "person_detections_at_conf": 73
+     }
+    }
+   },
+   "kb_test": {
+    "set": "kb_test",
+    "dets": "out/v4-T/kb_test_dets.jsonl",
+    "confidence": 0.45,
+    "summary": {
+     "images": 42,
+     "forklift": {
+      "gt": 43,
+      "ap50": 0.9128418552972518,
+      "tp": 38,
+      "fp": 6,
+      "precision": 0.8636363636363636,
+      "recall": 0.8837209302325582
+     },
+     "person": {
+      "gt": 44,
+      "ap50": 0.5135774439480876,
+      "tp": 21,
+      "fp": 8,
+      "precision": 0.7241379310344828,
+      "recall": 0.4772727272727273
+     },
+     "pair": {
+      "pair_images": 25,
+      "detected": 17,
+      "recall": 0.68,
+      "images_with_pair_output": 23,
+      "precision": 0.7391304347826086
+     }
+    },
+    "bootstrap": {
+     "ci95": {
+      "forklift_ap50": [
+       0.8228672427006182,
+       0.985168245548748
+      ],
+      "person_ap50": [
+       0.413716698113743,
+       0.6383782939403023
+      ],
+      "pair_recall": [
+       0.5,
+       0.8666666666666667
+      ],
+      "forklift_recall": [
+       0.7906976744186046,
+       0.9743589743589743
+      ],
+      "person_recall": [
+       0.3611111111111111,
+       0.6111111111111112
+      ]
+     },
+     "diff_vs_ref_ci95": {
+      "forklift_ap50": [
+       0.8228672427006182,
+       0.985168245548748
+      ],
+      "person_ap50": [
+       0.3253732780764382,
+       0.5511062609284484
+      ],
+      "pair_recall": [
+       0.5,
+       0.8666666666666667
+      ],
+      "forklift_recall": [
+       0.7906976744186046,
+       0.9743589743589743
+      ],
+      "person_recall": [
+       0.2758405172413793,
+       0.5128378378378378
+      ]
+     }
+    },
+    "reference": {
+     "dets": "out/old/kb_test_dets.jsonl",
+     "confidence": 0.4,
+     "summary": {
+      "images": 42,
+      "forklift": {
+       "gt": 43,
+       "ap50": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "precision": 0.0,
+       "recall": 0.0
+      },
+      "person": {
+       "gt": 44,
+       "ap50": 0.08722943722943723,
+       "tp": 4,
+       "fp": 7,
+       "precision": 0.36363636363636365,
+       "recall": 0.09090909090909091
+      },
+      "pair": {
+       "pair_images": 25,
+       "detected": 0,
+       "recall": 0.0,
+       "images_with_pair_output": 0,
+       "precision": null
+      }
+     }
+    }
+   },
+   "freeze": {
+    "checkpoint_epoch": 11,
+    "checkpoint_sha256": "a7c01fd7ca721dfbecc0b4aebadfb33c9c2deff32cc9dc4b3bab385a879d89d4",
+    "onnx_sha256": "88de60de6f41f6267744325b64944091b7a5d548a278004c6525462b82f4ea4b",
+    "confidence": 0.45,
+    "onnx_io_matches_current_app_model": true,
+    "frozen_utc": "2026-11-05T00:55:30Z",
+    "parity_max_abs": 1.1742115020751953e-05,
+    "hailo_end_nodes_pass": true,
+    "opset": [
+     {
+      "domain": "",
+      "version": 11
+     }
+    ]
+   }
+  },
+  "v4-S": {
+   "label": "v4-S",
+   "stage1": {
+    "pair": {
+     "tp": 53,
+     "fp": 2,
+     "fn": 6,
+     "precision": 0.9636363636363636,
+     "recall": 0.8983050847457628
+    },
+    "detection": {
+     "person": {
+      "tp": 83,
+      "fp": 2,
+      "fn": 6,
+      "precision": 0.9764705882352941,
+      "recall": 0.9325842696629213
+     },
+     "forklift": {
+      "tp": 90,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0
+     }
+    }
+   },
+   "gdino24": {
+    "pair": {
+     "tp": 115,
+     "fp": 5,
+     "fn": 7,
+     "precision": 0.9583333333333334,
+     "recall": 0.9426229508196722
+    }
+   },
+   "events_a1": {
+    "primary_peak_time_and_location": {
+     "strict": 27,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.6561176836533009,
+      0.9138923179105933
+     ]
+    },
+    "time_only_peak": {
+     "strict": 27,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.6561176836533009,
+      0.9138923179105933
+     ]
+    },
+    "interval_overlap_with_location": {
+     "strict": 31,
+     "n": 33,
+     "prec_k": 32,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.8039375519135219,
+      0.9832191169128082
+     ]
+    },
+    "onset_first_evidence_with_location": {
+     "strict": 25,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.5897538017044264,
+      0.8716828662282499
+     ]
+    },
+    "in_view_60px_events_peak_with_location": {
+     "strict": 27,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.6561176836533009,
+      0.9138923179105933
+     ]
+    }
+   },
+   "events_miss_causes": {
+    "both actors detected but image-space gap above rule threshold": 1,
+    "candidate interval overlaps but its peak is outside the window": 4,
+    "one positive 1 Hz sample only (grouping requires 2)": 1
+   },
+   "events_frozen_truth": {
+    "primary_peak_time_and_location": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 26,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    },
+    "time_only_peak": {
+     "strict": 27,
+     "n": 33,
+     "prec_k": 27,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.6561176836533009,
+      0.9138923179105933
+     ]
+    },
+    "interval_overlap_with_location": {
+     "strict": 30,
+     "n": 33,
+     "prec_k": 31,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.7642739435353026,
+      0.9685960584754184
+     ]
+    },
+    "onset_first_evidence_with_location": {
+     "strict": 25,
+     "n": 33,
+     "prec_k": 25,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.5897538017044264,
+      0.8716828662282499
+     ]
+    },
+    "in_view_60px_events_peak_with_location": {
+     "strict": 26,
+     "n": 33,
+     "prec_k": 26,
+     "prec_n": 32,
+     "recall_wilson95": [
+      0.6224835500784931,
+      0.8932397846697919
+     ]
+    }
+   },
+   "ss": {
+    "found_pooled": 0.33164688813660204,
+    "found": [
+     17830.0,
+     53762
+    ],
+    "person": {
+     "tp": 151007,
+     "fp": 32947,
+     "fn": 116425,
+     "P": 0.8208954412516173,
+     "R": 0.5646556881749379
+    },
+    "forklift": {
+     "tp": 17446,
+     "fp": 1203,
+     "fn": 36316,
+     "P": 0.9354925197061504,
+     "R": 0.32450429671515196
+    },
+    "alerts": {
+     "events": 61,
+     "alerts": 36,
+     "strict": 21,
+     "covered": 52,
+     "false_alerts": 8,
+     "strict_recall": 0.3443,
+     "covered_recall": 0.8525,
+     "alert_precision": 0.7778
+    },
+    "app_native": {
+     "events": 61,
+     "candidates": 91,
+     "strict": 51,
+     "events_with_any_candidate": 55,
+     "false_candidates": 27,
+     "strict_recall": 0.8361,
+     "any_recall": 0.9016
+    },
+    "per_scene": {
+     "Warehouse_010": {
+      "found_rate": 0.4139,
+      "any_camera_found": 1.0,
+      "person_P": 0.8398,
+      "person_R": 0.5123,
+      "forklift_P": 0.9596,
+      "forklift_R": 0.4139,
+      "ap50": {
+       "person": 0.5362,
+       "forklift": 0.4485
+      },
+      "alerts": {
+       "events": 42,
+       "alerts": 15,
+       "strict": 11,
+       "strict_recall": 0.2619,
+       "covered": 35,
+       "covered_recall": 0.8333,
+       "false_alerts": 4,
+       "alert_precision": 0.7333
+      },
+      "fp_confusion": {
+       "person": {
+        "background": 7204,
+        "same-class poor localisation": 6559,
+        "FourierGR1T2": 3296,
+        "AgilityDigit": 1701,
+        "Transporter": 371,
+        "NovaCarter": 210,
+        "Forklift": 35
+       },
+       "forklift": {
+        "background": 382,
+        "FourierGR1T2": 64,
+        "Transporter": 31,
+        "same-class poor localisation": 24,
+        "AgilityDigit": 15,
+        "Person": 7
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 26405,
+         "tp": 54,
+         "recall": 0.002
+        },
+        "32-96": {
+         "gt": 63517,
+         "tp": 10388,
+         "recall": 0.1635
+        },
+        "96-inf": {
+         "gt": 108342,
+         "tp": 91123,
+         "recall": 0.8411
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 88,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 11912,
+         "tp": 2954,
+         "recall": 0.248
+        },
+        "96-inf": {
+         "gt": 17997,
+         "tp": 9462,
+         "recall": 0.5258
+        }
+       }
+      }
+     },
+     "Warehouse_018": {
+      "found_rate": 0.2088,
+      "any_camera_found": 0.2619,
+      "person_P": 0.946,
+      "person_R": 0.9403,
+      "forklift_P": 0.8981,
+      "forklift_R": 0.197,
+      "ap50": {
+       "person": 0.9539,
+       "forklift": 0.2184
+      },
+      "alerts": {
+       "events": 8,
+       "alerts": 9,
+       "strict": 4,
+       "strict_recall": 0.5,
+       "covered": 7,
+       "covered_recall": 0.875,
+       "false_alerts": 1,
+       "alert_precision": 0.8889
+      },
+      "fp_confusion": {
+       "person": {
+        "background": 180,
+        "same-class poor localisation": 112,
+        "Forklift": 95,
+        "PalletTruck": 2
+       },
+       "forklift": {
+        "same-class poor localisation": 362,
+        "Person": 1
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 15,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 45,
+         "tp": 15,
+         "recall": 0.3333
+        },
+        "96-inf": {
+         "gt": 7191,
+         "tp": 6803,
+         "recall": 0.946
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 177,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 138,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 15921,
+         "tp": 3199,
+         "recall": 0.2009
+        }
+       }
+      }
+     },
+     "Warehouse_019": {
+      "found_rate": 0.2573,
+      "any_camera_found": 0.325,
+      "person_P": 0.7592,
+      "person_R": 0.7119,
+      "forklift_P": 0.8411,
+      "forklift_R": 0.2274,
+      "ap50": {
+       "person": 0.7223,
+       "forklift": 0.2619
+      },
+      "alerts": {
+       "events": 11,
+       "alerts": 12,
+       "strict": 6,
+       "strict_recall": 0.5455,
+       "covered": 10,
+       "covered_recall": 0.9091,
+       "false_alerts": 3,
+       "alert_precision": 0.75
+      },
+      "fp_confusion": {
+       "person": {
+        "PalletTruck": 2568,
+        "background": 384,
+        "same-class poor localisation": 275,
+        "Forklift": 133
+       },
+       "forklift": {
+        "same-class poor localisation": 265,
+        "background": 35
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 1282,
+         "tp": 1,
+         "recall": 0.0008
+        },
+        "32-96": {
+         "gt": 1898,
+         "tp": 304,
+         "recall": 0.1602
+        },
+        "96-inf": {
+         "gt": 11700,
+         "tp": 10288,
+         "recall": 0.8793
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 275,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 120,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 6588,
+         "tp": 1588,
+         "recall": 0.241
+        }
+       }
+      }
+     },
+     "Warehouse_022": {
+      "found_rate": 0.4176,
+      "any_camera_found": 0.4176,
+      "person_P": 0.7653,
+      "person_R": 0.681,
+      "forklift_P": 0.9346,
+      "forklift_R": 0.4451,
+      "ap50": {
+       "person": 0.6937,
+       "forklift": 0.5095
+      },
+      "alerts": {
+       "events": 0,
+       "alerts": 0,
+       "strict": 0,
+       "strict_recall": null,
+       "covered": 0,
+       "covered_recall": null,
+       "false_alerts": 0,
+       "alert_precision": null
+      },
+      "fp_confusion": {
+       "person": {
+        "background": 7425,
+        "same-class poor localisation": 2385,
+        "NovaCarter": 12
+       },
+       "forklift": {
+        "background": 9,
+        "same-class poor localisation": 8
+       }
+      },
+      "recall_by_h": {
+       "person": {
+        "0-32": {
+         "gt": 2359,
+         "tp": 16,
+         "recall": 0.0068
+        },
+        "32-96": {
+         "gt": 13682,
+         "tp": 5659,
+         "recall": 0.4136
+        },
+        "96-inf": {
+         "gt": 30996,
+         "tp": 26356,
+         "recall": 0.8503
+        }
+       },
+       "forklift": {
+        "0-32": {
+         "gt": 34,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "32-96": {
+         "gt": 50,
+         "tp": 0,
+         "recall": 0.0
+        },
+        "96-inf": {
+         "gt": 462,
+         "tp": 243,
+         "recall": 0.526
+        }
+       }
+      }
+     }
+    },
+    "source": "work/stage2/detector-v4/out/v4-S/ss_results.json"
+   },
+   "loco_test": {
+    "set": "loco_test",
+    "dets": "out/v4-S/loco_test_dets.jsonl",
+    "confidence": 0.25,
+    "summary": {
+     "images": 873,
+     "forklift": {
+      "gt": 188,
+      "ap50": 0.33666186915678903,
+      "tp": 64,
+      "fp": 32,
+      "precision": 0.6666666666666666,
+      "recall": 0.3404255319148936
+     },
+     "large_gt": 187,
+     "large_recall": 0.3422459893048128,
+     "small_gt": 1,
+     "small_recall": 0.0,
+     "false_forklift_rate": {
+      "pallet_truck": 0.0,
+      "stillage": 0.0
+     },
+     "false_forklift_hits": {
+      "pallet_truck": 0,
+      "stillage": 0
+     },
+     "class_totals": {
+      "pallet_truck": 308,
+      "stillage": 402
+     },
+     "fp_per_100_images": 3.665521191294387,
+     "fp_confusion": {
+      "background": 32
+     },
+     "person_detections_at_conf": 119
+    },
+    "bootstrap": {
+     "ci95": {
+      "forklift_ap50": [
+       0.26278160535883527,
+       0.41531950121602684
+      ],
+      "forklift_recall": [
+       0.27080853174603176,
+       0.409102998065764
+      ],
+      "forklift_precision": [
+       0.5638297872340425,
+       0.7623793316831683
+      ],
+      "pallet_truck_rate": [
+       0.0,
+       0.0
+      ],
+      "stillage_rate": [
+       0.0,
+       0.0
+      ]
+     },
+     "diff_vs_ref_ci95": {
+      "forklift_ap50": [
+       0.262780175480089,
+       0.41524081473780505
+      ],
+      "forklift_recall": [
+       0.27080853174603176,
+       0.409102998065764
+      ],
+      "forklift_precision": [
+       0.5638297872340425,
+       0.7623793316831683
+      ],
+      "pallet_truck_rate": [
+       0.0,
+       0.0
+      ],
+      "stillage_rate": [
+       -0.012136660524886022,
+       0.0
+      ]
+     }
+    },
+    "reference": {
+     "dets": "out/old/loco_test_dets.jsonl",
+     "confidence": 0.4,
+     "summary": {
+      "images": 873,
+      "forklift": {
+       "gt": 188,
+       "ap50": 5.114566284779051e-05,
+       "tp": 0,
+       "fp": 30,
+       "precision": 0.0,
+       "recall": 0.0
+      },
+      "large_gt": 187,
+      "large_recall": 0.0,
+      "small_gt": 1,
+      "small_recall": 0.0,
+      "false_forklift_rate": {
+       "pallet_truck": 0.0,
+       "stillage": 0.004975124378109453
+      },
+      "false_forklift_hits": {
+       "pallet_truck": 0,
+       "stillage": 2
+      },
+      "class_totals": {
+       "pallet_truck": 308,
+       "stillage": 402
+      },
+      "fp_per_100_images": 3.4364261168384878,
+      "fp_confusion": {
+       "background": 25,
+       "pallet": 3,
+       "stillage": 2
+      },
+      "person_detections_at_conf": 73
+     }
+    }
+   },
+   "kb_test": {
+    "set": "kb_test",
+    "dets": "out/v4-S/kb_test_dets.jsonl",
+    "confidence": 0.25,
+    "summary": {
+     "images": 42,
+     "forklift": {
+      "gt": 43,
+      "ap50": 0.8944674659260279,
+      "tp": 39,
+      "fp": 8,
+      "precision": 0.8297872340425532,
+      "recall": 0.9069767441860465
+     },
+     "person": {
+      "gt": 44,
+      "ap50": 0.5110826468463849,
+      "tp": 22,
+      "fp": 13,
+      "precision": 0.6285714285714286,
+      "recall": 0.5
+     },
+     "pair": {
+      "pair_images": 25,
+      "detected": 17,
+      "recall": 0.68,
+      "images_with_pair_output": 25,
+      "precision": 0.68
+     }
+    },
+    "bootstrap": {
+     "ci95": {
+      "forklift_ap50": [
+       0.8016619755838927,
+       0.9734098413639678
+      ],
+      "person_ap50": [
+       0.33949063625082027,
+       0.6983718059882417
+      ],
+      "pair_recall": [
+       0.4782608695652174,
+       0.8695652173913043
+      ],
+      "forklift_recall": [
+       0.8222222222222222,
+       0.9767441860465116
+      ],
+      "person_recall": [
+       0.33999056603773586,
+       0.6809029579657496
+      ]
+     },
+     "diff_vs_ref_ci95": {
+      "forklift_ap50": [
+       0.8016619755838927,
+       0.9734098413639678
+      ],
+      "person_ap50": [
+       0.23067779155272944,
+       0.6353434435800728
+      ],
+      "pair_recall": [
+       0.4782608695652174,
+       0.8695652173913043
+      ],
+      "forklift_recall": [
+       0.8222222222222222,
+       0.9767441860465116
+      ],
+      "person_recall": [
+       0.22222222222222224,
+       0.6071428571428572
+      ]
+     }
+    },
+    "reference": {
+     "dets": "out/old/kb_test_dets.jsonl",
+     "confidence": 0.4,
+     "summary": {
+      "images": 42,
+      "forklift": {
+       "gt": 43,
+       "ap50": 0.0,
+       "tp": 0,
+       "fp": 1,
+       "precision": 0.0,
+       "recall": 0.0
+      },
+      "person": {
+       "gt": 44,
+       "ap50": 0.08722943722943723,
+       "tp": 4,
+       "fp": 7,
+       "precision": 0.36363636363636365,
+       "recall": 0.09090909090909091
+      },
+      "pair": {
+       "pair_images": 25,
+       "detected": 0,
+       "recall": 0.0,
+       "images_with_pair_output": 0,
+       "precision": null
+      }
+     }
+    }
+   },
+   "freeze": {
+    "checkpoint_epoch": 11,
+    "checkpoint_sha256": "75d7feefe1c3eabbaefee6eb5eca7cf7c2b1e7cab90f7ce394a4c4fc24ded0c0",
+    "onnx_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+    "confidence": 0.25,
+    "onnx_io_matches_current_app_model": true,
+    "frozen_utc": "2026-11-05T01:06:29Z",
+    "parity_max_abs": 5.0514936447143555e-06,
+    "hailo_end_nodes_pass": true,
+    "opset": [
+     {
+      "domain": "",
+      "version": 11
+     }
+    ]
+   }
+  }
+ },
+ "criteria": {
+  "v4-T": {
+   "C1a": {
+    "value": [
+     0.9636363636363636,
+     0.8983050847457628
+    ],
+    "pass": true
+   },
+   "C1b": {
+    "value": "25/33",
+    "pass": true
+   },
+   "C2a": {
+    "value": {
+     "ap50": 0.27069423044102814,
+     "recall": 0.15425531914893617,
+     "precision": 0.7435897435897436,
+     "old_ap50": 5.114566284779051e-05,
+     "old_recall": 0.0
+    },
+    "pass": false
+   },
+   "C2b": {
+    "value": {
+     "forklift_ap50": 0.9128418552972518,
+     "person_ap50": 0.5135774439480876,
+     "pair_recall": 0.68,
+     "old": [
+      0.0,
+      0.08722943722943723,
+      0.0
+     ]
+    },
+    "pass": true
+   },
+   "C3": {
+    "value": {
+     "found": 0.2756035861761095,
+     "person_R": 0.5389033473929822,
+     "person_P": 0.9195666322116305,
+     "strict": 20,
+     "false_alerts": 1
+    },
+    "pass": true
+   },
+   "C4": {
+    "value": {
+     "pallet_truck": 0.0,
+     "stillage": 0.0,
+     "old": {
+      "pallet_truck": 0.0,
+      "stillage": 0.004975124378109453
+     }
+    },
+    "pass": true
+   },
+   "export": {
+    "value": [
+     true,
+     true,
+     1.1742115020751953e-05
+    ],
+    "pass": true
+   },
+   "all_pass": false
+  },
+  "v4-S": {
+   "C1a": {
+    "value": [
+     0.9636363636363636,
+     0.8983050847457628
+    ],
+    "pass": true
+   },
+   "C1b": {
+    "value": "27/33",
+    "pass": true
+   },
+   "C2a": {
+    "value": {
+     "ap50": 0.33666186915678903,
+     "recall": 0.3404255319148936,
+     "precision": 0.6666666666666666,
+     "old_ap50": 5.114566284779051e-05,
+     "old_recall": 0.0
+    },
+    "pass": true
+   },
+   "C2b": {
+    "value": {
+     "forklift_ap50": 0.8944674659260279,
+     "person_ap50": 0.5110826468463849,
+     "pair_recall": 0.68,
+     "old": [
+      0.0,
+      0.08722943722943723,
+      0.0
+     ]
+    },
+    "pass": true
+   },
+   "C3": {
+    "value": {
+     "found": 0.33164688813660204,
+     "person_R": 0.5646556881749379,
+     "person_P": 0.8208954412516173,
+     "strict": 21,
+     "false_alerts": 8
+    },
+    "pass": true
+   },
+   "C4": {
+    "value": {
+     "pallet_truck": 0.0,
+     "stillage": 0.0,
+     "old": {
+      "pallet_truck": 0.0,
+      "stillage": 0.004975124378109453
+     }
+    },
+    "pass": true
+   },
+   "export": {
+    "value": [
+     true,
+     true,
+     5.0514936447143555e-06
+    ],
+    "pass": true
+   },
+   "all_pass": true
+  },
+  "old": {
+   "C1a": {
+    "value": [
+     0.9807692307692307,
+     0.864406779661017
+    ],
+    "pass": true
+   },
+   "C1b": {
+    "value": "26/33",
+    "pass": true
+   },
+   "C2a": {
+    "value": {
+     "ap50": 5.114566284779051e-05,
+     "recall": 0.0,
+     "precision": 0.0,
+     "old_ap50": 5.114566284779051e-05,
+     "old_recall": 0.0
+    },
+    "pass": false
+   },
+   "C2b": {
+    "value": {
+     "forklift_ap50": 0.0,
+     "person_ap50": 0.08722943722943723,
+     "pair_recall": 0.0,
+     "old": [
+      0.0,
+      0.08722943722943723,
+      0.0
+     ]
+    },
+    "pass": false
+   },
+   "C3": {
+    "value": {
+     "found": 0.12222387559986608,
+     "person_R": 0.254285201471776,
+     "person_P": 0.6751787132644956,
+     "strict": 8,
+     "false_alerts": 1
+    },
+    "pass": false
+   },
+   "C4": {
+    "value": {
+     "pallet_truck": 0.0,
+     "stillage": 0.004975124378109453,
+     "old": {
+      "pallet_truck": 0.0,
+      "stillage": 0.004975124378109453
+     }
+    },
+    "pass": true
+   },
+   "all_pass": false
+  },
+  "v3": {
+   "C1a": {
+    "value": [
+     0.9137931034482759,
+     0.8983050847457628
+    ],
+    "pass": false
+   },
+   "C1b": {
+    "value": "26/33",
+    "pass": true
+   },
+   "C2a": {
+    "value": {
+     "ap50": 0.005267673301304049,
+     "recall": 0.005319148936170213,
+     "precision": 0.07142857142857142,
+     "old_ap50": 5.114566284779051e-05,
+     "old_recall": 0.0
+    },
+    "pass": false
+   },
+   "C2b": {
+    "value": {
+     "forklift_ap50": 0.0,
+     "person_ap50": 0.03297074127096298,
+     "pair_recall": 0.0,
+     "old": [
+      0.0,
+      0.08722943722943723,
+      0.0
+     ]
+    },
+    "pass": false
+   },
+   "C3": {
+    "value": {
+     "found": 0.2728321119005989,
+     "person_R": 0.5640873193933411,
+     "person_P": 0.7936061192710745,
+     "strict": 14,
+     "false_alerts": 0
+    },
+    "pass": true
+   },
+   "C4": {
+    "value": {
+     "pallet_truck": 0.006493506493506494,
+     "stillage": 0.0,
+     "old": {
+      "pallet_truck": 0.0,
+      "stillage": 0.004975124378109453
+     }
+    },
+    "pass": true
+   },
+   "all_pass": false
+  }
+ }
+}

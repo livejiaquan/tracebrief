@@ -1,0 +1,33 @@
+{
+ "train@0.60": {
+  "gt_persons": 296,
+  "tp": 218,
+  "fp": 17,
+  "precision": 0.9276595744680851,
+  "recall": 0.7364864864864865
+ },
+ "train@0.25": {
+  "gt_persons": 296,
+  "tp": 237,
+  "fp": 67,
+  "precision": 0.7796052631578947,
+  "recall": 0.8006756756756757
+ },
+ "valid@0.60": {
+  "gt_persons": 75,
+  "tp": 52,
+  "fp": 6,
+  "precision": 0.896551724137931,
+  "recall": 0.6933333333333334
+ },
+ "valid@0.25": {
+  "gt_persons": 75,
+  "tp": 56,
+  "fp": 19,
+  "precision": 0.7466666666666667,
+  "recall": 0.7466666666666667
+ },
+ "loco_images": 4224,
+ "loco_person_boxes_ge_0.60": 1133,
+ "loco_person_boxes_0.25_0.60": 607
+}

@@ -9,3 +9,8 @@ See docs/THIRD_PARTY_NOTICES.md and data/samples/manifest.json.
 
 NVIDIA synthetic warehouse demonstration material is provided under
 OpenMDW-1.1. NVIDIA does not endorse this project.
+
+weights/yolox-s-warehouse-v4.onnx (detector v4) was trained in part on
+NVIDIA PhysicalAI-SmartSpaces (NVIDIA Corporation, CC BY 4.0) and on the
+Forklift Dataset by Mohamed Traore, Roboflow Universe (CC BY 4.0). Changes
+and full attribution: docs/THIRD_PARTY_NOTICES.md.

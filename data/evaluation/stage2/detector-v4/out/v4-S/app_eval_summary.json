@@ -1,0 +1,29 @@
+{
+ "label": "v4-S",
+ "settings": {
+  "backend": "compact-onnx",
+  "model_path": "work/stage2/detector-v4/freeze/v4-S/yolox-s-warehouse-v4-S.onnx",
+  "model_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+  "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+  "model_revision": "75d7feefe1c3eabbaefee6eb5eca7cf7c2b1e7cab90f7ce394a4c4fc24ded0c0",
+  "input_size": 416,
+  "sample_fps": 1.0,
+  "confidence": 0.25,
+  "nms_iou": 0.45,
+  "gap_ratio": 0.3,
+  "min_samples": 2,
+  "merge_gap_s": 2.1,
+  "threads": 4
+ },
+ "settings_sha256": "630dbe5f6b644d8ff9a0bfabcf825a5891c02af5e6ea4a83ef130f730bcab2d5",
+ "videos": 34,
+ "wall_s": 108.9,
+ "scorer_sha256": {
+  "vision_evaluate.py": "c16c536a6481895140bda273b5c29e8f95d1ffedaa6fdfefabbaec30507d4692",
+  "score_a1.py": "98820ac77e3c06b648730f7d8cf01665fa429e90657bd1294480856213a2b275",
+  "score.py": "2a987336cb099c8b592f6e8e0f0794c509ee43e22ee83c444bc0a391384fba6f",
+  "vision_worker.py": "89b97f7aa159c22d0ec855d48abcad77c383b2c4523f57545d583f93750d51cc",
+  "compact_vision.py": "8c7a540237082d0f7bd42c9ca0d85b59a9ca8fc8c5590c3f6af1bc7205fc1a4e",
+  "server.py": "a7a2ce9adf1b1dcf35604b29f45ac463a76c8936d6c383bb2999471dddbbda05"
+ }
+}

@@ -10,14 +10,21 @@
     {
       "id": "fast",
       "label": "Fast search",
-      "description": "Purpose-trained compact detector (YOLOX-tiny). About a second per clip on CPU and few false candidates, but it can miss some interactions; review the original footage.",
-      "settings_file": "vision-compact.json"
+      "description": "Purpose-trained compact detector (YOLOX-s, detector v4, trained on synthetic and real warehouse images). About a second per clip on CPU, but at an unseen real site it found only about a third of the forklifts; review the original footage.",
+      "settings_file": "vision-compact-v4.json"
     },
     {
       "id": "stricter",
       "label": "Stricter search",
       "description": "Filter out lower-confidence detections. This can miss visible interactions; review the original footage.",
       "settings_file": "vision-stricter.json"
+    },
+    {
+      "id": "stage1",
+      "label": "Fast search (Stage I detector)",
+      "description": "The Stage I YOLOX-tiny, trained on synthetic footage only. Kept so the Stage I results can be reproduced; it found none of the forklifts in our real-image tests. Not compiled for the UGen300.",
+      "settings_file": "vision-compact.json",
+      "device": false
     }
   ]
 }

@@ -1,0 +1,25 @@
+{
+ "stage1": {
+  "tp": 51,
+  "fp": 1,
+  "fn": 8,
+  "precision": 0.9807692307692307,
+  "recall": 0.864406779661017
+ },
+ "events": {
+  "strict": 26,
+  "n": 33,
+  "precision": [
+   27,
+   31
+  ]
+ },
+ "gdino24": {
+  "tp": 104,
+  "fp": 10,
+  "fn": 18,
+  "precision": 0.9122807017543859,
+  "recall": 0.8524590163934426
+ },
+ "reproduces_published": true
+}

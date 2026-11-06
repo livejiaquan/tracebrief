@@ -1,0 +1,753 @@
+{
+ "source": "cache",
+ "cache_dir": "out/v4-S/ss_cache",
+ "frozen_confidence": 0.25,
+ "pilot_scorer_sha256": {
+  "score.py": "3413ae2a70b2be0d189b9131d86b76e572d9f0726d4081c1594b3a9a444c98a1",
+  "ssbench.py": "cdd77e24370f83247e62fe03d08b197e42a6995c75f5bd344f51d9051ed09d03"
+ },
+ "per_scene": {
+  "Warehouse_010": {
+   "forklift_found": {
+    "per_camera_mode": {
+     "visible_triples": 29997,
+     "found": 12415.0,
+     "rate": 0.4139
+    },
+    "any_camera_mode": {
+     "visible_pairs": 9000,
+     "found": 9000,
+     "rate": 1.0
+    },
+    "per_camera": {
+     "Camera_0000": {
+      "visible": 3000,
+      "found": 0,
+      "rate": 0.0
+     },
+     "Camera_0001": {
+      "visible": 2997,
+      "found": 2997.0,
+      "rate": 1.0
+     },
+     "Camera_0002": {
+      "visible": 6000,
+      "found": 0,
+      "rate": 0.0
+     },
+     "Camera_0004": {
+      "visible": 6000,
+      "found": 3000.0,
+      "rate": 0.5
+     },
+     "Camera_0005": {
+      "visible": 3000,
+      "found": 0,
+      "rate": 0.0
+     },
+     "Camera_0009": {
+      "visible": 3000,
+      "found": 3000.0,
+      "rate": 1.0
+     },
+     "Camera_0010": {
+      "visible": 6000,
+      "found": 3418.0,
+      "rate": 0.5697
+     }
+    },
+    "per_camera_mode_by_gt_box_height_px": {
+     "0-32": {
+      "visible": 88,
+      "found": 0.0,
+      "rate": 0.0
+     },
+     "32-96": {
+      "visible": 11912,
+      "found": 2953.0,
+      "rate": 0.2479
+     },
+     "96-inf": {
+      "visible": 17997,
+      "found": 9462.0,
+      "rate": 0.5258
+     }
+    }
+   },
+   "events": {
+    "gt_events": 42
+   },
+   "alerts_per_camera_cooldown": {
+    "events": 42,
+    "alerts": 15,
+    "strict": 11,
+    "strict_recall": 0.2619,
+    "covered": 35,
+    "covered_recall": 0.8333,
+    "false_alerts": 4,
+    "alert_precision": 0.7333
+   },
+   "alerts_scene_cooldown": {
+    "events": 42,
+    "alerts": 15,
+    "strict": 11,
+    "strict_recall": 0.2619,
+    "covered": 35,
+    "covered_recall": 0.8333,
+    "false_alerts": 4,
+    "alert_precision": 0.7333
+   },
+   "app_native_candidates_1fps": {
+    "events": 42,
+    "candidates": 56,
+    "strict": 38,
+    "strict_recall": 0.9048,
+    "events_with_any_candidate": 42,
+    "any_recall": 1.0,
+    "false_candidates": 15,
+    "candidate_precision": 0.7321
+   },
+   "alerts_by_camera": {
+    "Camera_0009": 5,
+    "Camera_0004": 4,
+    "Camera_0010": 1,
+    "Camera_0006": 2,
+    "Camera_0008": 2,
+    "Camera_0001": 1
+   },
+   "native_image_space": {
+    "images": 33000,
+    "pair": {
+     "tp": 5005,
+     "fp": 2653,
+     "fn": 7477,
+     "precision": 0.6536,
+     "recall": 0.401
+    },
+    "frame_candidate": {
+     "tn": 22298,
+     "fp": 899,
+     "fn": 4737,
+     "tp": 5066,
+     "precision": 0.8493,
+     "recall": 0.5168
+    },
+    "detection_at_frozen_conf": {
+     "person": {
+      "tp": 101565,
+      "fp": 19376,
+      "fn": 96699,
+      "precision": 0.8398,
+      "recall": 0.5123
+     },
+     "forklift": {
+      "tp": 12416,
+      "fp": 523,
+      "fn": 17581,
+      "precision": 0.9596,
+      "recall": 0.4139
+     }
+    },
+    "recall_by_gt_box_height_px": {
+     "person": {
+      "0-32": {
+       "gt": 26405,
+       "tp": 54,
+       "recall": 0.002
+      },
+      "32-96": {
+       "gt": 63517,
+       "tp": 10388,
+       "recall": 0.1635
+      },
+      "96-inf": {
+       "gt": 108342,
+       "tp": 91123,
+       "recall": 0.8411
+      }
+     },
+     "forklift": {
+      "0-32": {
+       "gt": 88,
+       "tp": 0,
+       "recall": 0.0
+      },
+      "32-96": {
+       "gt": 11912,
+       "tp": 2954,
+       "recall": 0.248
+      },
+      "96-inf": {
+       "gt": 17997,
+       "tp": 9462,
+       "recall": 0.5258
+      }
+     }
+    },
+    "ap50_over_cached_detections": {
+     "person": 0.5362,
+     "forklift": 0.4485
+    },
+    "fp_confusion_at_frozen_conf": {
+     "person": {
+      "background": 7204,
+      "same-class poor localisation": 6559,
+      "FourierGR1T2": 3296,
+      "AgilityDigit": 1701,
+      "Transporter": 371,
+      "NovaCarter": 210,
+      "Forklift": 35
+     },
+     "forklift": {
+      "background": 382,
+      "FourierGR1T2": 64,
+      "Transporter": 31,
+      "same-class poor localisation": 24,
+      "AgilityDigit": 15,
+      "Person": 7
+     }
+    }
+   }
+  },
+  "Warehouse_018": {
+   "forklift_found": {
+    "per_camera_mode": {
+     "visible_triples": 16236,
+     "found": 3390.0,
+     "rate": 0.2088
+    },
+    "any_camera_mode": {
+     "visible_pairs": 5956,
+     "found": 1560,
+     "rate": 0.2619
+    },
+    "per_camera": {
+     "Camera_0000": {
+      "visible": 5772,
+      "found": 1162.0,
+      "rate": 0.2013
+     },
+     "Camera_0001": {
+      "visible": 5235,
+      "found": 1058.0,
+      "rate": 0.2021
+     },
+     "Camera_0002": {
+      "visible": 5229,
+      "found": 1170.0,
+      "rate": 0.2238
+     }
+    },
+    "per_camera_mode_by_gt_box_height_px": {
+     "0-32": {
+      "visible": 177,
+      "found": 0,
+      "rate": 0.0
+     },
+     "32-96": {
+      "visible": 138,
+      "found": 0,
+      "rate": 0.0
+     },
+     "96-inf": {
+      "visible": 15921,
+      "found": 3390.0,
+      "rate": 0.2129
+     }
+    }
+   },
+   "events": {
+    "gt_events": 8
+   },
+   "alerts_per_camera_cooldown": {
+    "events": 8,
+    "alerts": 9,
+    "strict": 4,
+    "strict_recall": 0.5,
+    "covered": 7,
+    "covered_recall": 0.875,
+    "false_alerts": 1,
+    "alert_precision": 0.8889
+   },
+   "alerts_scene_cooldown": {
+    "events": 8,
+    "alerts": 4,
+    "strict": 3,
+    "strict_recall": 0.375,
+    "covered": 7,
+    "covered_recall": 0.875,
+    "false_alerts": 1,
+    "alert_precision": 0.75
+   },
+   "app_native_candidates_1fps": {
+    "events": 8,
+    "candidates": 18,
+    "strict": 6,
+    "strict_recall": 0.75,
+    "events_with_any_candidate": 6,
+    "any_recall": 0.75,
+    "false_candidates": 8,
+    "candidate_precision": 0.5556
+   },
+   "alerts_by_camera": {
+    "Camera_0000": 4,
+    "Camera_0002": 4,
+    "Camera_0001": 1
+   },
+   "native_image_space": {
+    "images": 9000,
+    "pair": {
+     "tp": 404,
+     "fp": 313,
+     "fn": 1314,
+     "precision": 0.5635,
+     "recall": 0.2352
+    },
+    "frame_candidate": {
+     "tn": 7156,
+     "fn": 1168,
+     "tp": 483,
+     "fp": 193,
+     "precision": 0.7145,
+     "recall": 0.2925
+    },
+    "detection_at_frozen_conf": {
+     "person": {
+      "tp": 6818,
+      "fp": 389,
+      "fn": 433,
+      "precision": 0.946,
+      "recall": 0.9403
+     },
+     "forklift": {
+      "tp": 3199,
+      "fp": 363,
+      "fn": 13037,
+      "precision": 0.8981,
+      "recall": 0.197
+     }
+    },
+    "recall_by_gt_box_height_px": {
+     "person": {
+      "0-32": {
+       "gt": 15,
+       "tp": 0,
+       "recall": 0.0
+      },
+      "32-96": {
+       "gt": 45,
+       "tp": 15,
+       "recall": 0.3333
+      },
+      "96-inf": {
+       "gt": 7191,
+       "tp": 6803,
+       "recall": 0.946
+      }
+     },
+     "forklift": {
+      "0-32": {
+       "gt": 177,
+       "tp": 0,
+       "recall": 0.0
+      },
+      "32-96": {
+       "gt": 138,
+       "tp": 0,
+       "recall": 0.0
+      },
+      "96-inf": {
+       "gt": 15921,
+       "tp": 3199,
+       "recall": 0.2009
+      }
+     }
+    },
+    "ap50_over_cached_detections": {
+     "person": 0.9539,
+     "forklift": 0.2184
+    },
+    "fp_confusion_at_frozen_conf": {
+     "person": {
+      "background": 180,
+      "same-class poor localisation": 112,
+      "Forklift": 95,
+      "PalletTruck": 2
+     },
+     "forklift": {
+      "same-class poor localisation": 362,
+      "Person": 1
+     }
+    }
+   }
+  },
+  "Warehouse_019": {
+   "forklift_found": {
+    "per_camera_mode": {
+     "visible_triples": 6983,
+     "found": 1797.0,
+     "rate": 0.2573
+    },
+    "any_camera_mode": {
+     "visible_pairs": 3000,
+     "found": 975,
+     "rate": 0.325
+    },
+    "per_camera": {
+     "Camera_0000": {
+      "visible": 2995,
+      "found": 446.0,
+      "rate": 0.1489
+     },
+     "Camera_0001": {
+      "visible": 1916,
+      "found": 673.0,
+      "rate": 0.3513
+     },
+     "Camera_0002": {
+      "visible": 2072,
+      "found": 678.0,
+      "rate": 0.3272
+     }
+    },
+    "per_camera_mode_by_gt_box_height_px": {
+     "0-32": {
+      "visible": 275,
+      "found": 0,
+      "rate": 0.0
+     },
+     "32-96": {
+      "visible": 120,
+      "found": 0,
+      "rate": 0.0
+     },
+     "96-inf": {
+      "visible": 6588,
+      "found": 1797.0,
+      "rate": 0.2728
+     }
+    }
+   },
+   "events": {
+    "gt_events": 11
+   },
+   "alerts_per_camera_cooldown": {
+    "events": 11,
+    "alerts": 12,
+    "strict": 6,
+    "strict_recall": 0.5455,
+    "covered": 10,
+    "covered_recall": 0.9091,
+    "false_alerts": 3,
+    "alert_precision": 0.75
+   },
+   "alerts_scene_cooldown": {
+    "events": 11,
+    "alerts": 7,
+    "strict": 4,
+    "strict_recall": 0.3636,
+    "covered": 9,
+    "covered_recall": 0.8182,
+    "false_alerts": 2,
+    "alert_precision": 0.7143
+   },
+   "app_native_candidates_1fps": {
+    "events": 11,
+    "candidates": 14,
+    "strict": 7,
+    "strict_recall": 0.6364,
+    "events_with_any_candidate": 7,
+    "any_recall": 0.6364,
+    "false_candidates": 1,
+    "candidate_precision": 0.9286
+   },
+   "alerts_by_camera": {
+    "Camera_0001": 5,
+    "Camera_0002": 3,
+    "Camera_0000": 4
+   },
+   "native_image_space": {
+    "images": 9000,
+    "pair": {
+     "tp": 450,
+     "fp": 282,
+     "fn": 1258,
+     "precision": 0.6148,
+     "recall": 0.2635
+    },
+    "frame_candidate": {
+     "tn": 7324,
+     "fn": 1079,
+     "fp": 112,
+     "tp": 485,
+     "precision": 0.8124,
+     "recall": 0.3101
+    },
+    "detection_at_frozen_conf": {
+     "person": {
+      "tp": 10593,
+      "fp": 3360,
+      "fn": 4287,
+      "precision": 0.7592,
+      "recall": 0.7119
+     },
+     "forklift": {
+      "tp": 1588,
+      "fp": 300,
+      "fn": 5395,
+      "precision": 0.8411,
+      "recall": 0.2274
+     }
+    },
+    "recall_by_gt_box_height_px": {
+     "person": {
+      "0-32": {
+       "gt": 1282,
+       "tp": 1,
+       "recall": 0.0008
+      },
+      "32-96": {
+       "gt": 1898,
+       "tp": 304,
+       "recall": 0.1602
+      },
+      "96-inf": {
+       "gt": 11700,
+       "tp": 10288,
+       "recall": 0.8793
+      }
+     },
+     "forklift": {
+      "0-32": {
+       "gt": 275,
+       "tp": 0,
+       "recall": 0.0
+      },
+      "32-96": {
+       "gt": 120,
+       "tp": 0,
+       "recall": 0.0
+      },
+      "96-inf": {
+       "gt": 6588,
+       "tp": 1588,
+       "recall": 0.241
+      }
+     }
+    },
+    "ap50_over_cached_detections": {
+     "person": 0.7223,
+     "forklift": 0.2619
+    },
+    "fp_confusion_at_frozen_conf": {
+     "person": {
+      "PalletTruck": 2568,
+      "background": 384,
+      "same-class poor localisation": 275,
+      "Forklift": 133
+     },
+     "forklift": {
+      "same-class poor localisation": 265,
+      "background": 35
+     }
+    }
+   }
+  },
+  "Warehouse_022": {
+   "forklift_found": {
+    "per_camera_mode": {
+     "visible_triples": 546,
+     "found": 228.0,
+     "rate": 0.4176
+    },
+    "any_camera_mode": {
+     "visible_pairs": 546,
+     "found": 228,
+     "rate": 0.4176
+    },
+    "per_camera": {
+     "Camera_0001": {
+      "visible": 546,
+      "found": 228.0,
+      "rate": 0.4176
+     }
+    },
+    "per_camera_mode_by_gt_box_height_px": {
+     "0-32": {
+      "visible": 34,
+      "found": 0,
+      "rate": 0.0
+     },
+     "32-96": {
+      "visible": 50,
+      "found": 0,
+      "rate": 0.0
+     },
+     "96-inf": {
+      "visible": 462,
+      "found": 228.0,
+      "rate": 0.4935
+     }
+    }
+   },
+   "events": {
+    "gt_events": 0
+   },
+   "alerts_per_camera_cooldown": {
+    "events": 0,
+    "alerts": 0,
+    "strict": 0,
+    "strict_recall": null,
+    "covered": 0,
+    "covered_recall": null,
+    "false_alerts": 0,
+    "alert_precision": null
+   },
+   "alerts_scene_cooldown": {
+    "events": 0,
+    "alerts": 0,
+    "strict": 0,
+    "strict_recall": null,
+    "covered": 0,
+    "covered_recall": null,
+    "false_alerts": 0,
+    "alert_precision": null
+   },
+   "app_native_candidates_1fps": {
+    "events": 0,
+    "candidates": 3,
+    "strict": 0,
+    "strict_recall": null,
+    "events_with_any_candidate": 0,
+    "any_recall": null,
+    "false_candidates": 3,
+    "candidate_precision": 0.0
+   },
+   "alerts_by_camera": {},
+   "native_image_space": {
+    "images": 12360,
+    "pair": {
+     "tp": 57,
+     "fp": 107,
+     "fn": 352,
+     "precision": 0.3476,
+     "recall": 0.1394
+    },
+    "frame_candidate": {
+     "tn": 12059,
+     "fn": 191,
+     "fp": 12,
+     "tp": 98,
+     "precision": 0.8909,
+     "recall": 0.3391
+    },
+    "detection_at_frozen_conf": {
+     "person": {
+      "tp": 32031,
+      "fp": 9822,
+      "fn": 15006,
+      "precision": 0.7653,
+      "recall": 0.681
+     },
+     "forklift": {
+      "tp": 243,
+      "fp": 17,
+      "fn": 303,
+      "precision": 0.9346,
+      "recall": 0.4451
+     }
+    },
+    "recall_by_gt_box_height_px": {
+     "person": {
+      "0-32": {
+       "gt": 2359,
+       "tp": 16,
+       "recall": 0.0068
+      },
+      "32-96": {
+       "gt": 13682,
+       "tp": 5659,
+       "recall": 0.4136
+      },
+      "96-inf": {
+       "gt": 30996,
+       "tp": 26356,
+       "recall": 0.8503
+      }
+     },
+     "forklift": {
+      "0-32": {
+       "gt": 34,
+       "tp": 0,
+       "recall": 0.0
+      },
+      "32-96": {
+       "gt": 50,
+       "tp": 0,
+       "recall": 0.0
+      },
+      "96-inf": {
+       "gt": 462,
+       "tp": 243,
+       "recall": 0.526
+      }
+     }
+    },
+    "ap50_over_cached_detections": {
+     "person": 0.6937,
+     "forklift": 0.5095
+    },
+    "fp_confusion_at_frozen_conf": {
+     "person": {
+      "background": 7425,
+      "same-class poor localisation": 2385,
+      "NovaCarter": 12
+     },
+     "forklift": {
+      "background": 9,
+      "same-class poor localisation": 8
+     }
+    }
+   }
+  }
+ },
+ "totals": {
+  "alerts_per_camera_cooldown": {
+   "events": 61,
+   "alerts": 36,
+   "strict": 21,
+   "covered": 52,
+   "false_alerts": 8,
+   "strict_recall": 0.3443,
+   "covered_recall": 0.8525,
+   "alert_precision": 0.7778
+  },
+  "alerts_scene_cooldown": {
+   "events": 61,
+   "alerts": 26,
+   "strict": 18,
+   "covered": 51,
+   "false_alerts": 7,
+   "strict_recall": 0.2951,
+   "covered_recall": 0.8361,
+   "alert_precision": 0.7308
+  },
+  "app_native_candidates_1fps": {
+   "events": 61,
+   "candidates": 91,
+   "strict": 51,
+   "events_with_any_candidate": 55,
+   "false_candidates": 27,
+   "strict_recall": 0.8361,
+   "any_recall": 0.9016
+  },
+  "native_pair": {
+   "tp": 5916,
+   "fp": 3355,
+   "fn": 10401,
+   "precision": 0.6381,
+   "recall": 0.3626
+  }
+ },
+ "score_wall_s": 13.1
+}

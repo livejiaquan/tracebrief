@@ -1,0 +1,31 @@
+{
+ "set": "kb_test",
+ "dets": "None",
+ "confidence": 0.5,
+ "summary": {
+  "images": 42,
+  "forklift": {
+   "gt": 43,
+   "ap50": 1.0,
+   "tp": 43,
+   "fp": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "person": {
+   "gt": 44,
+   "ap50": 1.0,
+   "tp": 44,
+   "fp": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "pair": {
+   "pair_images": 25,
+   "detected": 25,
+   "recall": 1.0,
+   "images_with_pair_output": 25,
+   "precision": 1.0
+  }
+ }
+}

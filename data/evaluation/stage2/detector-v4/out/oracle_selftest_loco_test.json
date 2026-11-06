@@ -1,0 +1,35 @@
+{
+ "set": "loco_test",
+ "dets": "None",
+ "confidence": 0.5,
+ "summary": {
+  "images": 873,
+  "forklift": {
+   "gt": 188,
+   "ap50": 1.0,
+   "tp": 188,
+   "fp": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "large_gt": 187,
+  "large_recall": 1.0,
+  "small_gt": 1,
+  "small_recall": 1.0,
+  "false_forklift_rate": {
+   "pallet_truck": 0.0,
+   "stillage": 0.0
+  },
+  "false_forklift_hits": {
+   "pallet_truck": 0,
+   "stillage": 0
+  },
+  "class_totals": {
+   "pallet_truck": 308,
+   "stillage": 402
+  },
+  "fp_per_100_images": 0.0,
+  "fp_confusion": {},
+  "person_detections_at_conf": 0
+ }
+}

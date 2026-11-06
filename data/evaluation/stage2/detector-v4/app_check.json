@@ -1,0 +1,303 @@
+{
+ "purpose": "Check that the app runs detector v4 (YOLOX-s) unchanged through the frozen compact_vision.py path, and compare its CPU time with the Stage I YOLOX-tiny on the bundled samples. Not an accuracy test.",
+ "date": "2026-11-05",
+ "host": "Intel Core i7-10700, WSL, ONNX Runtime CPU, 4 threads; shared workstation",
+ "vision_worker": {
+  "how": "scripts/vision_worker.py (compact_vision.analyze_video) on each bundled 10 s sample, both settings files, two passes",
+  "runs": [
+   {
+    "settings_file": "config/vision-compact.json",
+    "sample": "warehouse-1",
+    "repeat": 1,
+    "model_id": "YOLOX-tiny-warehouse-person-forklift",
+    "candidates": 1,
+    "frames_with_pairs": 7,
+    "detections": 19,
+    "sampled_frames": 10,
+    "wall_s": 1.065,
+    "model_load_s": 0.216955,
+    "inference_s": 0.259559,
+    "inference_ms_per_frame": 25.956
+   },
+   {
+    "settings_file": "config/vision-compact.json",
+    "sample": "warehouse-2",
+    "repeat": 1,
+    "model_id": "YOLOX-tiny-warehouse-person-forklift",
+    "candidates": 1,
+    "frames_with_pairs": 5,
+    "detections": 20,
+    "sampled_frames": 10,
+    "wall_s": 0.949,
+    "model_load_s": 0.108995,
+    "inference_s": 0.278676,
+    "inference_ms_per_frame": 27.868
+   },
+   {
+    "settings_file": "config/vision-compact.json",
+    "sample": "warehouse-3",
+    "repeat": 1,
+    "model_id": "YOLOX-tiny-warehouse-person-forklift",
+    "candidates": 1,
+    "frames_with_pairs": 5,
+    "detections": 19,
+    "sampled_frames": 10,
+    "wall_s": 0.928,
+    "model_load_s": 0.100155,
+    "inference_s": 0.250965,
+    "inference_ms_per_frame": 25.096
+   },
+   {
+    "settings_file": "config/vision-compact-v4.json",
+    "sample": "warehouse-1",
+    "repeat": 1,
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "candidates": 1,
+    "frames_with_pairs": 8,
+    "detections": 20,
+    "sampled_frames": 10,
+    "wall_s": 1.151,
+    "model_load_s": 0.198087,
+    "inference_s": 0.443946,
+    "inference_ms_per_frame": 44.395
+   },
+   {
+    "settings_file": "config/vision-compact-v4.json",
+    "sample": "warehouse-2",
+    "repeat": 1,
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "candidates": 1,
+    "frames_with_pairs": 4,
+    "detections": 20,
+    "sampled_frames": 10,
+    "wall_s": 1.037,
+    "model_load_s": 0.196887,
+    "inference_s": 0.37262,
+    "inference_ms_per_frame": 37.262
+   },
+   {
+    "settings_file": "config/vision-compact-v4.json",
+    "sample": "warehouse-3",
+    "repeat": 1,
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "candidates": 1,
+    "frames_with_pairs": 5,
+    "detections": 20,
+    "sampled_frames": 10,
+    "wall_s": 1.092,
+    "model_load_s": 0.18578,
+    "inference_s": 0.400079,
+    "inference_ms_per_frame": 40.008
+   },
+   {
+    "settings_file": "config/vision-compact.json",
+    "sample": "warehouse-1",
+    "repeat": 2,
+    "model_id": "YOLOX-tiny-warehouse-person-forklift",
+    "candidates": 1,
+    "frames_with_pairs": 7,
+    "detections": 19,
+    "sampled_frames": 10,
+    "wall_s": 0.949,
+    "model_load_s": 0.111291,
+    "inference_s": 0.288915,
+    "inference_ms_per_frame": 28.892
+   },
+   {
+    "settings_file": "config/vision-compact.json",
+    "sample": "warehouse-2",
+    "repeat": 2,
+    "model_id": "YOLOX-tiny-warehouse-person-forklift",
+    "candidates": 1,
+    "frames_with_pairs": 5,
+    "detections": 20,
+    "sampled_frames": 10,
+    "wall_s": 0.907,
+    "model_load_s": 0.11709,
+    "inference_s": 0.279969,
+    "inference_ms_per_frame": 27.997
+   },
+   {
+    "settings_file": "config/vision-compact.json",
+    "sample": "warehouse-3",
+    "repeat": 2,
+    "model_id": "YOLOX-tiny-warehouse-person-forklift",
+    "candidates": 1,
+    "frames_with_pairs": 5,
+    "detections": 19,
+    "sampled_frames": 10,
+    "wall_s": 0.873,
+    "model_load_s": 0.114302,
+    "inference_s": 0.258922,
+    "inference_ms_per_frame": 25.892
+   },
+   {
+    "settings_file": "config/vision-compact-v4.json",
+    "sample": "warehouse-1",
+    "repeat": 2,
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "candidates": 1,
+    "frames_with_pairs": 8,
+    "detections": 20,
+    "sampled_frames": 10,
+    "wall_s": 1.116,
+    "model_load_s": 0.187127,
+    "inference_s": 0.420004,
+    "inference_ms_per_frame": 42.0
+   },
+   {
+    "settings_file": "config/vision-compact-v4.json",
+    "sample": "warehouse-2",
+    "repeat": 2,
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "candidates": 1,
+    "frames_with_pairs": 4,
+    "detections": 20,
+    "sampled_frames": 10,
+    "wall_s": 1.087,
+    "model_load_s": 0.193242,
+    "inference_s": 0.417176,
+    "inference_ms_per_frame": 41.718
+   },
+   {
+    "settings_file": "config/vision-compact-v4.json",
+    "sample": "warehouse-3",
+    "repeat": 2,
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "candidates": 1,
+    "frames_with_pairs": 5,
+    "detections": 20,
+    "sampled_frames": 10,
+    "wall_s": 1.034,
+    "model_load_s": 0.187765,
+    "inference_s": 0.366079,
+    "inference_ms_per_frame": 36.608
+   }
+  ]
+ },
+ "app_jobs": {
+  "how": "the local server on the CPU backend, sample warehouse-1, Fast search (detector v4) and Fast search (Stage I detector), visual check and draft included; two server sessions in opposite order. The first job of session 1 includes loading the visual-check model from a cold disk cache.",
+  "jobs": [
+   {
+    "session": 1,
+    "job": "9c11846ccbcc468a",
+    "created_at": "2026-11-05T02:19:55.952568+00:00",
+    "sample": "warehouse-1",
+    "search_profile": "fast",
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "model_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+    "vision_sha256": "8c7a540237082d0f7bd42c9ca0d85b59a9ca8fc8c5590c3f6af1bc7205fc1a4e",
+    "status": "completed",
+    "candidates": 1,
+    "visual_check": [
+     "confirmed"
+    ],
+    "visual_check_s": [
+     54.077
+    ],
+    "draft": [
+     "local-qwen-draft"
+    ],
+    "analysis_seconds": 74.98,
+    "vision_timing": {
+     "wall_s": 1.029,
+     "sampled_frames": 10,
+     "model_load_s": 0.198484,
+     "wall_without_model_load_s": 0.830916,
+     "inference_s": 0.35074,
+     "inference_ms_per_frame": 35.074
+    }
+   },
+   {
+    "session": 1,
+    "job": "583ea57209924f4f",
+    "created_at": "2026-11-05T02:21:11.315134+00:00",
+    "sample": "warehouse-1",
+    "search_profile": "stage1",
+    "model_id": "YOLOX-tiny-warehouse-person-forklift",
+    "model_sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d",
+    "vision_sha256": "8c7a540237082d0f7bd42c9ca0d85b59a9ca8fc8c5590c3f6af1bc7205fc1a4e",
+    "status": "completed",
+    "candidates": 1,
+    "visual_check": [
+     "confirmed"
+    ],
+    "visual_check_s": [
+     9.114
+    ],
+    "draft": [
+     "local-qwen-draft"
+    ],
+    "analysis_seconds": 23.39,
+    "vision_timing": {
+     "wall_s": 1.065,
+     "sampled_frames": 10,
+     "model_load_s": 0.22188,
+     "wall_without_model_load_s": 0.843056,
+     "inference_s": 0.252527,
+     "inference_ms_per_frame": 25.253
+    }
+   },
+   {
+    "session": 2,
+    "job": "2224a4ffed65497b",
+    "created_at": "2026-11-05T02:21:48.459374+00:00",
+    "sample": "warehouse-1",
+    "search_profile": "stage1",
+    "model_id": "YOLOX-tiny-warehouse-person-forklift",
+    "model_sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d",
+    "vision_sha256": "8c7a540237082d0f7bd42c9ca0d85b59a9ca8fc8c5590c3f6af1bc7205fc1a4e",
+    "status": "completed",
+    "candidates": 1,
+    "visual_check": [
+     "confirmed"
+    ],
+    "visual_check_s": [
+     12.808
+    ],
+    "draft": [
+     "local-qwen-draft"
+    ],
+    "analysis_seconds": 29.92,
+    "vision_timing": {
+     "wall_s": 0.797,
+     "sampled_frames": 10,
+     "model_load_s": 0.095375,
+     "wall_without_model_load_s": 0.701198,
+     "inference_s": 0.241417,
+     "inference_ms_per_frame": 24.142
+    }
+   },
+   {
+    "session": 2,
+    "job": "902a5170c8264ee8",
+    "created_at": "2026-11-05T02:22:18.623549+00:00",
+    "sample": "warehouse-1",
+    "search_profile": "fast",
+    "model_id": "YOLOX-s-warehouse-person-forklift-v4-S",
+    "model_sha256": "fdcc92d11740c6a33125ef7c6d1412a7e55785a096c72a5fa899288571f05be2",
+    "vision_sha256": "8c7a540237082d0f7bd42c9ca0d85b59a9ca8fc8c5590c3f6af1bc7205fc1a4e",
+    "status": "completed",
+    "candidates": 1,
+    "visual_check": [
+     "confirmed"
+    ],
+    "visual_check_s": [
+     9.257
+    ],
+    "draft": [
+     "local-qwen-draft"
+    ],
+    "analysis_seconds": 22.69,
+    "vision_timing": {
+     "wall_s": 1.114,
+     "sampled_frames": 10,
+     "model_load_s": 0.197228,
+     "wall_without_model_load_s": 0.916316,
+     "inference_s": 0.357964,
+     "inference_ms_per_frame": 35.796
+    }
+   }
+  ]
+ }
+}

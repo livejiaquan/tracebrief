@@ -1,0 +1,12 @@
+{
+ "rule": "dHash 64-bit (also flipped), Hamming <= 8",
+ "images": {
+  "train": 295,
+  "valid": 84,
+  "test": 42
+ },
+ "pairs": [],
+ "same_source_name_pairs": [],
+ "remove_from_train": [],
+ "remove_from_valid": []
+}
