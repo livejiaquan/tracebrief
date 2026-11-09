@@ -298,6 +298,8 @@ def main():
     runner.load_model_script(script)
     order = "\n".join(p.name for p in calibration_paths) + "\n"
     (args.output / "calibration_order.txt").write_text(order, encoding="utf-8")
+    # The names alone do not say which images were used; this digest also covers each file's bytes, in order.
+    content = "".join(f"{p.name} {hashlib.sha256(p.read_bytes()).hexdigest()}\n" for p in calibration_paths)
     runner.optimize(calibration)
     runner.save_har(str(args.output / f"{args.name}_optimized.har"))
 
@@ -319,6 +321,8 @@ def main():
                                                              "calibration_seed": args.calibration_seed,
                                                              "calibset_size": args.calibset_size or "DFC default (64)",
                                                              "calibration_order_sha256": hashlib.sha256(order.encode()).hexdigest(),
+                                                             "calibration_content_sha256": hashlib.sha256(content.encode()).hexdigest(),
+                                                             "calibration_content_rule": '"<name> <SHA-256 of the file>\\n" per frame, in calibration order',
                                                              "outputs": report}, indent=2), encoding="utf-8")
     for row in report:
         print(f"  {row['layer']:<12} stride {row['stride']:<2} {row['role']:<16} {row['shape']}: SNR {row['snr_db']} dB")

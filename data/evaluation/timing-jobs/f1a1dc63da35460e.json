@@ -1,0 +1,43 @@
+{
+ "job_id": "f1a1dc63da35460e",
+ "description": "recorded demonstration, Fast search (Stage I detector) with the visual check and local drafting, 2026-10-20",
+ "analysis_seconds": 30.35,
+ "vision_timing": {
+  "wall_s": 0.789,
+  "sampled_frames": 10,
+  "model_load_s": 0.113006,
+  "wall_without_model_load_s": 0.676392,
+  "inference_s": 0.210024,
+  "inference_ms_per_frame": 21.002
+ },
+ "search_profile": {
+  "id": "fast",
+  "label": "Fast search",
+  "description": "Purpose-trained compact detector (YOLOX-tiny). About a second per clip on CPU and few false candidates, but it can miss some interactions; review the original footage."
+ },
+ "vision_model": {
+  "id": "YOLOX-tiny-warehouse-person-forklift",
+  "revision": "636cbf96275e7c65298cd647355bb94f6363c6c8c278c9997f6792946ef06ef2",
+  "backend": "YOLOX ONNXRuntime CPU",
+  "sha256": "535cbfdaaf32e8a3975b34534504c49a67a1215a02141aa305cc9c689e88bf1d"
+ },
+ "source_sha256": "802f70b61ac677b13168acf80e07469b7b94684ef724ef7b60b3da3111957344",
+ "created_at": "2026-10-20T07:55:21.606744+00:00",
+ "generated_at": "2026-10-20T07:55:51.967920+00:00",
+ "events": 1,
+ "visual_check": {
+  "seconds": 13.44,
+  "model_file": "Qwen2-VL-2B-Instruct-Q4_K_M.gguf",
+  "model_sha256": "5745685d2e607a82a0696c1118e56a2a1ae0901da450fd9cd4f161c6b62867d7",
+  "prompt_version": "look-v2",
+  "status": "confirmed"
+ },
+ "generation": {
+  "method": "local-qwen-draft",
+  "model_file": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+  "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "prompt_version": "draft-v2"
+ },
+ "hardware_label": "Host CPU · Stage I prototype",
+ "note": "Summary of the job record of the 2026-10-20 demonstration capture; the visual check ran on 8 CPU threads (the app default). Generation seconds were not kept in this record: the rest of analysis_seconds after detection and the visual check is mostly drafting."
+}
