@@ -24,3 +24,41 @@ jobs:
         run: python -m pip install pytest numpy opencv-python-headless pillow onnx
       - name: Run tests
         run: python -m pytest -q -p no:cacheprovider
+
+  # The pinned requirement files exactly as the README installs them, on the Python each one is for.
+  pinned:
+    name: ${{ matrix.file }} · ${{ matrix.os }} · Python ${{ matrix.python }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {file: vision_requirements.txt, os: ubuntu-latest, python: "3.12"}
+          - {file: generation_requirements.txt, os: ubuntu-latest, python: "3.12"}
+          - {file: device_requirements.txt, os: windows-latest, python: "3.10"}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install CPU PyTorch as the README does
+        if: matrix.file == 'vision_requirements.txt'
+        run: python -m pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
+      - name: Install scripts/${{ matrix.file }}
+        env:
+          CMAKE_ARGS: -DGGML_CUDA=OFF
+          CMAKE_BUILD_PARALLEL_LEVEL: "4"
+        run: python -m pip install -r scripts/${{ matrix.file }}
+      - name: Check the installed set
+        run: python -m pip check
+      - name: Run tests in the vision environment
+        if: matrix.file == 'vision_requirements.txt'
+        run: |
+          python -m pip install pytest==9.1.1 onnx==1.23.2
+          python -m pytest -q -p no:cacheprovider
+      - name: Import the llama.cpp bindings
+        if: matrix.file == 'generation_requirements.txt'
+        run: python -c "import llama_cpp, llama_cpp.mtmd_cpp; print(llama_cpp.__version__)"
+      - name: Import the device host packages
+        if: matrix.file == 'device_requirements.txt'
+        run: python -c "import numpy, cv2, PIL; print(numpy.__version__, cv2.__version__, PIL.__version__)"

@@ -6,7 +6,7 @@ This is an **offline batch prototype**. It does not establish physical distance,
 
 ## Run locally
 
-From the `tracebrief/` project directory, use Python 3.11 or newer in a virtual environment:
+From the `tracebrief/` project directory, use Python 3.12 or newer in a virtual environment (the pinned NumPy and SciPy need 3.12):
 
 ```bash
 python -m venv .venv-vision

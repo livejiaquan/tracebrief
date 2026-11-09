@@ -9,7 +9,7 @@
     },
     "vlm": {
       "file": "models/hailo/Qwen2-VL-2B-Instruct.hef",
-      "sha256": null,
+      "sha256": "7b2a8ee15269172a6b5e63690ac88d3e59ff9eeaacb3d99d6e1049bc59fbc407",
       "source": "https://dev-public.hailo.ai/v5.3.0/blob/Qwen2-VL-2B-Instruct.hef"
     }
   }

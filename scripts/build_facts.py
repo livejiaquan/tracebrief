@@ -241,9 +241,15 @@ def detector_v4(root: Path, configs: dict) -> list:
              "Pre-registered criterion C1b: at least 24 of 33."),
         Fact("v4.old_events_strict", [Decimal(event(old)["strict"]), Decimal(event(old)["n"])],
              f"{event(old)['strict']} of {event(old)['n']} held-out synthetic events found by the Stage I model", source, old_setting),
+        Fact("v4.events_ci", [dec(x) * 100 for x in event(small)["recall_wilson95"] + event(old)["recall_wilson95"]],
+             f"{show(dec(event(small)['recall_wilson95'][0]) * 100, 0)}–{show(dec(event(small)['recall_wilson95'][1]) * 100, 0)}% "
+             f"for v4-S and {show(dec(event(old)['recall_wilson95'][0]) * 100, 0)}–{show(dec(event(old)['recall_wilson95'][1]) * 100, 0)}% "
+             "for the Stage I model: Wilson 95% intervals of the strict held-out event recall", source, setting,
+             "The intervals overlap almost entirely: one more event found is not a measured improvement."),
     ]
     loco = lambda r: r["loco_test"]["summary"]["forklift"]
     kb = lambda r: r["kb_test"]["summary"]
+    loco_ci, kb_ci = small["loco_test"]["bootstrap"]["ci95"], small["kb_test"]["bootstrap"]["ci95"]
     loco_source = f"`{base}/out/v4-S/loco_test_results.json`, {source}"
     loco_note = (f"LOCO subset 3, a site never used for training or tuning: {small['loco_test']['summary']['images']} images, "
                  f"{loco(small)['gt']} forklifts. Scored once after the freeze.")
@@ -268,6 +274,16 @@ def detector_v4(root: Path, configs: dict) -> list:
         Fact("v4.kb_pair_recall", [dec(kb(small)["pair"]["recall"]), Decimal(kb(small)["pair"]["detected"]), Decimal(kb(small)["pair"]["pair_images"])],
              f"{show(kb(small)['pair']['recall'], 2)} pair recall ({kb(small)['pair']['detected']} of {kb(small)['pair']['pair_images']} test images "
              f"with a person and a forklift)", f"`{base}/out/v4-S/kb_test_results.json`, {source}", setting),
+        Fact("v4.loco_ci", [dec(x) for x in loco_ci["forklift_ap50"] + loco_ci["forklift_recall"]],
+             f"{show(loco_ci['forklift_ap50'][0], 2)}–{show(loco_ci['forklift_ap50'][1], 2)} forklift AP50 and "
+             f"{show(loco_ci['forklift_recall'][0], 2)}–{show(loco_ci['forklift_recall'][1], 2)} recall: bootstrap 95% intervals at the held-out real site",
+             loco_source, setting, "Image-level bootstrap; the images come from one site, so they are correlated and the intervals are optimistic."),
+        Fact("v4.kb_ci", [dec(x) for x in kb_ci["forklift_ap50"] + kb_ci["person_ap50"] + kb_ci["pair_recall"]],
+             f"{show(kb_ci['forklift_ap50'][0], 2)}–{show(kb_ci['forklift_ap50'][1], 2)} forklift AP50, "
+             f"{show(kb_ci['person_ap50'][0], 2)}–{show(kb_ci['person_ap50'][1], 2)} person AP50 and "
+             f"{show(kb_ci['pair_recall'][0], 2)}–{show(kb_ci['pair_recall'][1], 2)} pair recall: bootstrap 95% intervals on the keremberke test split",
+             f"`{base}/out/v4-S/kb_test_results.json`, {source}", setting,
+             f"{kb(small)['images']} images, {kb(small)['pair']['pair_images']} of them with a person and a forklift."),
         Fact("v4.old_kb", [dec(kb(old)["forklift"]["ap50"]), dec(kb(old)["person"]["ap50"]), dec(kb(old)["pair"]["recall"])],
              f"{show(kb(old)['forklift']['ap50'], 3)} / {show(kb(old)['person']['ap50'], 3)} / {show(kb(old)['pair']['recall'], 2)} "
              f"forklift AP50 / person AP50 / pair recall of the Stage I model on the same images", source, old_setting),
@@ -329,6 +345,7 @@ def visual_check(root: Path) -> list:
     fp = [i for i in items if i["gold_status"] == "fp"]
     agree = [i for i in items if isinstance(i.get("model_answer"), dict)
              and all(i["model_answer"].get(k) == i["visual_label"][k] for k in ("forklift", "person"))]
+    both_yes = [i for i in items if all(i["visual_label"][k] == "yes" for k in ("forklift", "person"))]
     audit = summary["e_description_audit"]["clear_factual_errors"]
     shelves = [i for i in dev["items"] if i["visual_label"]["forklift"] == "no"]
     forklifts = [i for i in dev["items"] if i["visual_label"]["forklift"] == "yes"]
@@ -353,6 +370,11 @@ def visual_check(root: Path) -> list:
         Fact("look.agreement_both", [Decimal(len(agree)), Decimal(len(items))],
              f"{len(agree)} of {len(items)} crops agree with the visual labels on both fields", f"{source}, `{EVAL}/look/test_labels.json`", setting,
              "Visual labels: one labeling pass over contact sheets, no independent second labeler."),
+        Fact("look.always_yes_both", [Decimal(len(both_yes)), Decimal(len(items))],
+             f"{len(both_yes)} of {len(items)} crops would agree on both fields if every answer were forklift yes and person yes",
+             f"`{EVAL}/look/test_labels.json`", "Baseline, no model: the visual labels alone",
+             f"Only {len(items) - len(both_yes)} test crops lack a forklift or a person, so agreement on both fields cannot show "
+             "that the check rejects false candidates."),
         Fact("look.median_s", [median(seconds), Decimal(threads)], f"{show(median(seconds))} s per crop (median) on {threads} threads", source, setting,
              f"Generation only, model loaded once ({show(results['load_seconds'])} s); range {show(min(seconds))}–{show(max(seconds))} s; shared workstation."),
         Fact("look.desc_errors", [Decimal(audit["numerator"]), Decimal(audit["denominator"])],

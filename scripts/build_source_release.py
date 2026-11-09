@@ -50,7 +50,7 @@ def allowed(path, root=ROOT):
     if relative.parts[:3] == ('data', 'evaluation', 'look'):
         return path.suffix in {'.json', '.md', '.jpg'}
     if relative.parts[:3] == ('data', 'evaluation', 'stage2'):
-        # Device and host-load records ship with the scripts that drove the device (host paths are arguments).
+        # Device records ship with the scripts that drove the device (host paths are arguments).
         return path.suffix in {'.json', '.jsonl', '.md', '.csv', '.txt', '.py'}
     if relative.parts[:2] == ('data', 'evaluation'):
         return path.suffix in {'.json', '.jsonl', '.md', '.csv', '.txt'}
