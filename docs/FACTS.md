@@ -160,7 +160,7 @@ Accuracy figures are on NVIDIA's synthetic warehouse footage, except in the dete
 | `config.threads` | 4 CPU threads for the detectors | `config/vision-broader.json`, `config/vision-compact-v4.json`, `config/vision-compact.json`, `config/vision-stricter.json`, `config/vision.json` | As frozen |  |
 | `hailo.hailort` | HailoRT 5.3 (any 5.3.x is accepted) | `config/hailo-manifest.json` | The release ASUS ships for the UGen300 | The device code's HailoRT calls were checked against the 5.3, 5.4 and 5.5 Python API sources and ran on a UGen300 with HailoRT 5.3.2 (UGen300 section). |
 | `hailo.hef_hashes` | 1 of 2 HEF SHA-256 values recorded | `config/hailo-manifest.json` | Device mode refuses a HEF without a recorded hash | The detector HEF is built from calibration frames outside the repository, so this manifest records no hash; the device runs used a local manifest (`data/evaluation/stage2/device/README.md`). |
-| `tests.collected` | 243 test cases | `python -m pytest --collect-only -q tests` | Current `tests/` | Collected count; tests that need a UGen300, the real models (`TRACEBRIEF_TEST_MODELS=1`), a real browser (`TRACEBRIEF_TEST_BROWSER=1`), Python 3.11 or a recorded device buffer skip themselves. |
+| `tests.collected` | 260 test cases | `python -m pytest --collect-only -q tests` | Current `tests/` | Collected count; tests that need a UGen300, the real models (`TRACEBRIEF_TEST_MODELS=1`), a real browser (`TRACEBRIEF_TEST_BROWSER=1`), Python 3.11 or a recorded device buffer skip themselves. |
 
 ## Frozen records and the current code
 

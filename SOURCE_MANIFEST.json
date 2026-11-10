@@ -23,7 +23,7 @@
     {
       "path": "README.md",
       "bytes": 32444,
-      "sha256": "ee8aa0967430a92cd64fee8d0e2619678b975da4eaeff5d2d818aa98c255d90c"
+      "sha256": "ae24a516bca8498c0f2c9960915b561d0f0be2a623513a3c08715b3b070f5a80"
     },
     {
       "path": "config/hailo-manifest.json",
@@ -1763,7 +1763,7 @@
     {
       "path": "docs/FACTS.md",
       "bytes": 43305,
-      "sha256": "f9b4ae070405db307c72555ea94f4e9bd73ea5a1b772f8c169d7cdd9c34e24ef"
+      "sha256": "0823c8bab7de7b004cd62443fc4e50ead5767ea4b1529533a5c0c4dc27d98a0c"
     },
     {
       "path": "docs/FAQ.md",
@@ -2164,6 +2164,11 @@
       "path": "tests/test_hailo_llm.py",
       "bytes": 5587,
       "sha256": "1bd4903b572eb618f7f90c5d6d85c695ed44e73eaeda9db01853273f9e4894cc"
+    },
+    {
+      "path": "tests/test_http_loopback.py",
+      "bytes": 9947,
+      "sha256": "9c41f8ebddcdd6e1d4d1fea18f65c64a86c4856f8486b1d3f07a14f29c13833d"
     },
     {
       "path": "tests/test_launcher.py",
