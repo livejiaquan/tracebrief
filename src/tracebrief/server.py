@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import html
+import ipaddress
 import json
 import math
 import mimetypes
@@ -26,7 +27,7 @@ import sys
 import threading
 import time
 import traceback
-from urllib.parse import parse_qs, unquote, urlparse
+from urllib.parse import parse_qs, unquote, urlparse, urlsplit
 import uuid
 
 from . import cpu_pipeline, media, workers
@@ -56,6 +57,11 @@ VISION_SECONDS_PER_VIDEO_SECOND = {"compact-onnx": 0.08, "grounding-dino": 7.1}
 CANDIDATE_STEP_SECONDS = 15  # a visual check or a draft, either path
 # The phases of a job on the UGen300, in the order they run (Phases).
 PHASES = ("detection", "visual_check", "draft")
+REQUEST_TIMEOUT_S = 120  # a connection that sends or reads nothing this long is closed (Handler.timeout)
+# Host names a browser may use besides IP addresses; TRACEBRIEF_ALLOWED_HOSTS adds more (comma-separated).
+LOCAL_HOSTS = {"localhost"}
+
+
 def now():
     return datetime.now(timezone.utc).isoformat()
 
@@ -416,20 +422,23 @@ def run_vision_process(job_id, directory, script, request, output, expected, mes
             cwd=ROOT, stdout=log, stderr=subprocess.STDOUT,
             env={**os.environ, "OMP_NUM_THREADS": "4", "OPENBLAS_NUM_THREADS": "4"},
         )
-        write_json(directory / "process.json", {"pid": process.pid, "started_at": now(), "command": script, "timeout_seconds": timeout})
-        tick = time.monotonic()
-        while process.poll() is None:
-            elapsed = time.monotonic() - tick
-            if elapsed > timeout:
+        try:
+            write_json(directory / "process.json", {"pid": process.pid, "started_at": now(), "command": script, "timeout_seconds": timeout})
+            tick = time.monotonic()
+            while process.poll() is None:
+                elapsed = time.monotonic() - tick
+                if elapsed > timeout:
+                    raise RuntimeError(f"Vision analysis exceeded the {timeout // 60}-minute runtime limit for this video.")
+                update_job(job_id, progress=stage_progress(10, 69, elapsed, expected), message=message(elapsed))
+                time.sleep(1)
+        finally:  # the time limit, a failed progress write or shutdown: the detector process never outlives the job
+            if process.poll() is None:
                 process.terminate()
                 try:
                     process.wait(timeout=10)
                 except subprocess.TimeoutExpired:
                     process.kill()
                     process.wait()
-                raise RuntimeError(f"Vision analysis exceeded the {timeout // 60}-minute runtime limit for this video.")
-            update_job(job_id, progress=stage_progress(10, 69, elapsed, expected), message=message(elapsed))
-            time.sleep(1)
         if process.returncode:
             raise RuntimeError(f"Vision analysis failed (exit {process.returncode}). See the local run log.")
     return load_json(output)
@@ -653,8 +662,37 @@ def export_record(result):
     return portable
 
 
+class Refused(Exception):
+    """A request answered with an HTTP status other than 400, and a reason."""
+
+    def __init__(self, status: int, message: str):
+        super().__init__(message)
+        self.status = status
+
+
+def allowed_host(host: str) -> bool:
+    """A Host header this server answers state-changing requests for: an IP address, localhost, or a configured name.
+
+    A web page on another site can make a browser send requests here; a name it controls that resolves to this
+    machine (DNS rebinding) is refused because the Host header then carries that name.
+    """
+    try:
+        name = (urlsplit(f"//{host}").hostname or "").rstrip(".").lower()
+    except ValueError:
+        return False
+    extra = {h.strip().lower() for h in os.environ.get("TRACEBRIEF_ALLOWED_HOSTS", "").split(",") if h.strip()}
+    if name in LOCAL_HOSTS | extra:
+        return True
+    try:
+        ipaddress.ip_address(name)
+        return True
+    except ValueError:
+        return False
+
+
 class Handler(BaseHTTPRequestHandler):
     server_version = "TraceBrief/0.1"
+    timeout = REQUEST_TIMEOUT_S  # a stalled client does not hold a server thread forever
 
     def log_message(self, fmt, *args):
         sys.stderr.write(f"{self.log_date_time_string()} {fmt % args}\n")
@@ -676,9 +714,28 @@ class Handler(BaseHTTPRequestHandler):
         except OSError:
             pass  # the client has gone
 
+    def same_origin(self):
+        """Refuse a POST or PATCH that a page of another site made the browser send (403).
+
+        Browsers send Origin with cross-origin requests and with same-origin POST and PATCH; it must name this
+        server as the Host header does. Requests without Origin (scripts, curl) are accepted from allowed hosts.
+        """
+        host = self.headers.get("Host")
+        if host is not None and not allowed_host(host):
+            raise Refused(403, f"Requests for host {host!r} are not accepted; open TraceBrief by its IP address or localhost, "
+                               "or add the name to TRACEBRIEF_ALLOWED_HOSTS.")
+        origin = self.headers.get("Origin")
+        if origin is not None:
+            parts = urlsplit(origin)
+            if parts.scheme not in ("http", "https") or not host or parts.netloc.lower() != host.lower():
+                raise Refused(403, "Requests from another site are not accepted.")
+
     def read_json(self, limit=1024*1024):
         n = int(self.headers.get("Content-Length", 0))
         if not 0 <= n <= limit: raise ValueError("Request is too large")
+        kind = (self.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+        if n and kind != "application/json":  # a form or text/plain body is what another site's page can send unasked
+            raise Refused(415, "Send the request body as application/json")
         value = json.loads(self.rfile.read(n) or b"{}")
         if not isinstance(value, dict): raise ValueError("Request body must be a JSON object")
         return value
@@ -758,12 +815,13 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_file(safe_file(ROOT / "web", static_name))
         except (FileNotFoundError, StopIteration): self.json_response({"error": "Not found"}, 404)
         except (ValueError, json.JSONDecodeError) as exc: self.json_response({"error": str(exc)}, 400)
-        except (BrokenPipeError, ConnectionResetError): pass
+        except (BrokenPipeError, ConnectionResetError, TimeoutError): pass
         except Exception as exc: self.internal_error(exc)
 
     def do_POST(self):
         path = urlparse(self.path).path
         try:
+            self.same_origin()
             if path == "/api/uploads":
                 size = int(self.headers.get("Content-Length", 0))
                 if not 0 < size <= MAX_UPLOAD: raise ValueError("Choose a video smaller than 500 MB")
@@ -773,14 +831,24 @@ class Handler(BaseHTTPRequestHandler):
                 upload_id = uuid.uuid4().hex[:16]
                 target = RUNTIME / "uploads" / (upload_id+ext)
                 target.parent.mkdir(parents=True, exist_ok=True)
-                with target.open("wb") as file:
-                    remaining = size
-                    while remaining:
-                        data = self.rfile.read(min(65536, remaining))
-                        if not data: raise ValueError("Upload ended early")
-                        file.write(data); remaining -= len(data)
-                # The duration scales the detection time limit; None when ffprobe cannot read it.
-                write_json(target.with_suffix(".json"), {"name": name, "path": target.name, "duration": media.duration(target)})
+                # Written under a .part name and renamed when complete; nothing of a failed upload stays behind.
+                part = target.with_name(target.name + ".part")
+                try:
+                    with part.open("wb") as file:
+                        remaining = size
+                        while remaining:
+                            data = self.rfile.read(min(65536, remaining))
+                            if not data: raise ValueError("Upload ended early")
+                            file.write(data); remaining -= len(data)
+                    retried(lambda: os.replace(part, target))
+                    # The duration scales the detection time limit; ffprobe reads it from any video it can open.
+                    duration = media.duration(target)
+                    if duration is None: raise ValueError("This file could not be read as a video; choose another file")
+                    write_json(target.with_suffix(".json"), {"name": name, "path": target.name, "duration": duration})
+                except BaseException:
+                    part.unlink(missing_ok=True)
+                    target.unlink(missing_ok=True)
+                    raise
                 return self.json_response({"id": upload_id, "filename": name}, 201)
             if path == "/api/jobs":
                 data = self.read_json()
@@ -810,14 +878,16 @@ class Handler(BaseHTTPRequestHandler):
                 POOL.submit(process_job, job_id, input_path, source, json.loads(json.dumps(inference_settings)), json.loads(json.dumps(recorded_profile)))
                 return self.json_response(job, 202)
             self.json_response({"error": "Not found"}, 404)
+        except Refused as exc: self.json_response({"error": str(exc)}, exc.status)
         except (FileNotFoundError, StopIteration): self.json_response({"error": "Source not found"}, 404)
         except (ValueError, json.JSONDecodeError) as exc: self.json_response({"error": str(exc)}, 400)
-        except (BrokenPipeError, ConnectionResetError): pass
+        except (BrokenPipeError, ConnectionResetError, TimeoutError): pass
         except Exception as exc: self.internal_error(exc)
 
     def do_PATCH(self):
         try:
-            match = re.fullmatch(r"/api/jobs/([a-f0-9]{16})/events/(event-\d{3})", urlparse(self.path).path)
+            self.same_origin()
+            match = re.fullmatch(r"/api/jobs/([a-f0-9]{16})/events/(event-\d{3,})", urlparse(self.path).path)
             if not match: return self.json_response({"error": "Not found"}, 404)
             job_id, event_id = match.groups()
             data = self.read_json()
@@ -856,18 +926,29 @@ class Handler(BaseHTTPRequestHandler):
                 write_json(job_path(job_id), job)
             return self.json_response({"event": event, "result": job["result"]})
         except (FileNotFoundError, StopIteration): self.json_response({"error": "Review not found"}, 404)
+        except Refused as exc: self.json_response({"error": str(exc)}, exc.status)
         except (ValueError, json.JSONDecodeError) as exc: self.json_response({"error": str(exc)}, 400)
-        except (BrokenPipeError, ConnectionResetError): pass
+        except (BrokenPipeError, ConnectionResetError, TimeoutError): pass
         except Exception as exc: self.internal_error(exc)
 
 
 def recover_interrupted():
     """At startup: a previous queued/running record is not evidence that its process survived."""
     for path in (RUNTIME / "jobs").glob("*/job.json"):
-        job = load_json(path)
-        if job.get("status") in {"queued", "running"}:
-            job.update(status="failed", error="Application restarted before analysis completed.", message="Interrupted analysis. Start a new review.")
-            write_json(path, job)
+        try:
+            recover_job(path)
+        except Exception as exc:  # one unreadable record does not keep the server from starting
+            print(f"TraceBrief: skipped {path} while recovering interrupted jobs: {type(exc).__name__}: {exc}", file=sys.stderr)
+
+
+def recover_job(path: Path):
+    """One job record at startup: a queued or running job is marked interrupted."""
+    job = load_json(path)
+    if not isinstance(job, dict):
+        raise ValueError("the record is not a JSON object")
+    if job.get("status") in {"queued", "running"}:
+        job.update(status="failed", error="Application restarted before analysis completed.", message="Interrupted analysis. Start a new review.")
+        write_json(path, job)
 
 
 def main():
@@ -884,14 +965,17 @@ def main():
     if selected == "hailo":
         # Load the device models before the first job; /api/health reports the state or the error.
         POOL.submit(warm_device)
-        signal.signal(signal.SIGTERM, lambda *_: sys.exit(0))
+    signal.signal(signal.SIGTERM, lambda *_: sys.exit(0))  # runs the shutdown below, as Ctrl+C does
     print(f"TraceBrief available at http://{args.host}:{args.port}" + (" · UGen300 backend" if selected == "hailo" else ""), flush=True)
     try:
         server.serve_forever()
     finally:
+        server.server_close()  # no new connections while the running work finishes
+        # Queued jobs are cancelled (recover_interrupted marks them at the next start); a running one finishes.
+        print("Waiting for a running analysis" + (", then releasing the UGen300." if selected == "hailo" else "."),
+              file=sys.stderr, flush=True)
+        POOL.shutdown(wait=True, cancel_futures=True)
         if selected == "hailo":
-            print("Waiting for a running analysis, then releasing the UGen300.", file=sys.stderr, flush=True)
-            POOL.shutdown(wait=True, cancel_futures=True)
             close_device()
         workers.close_all()  # the resident CPU workers; they also exit on their own when this process's pipes close
 

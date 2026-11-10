@@ -10,6 +10,7 @@ reproduce Stage I.
 """
 from __future__ import annotations
 
+from collections import OrderedDict
 from fractions import Fraction
 import math
 import os
@@ -17,6 +18,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import threading
 
 from .look import MAX_SIDE
 
@@ -27,7 +29,32 @@ SEEK_BACK_S = 10.0
 # showinfo's lines, by filter instance: each frame's integer pts and keyframe flag, and the time base they count in.
 SHOWINFO = re.compile(r"\[Parsed_showinfo_(\d+) @[^]]*\]\s*n:\s*\d+\s+pts:\s*(-?\d+)\s.*?\biskey:\s*(\d)")
 SHOWINFO_BASE = re.compile(r"\[Parsed_showinfo_(\d+) @[^]]*\]\s*config in time_base:\s*(\d+)/(\d+)")
-STREAMS: dict = {}
+STREAMS_KEPT = 32  # videos' probe results kept; each timestamp list is ~1 MB per hour of video
+
+
+class Recent(OrderedDict):
+    """A dict that keeps only the most recently used `size` entries."""
+
+    def __init__(self, size: int):
+        super().__init__()
+        self.size, self.lock = size, threading.Lock()
+
+    def __getitem__(self, key):
+        with self.lock:
+            value = super().__getitem__(key)
+            self.move_to_end(key)
+            return value
+
+    def __setitem__(self, key, value):
+        with self.lock:
+            super().__setitem__(key, value)
+            self.move_to_end(key)
+            while len(self) > self.size:
+                self.popitem(last=False)
+
+
+# ffprobe results by (kind, path, size, mtime); one video's frame rate, packet timestamps and first frame each count once.
+STREAMS: dict = Recent(3 * STREAMS_KEPT)
 
 
 def executable(name: str) -> str:

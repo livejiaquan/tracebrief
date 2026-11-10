@@ -199,6 +199,7 @@ The selector applies to the next analysis; each record keeps the profile and the
 | `TRACEBRIEF_RUNTIME` | Job and upload directory (default `.runtime/`) |
 | `TRACEBRIEF_BACKEND` | `cpu` (default) or `hailo`: run detection, visual check and drafting on the UGen300 |
 | `TRACEBRIEF_HAILO_MANIFEST` / `TRACEBRIEF_HAILO_BATCH` | HEF manifest with SHA-256 per HEF (default `config/hailo-manifest.json`); detector frames per submission (default 8) |
+| `TRACEBRIEF_ALLOWED_HOSTS` | Host names, comma-separated, the server accepts edits for besides IP addresses and `localhost` |
 
 Each job stores its source hash, detector settings and raw output, linked frames, visual-check crop and answer, the raw draft and check results, reviewer edits and status. Do not run two servers on the same runtime directory.
 

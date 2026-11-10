@@ -27,6 +27,7 @@ import threading
 import time
 import traceback
 
+LINES_KEPT = 64  # protocol lines waiting to be read; the worker blocks on stdout beyond that
 START_TIMEOUT = 300  # load and hash the model; a cold disk read of the 1.7 GB VLM takes well under this
 RETRY_AFTER = 300  # after a failed start, use the per-call path this long before trying again
 STOP_TIMEOUT = 10
@@ -161,7 +162,7 @@ class Worker:
         except OSError as exc:
             self.process = None
             raise self._failure(f"cannot run {self.command[0]}: {exc}") from exc
-        self.lines = queue.Queue()
+        self.lines = queue.Queue(maxsize=LINES_KEPT)
         threading.Thread(target=self._read, args=(self.process.stdout, self.lines), daemon=True,
                          name=f"tracebrief-{self.kind}-worker").start()
         try:
@@ -183,14 +184,19 @@ class Worker:
 
     @staticmethod
     def _read(stream, lines):
+        """Queue the protocol lines (JSON objects); anything else a library prints to stdout is dropped here."""
         try:
             for line in stream:
-                lines.put(line)
+                if line.lstrip().startswith(b"{"):
+                    lines.put(line)
         except (OSError, ValueError):
             pass
         finally:
             stream.close()
-            lines.put(None)
+            try:
+                lines.put(None, timeout=STOP_TIMEOUT)  # a full queue nobody reads any more does not keep this thread
+            except queue.Full:
+                pass
 
     def _receive(self, timeout):
         """The next protocol message; None once the worker's stdout has closed."""

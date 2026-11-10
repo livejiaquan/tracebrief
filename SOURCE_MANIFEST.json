@@ -22,8 +22,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 32316,
-      "sha256": "2ccd7787cf07c4cb925352238325d2a7414128a7730f00389ba1133fdaef443e"
+      "bytes": 32444,
+      "sha256": "ee8aa0967430a92cd64fee8d0e2619678b975da4eaeff5d2d818aa98c255d90c"
     },
     {
       "path": "config/hailo-manifest.json",
@@ -2077,13 +2077,13 @@
     },
     {
       "path": "src/tracebrief/media.py",
-      "bytes": 11397,
-      "sha256": "cda3a850aaba0c9f82828bd8ca7da62ebee9604b1cb1b29c2046775df6ecbdc5"
+      "bytes": 12296,
+      "sha256": "3f4cd65e5130a15ce5b3c59d7f2dbb5234d1fd189cc6c4e1b7f52b67002ab3e6"
     },
     {
       "path": "src/tracebrief/server.py",
-      "bytes": 51543,
-      "sha256": "ae0638e4df8afb23d9411d1c251dc15a39d7d163c3505a4803869364b1db05e4"
+      "bytes": 55972,
+      "sha256": "1171f7e7cdafae83016cfab81c6d05e02f19012e1bc3fd30ef4da0be94b4558b"
     },
     {
       "path": "src/tracebrief/vision.py",
@@ -2092,8 +2092,8 @@
     },
     {
       "path": "src/tracebrief/workers.py",
-      "bytes": 12360,
-      "sha256": "7ff9b4b39b14efac3df9966e1bce32c67cbc1bce25b128da442d710289753abc"
+      "bytes": 12799,
+      "sha256": "603b6378e8e0a0bbfe4146ac0c3dfaf6971b5f2c4a014a2cc7d5c69821b13103"
     },
     {
       "path": "tests/conftest.py",
@@ -2107,8 +2107,8 @@
     },
     {
       "path": "tests/test_api_inputs.py",
-      "bytes": 8740,
-      "sha256": "6cb5a1af6bdd53dbc70ea81338ac04c4d453360dd05ebdb9ae755890a1ab4c9f"
+      "bytes": 8840,
+      "sha256": "d9ec2596d60421b4adcd64e60f318c892d85a34d89f19eb8369002bcba9c7784"
     },
     {
       "path": "tests/test_check_setup.py",

@@ -19,6 +19,7 @@ def test_invalid_observation_returns_400_without_writing(tmp_path, monkeypatch, 
     server.write_json(server.job_path(job_id), job)
     before = server.job_path(job_id).read_bytes()
     handler = object.__new__(server.Handler)
+    handler.headers = {}
     handler.path = f'/api/jobs/{job_id}/events/event-001'
     handler.read_json = lambda: {'observations': [observation]}
     responses = []
@@ -53,6 +54,7 @@ def test_html_export_embeds_evidence_bytes_and_escapes_notes(tmp_path, monkeypat
 
 def test_numeric_upload_id_returns_400_without_starting_job():
     handler = object.__new__(server.Handler)
+    handler.headers = {}
     handler.path = '/api/jobs'
     handler.read_json = lambda: {'upload_id': 1111111111111111}
     responses = []
@@ -72,6 +74,7 @@ def test_dismissal_requires_reason_without_mutating_saved_job(tmp_path, monkeypa
     server.write_json(server.job_path(job_id), job)
     original = server.job_path(job_id).read_bytes()
     handler = object.__new__(server.Handler)
+    handler.headers = {}
     handler.path = f'/api/jobs/{job_id}/events/event-001'
     handler.read_json = lambda: {'status': 'dismissed', 'reviewer_notes': notes}
     responses = []
@@ -122,6 +125,7 @@ def test_queued_settings_survive_config_edit_and_export_keeps_run_metadata(tmp_p
             queued.append((function, args))
     monkeypatch.setattr(server, 'POOL', CapturingPool())
     handler = object.__new__(server.Handler)
+    handler.headers = {}
     handler.path = '/api/jobs'
     handler.read_json = lambda: {'sample_id': 'fixture', 'search_profile': profile_id}
     responses = []
