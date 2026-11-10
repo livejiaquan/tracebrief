@@ -2167,8 +2167,8 @@
     },
     {
       "path": "tests/test_http_loopback.py",
-      "bytes": 10065,
-      "sha256": "f22e521b5eb996fab3b4db4a6a7a6b33098cdfcc8b8538c88955ab0ed972426f"
+      "bytes": 10264,
+      "sha256": "5e9dd72d09f158aa788a9d4107690ebfb357e4e0c0408db9152030042ec41f78"
     },
     {
       "path": "tests/test_launcher.py",

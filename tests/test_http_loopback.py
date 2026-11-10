@@ -191,7 +191,12 @@ def test_probe_results_are_kept_for_recent_videos_only(monkeypatch):
 def test_a_worker_only_queues_protocol_lines():
     read, write = os.pipe()
     lines = workers.queue.Queue(maxsize=workers.LINES_KEPT)
-    with os.fdopen(write, "wb") as out:
-        out.write(b"llama_model_loader: noise\n" * 500 + b'{"ready": true}\n')
+
+    def write_all():  # from a thread: 13 KB is more than a Windows pipe holds before someone reads it
+        with os.fdopen(write, "wb") as out:
+            out.write(b"llama_model_loader: noise\n" * 500 + b'{"ready": true}\n')
+    writer = threading.Thread(target=write_all)
+    writer.start()
     workers.Worker._read(os.fdopen(read, "rb"), lines)
+    writer.join(10)
     assert lines.get_nowait() == b'{"ready": true}\n' and lines.get_nowait() is None
