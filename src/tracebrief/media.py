@@ -50,7 +50,9 @@ class Recent(OrderedDict):
             super().__setitem__(key, value)
             self.move_to_end(key)
             while len(self) > self.size:
-                self.popitem(last=False)
+                # Not popitem(): on Python 3.10 it reads the evicted value through this class's __getitem__, which
+                # takes the lock again (a deadlock, seen on the Windows kit) and moves the key it is removing.
+                super().__delitem__(next(iter(self)))
 
 
 # ffprobe results by (kind, path, size, mtime); one video's frame rate, packet timestamps and first frame each count once.

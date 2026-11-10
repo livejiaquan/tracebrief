@@ -2077,8 +2077,8 @@
     },
     {
       "path": "src/tracebrief/media.py",
-      "bytes": 12296,
-      "sha256": "3f4cd65e5130a15ce5b3c59d7f2dbb5234d1fd189cc6c4e1b7f52b67002ab3e6"
+      "bytes": 12535,
+      "sha256": "1e9532330b1b24923888f9852b55ca9f8f61f1e89370fff99817ae78f1056ff6"
     },
     {
       "path": "src/tracebrief/server.py",
