@@ -88,7 +88,9 @@ def test_an_upload_that_ends_early_leaves_nothing_behind(local, tmp_path):
         raw.sendall(b"POST /api/uploads HTTP/1.1\r\nHost: 127.0.0.1\r\nX-Filename: clip.mp4\r\n"
                     b"Content-Type: video/mp4\r\nContent-Length: 4096\r\n\r\n" + VIDEO[:100])
         raw.shutdown(socket.SHUT_WR)
-        answer = raw.recv(65536)
+        answer = b""
+        while chunk := raw.recv(65536):  # the headers and the JSON body can arrive in separate reads
+            answer += chunk
     assert answer.startswith(b"HTTP/1.0 400") and b"Upload ended early" in answer
     assert uploads(tmp_path) == []
 
