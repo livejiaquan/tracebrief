@@ -373,6 +373,7 @@ def test_unknown_backend_is_rejected(monkeypatch):
 
 def get(server, path):
     handler = object.__new__(server.Handler)
+    handler.headers = {}
     handler.path = path
     responses = []
     handler.json_response = lambda body, status=200: responses.append((status, body))
@@ -414,6 +415,7 @@ def test_hailo_mode_offers_only_searches_that_run_on_the_device(fake_hailo, mani
     status, body = get(server, "/api/search-profiles")
     assert [p["id"] for p in body["profiles"]] == ["fast"] and body["default"] == "fast"
     handler = object.__new__(server.Handler)
+    handler.headers = {}
     handler.path = "/api/jobs"
     handler.read_json = lambda: {"sample_id": "warehouse-1", "search_profile": "broader"}
     responses = []
@@ -557,16 +559,65 @@ def test_a_failed_detector_batch_waits_for_its_submitted_jobs_before_the_vlm_may
     detector = hb.HailoDetector(hb.shared_vdevice(fake), hef, batch_size=2)
     submit, calls = detector.configured.run_async, []
 
-    def run_async(bindings):
+    def run_async(bindings, callback=None):
         calls.append(len(bindings))
         if len(calls) == 2:
             raise RuntimeError("HAILO_TIMEOUT(4)")
-        return submit(bindings)
+        return submit(bindings, callback)
     detector.configured.run_async = run_async
     with pytest.raises(RuntimeError, match="HAILO_TIMEOUT"):
         detector.detect_batch([(np.zeros((416, 416, 3), np.uint8), 320, 240)] * 6)
     assert calls == [2, 2] and fake.in_flight == 0  # the first job was collected before the turn was released
     assert not detector.turns.lock.locked()
+    assert detector.configured is not None  # the submitted job finished cleanly, so the detector stays usable
+
+
+def test_a_detector_job_that_fails_on_the_device_raises_instead_of_reading_as_no_detections(fake_hailo, tmp_path, capsys):
+    """HailoRT 5.3: wait() succeeds whatever the job's status; the failure is only in the completion callback."""
+    np = pytest.importorskip("numpy")
+    from tracebrief import hailo_backend as hb
+    fake = fake_hailo(queue=2)
+    hef = tmp_path / "detector.hef"; hef.write_bytes(b"hef")
+    detector = hb.HailoDetector(hb.shared_vdevice(fake), hef, batch_size=2)
+    frames = [(np.zeros((416, 416, 3), np.uint8), 320, 240)] * 6
+    fake.boxes = lambda frame: [[[0.1, 0.2, 0.3, 0.4, 0.9]], []]
+    assert all(len(found) == 1 for found in detector.detect_batch(frames))
+    configured = detector.configured
+    fake.job_error = fake.HailoRTException("HAILO_STREAM_ABORT(62)")
+    with pytest.raises(fake.HailoRTException, match="HAILO_STREAM_ABORT"):
+        detector.detect_batch(frames)
+    assert fake.in_flight == 0 and not detector.turns.lock.locked()
+    # the device may not be idle after a failed job: the detector was shut down, not left for the next batch
+    assert configured.shut and detector.configured is None
+    assert "shutting the detector down" in capsys.readouterr().err
+    fake.job_error = None
+    with pytest.raises(hb.DeviceError, match="shut down after a failed batch"):
+        detector.detect_batch(frames)
+    detector.close()  # closing again is harmless
+
+
+def test_a_job_whose_wait_times_out_during_cleanup_shuts_the_detector_down(fake_hailo, tmp_path):
+    np = pytest.importorskip("numpy")
+    from tracebrief import hailo_backend as hb
+    fake = fake_hailo(queue=2)
+    hef = tmp_path / "detector.hef"; hef.write_bytes(b"hef")
+    detector = hb.HailoDetector(hb.shared_vdevice(fake), hef, batch_size=2)
+    configured, submit, calls = detector.configured, detector.configured.run_async, []
+
+    def run_async(bindings, callback=None):
+        calls.append(len(bindings))
+        if len(calls) == 2:
+            raise RuntimeError("HAILO_OUT_OF_HOST_MEMORY(3)")
+        job = submit(bindings, callback)
+
+        def stuck(timeout_ms):
+            raise fake.HailoRTException("HAILO_TIMEOUT(4)")
+        job.wait = stuck
+        return job
+    detector.configured.run_async = run_async
+    with pytest.raises(RuntimeError, match="HAILO_OUT_OF_HOST_MEMORY"):  # the original error, not the cleanup's
+        detector.detect_batch([(np.zeros((416, 416, 3), np.uint8), 320, 240)] * 6)
+    assert configured.shut and detector.configured is None and not detector.turns.lock.locked()
 
 
 def test_a_failed_phase_keeps_the_time_it_took(fake_hailo, manifest, tmp_path, monkeypatch):
@@ -591,13 +642,13 @@ def test_a_device_held_by_another_process_fails_at_once_with_the_reason(fake_hai
     fake.held = True
     monkeypatch.setattr(hb, "sha256", lambda path: pytest.fail("a HEF was hashed although the device is held"))
     tick = time.monotonic()
-    with pytest.raises(DeviceError, match="already open in another process") as caught:
+    with pytest.raises(DeviceError, match="probably held by another process") as caught:
         HailoRuntime(manifest, tmp_path)
     assert time.monotonic() - tick < 1 and not fake.vdevices
     message = str(caught.value)
     assert "UGen300 (usb/001:024)" in message and "HAILO_LIBUSB_FAILURE (98)" in message and "LIBUSB_ERROR_ACCESS" in message
     assert "bench_ugen300.py" in message and "reconnect" in message
-    with pytest.raises(DeviceError, match="already open in another process"):  # taken between identify and the VDevice
+    with pytest.raises(DeviceError, match="probably held by another process"):  # taken between identify and the VDevice
         hb.shared_vdevice(fake)
     assert hb.held_elsewhere(fake.HailoRTStatusException("98")) and not hb.held_elsewhere(RuntimeError("HAILO_TIMEOUT(4)"))
     server = hailo_server(monkeypatch, tmp_path, manifest)
@@ -605,7 +656,7 @@ def test_a_device_held_by_another_process_fails_at_once_with_the_reason(fake_hai
     job_id = queued_job(server)
     server.process_job(job_id, tmp_path / "clip.mp4", SOURCE, compact_settings())
     job = server.read_job(job_id)
-    assert job["status"] == "failed" and "already open in another process" in job["error"]
+    assert job["status"] == "failed" and "probably held by another process" in job["error"]
     assert "set TRACEBRIEF_BACKEND=cpu" in job["error"]
 
 
@@ -673,6 +724,25 @@ def test_bench_records_every_measurement_on_the_fake_device(fake_hailo, manifest
     check_fixture(fixture)
 
 
+def test_a_bench_that_fails_midway_keeps_what_it_measured(fake_hailo, manifest, tmp_path, monkeypatch, capsys):
+    pytest.importorskip("PIL")
+    from tracebrief import hailo_backend as hb
+    fake = fake_hailo(queue=8)
+    fake.boxes = lambda frame: [[normalized(PERSON, .9)], [normalized(FORKLIFT, .8)]]
+
+    def unplugged(*args, **kwargs):
+        raise RuntimeError("HAILO_DRIVER_OPERATION_FAILED(36)")
+    monkeypatch.setattr(hb, "HailoVLM", unplugged)
+    output = tmp_path / "bench.json"
+    with pytest.raises(RuntimeError, match="HAILO_DRIVER_OPERATION_FAILED"):
+        load_bench().main(["--manifest", str(manifest), "--video", str(synthetic_video(tmp_path / "clip.avi")), "--frames", "16",
+                           "--output", str(output), "--skip-process"])
+    report = json.loads(output.read_text(encoding="utf-8"))
+    assert [run["batch_size"] for run in report["detector"]] == [1, 8] and report["vlm"] == {}
+    assert report["incomplete"] == {"error": "RuntimeError: HAILO_DRIVER_OPERATION_FAILED(36)"}
+    assert fake.vdevices[0].released and "partial report" in capsys.readouterr().err
+
+
 class FrozenMonotonic:
     """The clocks as seen on a coarse host: monotonic() never advances within a short step, perf_counter() does.
 
@@ -705,7 +775,7 @@ def test_bench_reports_a_second_process_that_cannot_open_the_device(fake_hailo, 
     bench.main(arguments)
     second = json.loads(output.read_text(encoding="utf-8"))["concurrent"]["second_process"]
     assert second["measured"] is False and second["device_held_by_this_process"] is True
-    assert "already open in another process" in second["reason"] and "LIBUSB_ERROR_ACCESS" in second["note"]
+    assert "probably held by another process" in second["reason"] and "LIBUSB_ERROR_ACCESS" in second["note"]
     assert "not measurable: the device admits one process (expected on Windows over USB)" in capsys.readouterr().out
     monkeypatch.setattr(bench, "second_process", lambda *args: (_ for _ in ()).throw(RuntimeError("the second process exited (code 1)")))
     bench.main(arguments)
@@ -713,7 +783,7 @@ def test_bench_reports_a_second_process_that_cannot_open_the_device(fake_hailo, 
     assert second == {"measured": False, "reason": "the second process exited (code 1)", "device_held_by_this_process": False, "note": None}
     fake.held = True  # another process holds the device before the bench starts
     output.unlink()
-    with pytest.raises(SystemExit, match="bench_ugen300: The UGen300 \\(usb/001:024\\) is already open in another process"):
+    with pytest.raises(SystemExit, match="bench_ugen300: The UGen300 \\(usb/001:024\\) is probably held by another process"):
         bench.main(arguments)
     assert not output.exists()
 

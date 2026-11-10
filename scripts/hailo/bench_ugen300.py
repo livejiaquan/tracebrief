@@ -9,7 +9,8 @@ and latency at batch 1 and 8, Qwen2-VL-2B time to first token and tokens/s for t
 for the text-only draft, and detector FPS while the VLM generates: once in this process, sharing one
 VDevice as the server does, and once with the VLM in a second process on the "SHARED" group. Writes
 JSON and prints a table. Exits before loading anything when HailoRT or the device is missing, another
-process holds it, or a HEF hash does not match.
+process holds it, or a HEF hash does not match. A run that fails later still writes what it measured, with
+"incomplete" naming the error.
 
 The second-process run is expected to fail on a Windows host with the UGen300 on USB: there only one
 process can open the device (HailoRT 5.3.2, LIBUSB_ERROR_ACCESS), so it is reported as not measurable,
@@ -263,7 +264,9 @@ def main(argv=None):
               "hefs": {name: {k: m[k] for k in ("file", "sha256", "source", "hash_s")} for name, m in models.items()},
               "video": str(args.video), "settings": {"confidence": args.confidence, "nms_iou": args.nms_iou},
               "load_s": {}, "detector": [], "vlm": {}, "concurrent": {"note": GIL_NOTE}}
+    output = args.output or ROOT / "build/hailo" / f"bench-{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}.json"
     vdevice = detector = vlm = None
+    failure = None
     try:
         vdevice = hb.shared_vdevice(hailo)
         run, detector, _ = bench_detector(vdevice, models["detector"]["path"], frames, 8, args)
@@ -288,17 +291,24 @@ def main(argv=None):
                 report["concurrent"]["second_process"] = second_process(detector, frames, models["vlm"]["path"], crop)
             except Exception as exc:
                 report["concurrent"]["second_process"] = second_process_failure(exc)
-    except hb.DeviceError as exc:  # for example another process took the device after identify()
-        raise SystemExit(f"bench_ugen300: {exc}")
+    except BaseException as exc:  # for example another process took the device after identify()
+        failure = exc
+        report["incomplete"] = {"error": f"{type(exc).__name__}: {exc}"}
+        if isinstance(exc, hb.DeviceError):
+            raise SystemExit(f"bench_ugen300: {exc}")
+        raise
     finally:
-        for part in (vlm, detector):
-            if part is not None:
-                part.close()
-        if vdevice is not None:
-            vdevice.release()
-    output = args.output or ROOT / "build/hailo" / f"bench-{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}.json"
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(report, indent=2, default=str), encoding="utf-8")
+        try:
+            for part in (vlm, detector):
+                if part is not None:
+                    part.close()
+            if vdevice is not None:
+                vdevice.release()
+        finally:  # what was measured before a failure is kept, marked "incomplete"
+            output.parent.mkdir(parents=True, exist_ok=True)
+            output.write_text(json.dumps(report, indent=2, default=str), encoding="utf-8")
+            if failure is not None:
+                print(f"bench_ugen300: saved the partial report to {output}", file=sys.stderr)
     print(table(report))
     print(f"Saved {output}")
 

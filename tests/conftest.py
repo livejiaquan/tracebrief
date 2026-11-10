@@ -7,7 +7,8 @@ fake.timeline lists the detector jobs and GenAI generations in the order they st
 every moment a detector job was in flight while a GenAI model generated, fake.genai every GenAI load and
 release in order, and fake.genai_overlaps every load made while another GenAI model was still loaded
 (the device takes one at a time). fake.held makes it answer as a UGen300 on USB that another process
-holds (HailoRT 5.3.2 on Windows).
+holds (HailoRT 5.3.2 on Windows). fake.job_error is the exception the next detector jobs report: as in HailoRT 5.3,
+only through the completion callback, while wait() returns as usual.
 """
 from contextlib import contextmanager
 import importlib.util
@@ -85,6 +86,7 @@ def make_fake_hailo(devices=("0001:01:00.0",), classes=2, queue=8, version="5.3.
     fake.in_flight = fake.generating = 0
     fake.delay = 0.0  # seconds each detector job and each generated token take, to widen the windows in concurrency tests
     fake.held = False  # another process holds the device
+    fake.job_error = None  # what completion_info.exception carries for each detector job submitted from now on
     fake.HailoRTException = type("HailoRTException", (Exception,), {})
     fake.HailoRTStatusException = type("HailoRTStatusException", (fake.HailoRTException,), {})
     fake.boxes = lambda frame: [[] for _ in range(classes)]
@@ -168,12 +170,17 @@ def make_fake_hailo(devices=("0001:01:00.0",), classes=2, queue=8, version="5.3.
     class Job:
         done = False
 
-        def wait(self, timeout_ms):
+        def __init__(self, callback=None, error=None):
+            self.callback, self.error = callback, error
+
+        def wait(self, timeout_ms):  # like AsyncInferJobImpl::wait: success once the job and its callback ran
             self.waited = timeout_ms
             if not self.done:
                 time.sleep(fake.delay)
                 self.done = True
                 fake.in_flight -= 1
+                if self.callback:
+                    self.callback(completion_info=types.SimpleNamespace(exception=self.error))
 
     class Configured:
         def __init__(self, model):
@@ -201,7 +208,7 @@ def make_fake_hailo(devices=("0001:01:00.0",), classes=2, queue=8, version="5.3.
             for item in bindings:
                 item.output().buffer[...] = encode_by_class(fake.boxes(item.input().buffer), max_boxes)
             self.submissions.append(len(bindings))
-            return Job()
+            return Job(callback, fake.job_error)
 
         def shutdown(self):
             self.shut = True

@@ -51,9 +51,10 @@ LLM_FREQUENCY_PENALTY = 1.0  # none, as the CPU worker (HailoLLM); the Qwen2.5 H
 # hailo_status HAILO_LIBUSB_FAILURE (hailort.h). On the UGen300 over USB with a Windows host (HailoRT 5.3.2) a
 # process that opens the device while another holds it gets it within 0.1 s: identify() raises
 # HailoRTStatusException("98") and VDevice() "libhailort failed with error: 98 (HAILO_LIBUSB_FAILURE)", after
-# libusb's LIBUSB_ERROR_ACCESS in the HailoRT log.
+# libusb's LIBUSB_ERROR_ACCESS in the HailoRT log. Any other libusb failure (a loose cable, a device mid-reset)
+# returns the same status, so the message says "probably".
 LIBUSB_FAILURE = 98
-HELD = "already open in another process"
+HELD = "probably held by another process"
 
 
 class DeviceError(RuntimeError):
@@ -61,19 +62,20 @@ class DeviceError(RuntimeError):
 
 
 def held_elsewhere(exc: Exception) -> bool:
-    """HailoRT's answer when another process holds the USB device (see LIBUSB_FAILURE)."""
+    """HailoRT's answer when another process holds the USB device, or the USB link failed otherwise (see LIBUSB_FAILURE)."""
     text = str(exc).strip()
     return "HAILO_LIBUSB_FAILURE" in text or text == str(LIBUSB_FAILURE) or f"error: {LIBUSB_FAILURE} " in text
 
 
 def held_error(device_id=None) -> DeviceError:
-    """The message for a device another process holds: which one, why, and what to stop."""
+    """The message for a device another process probably holds: which one, why, and what to stop."""
     device = f"The UGen300 ({device_id})" if device_id else "The UGen300"
     where = "On a Windows host over USB" if sys.platform == "win32" else "Over USB"
     return DeviceError(f"{device} is {HELD}: HailoRT returned HAILO_LIBUSB_FAILURE ({LIBUSB_FAILURE}). {where} only one "
                        "process can open the device (HailoRT 5.3.2 on Windows: LIBUSB_ERROR_ACCESS), and TraceBrief runs both "
                        "models in one process. Stop the other process (another TraceBrief server, "
-                       "scripts/hailo/bench_ugen300.py, hailortcli) and try again; if none is running, reconnect the UGen300.")
+                       "scripts/hailo/bench_ugen300.py, hailortcli) and try again; if none is running, the USB link itself "
+                       "failed: reconnect the UGen300.")
 
 
 class Turns:
@@ -342,6 +344,11 @@ class HailoDetector:
     allocated once and reused. Two groups of frames can be in flight: the host fills one while the
     device runs the other.
 
+    Every submission carries a completion callback. HailoRT reports a failed job only there
+    (completion_info.exception): AsyncInferJob.wait() returns without error once the job and its callback have
+    run, whatever the job's status (AsyncInferJobImpl::wait in HailoRT 5.3.0). Without the callback a failed
+    batch would read as frames with no detections; with it, _collect raises the job's exception.
+
     close() waits until settle_s has passed since the last completed job before shutting the model
     down. On the UGen300 (USB, HailoRT 5.3.2) a shutdown() issued right after batched jobs finish
     can time out after 10 s and reset the device, although every job has completed on the host and
@@ -397,18 +404,33 @@ class HailoDetector:
         """frames: (letterboxed, source width, source height) tuples; results come back in order.
 
         Every job is collected before the device turn is released, so no batch is in flight afterwards,
-        also when a step fails: the jobs already submitted are waited for before the error goes up.
+        also when a step fails: the jobs already submitted are waited for before the error goes up. When one
+        of those jobs cannot be waited for either (a timeout, a failed job), nothing guarantees the device is
+        idle, so the detector is shut down before the turn is released and refuses further batches; the
+        original error is the one raised, and the drain failure is printed to stderr.
         """
         with self.turns.hold("detector"):
+            if self.configured is None:
+                raise DeviceError(f"The detector ({self.hef.name}) was shut down after a failed batch or closed; reload the UGen300 models.")
             pending = []
             try:
                 return self._detect_batch(frames, pending)
             except BaseException:
-                for job, _, _ in pending:
+                drained = []
+                for job, done, _, _ in pending:
                     try:
                         job.wait(self.timeout_ms)
-                    except Exception:
-                        pass  # the original error is the one to report
+                        if done.get("error") is not None:
+                            drained.append(done["error"])
+                    except Exception as exc:
+                        drained.append(exc)
+                if drained:
+                    print(f"TraceBrief: {len(drained)} detector job(s) of a failed batch did not finish cleanly "
+                          f"({type(drained[0]).__name__}: {drained[0]}); shutting the detector down.", file=sys.stderr)
+                    try:
+                        self._shutdown()
+                    except Exception as exc:
+                        print(f"TraceBrief: shutting the detector down failed: {exc}", file=sys.stderr)
                 raise
 
     def _detect_batch(self, frames: list, pending: list) -> list[list[dict]]:
@@ -425,15 +447,22 @@ class HailoDetector:
                     raise ValueError(f"Detector input must be uint8 {frame.shape}, got {canvas.dtype} {canvas.shape}.")
                 frame[...] = canvas
             self.configured.wait_for_async_ready(timeout_ms=self.timeout_ms, frames_count=len(group))
-            pending.append((self.configured.run_async([s[0] for s in slots]), slots, group))
+            done = {}
+            job = self.configured.run_async([s[0] for s in slots], lambda completion_info, done=done: done.update(
+                finished=True, error=completion_info.exception))
+            pending.append((job, done, slots, group))
         while pending:
             results += self._collect(*pending[0])
             pending.pop(0)
         return results
 
-    def _collect(self, job, slots, group):
-        job.wait(self.timeout_ms)
+    def _collect(self, job, done, slots, group):
+        job.wait(self.timeout_ms)  # returns once the job and its callback ran, also when the job failed
         self.last_job = time.perf_counter()  # monotonic() ticks in ~16 ms steps on Windows
+        if done.get("error") is not None:
+            raise done["error"]
+        if not done.get("finished"):
+            raise DeviceError(f"A detector job on {self.hef.name} returned from wait() without its completion callback.")
         return [to_source_boxes(bindings.output().get_buffer(), width, height, confidence=self.confidence)
                 for (bindings, _, _), (_, width, height) in zip(slots, group)]
 
@@ -448,9 +477,16 @@ class HailoDetector:
                 if self.last_job is not None:  # let the device settle after the last job (see the class docstring)
                     while (left := self.settle_s - (time.perf_counter() - self.last_job)) > 0:
                         time.sleep(left)  # sleep() can wake early on Windows
-                self.configured.shutdown()  # blocks until in-flight jobs finish
-                self.configured = None
+                self._shutdown()
         self.slots = []
+
+    def _shutdown(self):
+        """Shut the configured model down (the caller holds the device turn); it is not used again either way."""
+        configured, self.configured = self.configured, None
+        try:
+            configured.shutdown()  # blocks until in-flight jobs finish
+        finally:
+            self.slots = []
 
 
 class ObjectEnd:

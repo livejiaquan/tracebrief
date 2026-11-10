@@ -23,7 +23,7 @@
     {
       "path": "README.md",
       "bytes": 32316,
-      "sha256": "92759eb6d0ff61af1d7dc89cebcd947e34b9255af31e14d5c8a0c9edfb77c95d"
+      "sha256": "2ccd7787cf07c4cb925352238325d2a7414128a7730f00389ba1133fdaef443e"
     },
     {
       "path": "config/hailo-manifest.json",
@@ -1763,7 +1763,7 @@
     {
       "path": "docs/FACTS.md",
       "bytes": 43305,
-      "sha256": "72efbf6d91e984aee635422d7430c8396fe756b7cbb5d7a3cc6ad52f0165c593"
+      "sha256": "f9b4ae070405db307c72555ea94f4e9bd73ea5a1b772f8c169d7cdd9c34e24ef"
     },
     {
       "path": "docs/FAQ.md",
@@ -1942,8 +1942,8 @@
     },
     {
       "path": "scripts/hailo/bench_ugen300.py",
-      "bytes": 16531,
-      "sha256": "02590388aee3df89ca619345be9769e47bb253e9215b2d495aa650d2d7d13d55"
+      "bytes": 17060,
+      "sha256": "5176bfaf8f6319325b6a1b1f7fa87c8b293ae5dddd38bcd3cd904282622a0473"
     },
     {
       "path": "scripts/hailo/compile_yolox_hef.py",
@@ -2062,8 +2062,8 @@
     },
     {
       "path": "src/tracebrief/hailo_backend.py",
-      "bytes": 36794,
-      "sha256": "6aa3a07c59543d0523296879996c703d4b3d653e3dd831822dae8bdadbe1c2d7"
+      "bytes": 39236,
+      "sha256": "0d3007052ff2b5fd9257d747886b65c24089a853753432ac9af7ac1f1f634824"
     },
     {
       "path": "src/tracebrief/look.py",
@@ -2097,8 +2097,8 @@
     },
     {
       "path": "tests/conftest.py",
-      "bytes": 27080,
-      "sha256": "813474d436937b8d79094c06ef2460cc7837249477ee0bc0dd58bcf6ce92640a"
+      "bytes": 27683,
+      "sha256": "cbb7d1c70b93d406d1f7884944dbc60a8f6fe2c380e8a06f05fe6273570b3339"
     },
     {
       "path": "tests/fixtures/hailo/nms_by_class.npz",
@@ -2157,8 +2157,8 @@
     },
     {
       "path": "tests/test_hailo_backend.py",
-      "bytes": 39345,
-      "sha256": "1085ba83ab7adaef715d9f3044b946a5c73d7d4ee06d24e0cec87089a7d63e06"
+      "bytes": 43187,
+      "sha256": "5beb762cef6de7c54f272d9ed44ba41aab5c196672b9b8bb8e19743974d8f2a2"
     },
     {
       "path": "tests/test_hailo_llm.py",
