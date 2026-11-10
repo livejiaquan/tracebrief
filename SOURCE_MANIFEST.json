@@ -2192,8 +2192,8 @@
     },
     {
       "path": "tests/test_source_manifest.py",
-      "bytes": 1799,
-      "sha256": "d5ee70f1e983857a6bf0b7c14cf9f4139245f6e4e94adbaff0ff828d143140db"
+      "bytes": 1818,
+      "sha256": "965694ddf4484183e63dac4a7d7d82a4e2cebabe2079556f29b38eab200bea43"
     },
     {
       "path": "tests/test_visual_check.py",

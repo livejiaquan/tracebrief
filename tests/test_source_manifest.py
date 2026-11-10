@@ -21,7 +21,7 @@ def digest(path):
     """SHA-256 as released; a checkout that turned LF into CRLF (Git on Windows) still matches its text files."""
     content = path.read_bytes()
     digests = {hashlib.sha256(content).hexdigest()}
-    if b"\r\n" in content and path.suffix in release.TEXT_SUFFIXES | {".jsonl", ".csv"}:
+    if b"\r\n" in content and b"\0" not in content:  # text files, including LICENSE, NOTICE and .gitignore
         digests.add(hashlib.sha256(content.replace(b"\r\n", b"\n")).hexdigest())
     return digests
 
